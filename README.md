@@ -21,7 +21,7 @@ npx agent-memory-benchmark --provider in-memory
 
 | Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
 |---|---|---|---|---|---|---|---|---|---|
-| Central Intelligence | **88** | 100 | 100 | 86 | 86 | 83 | 86 | 17 | 100 |
+| Central Intelligence | **83** | 100 | 100 | 71 | 86 | 33* | 86 | 83 | 88 |
 | In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
 
 *Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*

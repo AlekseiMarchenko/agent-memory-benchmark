@@ -1,62 +1,74 @@
 # Agent Memory Benchmark Results
 
 **Provider:** Central Intelligence
-**Date:** 2026-03-30T18:02:05.441Z
+**Date:** 2026-03-30T18:17:42.402Z
 **AMB Version:** 1.0.0
-**Overall Score:** 88/100 (A)
+**Overall Score:** 83/100 (A)
 
 ## Category Scores
 
 | Category | Score | Passed | Avg Latency |
 |---|---|---|---|
-| Factual Recall | 100% (A+) | 8/8 | 1063ms |
-| Semantic Search | 100% (A+) | 8/8 | 647ms |
-| Temporal Reasoning | 86% (A) | 6/7 | 615ms |
-| Conflict Resolution | 86% (A) | 6/7 | 500ms |
-| Selective Forgetting | 83% (A) | 5/6 | 438ms |
-| Cross-Session Continuity | 86% (A) | 6/7 | 586ms |
-| Multi-Agent Collaboration | 17% (F) | 1/6 | 592ms |
-| Cost Efficiency | 100% (A+) | 16/16 | 636ms |
+| Factual Recall | 100% (A+) | 8/8 | 498ms |
+| Semantic Search | 100% (A+) | 8/8 | 875ms |
+| Temporal Reasoning | 71% (B) | 5/7 | 598ms |
+| Conflict Resolution | 86% (A) | 6/7 | 667ms |
+| Selective Forgetting | 33% (F) | 2/6 | 622ms |
+| Cross-Session Continuity | 86% (A) | 6/7 | 580ms |
+| Multi-Agent Collaboration | 83% (A) | 5/6 | 730ms |
+| Cost Efficiency | 88% (A) | 14/16 | 600ms |
 
 ## Efficiency Metrics
 
 | Metric | Value |
 |---|---|
 | Total API Calls | 65 |
-| Total Latency | 41.9s |
-| Est. Token Usage | 2,220 |
+| Total Latency | 41.6s |
+| Est. Token Usage | 13,741 |
 
-## Failed Tests (9)
+## Failed Tests (11)
 
 ### tr-01-q1: "what database do we currently use"
 - **Reason:** Top result contains unexpected keyword
 - **Top result:** "Database is MySQL 5.7..."
 
+### tr-04-q1: "where do we deploy now"
+- **Reason:** Found: [], Missing: [Fly.io]
+- **Top result:** "Deploy target: Heroku..."
+
 ### cr-02-q1: "what logging library do we use"
 - **Reason:** Found: [], Missing: [Pino]
 - **Top result:** "Logging uses Winston..."
 
+### sf-01-q1: "what is the API key"
+- **Reason:** Expected empty but got 1 results
+- **Top result:** "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (include..."
+
+### sf-02-q1: "what workarounds do we have"
+- **Reason:** Expected empty but got 3 results
+- **Top result:** "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer ..."
+
 ### sf-04-q1: "list project details"
 - **Reason:** Found: [], Missing: [delta, epsilon]
+
+### sf-06-q1: "what bugs exist in auth"
+- **Reason:** Expected empty but got 3 results
+- **Top result:** "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PAT..."
 
 ### cs-07-q1: "trace the deploy process"
 - **Reason:** Found: [deployed], Missing: [environment]
 - **Top result:** "Session 3: deployed to Fly.io. Health checks passing. Latency improved by 40%...."
 
-### ma-01-q1: "what changed in authentication"
-- **Reason:** Found: [], Missing: [middleware, auth]
-
-### ma-02-q1: "what decisions were made"
-- **Reason:** Found: [], Missing: [Tailwind, Hono]
-
 ### ma-03-q1: "what is the bug"
 - **Reason:** Found: [], Missing: [race condition, queue]
 
-### ma-05-q1: "what are the logging standards"
-- **Reason:** Found: [], Missing: [JSON logging, correlation]
+### ce-05-q1: "temporary test data"
+- **Reason:** Expected empty but got 2 results
+- **Top result:** "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer ..."
 
-### ma-06-q1: "how does user registration work end to end"
-- **Reason:** Found: [], Missing: [email, name]
+### ce-07-q1: "lifecycle test"
+- **Reason:** Expected empty but got 2 results
+- **Top result:** "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer ..."
 
 
 ---
