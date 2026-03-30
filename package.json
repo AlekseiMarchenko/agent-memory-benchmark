@@ -1,0 +1,31 @@
+{
+  "name": "agent-memory-benchmark",
+  "version": "1.0.0",
+  "description": "The definitive benchmark for agent memory systems. 56 tests across 8 categories.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "amb": "dist/cli.js",
+    "agent-memory-benchmark": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js"
+  },
+  "keywords": ["agent", "memory", "benchmark", "mcp", "ai", "llm", "mem0", "zep", "hindsight", "letta"],
+  "author": "AlekseiMarchenko",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlekseiMarchenko/agent-memory-benchmark"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0",
+    "@types/node": "^20.0.0"
+  }
+}

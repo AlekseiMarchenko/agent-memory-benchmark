@@ -1,0 +1,1358 @@
+{
+  "provider": "Central Intelligence",
+  "timestamp": "2026-03-30T18:02:05.441Z",
+  "version": "1.0.0",
+  "overallScore": 88,
+  "categories": [
+    {
+      "category": "factual-recall",
+      "name": "Factual Recall",
+      "score": 100,
+      "passed": 8,
+      "total": 8,
+      "details": [
+        {
+          "testId": "fr-01",
+          "queryId": "fr-01-q1",
+          "query": "what database does the project use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 1225,
+          "tokensEstimated": 28,
+          "topResults": [
+            {
+              "id": "bc5607e9-7027-4694-9163-1e1565ee0ec9",
+              "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
+              "createdAt": "2026-03-30T17:57:13.990Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-02",
+          "queryId": "fr-02-q1",
+          "query": "how is the API authenticated",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 3132,
+          "tokensEstimated": 23,
+          "topResults": [
+            {
+              "id": "78f545cf-f680-4c67-ba8f-211002fa8e45",
+              "content": "API authentication uses Bearer tokens with JWT signed by RS256",
+              "createdAt": "2026-03-30T17:57:21.366Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-03",
+          "queryId": "fr-03-q1",
+          "query": "what are the deployment specs",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 799,
+          "tokensEstimated": 23,
+          "topResults": [
+            {
+              "id": "2f20f5c0-164b-42f4-92e0-18d0ee204b13",
+              "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
+              "createdAt": "2026-03-30T17:57:27.990Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-04",
+          "queryId": "fr-04-q1",
+          "query": "what is the rate limit",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 477,
+          "tokensEstimated": 21,
+          "topResults": [
+            {
+              "id": "918b20cf-3d3a-4283-bd8e-3c61a8090e85",
+              "content": "Rate limiting is set to 100 requests per minute per API key",
+              "createdAt": "2026-03-30T17:57:31.890Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-05",
+          "queryId": "fr-05-q1",
+          "query": "what CI/CD system do we use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 609,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "20ab83b6-af11-462c-9884-b7112cfba083",
+              "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
+              "createdAt": "2026-03-30T17:57:36.688Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-06",
+          "queryId": "fr-06-q1",
+          "query": "what format do error responses use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 1192,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "2ac68691-5cb9-433b-ad47-032749e6659c",
+              "content": "Error codes follow RFC 7807 Problem Details format",
+              "createdAt": "2026-03-30T17:57:40.656Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-07",
+          "queryId": "fr-07-q1",
+          "query": "what is the staging URL",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 550,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "413f2544-b32e-46cc-9673-ad7871c16a29",
+              "content": "The staging environment URL is staging.example.com on port 8443",
+              "createdAt": "2026-03-30T17:57:45.192Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-08",
+          "queryId": "fr-08-q1",
+          "query": "what tool handles database migrations",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 520,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "bc4cdff9-857a-4284-b923-a1e578325545",
+              "content": "Database migrations use Drizzle ORM with sequential version numbers",
+              "createdAt": "2026-03-30T17:57:49.222Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 1063,
+      "totalTokens": 191
+    },
+    {
+      "category": "semantic-search",
+      "name": "Semantic Search",
+      "score": 100,
+      "passed": 8,
+      "total": 8,
+      "details": [
+        {
+          "testId": "ss-01",
+          "queryId": "ss-01-q1",
+          "query": "why did we pick this frontend framework",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 425,
+          "tokensEstimated": 29,
+          "topResults": [
+            {
+              "id": "5915630b-b983-41df-aec7-297922e12f30",
+              "content": "We chose React because the team has 5 years of collective React experience",
+              "createdAt": "2026-03-30T17:57:52.939Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-02",
+          "queryId": "ss-02-q1",
+          "query": "how do we handle money",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 762,
+          "tokensEstimated": 23,
+          "topResults": [
+            {
+              "id": "d88366c6-ea9e-4836-9086-d17ff9a6edac",
+              "content": "Payment processing uses Stripe with webhooks for async confirmation",
+              "createdAt": "2026-03-30T17:57:56.166Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-03",
+          "queryId": "ss-03-q1",
+          "query": "when do we show progress to leadership",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 582,
+          "tokensEstimated": 24,
+          "topResults": [
+            {
+              "id": "d0415b10-e115-4fe0-b540-21f4f3ac8fb7",
+              "content": "The CEO wants weekly demos every Friday at 3pm Pacific",
+              "createdAt": "2026-03-30T17:58:00.370Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-04",
+          "queryId": "ss-04-q1",
+          "query": "how do we protect sensitive information",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 539,
+          "tokensEstimated": 28,
+          "topResults": [
+            {
+              "id": "63612fb9-82dd-4fa5-8130-04be7989dbf7",
+              "content": "User data is encrypted at rest with AES-256 and in transit with TLS 1.3",
+              "createdAt": "2026-03-30T17:58:03.683Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-05",
+          "queryId": "ss-05-q1",
+          "query": "what happens when a new user joins",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 1157,
+          "tokensEstimated": 31,
+          "topResults": [
+            {
+              "id": "94133d10-5de0-4b84-8411-3c7b32a44611",
+              "content": "The onboarding flow has 4 steps: signup, verify email, choose plan, connect first agent",
+              "createdAt": "2026-03-30T17:58:07.774Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-06",
+          "queryId": "ss-06-q1",
+          "query": "which programming languages do we support",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 567,
+          "tokensEstimated": 32,
+          "topResults": [
+            {
+              "id": "5dcb2ca3-b6bf-44bb-9143-a357d45d93a6",
+              "content": "We sunset the Python SDK in favor of TypeScript-only to reduce maintenance burden",
+              "createdAt": "2026-03-30T17:58:11.697Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-07",
+          "queryId": "ss-07-q1",
+          "query": "how fast should the system respond",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 451,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "ebeaed26-8225-4623-954f-87868f55bf98",
+              "content": "Performance SLA: p99 latency under 200ms for recall operations",
+              "createdAt": "2026-03-30T17:58:15.119Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ss-08",
+          "queryId": "ss-08-q1",
+          "query": "what can users do without paying",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 693,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "9e9c676d-a32c-4eee-a641-2e3c0da58aca",
+              "content": "The free tier includes 500 operations per month with no credit card required",
+              "createdAt": "2026-03-30T17:58:18.301Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 647,
+      "totalTokens": 219
+    },
+    {
+      "category": "temporal-reasoning",
+      "name": "Temporal Reasoning",
+      "score": 85.71428571428571,
+      "passed": 6,
+      "total": 7,
+      "details": [
+        {
+          "testId": "tr-01",
+          "queryId": "tr-01-q1",
+          "query": "what database do we currently use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 575,
+          "tokensEstimated": 31,
+          "topResults": [
+            {
+              "id": "fd29d192-c875-4962-a4da-ffb5c75956c9",
+              "content": "Database is MySQL 5.7",
+              "createdAt": "2026-03-30T17:58:21.781Z"
+            },
+            {
+              "id": "fe757ca6-aa54-4619-9cb0-d3eb6d2655b3",
+              "content": "Migrated database to PostgreSQL 14",
+              "createdAt": "2026-03-30T17:58:22.538Z"
+            },
+            {
+              "id": "5091c17c-1ac2-4ad3-94a7-5e68fb6b21e8",
+              "content": "Upgraded to PostgreSQL 16",
+              "createdAt": "2026-03-30T17:58:23.463Z"
+            }
+          ],
+          "reason": "Top result contains unexpected keyword"
+        },
+        {
+          "testId": "tr-02",
+          "queryId": "tr-02-q1",
+          "query": "what database did we use before the migration",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 501,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "b0d62410-6c35-48c0-b5a3-ff44922b3835",
+              "content": "Migrated database from MySQL to PostgreSQL 14",
+              "createdAt": "2026-03-30T17:58:28.207Z"
+            },
+            {
+              "id": "ed2ce69b-4459-4bbe-b415-a8dc091d8da9",
+              "content": "Database is MySQL 5.7",
+              "createdAt": "2026-03-30T17:58:27.533Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-03",
+          "queryId": "tr-03-q1",
+          "query": "what is our current velocity",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 877,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "18114d95-121d-4eee-bcb0-0218e3c80c37",
+              "content": "Sprint velocity is 21 story points",
+              "createdAt": "2026-03-30T17:58:32.090Z"
+            },
+            {
+              "id": "9306499b-1a00-47d2-b709-25f3df2f49f5",
+              "content": "Sprint velocity increased to 34 story points",
+              "createdAt": "2026-03-30T17:58:32.749Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-04",
+          "queryId": "tr-04-q1",
+          "query": "where do we deploy now",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 971,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "e666d391-2cd0-4c87-87aa-0baaca6a30ff",
+              "content": "Deploy target: Heroku",
+              "createdAt": "2026-03-30T17:58:36.709Z"
+            },
+            {
+              "id": "e99839a9-5fb4-4c0e-8e02-d4cbe7a2d729",
+              "content": "Migrated from Heroku to AWS ECS",
+              "createdAt": "2026-03-30T17:58:37.417Z"
+            },
+            {
+              "id": "f8f1b16b-2234-42b5-90cd-4c38691b0d97",
+              "content": "Migrated from AWS to Fly.io",
+              "createdAt": "2026-03-30T17:58:38.449Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-05",
+          "queryId": "tr-05-q1",
+          "query": "what cloud providers have we used",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 461,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "bfe85087-002b-41cf-917f-278767c8aae0",
+              "content": "Migrated from AWS to Fly.io",
+              "createdAt": "2026-03-30T17:58:44.282Z"
+            },
+            {
+              "id": "b8375f22-ee8e-4271-9125-05068b3df0c4",
+              "content": "Migrated from Heroku to AWS ECS",
+              "createdAt": "2026-03-30T17:58:43.439Z"
+            },
+            {
+              "id": "082cea31-3edd-4616-bb9e-be0d47898caa",
+              "content": "Deploy target: Heroku",
+              "createdAt": "2026-03-30T17:58:42.815Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-06",
+          "queryId": "tr-06-q1",
+          "query": "how many people on the team",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 438,
+          "tokensEstimated": 31,
+          "topResults": [
+            {
+              "id": "252596c4-26de-4f9d-80c5-f3f0ec965fbf",
+              "content": "Hired 2 more, team is now 5 engineers",
+              "createdAt": "2026-03-30T17:58:49.227Z"
+            },
+            {
+              "id": "faa03d0a-d390-4015-9596-83d799861d76",
+              "content": "Team size: 3 engineers",
+              "createdAt": "2026-03-30T17:58:48.522Z"
+            },
+            {
+              "id": "201d49e0-8938-4c3e-8c19-cf748342d3a0",
+              "content": "Alice left, team is 4 engineers",
+              "createdAt": "2026-03-30T17:58:50.125Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-07",
+          "queryId": "tr-07-q1",
+          "query": "what is the latest API version",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 480,
+          "tokensEstimated": 28,
+          "topResults": [
+            {
+              "id": "fac1270b-7164-402d-8d05-ad1b66172ff7",
+              "content": "API version v1 launched",
+              "createdAt": "2026-03-30T17:58:54.439Z"
+            },
+            {
+              "id": "b2ac7d6f-b35a-4c79-ac57-dbe7cb2836b6",
+              "content": "v2 released with breaking changes",
+              "createdAt": "2026-03-30T17:58:55.338Z"
+            },
+            {
+              "id": "e8170acc-6fd5-48b3-831a-b698fa3ea6b5",
+              "content": "v2.1 patch released",
+              "createdAt": "2026-03-30T17:58:56.185Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 615,
+      "totalTokens": 204
+    },
+    {
+      "category": "conflict-resolution",
+      "name": "Conflict Resolution",
+      "score": 85.71428571428571,
+      "passed": 6,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cr-01",
+          "queryId": "cr-01-q1",
+          "query": "what is the default timeout",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 435,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "04109306-a6a7-40bd-8d1d-31183e1a4020",
+              "content": "Default timeout is 30 seconds",
+              "createdAt": "2026-03-30T17:59:00.098Z"
+            },
+            {
+              "id": "57a0c42f-2296-45f7-aa3e-282b52fae051",
+              "content": "Changed default timeout to 60 seconds",
+              "createdAt": "2026-03-30T17:59:00.842Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-02",
+          "queryId": "cr-02-q1",
+          "query": "what logging library do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 672,
+          "tokensEstimated": 13,
+          "topResults": [
+            {
+              "id": "d86c6669-d0cc-4f3c-80c6-450808068f22",
+              "content": "Logging uses Winston",
+              "createdAt": "2026-03-30T17:59:04.524Z"
+            }
+          ],
+          "reason": "Found: [], Missing: [Pino]"
+        },
+        {
+          "testId": "cr-03",
+          "queryId": "cr-03-q1",
+          "query": "what is the max file upload size",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 466,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "36f56d2c-9c39-4991-afa7-da5b4d8a036a",
+              "content": "Max file upload size is 5MB",
+              "createdAt": "2026-03-30T17:59:09.049Z"
+            },
+            {
+              "id": "6ca39716-da85-4e3b-8af9-f85316a6534c",
+              "content": "Increased max upload to 50MB for enterprise tier",
+              "createdAt": "2026-03-30T17:59:09.729Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-04",
+          "queryId": "cr-04-q1",
+          "query": "what is the main git branch",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 458,
+          "tokensEstimated": 21,
+          "topResults": [
+            {
+              "id": "f303b381-ad65-49d2-b116-5d1f2eb11e50",
+              "content": "Renamed primary branch to main",
+              "createdAt": "2026-03-30T17:59:14.011Z"
+            },
+            {
+              "id": "1a73bcc6-f0ec-469d-953c-b3bd6bcb5fc7",
+              "content": "Primary branch is master",
+              "createdAt": "2026-03-30T17:59:13.349Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-05",
+          "queryId": "cr-05-q1",
+          "query": "do we use semicolons",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 442,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "f595cf30-1ac8-450a-9b3c-c9ba306e78a4",
+              "content": "Use Prettier with semicolons enabled",
+              "createdAt": "2026-03-30T17:59:17.622Z"
+            },
+            {
+              "id": "018a3d88-e666-4b7b-ae0f-dd3aeab944f7",
+              "content": "Team voted to disable semicolons in Prettier config",
+              "createdAt": "2026-03-30T17:59:18.391Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-06",
+          "queryId": "cr-06-q1",
+          "query": "what Node version do we need",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 560,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "2c95ed60-0068-4494-8c16-45ecc66d2249",
+              "content": "Node.js 18 is required minimum version",
+              "createdAt": "2026-03-30T17:59:21.929Z"
+            },
+            {
+              "id": "d1b2a3ce-4426-48fd-be3e-a34ce5d5033d",
+              "content": "Upgraded minimum to Node.js 20",
+              "createdAt": "2026-03-30T17:59:22.568Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-07",
+          "queryId": "cr-07-q1",
+          "query": "what format does the API return",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 467,
+          "tokensEstimated": 26,
+          "topResults": [
+            {
+              "id": "bf4220e6-af68-4f73-b2e3-acab419e86c6",
+              "content": "The API returns XML responses",
+              "createdAt": "2026-03-30T17:59:26.212Z"
+            },
+            {
+              "id": "71ca8657-0779-49f7-a407-1c85a670cfe5",
+              "content": "Switched API to return JSON exclusively",
+              "createdAt": "2026-03-30T17:59:26.893Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 500,
+      "totalTokens": 164
+    },
+    {
+      "category": "selective-forgetting",
+      "name": "Selective Forgetting",
+      "score": 83.33333333333334,
+      "passed": 5,
+      "total": 6,
+      "details": [
+        {
+          "testId": "sf-01",
+          "queryId": "sf-01-q1",
+          "query": "what is the API key",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 440,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-02",
+          "queryId": "sf-02-q1",
+          "query": "what workarounds do we have",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 469,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-03",
+          "queryId": "sf-03-q1",
+          "query": "what linter do we use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 390,
+          "tokensEstimated": 20,
+          "topResults": [
+            {
+              "id": "6050fb6e-14d5-4d00-8559-ac28e9080da3",
+              "content": "Switched linter from ESLint to Biome for faster checks",
+              "createdAt": "2026-03-30T17:59:38.100Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "sf-04",
+          "queryId": "sf-04-q1",
+          "query": "list project details",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 442,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Found: [], Missing: [delta, epsilon]"
+        },
+        {
+          "testId": "sf-05",
+          "queryId": "sf-05-q1",
+          "query": "what endpoints are deprecated",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 449,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-06",
+          "queryId": "sf-06-q1",
+          "query": "what bugs exist in auth",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 440,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 438,
+      "totalTokens": 51
+    },
+    {
+      "category": "cross-session",
+      "name": "Cross-Session Continuity",
+      "score": 85.71428571428571,
+      "passed": 6,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cs-01",
+          "queryId": "cs-01-q1",
+          "query": "what are the user's editor preferences",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 476,
+          "tokensEstimated": 29,
+          "topResults": [
+            {
+              "id": "d61891d8-6dd0-40d6-b28f-5e96ddc789c9",
+              "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
+              "createdAt": "2026-03-30T17:59:56.450Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-02",
+          "queryId": "cs-02-q1",
+          "query": "what caused the out of memory crash",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 453,
+          "tokensEstimated": 46,
+          "topResults": [
+            {
+              "id": "2c091d76-b84a-416e-9a7b-e027235fbb7d",
+              "content": "Investigated OOM crash at 2am. Root cause was unbounded cache in UserService.getAll() method. Fixed by adding LRU eviction with max 1000 entries.",
+              "createdAt": "2026-03-30T17:59:59.630Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-03",
+          "queryId": "cs-03-q1",
+          "query": "why did we pick this data pattern",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 816,
+          "tokensEstimated": 44,
+          "topResults": [
+            {
+              "id": "c59b4d0a-12a4-411b-972d-9ccb74640c66",
+              "content": "Architecture decision: chose event sourcing over CRUD for the audit trail requirements. CQRS pattern with separate read and write models.",
+              "createdAt": "2026-03-30T18:00:04.250Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-04",
+          "queryId": "cs-04-q1",
+          "query": "what is the status of the dashboard feature",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 504,
+          "tokensEstimated": 84,
+          "topResults": [
+            {
+              "id": "7bd5b2e8-67a3-4941-a622-87f29320ed1d",
+              "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
+              "createdAt": "2026-03-30T18:00:08.039Z"
+            },
+            {
+              "id": "460ef956-0e1d-4205-ab97-ea9ba0250a2d",
+              "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
+              "createdAt": "2026-03-30T18:00:09.025Z"
+            },
+            {
+              "id": "650229ca-5068-41b5-818f-a71b22679744",
+              "content": "Dashboard design: use Recharts for graphs, card layout for metrics, infinite scroll for API log.",
+              "createdAt": "2026-03-30T18:00:08.533Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-05",
+          "queryId": "cs-05-q1",
+          "query": "summarize what happened this week",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 736,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "f0606fa8-31bf-4cba-aaa2-d91947df27a2",
+              "content": "Friday: production deploy successful. Monitoring looks clean.",
+              "createdAt": "2026-03-30T18:00:15.034Z"
+            },
+            {
+              "id": "978366f4-8437-4044-9ae5-3a40eb15552e",
+              "content": "Monday: set up CI/CD pipeline with GitHub Actions. Tests passing.",
+              "createdAt": "2026-03-30T18:00:12.867Z"
+            },
+            {
+              "id": "7b4d7481-c723-4260-a1ae-81d5e095ce1e",
+              "content": "Tuesday: implemented user authentication with JWT tokens.",
+              "createdAt": "2026-03-30T18:00:13.283Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-06",
+          "queryId": "cs-06-q1",
+          "query": "what happened with the search task",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 551,
+          "tokensEstimated": 69,
+          "topResults": [
+            {
+              "id": "564394f7-2f77-4149-901e-9d4510227a3e",
+              "content": "Task started: implement search functionality for the API",
+              "createdAt": "2026-03-30T18:00:19.750Z"
+            },
+            {
+              "id": "a262b57d-7803-470f-94f8-b5dd42e2b6ae",
+              "content": "Task completed: search functionality shipped with vector + BM25 + trigram hybrid approach",
+              "createdAt": "2026-03-30T18:00:21.622Z"
+            },
+            {
+              "id": "88d69a83-329c-444f-a1b0-2e55000b23b2",
+              "content": "Blocker found: full-text search requires pg_trgm extension not available on managed Postgres",
+              "createdAt": "2026-03-30T18:00:20.542Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-07",
+          "queryId": "cs-07-q1",
+          "query": "trace the deploy process",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 564,
+          "tokensEstimated": 26,
+          "topResults": [
+            {
+              "id": "7bbcfcd0-28e7-4267-a079-1b3de866aeaf",
+              "content": "Session 3: deployed to Fly.io. Health checks passing. Latency improved by 40%.",
+              "createdAt": "2026-03-30T18:00:27.257Z"
+            }
+          ],
+          "reason": "Found: [deployed], Missing: [environment]"
+        }
+      ],
+      "avgLatencyMs": 586,
+      "totalTokens": 372
+    },
+    {
+      "category": "multi-agent",
+      "name": "Multi-Agent Collaboration",
+      "score": 16.666666666666664,
+      "passed": 1,
+      "total": 6,
+      "details": [
+        {
+          "testId": "ma-01",
+          "queryId": "ma-01-q1",
+          "query": "what changed in authentication",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 645,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [middleware, auth]"
+        },
+        {
+          "testId": "ma-02",
+          "queryId": "ma-02-q1",
+          "query": "what decisions were made",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 540,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Tailwind, Hono]"
+        },
+        {
+          "testId": "ma-03",
+          "queryId": "ma-03-q1",
+          "query": "what is the bug",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 494,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Found: [], Missing: [race condition, queue]"
+        },
+        {
+          "testId": "ma-04",
+          "queryId": "ma-04-q1",
+          "query": "what experimental approaches are being tried",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 867,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ma-05",
+          "queryId": "ma-05-q1",
+          "query": "what are the logging standards",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 487,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [JSON logging, correlation]"
+        },
+        {
+          "testId": "ma-06",
+          "queryId": "ma-06-q1",
+          "query": "how does user registration work end to end",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 521,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [email, name]"
+        }
+      ],
+      "avgLatencyMs": 592,
+      "totalTokens": 48
+    },
+    {
+      "category": "cost-efficiency",
+      "name": "Cost Efficiency",
+      "score": 100,
+      "passed": 16,
+      "total": 16,
+      "details": [
+        {
+          "testId": "ce-01",
+          "queryId": "ce-01-q1",
+          "query": "what is the project architecture",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 475,
+          "tokensEstimated": 63,
+          "topResults": [
+            {
+              "id": "09ff8efb-9413-416e-804e-407c3afa3267",
+              "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
+              "createdAt": "2026-03-30T18:00:56.526Z"
+            },
+            {
+              "id": "78d8aa39-9d96-44f1-bef4-a30056205e7c",
+              "content": "Cost test memory 3: The frontend is built with Next.js 14 using app router",
+              "createdAt": "2026-03-30T18:00:57.629Z"
+            },
+            {
+              "id": "e1aa20e5-73f1-4cee-a079-88b0385ea0c6",
+              "content": "Cost test memory 6: API versioning follows URL-based strategy /v1/ /v2/",
+              "createdAt": "2026-03-30T18:00:59.408Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-02",
+          "queryId": "ce-02-q1",
+          "query": "what port does the server use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 617,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "4d83b938-00bc-466e-99f0-76c4ace8ae33",
+              "content": "The main API server runs on port 3000 with hot reload enabled in development",
+              "createdAt": "2026-03-30T18:01:08.126Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-03",
+          "queryId": "ce-03-q1",
+          "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 534,
+          "tokensEstimated": 109,
+          "topResults": [
+            {
+              "id": "86de29de-1cd6-47b8-8622-69b2d44c2b5d",
+              "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
+              "createdAt": "2026-03-30T18:01:11.579Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q1",
+          "query": "what is configuration setting A",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 540,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "25615132-85aa-4022-b0cb-f0de208117f1",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "createdAt": "2026-03-30T18:01:14.974Z"
+            },
+            {
+              "id": "5d66a3dd-84e6-41c1-ba52-0aeff89bb1b2",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.480Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q2",
+          "query": "what is configuration setting B",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 480,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "5d66a3dd-84e6-41c1-ba52-0aeff89bb1b2",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.480Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "b3e93e87-1ca8-4d84-a90c-f1e0ef5755f5",
+              "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
+              "createdAt": "2026-03-30T18:01:17.429Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q3",
+          "query": "what is configuration setting C",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 1618,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            },
+            {
+              "id": "5d66a3dd-84e6-41c1-ba52-0aeff89bb1b2",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.480Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q4",
+          "query": "what is configuration setting D",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 539,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "66758d98-eec2-44d2-9605-03a3932ded04",
+              "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.458Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "5d66a3dd-84e6-41c1-ba52-0aeff89bb1b2",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.480Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q5",
+          "query": "what is configuration setting E",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 528,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "b3e93e87-1ca8-4d84-a90c-f1e0ef5755f5",
+              "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
+              "createdAt": "2026-03-30T18:01:17.429Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q6",
+          "query": "what is configuration setting F",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 994,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "b3e93e87-1ca8-4d84-a90c-f1e0ef5755f5",
+              "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
+              "createdAt": "2026-03-30T18:01:17.429Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q7",
+          "query": "what is configuration setting G",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 621,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "9ede23d7-df13-434c-8bd8-1328d3727bc2",
+              "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
+              "createdAt": "2026-03-30T18:01:17.931Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q8",
+          "query": "what is configuration setting H",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 493,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "88e2c1f2-a8c7-467f-a8b2-bbd83702b646",
+              "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
+              "createdAt": "2026-03-30T18:01:18.423Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q9",
+          "query": "what is configuration setting I",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 510,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "25615132-85aa-4022-b0cb-f0de208117f1",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "createdAt": "2026-03-30T18:01:14.974Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "24c0ba79-1f03-44bb-bf1f-89149f7c4254",
+              "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
+              "createdAt": "2026-03-30T18:01:18.917Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q10",
+          "query": "what is configuration setting J",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 559,
+          "tokensEstimated": 75,
+          "topResults": [
+            {
+              "id": "8a67d01d-eb9c-4f9b-9b87-5627482360d6",
+              "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
+              "createdAt": "2026-03-30T18:01:19.394Z"
+            },
+            {
+              "id": "b7436acb-bdca-46e6-9feb-597ebd911701",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "createdAt": "2026-03-30T18:01:15.972Z"
+            },
+            {
+              "id": "81d31f1b-ae52-4bca-a5d2-44e780ae62a0",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "createdAt": "2026-03-30T18:01:16.920Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-05",
+          "queryId": "ce-05-q1",
+          "query": "temporary test data",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 694,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ce-06",
+          "queryId": "ce-06-q1",
+          "query": "cold start test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 516,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "18ceb16c-b9a2-4cee-ba0f-dd79f3196db4",
+              "content": "Cold start test: this memory exists to measure initial search latency",
+              "createdAt": "2026-03-30T18:01:58.366Z"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-07",
+          "queryId": "ce-07-q1",
+          "query": "lifecycle test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 464,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 636,
+      "totalTokens": 971
+    }
+  ],
+  "meta": {
+    "totalLatencyMs": 41949,
+    "totalTokens": 2220,
+    "totalApiCalls": 65
+  }
+}
