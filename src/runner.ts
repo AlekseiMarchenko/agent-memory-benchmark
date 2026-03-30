@@ -23,13 +23,16 @@ async function runTestCase(
   const results: QueryResult[] = [];
   const storedIds: string[] = [];
 
+  // Generate a unique default agent ID for this test to prevent cross-test pollution
+  const defaultAgentId = `amb-${test.id}-${Date.now()}`;
+
   try {
     // Seed memories
     if (test.setup === "store-with-delay") {
       for (const seed of test.seeds) {
         if (seed.storeDelay) await sleep(seed.storeDelay);
         const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId,
+          agentId: seed.agentId || defaultAgentId,
           tags: seed.tags,
           scope: seed.scope,
         });
@@ -38,7 +41,7 @@ async function runTestCase(
     } else if (test.setup === "multi-agent-store") {
       for (const seed of test.seeds) {
         const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId,
+          agentId: seed.agentId || defaultAgentId,
           tags: seed.tags,
           scope: seed.scope || "org",
         });
@@ -47,7 +50,7 @@ async function runTestCase(
     } else {
       for (const seed of test.seeds) {
         const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId,
+          agentId: seed.agentId || defaultAgentId,
           tags: seed.tags,
           scope: seed.scope,
         });
@@ -87,15 +90,15 @@ async function runTestCase(
       }
     }
 
-    // Wait for indexing
-    await sleep(2000);
+    // Wait for indexing + rate limit cooldown
+    await sleep(3000);
 
     // Run queries
     for (const query of test.queries) {
       const start = Date.now();
       const searchResults = await adapter.search(query.query, {
         limit: query.topK || 3,
-        agentId: query.agentId,
+        agentId: query.agentId || defaultAgentId,
         scope: query.scope,
       });
       const latency = Date.now() - start;
@@ -170,6 +173,17 @@ async function runTestCase(
     }
   }
 
+  // Clean up all memories created by this test case (except ones already deleted by store-then-delete tests)
+  if (test.setup !== "store-then-delete") {
+    for (const id of storedIds) {
+      try {
+        await adapter.delete(id);
+      } catch {}
+    }
+  }
+  // Delay to ensure deletes propagate before next test seeds
+  await sleep(1500);
+
   return results;
 }
 
@@ -220,9 +234,6 @@ export async function runBenchmark(
 
     for (const test of tests) {
       if (verbose) console.log(`\n  📝 ${test.name}: ${test.description}`);
-
-      // Clean up between tests
-      await adapter.cleanup();
 
       const queryResults = await runTestCase(adapter, test, verbose);
       allQueryResults.push(...queryResults);

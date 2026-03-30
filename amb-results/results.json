@@ -1,8 +1,8 @@
 {
   "provider": "Central Intelligence",
-  "timestamp": "2026-03-30T18:17:42.402Z",
+  "timestamp": "2026-03-30T19:13:40.383Z",
   "version": "1.0.0",
-  "overallScore": 83,
+  "overallScore": 92,
   "categories": [
     {
       "category": "factual-recall",
@@ -17,23 +17,13 @@
           "query": "what database does the project use",
           "passed": true,
           "score": 1,
-          "latencyMs": 587,
-          "tokensEstimated": 512,
+          "latencyMs": 931,
+          "tokensEstimated": 28,
           "topResults": [
             {
-              "id": "a4251222-d7cb-4d99-944b-f56674d58dbe",
+              "id": "b9d249fc-1f94-462b-b59b-66297a7371a3",
               "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
-              "createdAt": "2026-03-30T18:12:42.478Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "393c1d32-6d4b-4f09-beba-40b2df1d0255",
-              "content": "CORRECTION on interview #1 (2026-03-23): Vadim is NOT an engineer. He is a product-focused founder with very basic coding skills. He learned the claude.md discipline by asking AI (Claude/ChatGPT) how to organize AI workflows. This makes the finding MORE significant: if the most persistent, self-taught non-tech founder builds manual file-based memory, the average non-tech founder does NOTHING — they just suffer through forgetting and think that is how AI works. TARGET PERSONA REFINED: Non-tech founders who use Claude Code / Cursor daily, run multiple agents, have budget (used to engineer salaries), but lack the discipline or knowledge to build manual memory systems. They dont know memory-as-a-service exists. The pitch is not \"replace your claude.md\" — it is \"your agent can remember everything automatically, you never have to explain your project twice.\"",
-              "createdAt": "2026-03-23T19:27:32.900Z"
+              "createdAt": "2026-03-30T19:06:07.589Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -44,23 +34,13 @@
           "query": "how is the API authenticated",
           "passed": true,
           "score": 1,
-          "latencyMs": 601,
-          "tokensEstimated": 551,
+          "latencyMs": 517,
+          "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "8c8a74b9-ba4e-47dc-9b4b-321318e40751",
+              "id": "3c799314-e337-4312-98e5-b12c488db231",
               "content": "API authentication uses Bearer tokens with JWT signed by RS256",
-              "createdAt": "2026-03-30T18:12:45.869Z"
-            },
-            {
-              "id": "7a9a8c69-043a-4acb-b7dd-5a38176319d8",
-              "content": "Central Intelligence strategic thesis (March 2026): Do NOT compete on memory quality with Mem0/Zep/Hindsight — that is a VC-funded enterprise arms race requiring big rounds and SOC2. Instead, double down on agent-native distribution and zero-friction payments. The moat is: (1) x402 autonomous payments — agents discover, pay $0.001 USDC, and use memory in one HTTP round-trip, no signup needed. (2) Network effects — shared memories across org make every agent smarter. (3) Crypto-native revenue — no Stripe, no invoices, no sales team, revenue scales with agent activity. The bet: in 12 months agents will choose their own tools. The service with lowest friction wins, not the best benchmark. An agent with a wallet does not care about SOC2 — it cares about one-step value. If we get agent traction first, we are in a different category entirely. Enterprise quality and certifications become feasible after traction, funded by revenue from autonomous agent payments.",
-              "createdAt": "2026-03-23T18:41:28.802Z"
-            },
-            {
-              "id": "5cac56c1-e482-4407-9d53-0147fe007914",
-              "content": "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (includes testing/wash trading). Daily: ~131K transactions, ~$28K volume, ~$0.20 avg payment. ~50% of activity is artificial. Peak Feb 2026: 3.8M tx / ~$2M (mostly infra testing). AGENT WALLETS: Coinbase Agentic Wallets launched 2026-02-11, \"tens of thousands\" deployed. Wallet creation in <2 min via AgentKit CLI. USDC/EURC/cbBTC gasless on Base. ENTERPRISE: 80% Fortune 500 run AI agents (Gartner). 40% enterprise apps will embed agents by end 2026 (Gartner). Alchemy launched x402 integration 2026-03-18. Stripe integrated x402 for USDC billing on Base. World (Sam Altman) launched AgentKit with x402 + World ID on 2026-03-17. REALITY CHECK: CoinDesk 2026-03-11 headline: \"demand is just not there yet.\" $7B ecosystem valuation vs $28K/day real volume. Narrative is 100x ahead of reality. Galaxy estimates agentic commerce $3-5T by 2030. IMPLICATION FOR CI: Keep both paths (API key for humans now, x402 for agents later). Dont over-invest in x402 marketing until daily volume crosses $1M. But keep infrastructure live — when it tips, we are ready.",
-              "createdAt": "2026-03-23T19:00:23.025Z"
+              "createdAt": "2026-03-30T19:06:13.800Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -71,23 +51,13 @@
           "query": "what are the deployment specs",
           "passed": true,
           "score": 1,
-          "latencyMs": 421,
-          "tokensEstimated": 500,
+          "latencyMs": 527,
+          "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "c12a0ed1-64ce-4c98-bef3-e0cc2f263013",
+              "id": "87c15fed-6406-4461-8bcf-4b6ec7a0a8d2",
               "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
-              "createdAt": "2026-03-30T18:12:49.468Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
+              "createdAt": "2026-03-30T19:06:19.624Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -98,13 +68,13 @@
           "query": "what is the rate limit",
           "passed": true,
           "score": 1,
-          "latencyMs": 410,
+          "latencyMs": 537,
           "tokensEstimated": 21,
           "topResults": [
             {
-              "id": "f0e3e6b4-124b-4fec-9038-3727ed3c7f47",
+              "id": "56f1d322-5eb6-4862-8042-4c9b548d3b39",
               "content": "Rate limiting is set to 100 requests per minute per API key",
-              "createdAt": "2026-03-30T18:12:52.880Z"
+              "createdAt": "2026-03-30T19:06:25.455Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -115,23 +85,13 @@
           "query": "what CI/CD system do we use",
           "passed": true,
           "score": 1,
-          "latencyMs": 475,
-          "tokensEstimated": 571,
+          "latencyMs": 496,
+          "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "2327553c-cc8a-4e85-97e9-6f9f593d97b4",
+              "id": "ae590912-001f-4e6a-89fb-a7dfd46dbbc3",
               "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
-              "createdAt": "2026-03-30T18:12:56.493Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
+              "createdAt": "2026-03-30T19:06:31.305Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -142,13 +102,13 @@
           "query": "what format do error responses use",
           "passed": true,
           "score": 1,
-          "latencyMs": 514,
+          "latencyMs": 512,
           "tokensEstimated": 22,
           "topResults": [
             {
-              "id": "d1e59644-e5e9-4ed1-9fda-dbaa6cd1e117",
+              "id": "2e4c1f48-1587-47fd-bd78-a26fe60237d8",
               "content": "Error codes follow RFC 7807 Problem Details format",
-              "createdAt": "2026-03-30T18:12:59.693Z"
+              "createdAt": "2026-03-30T19:06:37.119Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -159,13 +119,13 @@
           "query": "what is the staging URL",
           "passed": true,
           "score": 1,
-          "latencyMs": 469,
+          "latencyMs": 578,
           "tokensEstimated": 22,
           "topResults": [
             {
-              "id": "15a063f7-d5f1-4911-83a5-b7d0d2e6af36",
+              "id": "74d0f79f-bc9e-4f94-9897-4f750e11c708",
               "content": "The staging environment URL is staging.example.com on port 8443",
-              "createdAt": "2026-03-30T18:13:03.182Z"
+              "createdAt": "2026-03-30T19:06:42.884Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -176,25 +136,20 @@
           "query": "what tool handles database migrations",
           "passed": true,
           "score": 1,
-          "latencyMs": 504,
-          "tokensEstimated": 295,
+          "latencyMs": 547,
+          "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "173a7684-beb8-4c20-9645-3ebdd73f8050",
+              "id": "b3406ee7-dff6-40bc-8bbb-d059f1b6189a",
               "content": "Database migrations use Drizzle ORM with sequential version numbers",
-              "createdAt": "2026-03-30T18:13:06.466Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
+              "createdAt": "2026-03-30T19:06:48.786Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 498,
-      "totalTokens": 2494
+      "avgLatencyMs": 581,
+      "totalTokens": 191
     },
     {
       "category": "semantic-search",
@@ -209,18 +164,13 @@
           "query": "why did we pick this frontend framework",
           "passed": true,
           "score": 1,
-          "latencyMs": 1541,
-          "tokensEstimated": 297,
+          "latencyMs": 1285,
+          "tokensEstimated": 29,
           "topResults": [
             {
-              "id": "4ee270ba-b04f-4742-9fce-f151629646fa",
+              "id": "980b6aa1-ee22-494b-a690-3873a3ad5a41",
               "content": "We chose React because the team has 5 years of collective React experience",
-              "createdAt": "2026-03-30T18:13:09.705Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
+              "createdAt": "2026-03-30T19:06:54.770Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -231,18 +181,13 @@
           "query": "how do we handle money",
           "passed": true,
           "score": 1,
-          "latencyMs": 698,
-          "tokensEstimated": 309,
+          "latencyMs": 541,
+          "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "a9c3437f-27e0-42f9-b393-b680000de642",
+              "id": "af76ddce-27f6-482d-8eb4-12a36ef5979a",
               "content": "Payment processing uses Stripe with webhooks for async confirmation",
-              "createdAt": "2026-03-30T18:13:14.137Z"
-            },
-            {
-              "id": "5cac56c1-e482-4407-9d53-0147fe007914",
-              "content": "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (includes testing/wash trading). Daily: ~131K transactions, ~$28K volume, ~$0.20 avg payment. ~50% of activity is artificial. Peak Feb 2026: 3.8M tx / ~$2M (mostly infra testing). AGENT WALLETS: Coinbase Agentic Wallets launched 2026-02-11, \"tens of thousands\" deployed. Wallet creation in <2 min via AgentKit CLI. USDC/EURC/cbBTC gasless on Base. ENTERPRISE: 80% Fortune 500 run AI agents (Gartner). 40% enterprise apps will embed agents by end 2026 (Gartner). Alchemy launched x402 integration 2026-03-18. Stripe integrated x402 for USDC billing on Base. World (Sam Altman) launched AgentKit with x402 + World ID on 2026-03-17. REALITY CHECK: CoinDesk 2026-03-11 headline: \"demand is just not there yet.\" $7B ecosystem valuation vs $28K/day real volume. Narrative is 100x ahead of reality. Galaxy estimates agentic commerce $3-5T by 2030. IMPLICATION FOR CI: Keep both paths (API key for humans now, x402 for agents later). Dont over-invest in x402 marketing until daily volume crosses $1M. But keep infrastructure live — when it tips, we are ready.",
-              "createdAt": "2026-03-23T19:00:23.025Z"
+              "createdAt": "2026-03-30T19:07:01.748Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -253,13 +198,13 @@
           "query": "when do we show progress to leadership",
           "passed": true,
           "score": 1,
-          "latencyMs": 727,
+          "latencyMs": 723,
           "tokensEstimated": 24,
           "topResults": [
             {
-              "id": "2932e046-5637-4289-ac04-f81a69bd733c",
+              "id": "528bd902-81f2-4cc1-a153-4f9afb943215",
               "content": "The CEO wants weekly demos every Friday at 3pm Pacific",
-              "createdAt": "2026-03-30T18:13:17.729Z"
+              "createdAt": "2026-03-30T19:07:08.140Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -270,18 +215,13 @@
           "query": "how do we protect sensitive information",
           "passed": true,
           "score": 1,
-          "latencyMs": 627,
-          "tokensEstimated": 270,
+          "latencyMs": 464,
+          "tokensEstimated": 28,
           "topResults": [
             {
-              "id": "fcc91562-8048-4ef3-991a-d4bddfe2ab0e",
+              "id": "2b662463-ee89-4a02-b134-409a56f8d8d6",
               "content": "User data is encrypted at rest with AES-256 and in transit with TLS 1.3",
-              "createdAt": "2026-03-30T18:13:21.309Z"
-            },
-            {
-              "id": "7a9a8c69-043a-4acb-b7dd-5a38176319d8",
-              "content": "Central Intelligence strategic thesis (March 2026): Do NOT compete on memory quality with Mem0/Zep/Hindsight — that is a VC-funded enterprise arms race requiring big rounds and SOC2. Instead, double down on agent-native distribution and zero-friction payments. The moat is: (1) x402 autonomous payments — agents discover, pay $0.001 USDC, and use memory in one HTTP round-trip, no signup needed. (2) Network effects — shared memories across org make every agent smarter. (3) Crypto-native revenue — no Stripe, no invoices, no sales team, revenue scales with agent activity. The bet: in 12 months agents will choose their own tools. The service with lowest friction wins, not the best benchmark. An agent with a wallet does not care about SOC2 — it cares about one-step value. If we get agent traction first, we are in a different category entirely. Enterprise quality and certifications become feasible after traction, funded by revenue from autonomous agent payments.",
-              "createdAt": "2026-03-23T18:41:28.802Z"
+              "createdAt": "2026-03-30T19:07:14.156Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -292,18 +232,13 @@
           "query": "what happens when a new user joins",
           "passed": true,
           "score": 1,
-          "latencyMs": 707,
-          "tokensEstimated": 309,
+          "latencyMs": 511,
+          "tokensEstimated": 31,
           "topResults": [
             {
-              "id": "168f149e-0588-4326-a414-85f81627acea",
+              "id": "02154a0e-c271-4615-bb87-2cdc62c0fed3",
               "content": "The onboarding flow has 4 steps: signup, verify email, choose plan, connect first agent",
-              "createdAt": "2026-03-30T18:13:24.819Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
+              "createdAt": "2026-03-30T19:07:19.913Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -314,23 +249,13 @@
           "query": "which programming languages do we support",
           "passed": true,
           "score": 1,
-          "latencyMs": 480,
-          "tokensEstimated": 499,
+          "latencyMs": 491,
+          "tokensEstimated": 32,
           "topResults": [
             {
-              "id": "c261c8d5-63aa-4679-8754-dbfce9e965f1",
+              "id": "a10e6e6d-5e86-4bb3-93e2-e82b9aa11c94",
               "content": "We sunset the Python SDK in favor of TypeScript-only to reduce maintenance burden",
-              "createdAt": "2026-03-30T18:13:28.331Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
+              "createdAt": "2026-03-30T19:07:25.821Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -341,23 +266,13 @@
           "query": "how fast should the system respond",
           "passed": true,
           "score": 1,
-          "latencyMs": 1550,
-          "tokensEstimated": 466,
+          "latencyMs": 526,
+          "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "b35bc176-da37-4f70-af89-5f8e435305a7",
+              "id": "8cfcd07e-9f3d-46ba-8ffe-ebf49d5da4bd",
               "content": "Performance SLA: p99 latency under 200ms for recall operations",
-              "createdAt": "2026-03-30T18:13:31.603Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
-            },
-            {
-              "id": "7a9a8c69-043a-4acb-b7dd-5a38176319d8",
-              "content": "Central Intelligence strategic thesis (March 2026): Do NOT compete on memory quality with Mem0/Zep/Hindsight — that is a VC-funded enterprise arms race requiring big rounds and SOC2. Instead, double down on agent-native distribution and zero-friction payments. The moat is: (1) x402 autonomous payments — agents discover, pay $0.001 USDC, and use memory in one HTTP round-trip, no signup needed. (2) Network effects — shared memories across org make every agent smarter. (3) Crypto-native revenue — no Stripe, no invoices, no sales team, revenue scales with agent activity. The bet: in 12 months agents will choose their own tools. The service with lowest friction wins, not the best benchmark. An agent with a wallet does not care about SOC2 — it cares about one-step value. If we get agent traction first, we are in a different category entirely. Enterprise quality and certifications become feasible after traction, funded by revenue from autonomous agent payments.",
-              "createdAt": "2026-03-23T18:41:28.802Z"
+              "createdAt": "2026-03-30T19:07:31.615Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -368,26 +283,26 @@
           "query": "what can users do without paying",
           "passed": true,
           "score": 1,
-          "latencyMs": 669,
+          "latencyMs": 1234,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "c3d10e5b-dbaf-464d-8ab4-6e1188df683c",
+              "id": "d877b602-fc83-4f35-bb40-2b1e91022849",
               "content": "The free tier includes 500 operations per month with no credit card required",
-              "createdAt": "2026-03-30T18:13:35.969Z"
+              "createdAt": "2026-03-30T19:07:37.611Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 875,
-      "totalTokens": 2201
+      "avgLatencyMs": 722,
+      "totalTokens": 219
     },
     {
       "category": "temporal-reasoning",
       "name": "Temporal Reasoning",
-      "score": 71.42857142857143,
-      "passed": 5,
+      "score": 85.71428571428571,
+      "passed": 6,
       "total": 7,
       "details": [
         {
@@ -396,23 +311,23 @@
           "query": "what database do we currently use",
           "passed": false,
           "score": 0,
-          "latencyMs": 505,
+          "latencyMs": 514,
           "tokensEstimated": 31,
           "topResults": [
             {
-              "id": "6980fd74-2379-4d14-a191-5e8d7756a478",
+              "id": "fb393145-f814-4326-bdbe-b7b299e06a9a",
               "content": "Database is MySQL 5.7",
-              "createdAt": "2026-03-30T18:13:39.351Z"
+              "createdAt": "2026-03-30T19:07:44.186Z"
             },
             {
-              "id": "51590994-833f-4f6d-810e-0c1e53616d3d",
+              "id": "707784e8-bb82-413b-85b9-502b271faa0d",
               "content": "Migrated database to PostgreSQL 14",
-              "createdAt": "2026-03-30T18:13:40.014Z"
+              "createdAt": "2026-03-30T19:07:44.849Z"
             },
             {
-              "id": "f2ea9eb1-1655-4f87-9efa-8e7ec1fc9586",
+              "id": "48d24fd7-be55-489d-8e79-7061af4222d2",
               "content": "Upgraded to PostgreSQL 16",
-              "createdAt": "2026-03-30T18:13:40.848Z"
+              "createdAt": "2026-03-30T19:07:45.708Z"
             }
           ],
           "reason": "Top result contains unexpected keyword"
@@ -423,23 +338,18 @@
           "query": "what database did we use before the migration",
           "passed": true,
           "score": 1,
-          "latencyMs": 452,
-          "tokensEstimated": 298,
+          "latencyMs": 540,
+          "tokensEstimated": 30,
           "topResults": [
             {
-              "id": "fcc483ee-bd7a-464d-9269-88133c05a7e9",
+              "id": "0427c10f-65ed-4708-a7b0-8ad488b21039",
               "content": "Migrated database from MySQL to PostgreSQL 14",
-              "createdAt": "2026-03-30T18:13:45.851Z"
+              "createdAt": "2026-03-30T19:07:53.061Z"
             },
             {
-              "id": "364cfaee-77fc-4bb0-ae7a-5a8fe30280d7",
+              "id": "f14f1e79-f534-4540-acf5-7870bda49851",
               "content": "Database is MySQL 5.7",
-              "createdAt": "2026-03-30T18:13:45.098Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
+              "createdAt": "2026-03-30T19:07:52.401Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -450,18 +360,18 @@
           "query": "what is our current velocity",
           "passed": true,
           "score": 1,
-          "latencyMs": 798,
+          "latencyMs": 520,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "98b0bb29-1dbe-4064-b1b1-d4ba684a1ede",
+              "id": "4de03aa0-9c68-4df2-8af6-ba0818bcb128",
               "content": "Sprint velocity is 21 story points",
-              "createdAt": "2026-03-30T18:13:49.386Z"
+              "createdAt": "2026-03-30T19:07:59.280Z"
             },
             {
-              "id": "f78587de-d1fa-451b-a12a-7fb3c02d9b8d",
+              "id": "02eae334-3c0f-4c76-ab03-931258ae0c92",
               "content": "Sprint velocity increased to 34 story points",
-              "createdAt": "2026-03-30T18:13:50.061Z"
+              "createdAt": "2026-03-30T19:07:59.940Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -470,28 +380,28 @@
           "testId": "tr-04",
           "queryId": "tr-04-q1",
           "query": "where do we deploy now",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 715,
-          "tokensEstimated": 306,
+          "passed": true,
+          "score": 1,
+          "latencyMs": 515,
+          "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "fc620459-1b01-49b1-a42b-9ecdafbb9395",
+              "id": "230f3f17-e642-493f-8dbe-1f53bc538ede",
               "content": "Deploy target: Heroku",
-              "createdAt": "2026-03-30T18:13:54.218Z"
+              "createdAt": "2026-03-30T19:08:06.123Z"
             },
             {
-              "id": "5cac56c1-e482-4407-9d53-0147fe007914",
-              "content": "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (includes testing/wash trading). Daily: ~131K transactions, ~$28K volume, ~$0.20 avg payment. ~50% of activity is artificial. Peak Feb 2026: 3.8M tx / ~$2M (mostly infra testing). AGENT WALLETS: Coinbase Agentic Wallets launched 2026-02-11, \"tens of thousands\" deployed. Wallet creation in <2 min via AgentKit CLI. USDC/EURC/cbBTC gasless on Base. ENTERPRISE: 80% Fortune 500 run AI agents (Gartner). 40% enterprise apps will embed agents by end 2026 (Gartner). Alchemy launched x402 integration 2026-03-18. Stripe integrated x402 for USDC billing on Base. World (Sam Altman) launched AgentKit with x402 + World ID on 2026-03-17. REALITY CHECK: CoinDesk 2026-03-11 headline: \"demand is just not there yet.\" $7B ecosystem valuation vs $28K/day real volume. Narrative is 100x ahead of reality. Galaxy estimates agentic commerce $3-5T by 2030. IMPLICATION FOR CI: Keep both paths (API key for humans now, x402 for agents later). Dont over-invest in x402 marketing until daily volume crosses $1M. But keep infrastructure live — when it tips, we are ready.",
-              "createdAt": "2026-03-23T19:00:23.025Z"
-            },
-            {
-              "id": "ebf0d199-55a0-4c9b-8724-4c3a9d09e861",
+              "id": "62b980d9-8ac0-4ff5-a6be-8aca908eea97",
               "content": "Migrated from Heroku to AWS ECS",
-              "createdAt": "2026-03-30T18:13:54.835Z"
+              "createdAt": "2026-03-30T19:08:06.807Z"
+            },
+            {
+              "id": "8095a971-034d-4e96-8100-4871e82fc4da",
+              "content": "Migrated from AWS to Fly.io",
+              "createdAt": "2026-03-30T19:08:07.708Z"
             }
           ],
-          "reason": "Found: [], Missing: [Fly.io]"
+          "reason": "All expected keywords found in results"
         },
         {
           "testId": "tr-05",
@@ -499,23 +409,23 @@
           "query": "what cloud providers have we used",
           "passed": true,
           "score": 1,
-          "latencyMs": 500,
-          "tokensEstimated": 540,
+          "latencyMs": 738,
+          "tokensEstimated": 30,
           "topResults": [
             {
-              "id": "02a8c9c8-cc2a-4b22-8913-0bf11494d967",
+              "id": "35518cf0-8992-49c4-a45d-124788ed38bf",
               "content": "Migrated from AWS to Fly.io",
-              "createdAt": "2026-03-30T18:14:02.297Z"
+              "createdAt": "2026-03-30T19:08:15.852Z"
             },
             {
-              "id": "007d466c-4ad2-468a-bb02-f020e4be1092",
+              "id": "aa5e9558-1a6d-43c2-90be-fa20b66cc368",
               "content": "Migrated from Heroku to AWS ECS",
-              "createdAt": "2026-03-30T18:14:01.472Z"
+              "createdAt": "2026-03-30T19:08:15.004Z"
             },
             {
-              "id": "c837934e-0009-4d3a-989b-ce6af120821d",
+              "id": "11f58d49-6bf4-44ba-be8f-dc1195a47d47",
               "content": "Deploy target: Heroku",
-              "createdAt": "2026-03-30T18:14:00.809Z"
+              "createdAt": "2026-03-30T19:08:14.297Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -526,23 +436,23 @@
           "query": "how many people on the team",
           "passed": true,
           "score": 1,
-          "latencyMs": 592,
+          "latencyMs": 543,
           "tokensEstimated": 31,
           "topResults": [
             {
-              "id": "d8235679-86d5-41b3-b767-0b5d57196906",
+              "id": "e9c1ea50-a769-445b-b54e-9ab45da4f83c",
               "content": "Hired 2 more, team is now 5 engineers",
-              "createdAt": "2026-03-30T18:14:07.384Z"
+              "createdAt": "2026-03-30T19:08:23.197Z"
             },
             {
-              "id": "afe2cd43-6efb-42e9-8b3f-d9bd777a18a4",
+              "id": "1e6c3595-b16b-4c26-afd3-fd471b1ae856",
               "content": "Team size: 3 engineers",
-              "createdAt": "2026-03-30T18:14:06.454Z"
+              "createdAt": "2026-03-30T19:08:22.558Z"
             },
             {
-              "id": "57be5086-31fa-4d1d-9bdd-4eb12bcbf8cb",
+              "id": "64dbc9c4-c30f-415e-99a0-deb0c818d60c",
               "content": "Alice left, team is 4 engineers",
-              "createdAt": "2026-03-30T18:14:08.341Z"
+              "createdAt": "2026-03-30T19:08:24.104Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -553,30 +463,30 @@
           "query": "what is the latest API version",
           "passed": true,
           "score": 1,
-          "latencyMs": 622,
+          "latencyMs": 533,
           "tokensEstimated": 28,
           "topResults": [
             {
-              "id": "b3134c26-1e78-46c8-93ef-87573dc6bfb0",
+              "id": "b374c5ad-1734-4c7f-885e-c1030b24f0a1",
               "content": "API version v1 launched",
-              "createdAt": "2026-03-30T18:14:12.396Z"
+              "createdAt": "2026-03-30T19:08:30.600Z"
             },
             {
-              "id": "1b787355-8245-47be-b4a2-541a41c059fa",
+              "id": "34fc6f73-630f-45a3-9cc8-ed78c4aebf38",
               "content": "v2 released with breaking changes",
-              "createdAt": "2026-03-30T18:14:13.543Z"
+              "createdAt": "2026-03-30T19:08:31.294Z"
             },
             {
-              "id": "4176ba3b-dc2a-48b5-8edb-a66b932d57e9",
+              "id": "dedeca7d-61c5-4212-937b-c8e8bca10c8b",
               "content": "v2.1 patch released",
-              "createdAt": "2026-03-30T18:14:21.003Z"
+              "createdAt": "2026-03-30T19:08:32.147Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 598,
-      "totalTokens": 1261
+      "avgLatencyMs": 558,
+      "totalTokens": 204
     },
     {
       "category": "conflict-resolution",
@@ -591,18 +501,18 @@
           "query": "what is the default timeout",
           "passed": true,
           "score": 1,
-          "latencyMs": 1055,
+          "latencyMs": 761,
           "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "13b15bbf-f55a-425b-8ade-2f6b9f7e137c",
+              "id": "25b4b2eb-9424-4c0f-a1a0-94186ae3b9b3",
               "content": "Default timeout is 30 seconds",
-              "createdAt": "2026-03-30T18:14:25.013Z"
+              "createdAt": "2026-03-30T19:08:38.653Z"
             },
             {
-              "id": "291cc0ae-bcd2-475c-9df4-dd7f2a4ec4fb",
+              "id": "7ca9f115-1684-42c1-ac56-7d87e88ebcba",
               "content": "Changed default timeout to 60 seconds",
-              "createdAt": "2026-03-30T18:14:26.383Z"
+              "createdAt": "2026-03-30T19:08:41.279Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -613,13 +523,13 @@
           "query": "what logging library do we use",
           "passed": false,
           "score": 0,
-          "latencyMs": 511,
+          "latencyMs": 488,
           "tokensEstimated": 13,
           "topResults": [
             {
-              "id": "120c4111-01ee-440c-8a55-ebca75eaac28",
+              "id": "d96b8278-534c-47b8-9d80-053cba84e44e",
               "content": "Logging uses Winston",
-              "createdAt": "2026-03-30T18:14:30.574Z"
+              "createdAt": "2026-03-30T19:08:47.751Z"
             }
           ],
           "reason": "Found: [], Missing: [Pino]"
@@ -630,18 +540,18 @@
           "query": "what is the max file upload size",
           "passed": true,
           "score": 1,
-          "latencyMs": 454,
+          "latencyMs": 562,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "b7d69011-f806-45cd-9733-b72cf7241e59",
+              "id": "00103df0-3013-43eb-8236-d354119b7e94",
               "content": "Max file upload size is 5MB",
-              "createdAt": "2026-03-30T18:14:34.840Z"
+              "createdAt": "2026-03-30T19:08:56.292Z"
             },
             {
-              "id": "14125856-2e11-4466-8591-a7a091b19211",
+              "id": "160e1c73-b908-40b3-a0ce-05ddc460c1ee",
               "content": "Increased max upload to 50MB for enterprise tier",
-              "createdAt": "2026-03-30T18:14:35.547Z"
+              "createdAt": "2026-03-30T19:08:56.951Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -652,23 +562,18 @@
           "query": "what is the main git branch",
           "passed": true,
           "score": 1,
-          "latencyMs": 541,
-          "tokensEstimated": 289,
+          "latencyMs": 517,
+          "tokensEstimated": 21,
           "topResults": [
             {
-              "id": "911a624f-9c61-4450-9cd2-7887885956fd",
+              "id": "fbc38840-b258-4bdc-9b0d-62a2f39c49b8",
               "content": "Renamed primary branch to main",
-              "createdAt": "2026-03-30T18:14:40.064Z"
+              "createdAt": "2026-03-30T19:09:03.818Z"
             },
             {
-              "id": "fec8a43d-939e-48ef-b1d6-6f787e2567f5",
+              "id": "ad8c66a2-357f-4516-a083-5a17e6094317",
               "content": "Primary branch is master",
-              "createdAt": "2026-03-30T18:14:39.395Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
+              "createdAt": "2026-03-30T19:09:03.150Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -679,18 +584,18 @@
           "query": "do we use semicolons",
           "passed": true,
           "score": 1,
-          "latencyMs": 515,
+          "latencyMs": 468,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "11ada829-0088-4ede-8fed-b56b1a61e957",
+              "id": "482fda90-7405-4370-82f0-52bbea45da12",
               "content": "Use Prettier with semicolons enabled",
-              "createdAt": "2026-03-30T18:14:43.687Z"
+              "createdAt": "2026-03-30T19:09:09.973Z"
             },
             {
-              "id": "44b55f52-acd7-4526-9fab-c9c0f875d65f",
+              "id": "fbb8e209-f1d3-4221-9971-76ac87fab42a",
               "content": "Team voted to disable semicolons in Prettier config",
-              "createdAt": "2026-03-30T18:14:44.450Z"
+              "createdAt": "2026-03-30T19:09:10.711Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -701,23 +606,18 @@
           "query": "what Node version do we need",
           "passed": true,
           "score": 1,
-          "latencyMs": 1068,
-          "tokensEstimated": 224,
+          "latencyMs": 497,
+          "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "0a8d7af2-ec0c-4340-8516-4517ef110546",
+              "id": "c6ff9f39-9610-4399-bf57-c5146d3eaea7",
               "content": "Node.js 18 is required minimum version",
-              "createdAt": "2026-03-30T18:14:48.164Z"
+              "createdAt": "2026-03-30T19:09:16.983Z"
             },
             {
-              "id": "6fa4d3cf-2900-4b97-ae92-50789e66b1ad",
+              "id": "e20a0b97-ece7-4de3-b3b9-610a12ae9ed1",
               "content": "Upgraded minimum to Node.js 20",
-              "createdAt": "2026-03-30T18:14:48.911Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
+              "createdAt": "2026-03-30T19:09:17.621Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -728,76 +628,54 @@
           "query": "what format does the API return",
           "passed": true,
           "score": 1,
-          "latencyMs": 525,
+          "latencyMs": 473,
           "tokensEstimated": 26,
           "topResults": [
             {
-              "id": "ac3be967-5e9e-4179-a724-2ef947d99169",
+              "id": "0a90b99b-334d-4c45-9197-80d845f62175",
               "content": "The API returns XML responses",
-              "createdAt": "2026-03-30T18:14:53.082Z"
+              "createdAt": "2026-03-30T19:09:23.760Z"
             },
             {
-              "id": "c2f435b2-eeb7-49ef-8492-ef2d30195725",
+              "id": "2456b4b8-f597-4e1b-a163-e6bba867932d",
               "content": "Switched API to return JSON exclusively",
-              "createdAt": "2026-03-30T18:14:53.793Z"
+              "createdAt": "2026-03-30T19:09:24.621Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 667,
-      "totalTokens": 631
+      "avgLatencyMs": 538,
+      "totalTokens": 164
     },
     {
       "category": "selective-forgetting",
       "name": "Selective Forgetting",
-      "score": 33.33333333333333,
-      "passed": 2,
+      "score": 83.33333333333334,
+      "passed": 5,
       "total": 6,
       "details": [
         {
           "testId": "sf-01",
           "queryId": "sf-01-q1",
           "query": "what is the API key",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 748,
-          "tokensEstimated": 291,
-          "topResults": [
-            {
-              "id": "5cac56c1-e482-4407-9d53-0147fe007914",
-              "content": "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (includes testing/wash trading). Daily: ~131K transactions, ~$28K volume, ~$0.20 avg payment. ~50% of activity is artificial. Peak Feb 2026: 3.8M tx / ~$2M (mostly infra testing). AGENT WALLETS: Coinbase Agentic Wallets launched 2026-02-11, \"tens of thousands\" deployed. Wallet creation in <2 min via AgentKit CLI. USDC/EURC/cbBTC gasless on Base. ENTERPRISE: 80% Fortune 500 run AI agents (Gartner). 40% enterprise apps will embed agents by end 2026 (Gartner). Alchemy launched x402 integration 2026-03-18. Stripe integrated x402 for USDC billing on Base. World (Sam Altman) launched AgentKit with x402 + World ID on 2026-03-17. REALITY CHECK: CoinDesk 2026-03-11 headline: \"demand is just not there yet.\" $7B ecosystem valuation vs $28K/day real volume. Narrative is 100x ahead of reality. Galaxy estimates agentic commerce $3-5T by 2030. IMPLICATION FOR CI: Keep both paths (API key for humans now, x402 for agents later). Dont over-invest in x402 marketing until daily volume crosses $1M. But keep infrastructure live — when it tips, we are ready.",
-              "createdAt": "2026-03-23T19:00:23.025Z"
-            }
-          ],
-          "reason": "Expected empty but got 1 results"
+          "passed": true,
+          "score": 1,
+          "latencyMs": 452,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
         },
         {
           "testId": "sf-02",
           "queryId": "sf-02-q1",
           "query": "what workarounds do we have",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 464,
-          "tokensEstimated": 752,
-          "topResults": [
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
-            }
-          ],
-          "reason": "Expected empty but got 3 results"
+          "passed": true,
+          "score": 1,
+          "latencyMs": 386,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
         },
         {
           "testId": "sf-03",
@@ -805,13 +683,13 @@
           "query": "what linter do we use",
           "passed": true,
           "score": 1,
-          "latencyMs": 658,
+          "latencyMs": 482,
           "tokensEstimated": 20,
           "topResults": [
             {
-              "id": "92380e2e-2451-4083-b8d8-de09eb45d4ee",
+              "id": "5c849f15-40ff-496d-8eeb-cb6dcf79ef9d",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "createdAt": "2026-03-30T18:15:07.015Z"
+              "createdAt": "2026-03-30T19:09:42.907Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -822,7 +700,7 @@
           "query": "list project details",
           "passed": false,
           "score": 0,
-          "latencyMs": 661,
+          "latencyMs": 745,
           "tokensEstimated": 5,
           "topResults": [],
           "reason": "Found: [], Missing: [delta, epsilon]"
@@ -833,7 +711,7 @@
           "query": "what endpoints are deprecated",
           "passed": true,
           "score": 1,
-          "latencyMs": 555,
+          "latencyMs": 461,
           "tokensEstimated": 8,
           "topResults": [],
           "reason": "Correctly returned empty/low-score results"
@@ -842,32 +720,16 @@
           "testId": "sf-06",
           "queryId": "sf-06-q1",
           "query": "what bugs exist in auth",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 648,
-          "tokensEstimated": 751,
-          "topResults": [
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            }
-          ],
-          "reason": "Expected empty but got 3 results"
+          "passed": true,
+          "score": 1,
+          "latencyMs": 437,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
         }
       ],
-      "avgLatencyMs": 622,
-      "totalTokens": 1827
+      "avgLatencyMs": 494,
+      "totalTokens": 51
     },
     {
       "category": "cross-session",
@@ -882,23 +744,13 @@
           "query": "what are the user's editor preferences",
           "passed": true,
           "score": 1,
-          "latencyMs": 449,
-          "tokensEstimated": 513,
+          "latencyMs": 527,
+          "tokensEstimated": 29,
           "topResults": [
             {
-              "id": "5daec6dc-97b5-4feb-adc8-ac6740041431",
+              "id": "49e60305-0155-4067-ac06-9defea1ab021",
               "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
-              "createdAt": "2026-03-30T18:15:27.024Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "393c1d32-6d4b-4f09-beba-40b2df1d0255",
-              "content": "CORRECTION on interview #1 (2026-03-23): Vadim is NOT an engineer. He is a product-focused founder with very basic coding skills. He learned the claude.md discipline by asking AI (Claude/ChatGPT) how to organize AI workflows. This makes the finding MORE significant: if the most persistent, self-taught non-tech founder builds manual file-based memory, the average non-tech founder does NOTHING — they just suffer through forgetting and think that is how AI works. TARGET PERSONA REFINED: Non-tech founders who use Claude Code / Cursor daily, run multiple agents, have budget (used to engineer salaries), but lack the discipline or knowledge to build manual memory systems. They dont know memory-as-a-service exists. The pitch is not \"replace your claude.md\" — it is \"your agent can remember everything automatically, you never have to explain your project twice.\"",
-              "createdAt": "2026-03-23T19:27:32.900Z"
+              "createdAt": "2026-03-30T19:10:09.420Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -909,23 +761,13 @@
           "query": "what caused the out of memory crash",
           "passed": true,
           "score": 1,
-          "latencyMs": 461,
-          "tokensEstimated": 530,
+          "latencyMs": 516,
+          "tokensEstimated": 46,
           "topResults": [
             {
-              "id": "02536b71-2707-4b5e-8c93-1abd60053b26",
+              "id": "8cf81d56-610c-4aa3-96ee-5d928d443880",
               "content": "Investigated OOM crash at 2am. Root cause was unbounded cache in UserService.getAll() method. Fixed by adding LRU eviction with max 1000 entries.",
-              "createdAt": "2026-03-30T18:15:30.204Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "393c1d32-6d4b-4f09-beba-40b2df1d0255",
-              "content": "CORRECTION on interview #1 (2026-03-23): Vadim is NOT an engineer. He is a product-focused founder with very basic coding skills. He learned the claude.md discipline by asking AI (Claude/ChatGPT) how to organize AI workflows. This makes the finding MORE significant: if the most persistent, self-taught non-tech founder builds manual file-based memory, the average non-tech founder does NOTHING — they just suffer through forgetting and think that is how AI works. TARGET PERSONA REFINED: Non-tech founders who use Claude Code / Cursor daily, run multiple agents, have budget (used to engineer salaries), but lack the discipline or knowledge to build manual memory systems. They dont know memory-as-a-service exists. The pitch is not \"replace your claude.md\" — it is \"your agent can remember everything automatically, you never have to explain your project twice.\"",
-              "createdAt": "2026-03-23T19:27:32.900Z"
+              "createdAt": "2026-03-30T19:10:15.378Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -936,13 +778,13 @@
           "query": "why did we pick this data pattern",
           "passed": true,
           "score": 1,
-          "latencyMs": 434,
+          "latencyMs": 513,
           "tokensEstimated": 44,
           "topResults": [
             {
-              "id": "9cf8632b-1839-44d0-98da-960cd585648f",
+              "id": "3024ba35-c081-44ee-b623-6514abc4057f",
               "content": "Architecture decision: chose event sourcing over CRUD for the audit trail requirements. CQRS pattern with separate read and write models.",
-              "createdAt": "2026-03-30T18:15:33.907Z"
+              "createdAt": "2026-03-30T19:10:21.265Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -953,23 +795,23 @@
           "query": "what is the status of the dashboard feature",
           "passed": true,
           "score": 1,
-          "latencyMs": 536,
+          "latencyMs": 519,
           "tokensEstimated": 84,
           "topResults": [
             {
-              "id": "846dd214-bb78-4754-9eb5-781957ddd6cb",
+              "id": "b7ef821f-9782-436c-bd6a-22b03087647d",
               "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
-              "createdAt": "2026-03-30T18:15:37.431Z"
+              "createdAt": "2026-03-30T19:10:27.070Z"
             },
             {
-              "id": "c5970001-4221-4c59-a1d3-a00ecd061c97",
+              "id": "8a366c6f-4ef2-48a8-9e55-313ab5f02a8d",
               "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
-              "createdAt": "2026-03-30T18:15:39.233Z"
+              "createdAt": "2026-03-30T19:10:28.176Z"
             },
             {
-              "id": "84f744b3-cd31-4113-b258-9bf79946b174",
+              "id": "ec265a51-8ce7-45e4-aa27-7ca2ef27a269",
               "content": "Dashboard design: use Recharts for graphs, card layout for metrics, infinite scroll for API log.",
-              "createdAt": "2026-03-30T18:15:38.773Z"
+              "createdAt": "2026-03-30T19:10:27.506Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -980,23 +822,23 @@
           "query": "summarize what happened this week",
           "passed": true,
           "score": 1,
-          "latencyMs": 782,
+          "latencyMs": 520,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "f113100e-fef7-4e77-b0da-3552559ba9cc",
+              "id": "b41f0374-537f-45e1-a7eb-eef79575524f",
               "content": "Friday: production deploy successful. Monitoring looks clean.",
-              "createdAt": "2026-03-30T18:15:46.375Z"
+              "createdAt": "2026-03-30T19:10:36.561Z"
             },
             {
-              "id": "551ba59a-220c-4d27-b11a-6f85f88dabfa",
+              "id": "cb6bb3cd-28de-42ba-8f89-6c5c58a4e045",
               "content": "Monday: set up CI/CD pipeline with GitHub Actions. Tests passing.",
-              "createdAt": "2026-03-30T18:15:43.731Z"
+              "createdAt": "2026-03-30T19:10:34.617Z"
             },
             {
-              "id": "9e1916ad-3be6-4acb-b640-01dcb73fdc1a",
+              "id": "ab53174a-fd89-4f77-9576-afa938b20dbe",
               "content": "Tuesday: implemented user authentication with JWT tokens.",
-              "createdAt": "2026-03-30T18:15:44.516Z"
+              "createdAt": "2026-03-30T19:10:35.054Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1007,23 +849,23 @@
           "query": "what happened with the search task",
           "passed": true,
           "score": 1,
-          "latencyMs": 809,
-          "tokensEstimated": 536,
+          "latencyMs": 454,
+          "tokensEstimated": 69,
           "topResults": [
             {
-              "id": "fd38a10f-d33b-49dc-9e21-0875f7ed0c24",
+              "id": "52fca5cc-56e8-4316-a851-203f1b5e6697",
               "content": "Task started: implement search functionality for the API",
-              "createdAt": "2026-03-30T18:15:51.177Z"
+              "createdAt": "2026-03-30T19:10:43.601Z"
             },
             {
-              "id": "a17fbd0a-2626-4d25-a5f9-eb4ec81a7117",
+              "id": "82ac3541-a084-4a3c-b8ed-adb0dbdb39dc",
               "content": "Task completed: search functionality shipped with vector + BM25 + trigram hybrid approach",
-              "createdAt": "2026-03-30T18:15:52.985Z"
+              "createdAt": "2026-03-30T19:10:45.238Z"
             },
             {
-              "id": "47c86b99-d79e-425e-9359-8a4d8b120d35",
+              "id": "ad859bee-5796-4ed2-b9f1-586108100b94",
               "content": "Blocker found: full-text search requires pg_trgm extension not available on managed Postgres",
-              "createdAt": "2026-03-30T18:15:51.760Z"
+              "createdAt": "2026-03-30T19:10:44.329Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1034,30 +876,20 @@
           "query": "trace the deploy process",
           "passed": false,
           "score": 0,
-          "latencyMs": 589,
-          "tokensEstimated": 572,
+          "latencyMs": 594,
+          "tokensEstimated": 26,
           "topResults": [
             {
-              "id": "848b89e3-e3ba-4236-99df-8c3ac2708441",
+              "id": "f2451ebb-d900-4b4b-92d2-de85cc42f594",
               "content": "Session 3: deployed to Fly.io. Health checks passing. Latency improved by 40%.",
-              "createdAt": "2026-03-30T18:15:59.638Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
-            },
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
+              "createdAt": "2026-03-30T19:10:52.925Z"
             }
           ],
           "reason": "Found: [deployed], Missing: [environment]"
         }
       ],
-      "avgLatencyMs": 580,
-      "totalTokens": 2353
+      "avgLatencyMs": 520,
+      "totalTokens": 372
     },
     {
       "category": "multi-agent",
@@ -1072,13 +904,13 @@
           "query": "what changed in authentication",
           "passed": true,
           "score": 1,
-          "latencyMs": 958,
+          "latencyMs": 732,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "1b86159a-a9fa-4471-9319-04ed3b92bc90",
+              "id": "9a8422f7-96ef-4ed4-8270-38416478a1d4",
               "content": "Refactored auth module to use middleware pattern instead of inline checks",
-              "createdAt": "2026-03-30T18:16:03.784Z"
+              "createdAt": "2026-03-30T19:10:59.741Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1089,23 +921,23 @@
           "query": "what decisions were made",
           "passed": true,
           "score": 1,
-          "latencyMs": 1184,
+          "latencyMs": 536,
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "e8d879a4-addf-446e-b760-b054655ca552",
+              "id": "0678b3ff-9ac8-441b-96d5-6c44c01675cc",
               "content": "Frontend decision: use Tailwind CSS for styling instead of CSS modules",
-              "createdAt": "2026-03-30T18:16:08.073Z"
+              "createdAt": "2026-03-30T19:11:05.799Z"
             },
             {
-              "id": "d58a3275-f4f6-44b4-9481-659ba2875e09",
+              "id": "80adb31a-c5a2-4b12-b177-0e054b172159",
               "content": "Frontend decision: implement dark mode with CSS custom properties",
-              "createdAt": "2026-03-30T18:16:08.480Z"
+              "createdAt": "2026-03-30T19:11:06.313Z"
             },
             {
-              "id": "fe89b134-37ed-4c1f-9891-8403b2fb7bee",
+              "id": "92ad05a6-7202-4962-b1c5-1484f8af9c7c",
               "content": "Backend decision: use Hono framework for API instead of Express",
-              "createdAt": "2026-03-30T18:16:09.435Z"
+              "createdAt": "2026-03-30T19:11:06.778Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1116,7 +948,7 @@
           "query": "what is the bug",
           "passed": false,
           "score": 0,
-          "latencyMs": 509,
+          "latencyMs": 554,
           "tokensEstimated": 4,
           "topResults": [],
           "reason": "Found: [], Missing: [race condition, queue]"
@@ -1127,7 +959,7 @@
           "query": "what experimental approaches are being tried",
           "passed": true,
           "score": 1,
-          "latencyMs": 527,
+          "latencyMs": 885,
           "tokensEstimated": 11,
           "topResults": [],
           "reason": "Correctly returned empty/low-score results"
@@ -1138,13 +970,13 @@
           "query": "what are the logging standards",
           "passed": true,
           "score": 1,
-          "latencyMs": 594,
+          "latencyMs": 557,
           "tokensEstimated": 30,
           "topResults": [
             {
-              "id": "7b380859-464c-487e-aac9-dc03ae845df5",
+              "id": "a662b868-345e-4bf2-a299-90490f0b3c3a",
               "content": "Org-wide standard: all services must use structured JSON logging with correlation IDs",
-              "createdAt": "2026-03-30T18:16:21.969Z"
+              "createdAt": "2026-03-30T19:11:27.189Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1155,36 +987,36 @@
           "query": "how does user registration work end to end",
           "passed": true,
           "score": 1,
-          "latencyMs": 607,
+          "latencyMs": 484,
           "tokensEstimated": 65,
           "topResults": [
             {
-              "id": "57b356b9-f53c-4cb6-92d4-8e643008fec2",
+              "id": "376ab271-6bcf-446e-bab0-6bc62f3176fd",
               "content": "Frontend form: user registration collects email, name, and optional phone",
-              "createdAt": "2026-03-30T18:16:26.610Z"
+              "createdAt": "2026-03-30T19:11:33.978Z"
             },
             {
-              "id": "bf02103f-7c2b-4e6d-8c81-aa48836308ae",
+              "id": "033da06e-fdab-435c-955f-53d0e0ac883e",
               "content": "API endpoint: POST /users creates a new user, requires email and name",
-              "createdAt": "2026-03-30T18:16:26.160Z"
+              "createdAt": "2026-03-30T19:11:33.568Z"
             },
             {
-              "id": "2b30edb4-8b63-46e2-976e-b9747fefeca9",
+              "id": "79de823c-40c3-4a41-80d6-7cb9f108b1cd",
               "content": "Database schema: users table has id, email, name, created_at columns",
-              "createdAt": "2026-03-30T18:16:25.469Z"
+              "createdAt": "2026-03-30T19:11:33.170Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 730,
+      "avgLatencyMs": 625,
       "totalTokens": 212
     },
     {
       "category": "cost-efficiency",
       "name": "Cost Efficiency",
-      "score": 87.5,
-      "passed": 14,
+      "score": 100,
+      "passed": 16,
       "total": 16,
       "details": [
         {
@@ -1193,23 +1025,23 @@
           "query": "what is the project architecture",
           "passed": true,
           "score": 1,
-          "latencyMs": 536,
-          "tokensEstimated": 313,
+          "latencyMs": 532,
+          "tokensEstimated": 63,
           "topResults": [
             {
-              "id": "9f2fee45-f337-4129-9bd6-0d0507b18424",
+              "id": "04b61d1d-4d83-4271-beb6-1e2cba8cb655",
               "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
-              "createdAt": "2026-03-30T18:16:31.023Z"
+              "createdAt": "2026-03-30T19:11:40.600Z"
             },
             {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "e31d5aec-eefe-4bd6-bab1-96399070a830",
+              "id": "54c86a48-911c-4d59-b1ea-231ea7efac78",
               "content": "Cost test memory 3: The frontend is built with Next.js 14 using app router",
-              "createdAt": "2026-03-30T18:16:32.163Z"
+              "createdAt": "2026-03-30T19:11:41.462Z"
+            },
+            {
+              "id": "84d1f1ce-b29c-4756-97ca-1f0178c23937",
+              "content": "Cost test memory 6: API versioning follows URL-based strategy /v1/ /v2/",
+              "createdAt": "2026-03-30T19:11:42.872Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1220,13 +1052,13 @@
           "query": "what port does the server use",
           "passed": true,
           "score": 1,
-          "latencyMs": 546,
+          "latencyMs": 489,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "be10387a-ff0c-4df9-a8ec-c3c25f574805",
+              "id": "c2da13a8-7ee6-488b-bb91-9271ea278f71",
               "content": "The main API server runs on port 3000 with hot reload enabled in development",
-              "createdAt": "2026-03-30T18:16:41.898Z"
+              "createdAt": "2026-03-30T19:11:56.100Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1237,23 +1069,13 @@
           "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
           "passed": true,
           "score": 1,
-          "latencyMs": 492,
-          "tokensEstimated": 550,
+          "latencyMs": 560,
+          "tokensEstimated": 109,
           "topResults": [
             {
-              "id": "aecff12e-3e9d-422c-bd13-78b6ac716a1f",
+              "id": "007a26f0-a004-45f5-af77-0f6f709a4c51",
               "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
-              "createdAt": "2026-03-30T18:16:45.303Z"
-            },
-            {
-              "id": "796935a5-6782-4233-92f2-2de3ef7f4196",
-              "content": "Open questions and expert interview targets (March 2026): UNCERTAINTIES: (1) Will agents choose tools autonomously in 6 months or still rely on human config? x402 bet depends on this. (2) Will memory quality matter for agent adoption? Vector-only search may not be enough vs graph-based retrieval. (3) Will x402 ecosystem reach critical mass? Need wallet infrastructure to scale. EXPERT INTERVIEWS NEEDED: (1) Someone at Anthropic working on MCP ecosystem — how do they think about default server recommendations? (2) Heavy Claude Code / Cursor power user — actual memory pain point today? (3) x402 infrastructure builder (Coinbase CDP, Cloudflare Workers) — realistic timeline for agents with wallets? (4) Fund investing in agent infrastructure — does agent-native distribution thesis resonate?",
-              "createdAt": "2026-03-23T18:48:01.606Z"
-            },
-            {
-              "id": "7a9a8c69-043a-4acb-b7dd-5a38176319d8",
-              "content": "Central Intelligence strategic thesis (March 2026): Do NOT compete on memory quality with Mem0/Zep/Hindsight — that is a VC-funded enterprise arms race requiring big rounds and SOC2. Instead, double down on agent-native distribution and zero-friction payments. The moat is: (1) x402 autonomous payments — agents discover, pay $0.001 USDC, and use memory in one HTTP round-trip, no signup needed. (2) Network effects — shared memories across org make every agent smarter. (3) Crypto-native revenue — no Stripe, no invoices, no sales team, revenue scales with agent activity. The bet: in 12 months agents will choose their own tools. The service with lowest friction wins, not the best benchmark. An agent with a wallet does not care about SOC2 — it cares about one-step value. If we get agent traction first, we are in a different category entirely. Enterprise quality and certifications become feasible after traction, funded by revenue from autonomous agent payments.",
-              "createdAt": "2026-03-23T18:41:28.802Z"
+              "createdAt": "2026-03-30T19:12:02.120Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1264,23 +1086,23 @@
           "query": "what is configuration setting A",
           "passed": true,
           "score": 1,
-          "latencyMs": 667,
+          "latencyMs": 574,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "f97c17ac-5c95-4085-9689-2335b81f9659",
+              "id": "5b273796-2d68-4fe6-966a-5863a851cdd1",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "createdAt": "2026-03-30T18:16:48.562Z"
+              "createdAt": "2026-03-30T19:12:07.970Z"
             },
             {
-              "id": "677e2f4a-e336-4189-9c46-1bc1de06c1cb",
+              "id": "39ab2617-2028-41a6-8170-29f4d78eb706",
               "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-              "createdAt": "2026-03-30T18:16:49.024Z"
+              "createdAt": "2026-03-30T19:12:08.426Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1291,23 +1113,23 @@
           "query": "what is configuration setting B",
           "passed": true,
           "score": 1,
-          "latencyMs": 474,
+          "latencyMs": 640,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "677e2f4a-e336-4189-9c46-1bc1de06c1cb",
+              "id": "39ab2617-2028-41a6-8170-29f4d78eb706",
               "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-              "createdAt": "2026-03-30T18:16:49.024Z"
+              "createdAt": "2026-03-30T19:12:08.426Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "e7b97959-c3e5-4afd-9777-d2a8c0185bc6",
+              "id": "10fb3b82-6311-44ca-9c95-976734963162",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "createdAt": "2026-03-30T18:16:52.175Z"
+              "createdAt": "2026-03-30T19:12:10.239Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1318,23 +1140,23 @@
           "query": "what is configuration setting C",
           "passed": true,
           "score": 1,
-          "latencyMs": 547,
+          "latencyMs": 502,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             },
             {
-              "id": "677e2f4a-e336-4189-9c46-1bc1de06c1cb",
+              "id": "39ab2617-2028-41a6-8170-29f4d78eb706",
               "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-              "createdAt": "2026-03-30T18:16:49.024Z"
+              "createdAt": "2026-03-30T19:12:08.426Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1345,23 +1167,23 @@
           "query": "what is configuration setting D",
           "passed": true,
           "score": 1,
-          "latencyMs": 609,
+          "latencyMs": 800,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "11c5bbfe-f752-4193-986f-05d063cdcd29",
+              "id": "5d151c5f-1c17-40e3-be17-16acb79b205c",
               "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.220Z"
+              "createdAt": "2026-03-30T19:12:09.313Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "677e2f4a-e336-4189-9c46-1bc1de06c1cb",
+              "id": "39ab2617-2028-41a6-8170-29f4d78eb706",
               "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-              "createdAt": "2026-03-30T18:16:49.024Z"
+              "createdAt": "2026-03-30T19:12:08.426Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1372,23 +1194,23 @@
           "query": "what is configuration setting E",
           "passed": true,
           "score": 1,
-          "latencyMs": 520,
+          "latencyMs": 843,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "e7b97959-c3e5-4afd-9777-d2a8c0185bc6",
+              "id": "10fb3b82-6311-44ca-9c95-976734963162",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "createdAt": "2026-03-30T18:16:52.175Z"
+              "createdAt": "2026-03-30T19:12:10.239Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1399,23 +1221,23 @@
           "query": "what is configuration setting F",
           "passed": true,
           "score": 1,
-          "latencyMs": 485,
+          "latencyMs": 442,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "e7b97959-c3e5-4afd-9777-d2a8c0185bc6",
+              "id": "10fb3b82-6311-44ca-9c95-976734963162",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "createdAt": "2026-03-30T18:16:52.175Z"
+              "createdAt": "2026-03-30T19:12:10.239Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1426,23 +1248,23 @@
           "query": "what is configuration setting G",
           "passed": true,
           "score": 1,
-          "latencyMs": 589,
+          "latencyMs": 467,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "581a3548-c1bd-40e2-b84d-550eb8fe376e",
+              "id": "9bda8237-5548-4a2b-b1ee-f570acefa74b",
               "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
-              "createdAt": "2026-03-30T18:16:52.692Z"
+              "createdAt": "2026-03-30T19:12:10.698Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1453,23 +1275,23 @@
           "query": "what is configuration setting H",
           "passed": true,
           "score": 1,
-          "latencyMs": 970,
+          "latencyMs": 481,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "74691259-2a5f-4e89-957e-b061b296cde8",
+              "id": "dd50b30a-ee6f-4c87-a183-a81be255a891",
               "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
-              "createdAt": "2026-03-30T18:16:53.563Z"
+              "createdAt": "2026-03-30T19:12:11.145Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1480,23 +1302,23 @@
           "query": "what is configuration setting I",
           "passed": true,
           "score": 1,
-          "latencyMs": 514,
+          "latencyMs": 506,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "f97c17ac-5c95-4085-9689-2335b81f9659",
+              "id": "5b273796-2d68-4fe6-966a-5863a851cdd1",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "createdAt": "2026-03-30T18:16:48.562Z"
+              "createdAt": "2026-03-30T19:12:07.970Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "7adfb3a1-6d8f-490e-8b19-1721c5cc9d1d",
+              "id": "cab8d149-c804-4da7-bfc1-2ed74bda3bac",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "createdAt": "2026-03-30T18:16:54.125Z"
+              "createdAt": "2026-03-30T19:12:11.598Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1507,23 +1329,23 @@
           "query": "what is configuration setting J",
           "passed": true,
           "score": 1,
-          "latencyMs": 551,
+          "latencyMs": 494,
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "c6c093eb-cd9e-4368-935a-e4c507bd88ad",
+              "id": "203c3df0-e53f-4cb8-b4b4-a6952ec867b6",
               "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
-              "createdAt": "2026-03-30T18:16:54.641Z"
+              "createdAt": "2026-03-30T19:12:12.054Z"
             },
             {
-              "id": "68c3d820-3ee8-40f0-b2a6-08d6286116dc",
+              "id": "95eb5904-2b2f-4262-b1e2-8f9f8a3910f1",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "createdAt": "2026-03-30T18:16:50.704Z"
+              "createdAt": "2026-03-30T19:12:08.855Z"
             },
             {
-              "id": "4dd16280-69c9-43fc-a9f1-9a2c251e50d0",
+              "id": "c48e0689-9957-40b3-aedb-148028899560",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "createdAt": "2026-03-30T18:16:51.689Z"
+              "createdAt": "2026-03-30T19:12:09.780Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1532,23 +1354,12 @@
           "testId": "ce-05",
           "queryId": "ce-05-q1",
           "query": "temporary test data",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 1018,
-          "tokensEstimated": 559,
-          "topResults": [
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "5cac56c1-e482-4407-9d53-0147fe007914",
-              "content": "x402 ecosystem market data (researched 2026-03-23): TRANSACTION VOLUME: 50M+ total all-time (includes testing/wash trading). Daily: ~131K transactions, ~$28K volume, ~$0.20 avg payment. ~50% of activity is artificial. Peak Feb 2026: 3.8M tx / ~$2M (mostly infra testing). AGENT WALLETS: Coinbase Agentic Wallets launched 2026-02-11, \"tens of thousands\" deployed. Wallet creation in <2 min via AgentKit CLI. USDC/EURC/cbBTC gasless on Base. ENTERPRISE: 80% Fortune 500 run AI agents (Gartner). 40% enterprise apps will embed agents by end 2026 (Gartner). Alchemy launched x402 integration 2026-03-18. Stripe integrated x402 for USDC billing on Base. World (Sam Altman) launched AgentKit with x402 + World ID on 2026-03-17. REALITY CHECK: CoinDesk 2026-03-11 headline: \"demand is just not there yet.\" $7B ecosystem valuation vs $28K/day real volume. Narrative is 100x ahead of reality. Galaxy estimates agentic commerce $3-5T by 2030. IMPLICATION FOR CI: Keep both paths (API key for humans now, x402 for agents later). Dont over-invest in x402 marketing until daily volume crosses $1M. But keep infrastructure live — when it tips, we are ready.",
-              "createdAt": "2026-03-23T19:00:23.025Z"
-            }
-          ],
-          "reason": "Expected empty but got 2 results"
+          "passed": true,
+          "score": 1,
+          "latencyMs": 593,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
         },
         {
           "testId": "ce-06",
@@ -1556,13 +1367,13 @@
           "query": "cold start test",
           "passed": true,
           "score": 1,
-          "latencyMs": 573,
+          "latencyMs": 584,
           "tokensEstimated": 22,
           "topResults": [
             {
-              "id": "dcaa2344-ac76-4d8b-a2dc-dbac55098d57",
+              "id": "13cd687c-8076-4bfa-b0f8-926751d8e693",
               "content": "Cold start test: this memory exists to measure initial search latency",
-              "createdAt": "2026-03-30T18:17:34.151Z"
+              "createdAt": "2026-03-30T19:12:48.231Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1571,32 +1382,21 @@
           "testId": "ce-07",
           "queryId": "ce-07-q1",
           "query": "lifecycle test",
-          "passed": false,
-          "score": 0,
-          "latencyMs": 506,
-          "tokensEstimated": 550,
-          "topResults": [
-            {
-              "id": "4752b91d-40a6-4c96-82aa-a7d428bed418",
-              "content": "User interview #1 (2026-03-23): Vadim, non-tech founder, travel tech / OTA, 15+ years, 10+ engineer team, actively adopting Claude Code. CURRENT MEMORY SETUP: Manual — writes everything to claude.md. Specs and implementation plans in separate folders, documented in claude.md. Keeps prompts in a prompts folder. Uses Worktrees plugin for parallel agents (1 main + 2 worktrees, no issues with 3 concurrent). Each worktree is isolated branch clone. Merges to main when done. KEY INSIGHT: He built local file-based memory because nothing better exists. This is exactly the pain point CI solves — but his solution works for him because he is disciplined about documentation. The gap: his agents cannot share context between worktrees, and new sessions require reading claude.md from scratch (no semantic search, no relevance ranking). THESIS VALIDATION: Non-tech founders ARE adopting AI coding (confirms Aleksei hypothesis). They are used to paying engineer salaries so small costs dont scare them. They solve memory manually because no better option is obvious to them yet.",
-              "createdAt": "2026-03-23T19:24:11.443Z"
-            },
-            {
-              "id": "35905640-7d15-443a-86f9-631c5c7ada70",
-              "content": "Agent distribution strategy (March 2026) — five vectors ranked by leverage: (1) EMBED IN FAILURE PATH — build a memory probe agents call before tasks; if no memories exist, hint that memory is available. Like npm suggesting install when module missing. (2) BE IN DEFAULT CONFIG — get CI into Anthropic recommended MCP servers, OpenClaw default skills, LangChain/CrewAI starter templates. Requires relationships not code — Aleksei's human network is the edge. (3) AGENT REFERRAL LOOP — shared org memories are the marketing. Agent A stores knowledge, Agent B discovers CI through the content itself. Build team onboarding flow where adding CI key to second agent gives it instant access to all org knowledge. First experience is wow. (4) X402 DISCOVERY NETWORK — register with x402 facilitators, cross-list with other x402 services. Wild idea: memory bounty — pay agents USDC to store high-quality memories that others recall. Memory becomes economic resource. (5) SEED THE CONTEXT WINDOW — every GitHub README, PyPI package, blog post mentioning CI becomes future training data. Free, compounds over 6-12 months.",
-              "createdAt": "2026-03-23T18:47:50.770Z"
-            }
-          ],
-          "reason": "Expected empty but got 2 results"
+          "passed": true,
+          "score": 1,
+          "latencyMs": 541,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
         }
       ],
-      "avgLatencyMs": 600,
-      "totalTokens": 2762
+      "avgLatencyMs": 566,
+      "totalTokens": 971
     }
   ],
   "meta": {
-    "totalLatencyMs": 41603,
-    "totalTokens": 13741,
+    "totalLatencyMs": 37491,
+    "totalTokens": 2384,
     "totalApiCalls": 65
   }
 }
