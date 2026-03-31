@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{authblk}
+
+% Code listing style
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  language=Java, % closest to TypeScript
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+}
+
+% Title
+\title{AMB: Agent Memory Benchmark for Evaluating\\Memory Provider Infrastructure}
+\author[1]{Aleksei Marchenko}
+\affil[1]{Independent Researcher}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+\begin{abstract}
+We introduce AMB (Agent Memory Benchmark), a provider-agnostic benchmark for evaluating persistent memory systems used by AI agents. Unlike existing benchmarks that focus on conversational recall (LoCoMo) or long-context information extraction (LongMemEval), AMB evaluates memory systems as infrastructure: can they store, retrieve, scope, forget, and maintain consistency across the operations that real agents perform? AMB provides two evaluation layers: Layer~1 tests single-operation retrieval quality across 8 categories (56 tests), and Layer~2 tests multi-step retrieval scenarios that mirror real agent workflows (5 scenarios). All scoring is deterministic and reproducible---no LLM-as-judge, no embedding similarity thresholds. We evaluate four memory providers and find meaningful differentiation across categories, with no provider achieving perfect scores on both layers. AMB is open source and available via \texttt{npx agent-memory-benchmark}.
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+
+AI agents increasingly rely on persistent memory to maintain context across sessions, share knowledge between agents, and avoid redundant work. Several memory providers have emerged---Mem0, Zep, Hindsight, Central Intelligence, mcp-memory-service---but developers lack a standardized way to compare them.
+
+Existing benchmarks test the wrong thing for agent memory:
+
+\textbf{LoCoMo}~\citep{maharana2024} measures word-level F1/IoU on 9K-token chat histories. It tests conversational recall, not the store/search/delete operations agents actually perform. Systems can score well by simply storing raw conversation files.
+
+\textbf{LongMemEval}~\citep{wu2025} tests information extraction and temporal reasoning across 1.5M-token conversations. It is harder than LoCoMo, but still evaluates memory as a conversational aid rather than as agent infrastructure. Top systems now score 90\%+, approaching saturation.
+
+\textbf{AMA-Bench}~\citep{amabench2026} explicitly targets agentic applications with long-horizon reasoning. It categorizes prior work as ``dialogue-centric'' and proposes agent-specific evaluation. AMB shares this motivation but differs in approach: where AMA-Bench evaluates agent behavior with memory, AMB evaluates memory systems themselves.
+
+\textbf{LifeBench}~\citep{lifebench2026} tests multi-source memory with real-world complexity. Top systems score only 55\%, validating that harder benchmarks are needed. AMB is complementary: LifeBench tests memory-augmented agent performance, AMB tests the memory layer in isolation.
+
+AMB fills the gap between conversational memory benchmarks and agent behavior benchmarks. It tests memory as infrastructure: does the provider correctly store, retrieve, scope, delete, and maintain temporal consistency of memories? This is the foundation that agent performance depends on.
+
+% ============================================================
+\section{Design Principles}
+
+\begin{enumerate}
+    \item \textbf{Provider-agnostic.} Same tests, same scoring, any provider. AMB defines a minimal adapter interface (\texttt{store}, \texttt{search}, \texttt{delete}, \texttt{cleanup}) that maps to any memory system.
+
+    \item \textbf{Deterministic scoring.} All scores are binary pass/fail based on keyword presence in retrieved results. No LLM-as-judge, no embedding similarity, no subjective evaluation. The same inputs produce the same scores every run.
+
+    \item \textbf{Two evaluation layers.} Layer~1 tests single-operation retrieval quality (can the system find what was stored?). Layer~2 tests multi-step retrieval scenarios (can the system support a realistic agent workflow?). Scores are reported separately, not blended.
+
+    \item \textbf{Reproducibility metadata.} Every run records fixture hashes, benchmark version, provider version, and hardware specs. Results can be independently verified.
+
+    \item \textbf{Real-world scenarios.} Every test case maps to an actual agent workflow pattern. No synthetic or adversarial-only data.
+\end{enumerate}
+
+% ============================================================
+\section{Benchmark Structure}
+
+\subsection{Layer 1: Single-Operation Retrieval}
+
+Layer~1 consists of 56 tests across 8 categories, each with a weighted contribution to the overall score:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llcl}
+\toprule
+\textbf{Category} & \textbf{Tests} & \textbf{Weight} & \textbf{What It Measures} \\
+\midrule
+Factual Recall & 8 & 15\% & Store a fact, retrieve with direct query \\
+Semantic Search & 8 & 20\% & Retrieve using paraphrased queries \\
+Temporal Reasoning & 7 & 15\% & Handle ``before/after'' and ``latest'' queries \\
+Conflict Resolution & 7 & 10\% & When facts contradict, latest should win \\
+Selective Forgetting & 6 & 10\% & Deleted memories must not resurface \\
+Cross-Session & 7 & 15\% & Context carries over across sessions \\
+Multi-Agent & 6 & 5\% & Agent A stores, Agent B retrieves \\
+Cost Efficiency & 7 & 10\% & Latency and operation counts \\
+\bottomrule
+\end{tabular}
+\caption{Layer~1 categories and their weights in the overall score.}
+\label{tab:categories}
+\end{table}
+
+Each test seeds one or more memories via the adapter's \texttt{store()} method, waits for indexing (configurable, default 3 seconds), then runs one or more queries via \texttt{search()}. A query passes if all expected keywords appear in the retrieved results. The category score is $(\text{passed} / \text{total}) \times 100$. The Layer~1 overall score is the weighted average across categories.
+
+\subsection{Layer 2: Multi-Step Retrieval Scenarios}
+
+Layer~2 tests whether a memory system can support realistic multi-step agent workflows. Unlike Layer~1's single store-then-search pattern, Layer~2 scenarios involve multiple stores, multiple searches with different queries, and scoring against gold-standard expected outputs.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Scenario} & \textbf{What It Tests} \\
+\midrule
+Preference Application & Assemble a config from multiple stored preferences \\
+Context Continuity & Retrieve context from multiple prior sessions \\
+Conflict Resolution & Handle chains of superseding facts \\
+Cross-Agent Handoff & Agent B retrieves Agent A's scoped context \\
+Redundancy Check & Verify stored facts remain retrievable \\
+\bottomrule
+\end{tabular}
+\caption{Layer~2 multi-step retrieval scenarios.}
+\label{tab:layer2}
+\end{table}
+
+A scenario passes (score = 1.0) if all expected keywords are found in retrieved results and no unexpected keywords appear. Otherwise it fails (score = 0.0). The Layer~2 score is the percentage of scenarios passed.
+
+Layer~2 is \emph{not} agent task completion testing. It does not involve LLM reasoning over retrieved context. It is multi-step retrieval evaluation: testing whether the memory system returns the right information across a sequence of operations that mirrors how real agents use memory.
+
+\subsection{Adapter Interface}
+
+\begin{lstlisting}
+interface MemoryAdapter {
+  name: string;
+  capabilities?: {
+    multiAgent?: boolean;
+    scoping?: boolean;
+    temporalDecay?: boolean;
+  };
+  initialize(): Promise<void>;
+  store(content: string, options?: StoreOptions): Promise<MemoryEntry>;
+  search(query: string, options?: SearchOptions): Promise<MemoryEntry[]>;
+  delete(id: string): Promise<boolean>;
+  cleanup(): Promise<void>;
+}
+\end{lstlisting}
+
+Any memory system that can implement these 5 methods can be benchmarked. The interface is intentionally minimal. Providers with additional capabilities declare them via the \texttt{capabilities} field; tests requiring unsupported capabilities are skipped and excluded from scoring.
+
+% ============================================================
+\section{Scoring Methodology}
+
+All scoring is binary pass/fail based on keyword presence:
+
+\begin{enumerate}
+    \item For each query, combine the content of all returned results into a single string.
+    \item Check that every expected keyword appears (case-insensitive substring match).
+    \item Check that no unexpected keywords appear in the results.
+    \item A query passes if both checks succeed.
+\end{enumerate}
+
+This approach is deliberately simple. It trades granularity for reproducibility. Two independent runs against the same provider will produce identical scores. There is no embedding similarity threshold to tune, no LLM judge to calibrate, no tokenizer to specify.
+
+\textbf{Limitations of keyword scoring.} A provider could return the right keywords in an irrelevant context and still pass. We accept this trade-off because: (a) test cases are designed with specific, distinctive keywords unlikely to appear in unrelated content, and (b) the alternative (embedding similarity) introduces non-determinism and hardware dependence.
+
+% ============================================================
+\section{Anti-Gaming and Reproducibility}
+
+AMB's test fixtures are public. Providers could theoretically optimize for known test queries. We mitigate this through:
+
+\begin{enumerate}
+    \item \textbf{Unique memory IDs per run.} Each test case generates a unique agent ID incorporating the test ID and current timestamp. Caching across runs is ineffective.
+    \item \textbf{Fixture integrity hashing.} SHA-256 hashes of all fixture files are recorded in the output. Modified fixtures are detectable.
+    \item \textbf{Reproducibility metadata.} Every run records: benchmark version, provider name, timestamp, Node.js version, OS, and fixture hashes.
+\end{enumerate}
+
+We acknowledge that fixture hashing does not prevent a provider from training on known test data. The primary defense is community scrutiny: published results include full methodology, and any provider can run the benchmark independently.
+
+% ============================================================
+\section{Results}
+
+We evaluate four memory providers: Central Intelligence, Mem0, Zep, and an in-memory baseline (exact keyword matching with no semantic layer). All runs used AMB v2.0.2. The default store-to-search delay is 3 seconds. For async providers (Mem0, Zep), we also report results at 10 seconds to account for their LLM-based extraction pipelines.
+
+\subsection{Layer 1: Single-Operation Retrieval}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccccccccc}
+\toprule
+\textbf{Provider} & \textbf{Overall} & \textbf{Fact.} & \textbf{Sem.} & \textbf{Temp.} & \textbf{Confl.} & \textbf{Forg.} & \textbf{Cross} & \textbf{Multi} & \textbf{Cost} \\
+\midrule
+Central Intelligence & \textbf{90} & 100 & 100 & 86 & 86 & 83 & 86 & 67 & 94 \\
+In-Memory Baseline & 55 & 100 & 0 & 43 & 86 & 83 & 57 & 50 & 56 \\
+Zep (3s) & 11 & 0 & 0 & 14 & 0 & 67 & 0 & --- & 19 \\
+Mem0 (3s) & 7 & 0 & 0 & 14 & 0 & 50 & 0 & 17 & 25 \\
+\midrule
+Mem0 (10s) & \textbf{54} & 100 & 100 & 29 & 29 & 0 & 43 & 17 & 44 \\
+Zep (10s) & 39 & 75 & 63 & 29 & 0 & 67 & 0 & --- & 19 \\
+\bottomrule
+\end{tabular}
+\caption{Layer~1 results. Top section: default 3s delay. Bottom section: 10s delay for async providers. ``---'' indicates the provider does not support multi-agent capabilities.}
+\label{tab:layer1}
+\end{table}
+
+\subsection{Layer 2: Multi-Step Retrieval}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Provider} & \textbf{Overall} & \textbf{Pref.} & \textbf{Cont.} & \textbf{Confl.} & \textbf{Hand.} & \textbf{Redun.} \\
+\midrule
+Central Intelligence & \textbf{60} & Fail & Fail & Pass & Pass & Pass \\
+In-Memory Baseline & 20 & Fail & Fail & Fail & Fail & Pass \\
+Zep & 0 & Fail & Fail & Fail & Fail & Fail \\
+Mem0 & 0 & Fail & Fail & Fail & Fail & Fail \\
+\bottomrule
+\end{tabular}
+\caption{Layer~2 results. Consistent at both 3s and 10s delays. No async provider passed any Layer~2 scenario.}
+\label{tab:layer2results}
+\end{table}
+
+\subsection{Key Findings}
+
+\textbf{1. Semantic search is table stakes, but most providers lack it at low latency.} At 3s, both Mem0 and Zep score 0\% on semantic search. At 10s, Mem0 achieves 100\% and Zep 63\%. Central Intelligence scores 100\% at 3s. For agents that need immediate recall after storing a fact, only providers with synchronous indexing deliver.
+
+\textbf{2. Temporal reasoning separates real memory systems from vector databases.} Handling ``what is the current X'' after multiple updates requires the provider to understand recency, not just similarity. Central Intelligence scores 86\%. All other providers score 29\% or below, even at 10s. This is the category where most providers lose the most points relative to their factual recall scores.
+
+\textbf{3. Selective forgetting is broken in Mem0.} Mem0 scores 0\% on forgetting at both delays. The root cause: Mem0's store endpoint returns a ``PENDING'' status without a real memory ID. Delete operations use synthetic IDs that do not map to actual stored memories. Memories persist after supposed deletion. Zep handles deletion correctly (67\% at both delays).
+
+\textbf{4. Multi-step retrieval (Layer~2) remains unsolved.} Even Central Intelligence, scoring 90\% on Layer~1, achieves only 60\% on Layer~2. The failed scenarios (Preference Application, Context Continuity) require assembling information from multiple stored memories. This suggests that retrieval quality alone is insufficient; relevance ranking across multiple related memories is the bottleneck.
+
+\textbf{5. Async processing is an architectural choice, not a defect.} Mem0 and Zep both use LLM-based fact extraction that runs asynchronously after the store call returns. At 3s, most memories are not indexed. At 10s, Mem0 jumps from 7 to 54 overall. These systems trade immediate availability for richer semantic extraction. The right delay depends on the use case.
+
+% ============================================================
+\section{Discussion}
+
+\subsection{What AMB Measures and What It Does Not}
+
+AMB evaluates memory systems as infrastructure. It answers: given a store operation followed by a search operation, does the system return the right information? It does not evaluate:
+
+\begin{itemize}
+    \item \textbf{Agent reasoning quality.} Whether an agent can use retrieved memories to make good decisions is outside scope. That requires an LLM in the loop, introducing non-determinism.
+    \item \textbf{Semantic quality of stored representations.} AMB checks keyword presence, not whether the memory system extracted the right ``meaning'' from input. A system could store verbatim text and pass factual recall; that is a valid strategy.
+    \item \textbf{Scale behavior.} AMB tests with small memory corpora (1--20 memories per test). Providers may behave differently at 10K or 1M memories.
+\end{itemize}
+
+\subsection{Limitations of Keyword Scoring}
+
+Binary keyword scoring is AMB's most polarizing design choice. It means:
+
+\begin{itemize}
+    \item A provider can pass by returning the right keywords in irrelevant context.
+    \item A provider can fail by correctly understanding a query but returning a paraphrase that lacks the exact expected keyword.
+    \item There is no partial credit. A provider that returns 4 of 5 expected keywords scores the same as one returning 0.
+\end{itemize}
+
+We chose this trade-off deliberately. Embedding-based similarity scores vary across embedding models, hardware, and library versions. LLM-as-judge scores vary across model versions and prompts. Keyword matching is the only scoring method that produces identical results on any machine. For a benchmark intended to produce comparable, publishable numbers, reproducibility outweighs granularity.
+
+\subsection{The Async Provider Dilemma}
+
+The gap between 3s and 10s scores for Mem0 (7 to 54) and Zep (11 to 39) raises a question: what is the ``right'' delay for benchmarking? There is no universal answer. An agent that stores a preference and immediately asks for it needs sub-second indexing. An agent that stores meeting notes today and queries them tomorrow can tolerate minutes of processing time.
+
+AMB defaults to 3 seconds because this is the minimum viable latency for interactive agent workflows. The \texttt{--store-delay} flag allows providers to demonstrate their performance at longer indexing windows. We report both results and let users decide which scenario matches their use case.
+
+\subsection{Future Work}
+
+\begin{itemize}
+    \item \textbf{Scale testing.} Evaluate providers at 1K, 10K, and 100K memory corpora.
+    \item \textbf{Concurrent access.} Test behavior when multiple agents write and read simultaneously.
+    \item \textbf{Layer~3: Agent task completion.} Add LLM-in-the-loop evaluation where agents use retrieved memories to complete tasks. This requires accepting non-deterministic scoring.
+    \item \textbf{Community fixtures.} Accept contributed test scenarios from the community to expand coverage beyond the current 56 + 5.
+\end{itemize}
+
+% ============================================================
+\section{Related Work}
+
+\textbf{LoCoMo}~\citep{maharana2024} is a long-term conversational memory benchmark using 9K-token dialogues with word-level F1/IoU scoring. It tests conversational recall rather than agent infrastructure operations.
+
+\textbf{LongMemEval}~\citep{wu2025} poses 500 questions across 1.5M tokens, testing information extraction and temporal reasoning. It is harder than LoCoMo but remains dialogue-centric. Top systems score above 90\%, approaching saturation.
+
+\textbf{AMA-Bench}~\citep{amabench2026} targets agentic applications with long-horizon reasoning, evaluating agent behavior with memory. AMB is complementary: it evaluates the memory infrastructure that agents depend on.
+
+\textbf{LifeBench}~\citep{lifebench2026} tests multi-source memory with real-world complexity, where top systems score only 55\%. AMB is complementary: LifeBench tests memory-augmented agent performance; AMB tests the memory layer in isolation.
+
+\textbf{MemoryCD}~\citep{memorycd2026} is a cross-domain personalization benchmark using authentic user data from Reddit, testing whether memory systems generalize across domains.
+
+% ============================================================
+\section{Conclusion}
+
+AMB provides a reproducible, provider-agnostic benchmark for agent memory systems. It separates memory infrastructure quality from agent reasoning quality, enabling direct comparison of the underlying systems agents depend on.
+
+The results show meaningful differentiation. No provider achieves perfect scores on both layers. Temporal reasoning and multi-step retrieval remain challenging for all tested systems. Async providers perform substantially better when given adequate indexing time, suggesting that benchmark methodology---specifically, store-to-search delay---significantly impacts results.
+
+AMB is open source (MIT license) and available at \texttt{npx agent-memory-benchmark}. Providers can add adapters and submit results. The benchmark, all test fixtures, and all adapter code are public at \url{https://github.com/AlekseiMarchenko/agent-memory-benchmark}.
+
+% ============================================================
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{5}
+
+\bibitem[Maharana et~al.(2024)]{maharana2024}
+Maharana, A., Lee, D., Tulyakov, S., Bansal, M., Barbieri, F., and Fang, Y.
+\newblock Evaluating Very Long-Term Conversational Memory of LLM Agents.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)}, 2024.
+
+\bibitem[Wu et~al.(2025)]{wu2025}
+Wu, D., et~al.
+\newblock LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory.
+\newblock In \emph{Proceedings of the International Conference on Learning Representations (ICLR)}, 2025.
+
+\bibitem[{AMA-Bench}(2026)]{amabench2026}
+{AMA-Bench}.
+\newblock Agent Memory Architecture Benchmark.
+\newblock \emph{arXiv preprint}, 2026.
+
+\bibitem[{LifeBench}(2026)]{lifebench2026}
+{LifeBench}.
+\newblock Multi-Source Memory Evaluation for Long-Lived Agents.
+\newblock \emph{arXiv preprint}, 2026.
+
+\bibitem[{MemoryCD}(2026)]{memorycd2026}
+{MemoryCD}.
+\newblock Cross-Domain Personalization Benchmark for Memory-Augmented LLMs.
+\newblock \emph{arXiv preprint}, 2026.
+
+\end{thebibliography}
+
+\end{document}
