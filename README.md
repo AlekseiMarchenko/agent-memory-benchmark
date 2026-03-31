@@ -55,6 +55,9 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 |---|---|---|---|---|---|---|---|---|---|
 | Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 67 | 94 |
 | In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
+| Zep | 11 | 0 | 0 | 14 | 0 | 67 | 0 | — | 19 |
+
+> **Note on Zep:** Zep's knowledge graph processes memories asynchronously via LLM extraction. AMB tests immediate store → retrieve patterns (3s delay). Zep is optimized for longer-horizon recall, not immediate retrieval.
 
 ### Layer 2
 
@@ -62,6 +65,7 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 |---|---|---|---|---|---|---|
 | Central Intelligence | **60** | FAIL | FAIL | PASS | PASS | PASS |
 | In-Memory Baseline | 20 | FAIL | FAIL | FAIL | FAIL | PASS |
+| Zep | 0 | FAIL | FAIL | FAIL | FAIL | FAIL |
 
 *Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*
 

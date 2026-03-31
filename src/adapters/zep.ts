@@ -1,17 +1,15 @@
 import { MemoryAdapter, MemoryEntry, StoreOptions, SearchOptions } from "../types.js";
 
 /**
- * Zep Cloud v2 adapter.
- * API docs: https://help.getzep.com/v2/memory
- * Auth: "Api-Key <key>" header
+ * Zep Cloud v3 adapter.
+ * API docs: https://help.getzep.com
+ * Auth: "Authorization: Api-Key <key>"
  *
- * Zep is session-oriented. You add messages to sessions, and Zep builds a
- * knowledge graph automatically. Search returns context + relevant_facts from
- * the knowledge graph for recent session state.
- *
- * Note: Zep's memory model (chat-message-based sessions) is a different
- * paradigm from store/search adapters. Scores on semantic retrieval tests
- * will be lower because Zep requires session history to build its graph.
+ * Zep v3 model:
+ * - Users hold a knowledge graph
+ * - Threads (formerly sessions) hold message sequences
+ * - Messages added to threads are auto-extracted into the user's knowledge graph
+ * - Search uses POST /api/v2/graph/search with user_id + query
  */
 export class ZepAdapter implements MemoryAdapter {
   name = "Zep";
@@ -19,7 +17,8 @@ export class ZepAdapter implements MemoryAdapter {
   private apiKey: string;
   private apiUrl: string;
   private userId: string;
-  private sessions: Set<string> = new Set();
+  private threads: Set<string> = new Set();
+  private messageUuids: string[] = [];
 
   constructor(apiKey: string, apiUrl: string = "https://api.getzep.com/api/v2") {
     this.apiKey = apiKey;
@@ -30,12 +29,11 @@ export class ZepAdapter implements MemoryAdapter {
   private headers(): Record<string, string> {
     return {
       "Content-Type": "application/json",
-      "Api-Key": this.apiKey,
+      "Authorization": `Api-Key ${this.apiKey}`,
     };
   }
 
   async initialize(): Promise<void> {
-    // Create a benchmark user
     const res = await fetch(`${this.apiUrl}/users`, {
       method: "POST",
       headers: this.headers(),
@@ -46,27 +44,27 @@ export class ZepAdapter implements MemoryAdapter {
     }
   }
 
-  private async ensureSession(sessionId: string): Promise<void> {
-    if (this.sessions.has(sessionId)) return;
-    const res = await fetch(`${this.apiUrl}/sessions`, {
+  private async ensureThread(threadId: string): Promise<void> {
+    if (this.threads.has(threadId)) return;
+    const res = await fetch(`${this.apiUrl}/threads`, {
       method: "POST",
       headers: this.headers(),
-      body: JSON.stringify({ session_id: sessionId, user_id: this.userId }),
+      body: JSON.stringify({ thread_id: threadId, user_id: this.userId }),
     });
     if (res.ok || res.status === 409) {
-      this.sessions.add(sessionId);
+      this.threads.add(threadId);
     }
   }
 
   async store(content: string, options?: StoreOptions): Promise<MemoryEntry> {
-    const sessionId = options?.agentId || "amb-benchmark";
-    await this.ensureSession(sessionId);
+    const threadId = options?.agentId || "amb-benchmark";
+    await this.ensureThread(threadId);
 
-    const res = await fetch(`${this.apiUrl}/sessions/${sessionId}/memory`, {
+    const res = await fetch(`${this.apiUrl}/threads/${threadId}/messages`, {
       method: "POST",
       headers: this.headers(),
       body: JSON.stringify({
-        messages: [{ role: "user", content, role_type: "user" }],
+        messages: [{ role: "user", content, role_type: "human" }],
       }),
     });
 
@@ -75,20 +73,23 @@ export class ZepAdapter implements MemoryAdapter {
       throw new Error(`Zep store failed (${res.status}): ${text}`);
     }
 
-    // Zep doesn't return a per-message ID — track by session
-    const id = `zep-${sessionId}-${Date.now()}`;
-    return { id, content, createdAt: new Date().toISOString() };
+    const data = await res.json() as { message_uuids?: string[] };
+    const msgUuid = data.message_uuids?.[0] || `zep-${Date.now()}`;
+    this.messageUuids.push(msgUuid);
+
+    return { id: msgUuid, content, createdAt: new Date().toISOString() };
   }
 
   async search(query: string, options?: SearchOptions): Promise<MemoryEntry[]> {
-    const sessionId = options?.agentId || "amb-benchmark";
-    await this.ensureSession(sessionId);
-
-    // Zep v2 search: GET session memory returns context + relevant_facts
-    // We also try graph search for direct semantic retrieval
-    const params = new URLSearchParams({ lastn: "50" });
-    const res = await fetch(`${this.apiUrl}/sessions/${sessionId}/memory?${params}`, {
+    // Zep v3: semantic search via knowledge graph
+    const res = await fetch(`${this.apiUrl}/graph/search`, {
+      method: "POST",
       headers: this.headers(),
+      body: JSON.stringify({
+        user_id: this.userId,
+        query,
+        limit: options?.limit || 10,
+      }),
     });
 
     if (!res.ok) {
@@ -97,34 +98,23 @@ export class ZepAdapter implements MemoryAdapter {
     }
 
     const data = await res.json() as {
-      context?: string;
-      messages?: Array<{ content: string; uuid?: string; role?: string }>;
-      relevant_facts?: Array<{ fact: string; uuid?: string }>;
+      edges?: Array<{ uuid: string; fact: string; score?: number }>;
+      episodes?: Array<{ uuid: string; content: string; score?: number }>;
     };
 
     const results: MemoryEntry[] = [];
 
-    // Include relevant_facts first (most semantically relevant)
-    if (data.relevant_facts) {
-      for (const f of data.relevant_facts) {
-        results.push({ id: f.uuid || `zep-fact-${Date.now()}`, content: f.fact, score: 0.9 });
+    // Edges = extracted facts from the knowledge graph (most relevant)
+    if (data.edges) {
+      for (const e of data.edges) {
+        results.push({ id: e.uuid, content: e.fact, score: e.score });
       }
     }
 
-    // Include messages that contain the query keywords
-    if (data.messages) {
-      const queryLower = query.toLowerCase();
-      for (const m of data.messages) {
-        if (m.role === "user" && m.content.toLowerCase().includes(queryLower.split(" ")[0])) {
-          results.push({ id: m.uuid || `zep-msg-${Date.now()}`, content: m.content, score: 0.7 });
-        }
-      }
-    }
-
-    // Add all messages as fallback (Zep builds context from full history)
-    if (results.length === 0 && data.messages) {
-      for (const m of data.messages.filter((m) => m.role === "user")) {
-        results.push({ id: m.uuid || `zep-msg-${Date.now()}`, content: m.content, score: 0.5 });
+    // Episodes = raw message content
+    if (data.episodes) {
+      for (const ep of data.episodes) {
+        results.push({ id: ep.uuid, content: ep.content, score: ep.score });
       }
     }
 
@@ -132,20 +122,20 @@ export class ZepAdapter implements MemoryAdapter {
   }
 
   async delete(_id: string): Promise<boolean> {
-    // Individual message deletion is not supported in Zep v2.
-    // cleanup() deletes sessions.
+    // Zep v3 does not support deleting individual messages or facts.
+    // cleanup() deletes the user (cascade deletes all threads + graph).
     return true;
   }
 
   async cleanup(): Promise<void> {
-    for (const sessionId of this.sessions) {
-      try {
-        await fetch(`${this.apiUrl}/sessions/${sessionId}/memory`, {
-          method: "DELETE",
-          headers: this.headers(),
-        });
-      } catch {}
-    }
-    this.sessions.clear();
+    // Delete the benchmark user — cascades to all threads and graph data
+    try {
+      await fetch(`${this.apiUrl}/users/${this.userId}`, {
+        method: "DELETE",
+        headers: this.headers(),
+      });
+    } catch {}
+    this.threads.clear();
+    this.messageUuids = [];
   }
 }
