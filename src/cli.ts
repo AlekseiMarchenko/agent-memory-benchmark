@@ -25,6 +25,7 @@ program
   .option("--verbose", "Show detailed per-query output", false)
   .option("--layer <layer>", "Which layer to run: 1, 2, or all", "all")
   .option("--no-delay", "Skip inter-test delays (useful for local/in-memory adapters)")
+  .option("--store-delay <seconds>", "Seconds to wait after storing before searching (default: 3)", parseFloat)
   .option("--fixtures-dir <dir>", "Fixtures directory for Layer 2 scenarios")
   .option("--mcp-command <cmd>", "MCP server command (for --provider mcp)")
   .option("--mcp-store-tool <name>", "Override MCP store tool name")
@@ -106,6 +107,7 @@ async function main() {
       verbose: opts.verbose,
       layer,
       noDelay: opts.delay === false,
+      storeDelayMs: opts.storeDelay ? opts.storeDelay * 1000 : undefined,
       fixturesDir: opts.fixturesDir,
     });
 

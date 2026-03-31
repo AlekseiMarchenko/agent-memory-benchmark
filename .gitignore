@@ -3,3 +3,4 @@ dist/
 results/
 *.js.map
 .DS_Store
+.gstack/

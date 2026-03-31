@@ -48,7 +48,8 @@ async function sleep(ms: number): Promise<void> {
 async function runTestCase(
   adapter: MemoryAdapter,
   test: TestCase,
-  verbose: boolean
+  verbose: boolean,
+  storeDelayMs: number = 3000
 ): Promise<QueryResult[]> {
   const results: QueryResult[] = [];
   const storedIds: string[] = [];
@@ -97,7 +98,7 @@ async function runTestCase(
     }
 
     // Wait for indexing + rate limit cooldown
-    await sleep(3000);
+    await sleep(storeDelayMs);
 
     // Run queries
     for (const query of test.queries) {
@@ -203,17 +204,20 @@ export async function runBenchmark(
     verbose?: boolean;
     layer?: "1" | "2" | "all";
     noDelay?: boolean;
+    storeDelayMs?: number;
     fixturesDir?: string;
   } = {}
 ): Promise<BenchmarkResult> {
   const verbose = options.verbose ?? false;
   const layer = options.layer ?? "all";
   const noDelay = options.noDelay ?? false;
+  const storeDelayMs = noDelay ? 0 : (options.storeDelayMs ?? 3000);
   const categoriesToRun = options.categories || getCategories();
 
   console.log(`\n🧠 Agent Memory Benchmark v2.0.0`);
   console.log(`   Provider: ${adapter.name}`);
   console.log(`   Layer: ${layer}`);
+  console.log(`   Store delay: ${storeDelayMs / 1000}s`);
   console.log(`   Categories: ${categoriesToRun.length}`);
   console.log(`   Tests: ${categoriesToRun.reduce((sum, c) => sum + getTestsByCategory(c).length, 0)}\n`);
 
@@ -255,7 +259,7 @@ export async function runBenchmark(
     for (const test of tests) {
       if (verbose) console.log(`\n  📝 ${test.name}: ${test.description}`);
 
-      const queryResults = await runTestCase(adapter, test, verbose);
+      const queryResults = await runTestCase(adapter, test, verbose, storeDelayMs);
       allQueryResults.push(...queryResults);
     }
 
@@ -286,6 +290,7 @@ export async function runBenchmark(
     layer2Result = await runLayer2(adapter, {
       verbose,
       noDelay,
+      storeDelayMs,
       fixturesDir: options.fixturesDir,
     });
   }

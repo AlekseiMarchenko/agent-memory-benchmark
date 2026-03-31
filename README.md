@@ -51,6 +51,8 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 
 ### Layer 1
 
+**Default (3s store delay)**
+
 | Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
 |---|---|---|---|---|---|---|---|---|---|
 | Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 67 | 94 |
@@ -58,7 +60,14 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 | Zep | 11 | 0 | 0 | 14 | 0 | 67 | 0 | — | 19 |
 | Mem0 | 7 | 0 | 0 | 14 | 0 | 50 | 0 | 17 | 25 |
 
-> **Note on Zep and Mem0:** Both process memories asynchronously via LLM extraction. AMB tests immediate store → retrieve patterns (3s delay). These providers are optimized for longer-horizon recall, not immediate retrieval. Scores reflect this architectural difference.
+**Extended delay (10s, `--store-delay 10`) — async providers at their best**
+
+| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
+|---|---|---|---|---|---|---|---|---|---|
+| Zep | 39 | 75 | 63 | 29 | 0 | 67 | 0 | — | 19 |
+| Mem0 | **54** | 100 | 100 | 29 | 29 | 0 | 43 | 17 | 44 |
+
+> **Note on Zep and Mem0:** Both use LLM-based async fact extraction. At the default 3s delay, most memories aren't indexed yet. The 10s table shows scores after allowing more indexing time. For production workloads where memories are stored ahead of retrieval, the 10s scores are more representative.
 
 ### Layer 2
 

@@ -23,7 +23,8 @@ async function runScenario(
   adapter: MemoryAdapter,
   scenario: Layer2Scenario,
   verbose: boolean,
-  noDelay: boolean
+  noDelay: boolean,
+  storeDelayMs: number = 3000
 ): Promise<Layer2ScenarioResult> {
   const defaultAgentId = `amb-l2-${scenario.id}-${Date.now()}`;
   const storedIds: string[] = [];
@@ -42,7 +43,7 @@ async function runScenario(
     }
 
     // Wait for indexing
-    if (!noDelay) await sleep(3000);
+    if (!noDelay) await sleep(storeDelayMs);
 
     // Run all queries and collect results
     const allContent: string[] = [];
@@ -95,10 +96,11 @@ async function runScenario(
 
 export async function runLayer2(
   adapter: MemoryAdapter,
-  options: { verbose?: boolean; noDelay?: boolean; fixturesDir?: string } = {}
+  options: { verbose?: boolean; noDelay?: boolean; storeDelayMs?: number; fixturesDir?: string } = {}
 ): Promise<Layer2Result> {
   const verbose = options.verbose ?? false;
   const noDelay = options.noDelay ?? false;
+  const storeDelayMs = noDelay ? 0 : (options.storeDelayMs ?? 3000);
   const fixturesDir = options.fixturesDir ?? path.resolve(process.cwd(), "fixtures");
 
   const scenarios = loadScenarios(fixturesDir);
@@ -114,7 +116,7 @@ export async function runLayer2(
 
   for (const scenario of scenarios) {
     if (verbose) console.log(`\n  📝 ${scenario.name}: ${scenario.description}`);
-    const result = await runScenario(adapter, scenario, verbose, noDelay);
+    const result = await runScenario(adapter, scenario, verbose, noDelay, storeDelayMs);
     results.push(result);
   }
 
