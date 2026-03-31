@@ -157,7 +157,7 @@ Add AMB to your CI:
 2. **Provider-agnostic** -- Same tests, fair comparison
 3. **Deterministic scoring** -- No LLM-as-judge, no embedding similarity
 4. **Two layers** -- Single-operation retrieval + multi-step retrieval scenarios
-5. **Open source** -- MIT licensed. Add your provider, submit PRs
+5. **Open source** -- Apache 2.0 licensed. Add your provider, submit PRs
 
 ## Contributing
 
@@ -170,4 +170,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-MIT -- [Aleksei Marchenko](https://github.com/AlekseiMarchenko)
+Apache 2.0 -- [Aleksei Marchenko](https://github.com/AlekseiMarchenko)

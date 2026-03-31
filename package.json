@@ -21,7 +21,7 @@
   ],
   "keywords": ["agent", "memory", "benchmark", "mcp", "ai", "llm", "mem0", "zep", "hindsight", "letta"],
   "author": "AlekseiMarchenko",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/AlekseiMarchenko/agent-memory-benchmark"
