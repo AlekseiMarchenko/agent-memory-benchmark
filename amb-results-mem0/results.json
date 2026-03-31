@@ -1,0 +1,1125 @@
+{
+  "provider": "Mem0",
+  "timestamp": "2026-03-31T21:50:31.205Z",
+  "version": "2.0.0",
+  "overallScore": 7,
+  "categories": [
+    {
+      "category": "factual-recall",
+      "name": "Factual Recall",
+      "score": 0,
+      "passed": 0,
+      "total": 8,
+      "details": [
+        {
+          "testId": "fr-01",
+          "queryId": "fr-01-q1",
+          "query": "what database does the project use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 1463,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [PostgreSQL, pgvector]"
+        },
+        {
+          "testId": "fr-02",
+          "queryId": "fr-02-q1",
+          "query": "how is the API authenticated",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 464,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Bearer, JWT, RS256]"
+        },
+        {
+          "testId": "fr-03",
+          "queryId": "fr-03-q1",
+          "query": "what are the deployment specs",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 473,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Kubernetes, 3, 2GB]"
+        },
+        {
+          "testId": "fr-04",
+          "queryId": "fr-04-q1",
+          "query": "what is the rate limit",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 514,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [100, minute]"
+        },
+        {
+          "testId": "fr-05",
+          "queryId": "fr-05-q1",
+          "query": "what CI/CD system do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 526,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [GitHub Actions, 15]"
+        },
+        {
+          "testId": "fr-06",
+          "queryId": "fr-06-q1",
+          "query": "what format do error responses use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 495,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [RFC 7807, Problem Details]"
+        },
+        {
+          "testId": "fr-07",
+          "queryId": "fr-07-q1",
+          "query": "what is the staging URL",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 501,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [staging.example.com, 8443]"
+        },
+        {
+          "testId": "fr-08",
+          "queryId": "fr-08-q1",
+          "query": "what tool handles database migrations",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 525,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Drizzle]"
+        }
+      ],
+      "avgLatencyMs": 620,
+      "totalTokens": 62
+    },
+    {
+      "category": "semantic-search",
+      "name": "Semantic Search",
+      "score": 0,
+      "passed": 0,
+      "total": 8,
+      "details": [
+        {
+          "testId": "ss-01",
+          "queryId": "ss-01-q1",
+          "query": "why did we pick this frontend framework",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 475,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [React, experience]"
+        },
+        {
+          "testId": "ss-02",
+          "queryId": "ss-02-q1",
+          "query": "how do we handle money",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 480,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Stripe, payment]"
+        },
+        {
+          "testId": "ss-03",
+          "queryId": "ss-03-q1",
+          "query": "when do we show progress to leadership",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 537,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Friday, 3pm]"
+        },
+        {
+          "testId": "ss-04",
+          "queryId": "ss-04-q1",
+          "query": "how do we protect sensitive information",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 496,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [encrypted, AES-256]"
+        },
+        {
+          "testId": "ss-05",
+          "queryId": "ss-05-q1",
+          "query": "what happens when a new user joins",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 868,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [onboarding, signup]"
+        },
+        {
+          "testId": "ss-06",
+          "queryId": "ss-06-q1",
+          "query": "which programming languages do we support",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 495,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [TypeScript]"
+        },
+        {
+          "testId": "ss-07",
+          "queryId": "ss-07-q1",
+          "query": "how fast should the system respond",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 869,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [200ms, latency]"
+        },
+        {
+          "testId": "ss-08",
+          "queryId": "ss-08-q1",
+          "query": "what can users do without paying",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 503,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [free, 500]"
+        }
+      ],
+      "avgLatencyMs": 590,
+      "totalTokens": 73
+    },
+    {
+      "category": "temporal-reasoning",
+      "name": "Temporal Reasoning",
+      "score": 14.285714285714285,
+      "passed": 1,
+      "total": 7,
+      "details": [
+        {
+          "testId": "tr-01",
+          "queryId": "tr-01-q1",
+          "query": "what database do we currently use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 482,
+          "tokensEstimated": 16,
+          "topResults": [
+            {
+              "id": "ce293286-d719-4493-b7dc-36b3ccd134dc",
+              "content": "User's database is MySQL 5.7",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:43:16-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [PostgreSQL 16]"
+        },
+        {
+          "testId": "tr-02",
+          "queryId": "tr-02-q1",
+          "query": "what database did we use before the migration",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 510,
+          "tokensEstimated": 19,
+          "topResults": [
+            {
+              "id": "309171d3-40df-4f1c-a8c2-157f9b59e1c2",
+              "content": "User's database is MySQL 5.7",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:43:25-07:00"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-03",
+          "queryId": "tr-03-q1",
+          "query": "what is our current velocity",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 517,
+          "tokensEstimated": 18,
+          "topResults": [
+            {
+              "id": "03a67753-5a59-4941-bb35-33377fd8263a",
+              "content": "User's sprint velocity is 21 story points",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:43:33-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [34]"
+        },
+        {
+          "testId": "tr-04",
+          "queryId": "tr-04-q1",
+          "query": "where do we deploy now",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 518,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Fly.io]"
+        },
+        {
+          "testId": "tr-05",
+          "queryId": "tr-05-q1",
+          "query": "what cloud providers have we used",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 531,
+          "tokensEstimated": 17,
+          "topResults": [
+            {
+              "id": "5a64548c-8d4d-432a-96c9-ca1b1b88acfa",
+              "content": "User's deploy target is Heroku",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:43:50-07:00"
+            }
+          ],
+          "reason": "Found: [Heroku], Missing: [AWS, Fly.io]"
+        },
+        {
+          "testId": "tr-06",
+          "queryId": "tr-06-q1",
+          "query": "how many people on the team",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 565,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [4]"
+        },
+        {
+          "testId": "tr-07",
+          "queryId": "tr-07-q1",
+          "query": "what is the latest API version",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 501,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [v2.1]"
+        }
+      ],
+      "avgLatencyMs": 518,
+      "totalTokens": 91
+    },
+    {
+      "category": "conflict-resolution",
+      "name": "Conflict Resolution",
+      "score": 0,
+      "passed": 0,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cr-01",
+          "queryId": "cr-01-q1",
+          "query": "what is the default timeout",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 534,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [60]"
+        },
+        {
+          "testId": "cr-02",
+          "queryId": "cr-02-q1",
+          "query": "what logging library do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 551,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Pino]"
+        },
+        {
+          "testId": "cr-03",
+          "queryId": "cr-03-q1",
+          "query": "what is the max file upload size",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 467,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [50MB]"
+        },
+        {
+          "testId": "cr-04",
+          "queryId": "cr-04-q1",
+          "query": "what is the main git branch",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 473,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [main]"
+        },
+        {
+          "testId": "cr-05",
+          "queryId": "cr-05-q1",
+          "query": "do we use semicolons",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 484,
+          "tokensEstimated": 18,
+          "topResults": [
+            {
+              "id": "8068a3fc-f7b8-46c4-be34-f1bb04f9b487",
+              "content": "User prefers to use Prettier with semicolons enabled",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:44:50-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [disable]"
+        },
+        {
+          "testId": "cr-06",
+          "queryId": "cr-06-q1",
+          "query": "what Node version do we need",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 584,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Found: [], Missing: [20]"
+        },
+        {
+          "testId": "cr-07",
+          "queryId": "cr-07-q1",
+          "query": "what format does the API return",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 541,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [JSON]"
+        }
+      ],
+      "avgLatencyMs": 519,
+      "totalTokens": 63
+    },
+    {
+      "category": "selective-forgetting",
+      "name": "Selective Forgetting",
+      "score": 16.666666666666664,
+      "passed": 1,
+      "total": 6,
+      "details": [
+        {
+          "testId": "sf-01",
+          "queryId": "sf-01-q1",
+          "query": "what is the API key",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 488,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-02",
+          "queryId": "sf-02-q1",
+          "query": "what workarounds do we have",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 490,
+          "tokensEstimated": 32,
+          "topResults": [
+            {
+              "id": "02bdc24c-75fc-48e2-8e3f-2f1d426c1e4a",
+              "content": "User has a temporary workaround to restart the auth service every 6 hours to prevent a memory leak",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:45:21-07:00"
+            }
+          ],
+          "reason": "Expected empty but got 1 results (scores: 0.9)"
+        },
+        {
+          "testId": "sf-03",
+          "queryId": "sf-03-q1",
+          "query": "what linter do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 525,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "c38e6446-181b-4b94-8cc0-79a5c6c570ec",
+              "content": "User's linter configuration uses ESLint with the Airbnb preset",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:45:28-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [Biome]"
+        },
+        {
+          "testId": "sf-04",
+          "queryId": "sf-04-q1",
+          "query": "list project details",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 478,
+          "tokensEstimated": 14,
+          "topResults": [
+            {
+              "id": "ce5ef434-027e-4ffb-824a-8cbac601db37",
+              "content": "Project Memory alpha uses TypeScript",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:45:37-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [delta, epsilon]"
+        },
+        {
+          "testId": "sf-05",
+          "queryId": "sf-05-q1",
+          "query": "what endpoints are deprecated",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 475,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "c2edd61f-c9b6-44fb-b1f6-fda1b0c5bee4",
+              "content": "User states that the /api/v1/users endpoint will be deprecated and removed in Q4 2026",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:45:50-07:00"
+            }
+          ],
+          "reason": "Expected empty but got 1 results (scores: 0.9)"
+        },
+        {
+          "testId": "sf-06",
+          "queryId": "sf-06-q1",
+          "query": "what bugs exist in auth",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 468,
+          "tokensEstimated": 26,
+          "topResults": [
+            {
+              "id": "79019d4d-4d1a-4e2b-ad32-ef99663ed137",
+              "content": "User reports a null pointer exception in auth.ts line 42 when session expires",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:45:57-07:00"
+            }
+          ],
+          "reason": "Expected empty but got 1 results (scores: 0.9)"
+        }
+      ],
+      "avgLatencyMs": 487,
+      "totalTokens": 129
+    },
+    {
+      "category": "cross-session",
+      "name": "Cross-Session Continuity",
+      "score": 0,
+      "passed": 0,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cs-01",
+          "queryId": "cs-01-q1",
+          "query": "what are the user's editor preferences",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 482,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [dark mode, vim, 2-space]"
+        },
+        {
+          "testId": "cs-02",
+          "queryId": "cs-02-q1",
+          "query": "what caused the out of memory crash",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 464,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [unbounded cache, UserService]"
+        },
+        {
+          "testId": "cs-03",
+          "queryId": "cs-03-q1",
+          "query": "why did we pick this data pattern",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 480,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [event sourcing, audit trail]"
+        },
+        {
+          "testId": "cs-04",
+          "queryId": "cs-04-q1",
+          "query": "what is the status of the dashboard feature",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 506,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [dashboard, 70%]"
+        },
+        {
+          "testId": "cs-05",
+          "queryId": "cs-05-q1",
+          "query": "summarize what happened this week",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 510,
+          "tokensEstimated": 32,
+          "topResults": [
+            {
+              "id": "5a43e08a-62dc-4879-b233-3a51dcff12ff",
+              "content": "User set up a CI/CD pipeline with GitHub Actions on March 28, 2026 and tests are passing.",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:46:37-07:00"
+            }
+          ],
+          "reason": "Found: [CI/CD], Missing: [authentication]"
+        },
+        {
+          "testId": "cs-06",
+          "queryId": "cs-06-q1",
+          "query": "what happened with the search task",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 1578,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "b16301f0-ae1f-4048-8eab-5cf0e00398f7",
+              "content": "User has started a task to implement search functionality for the API",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:46:47-07:00"
+            }
+          ],
+          "reason": "Found: [search], Missing: [completed]"
+        },
+        {
+          "testId": "cs-07",
+          "queryId": "cs-07-q1",
+          "query": "trace the deploy process",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 512,
+          "tokensEstimated": 29,
+          "topResults": [
+            {
+              "id": "3af91d08-397b-41a5-adbf-f950f788db69",
+              "content": "User updated environment variables for production, adding OPENAI_API_KEY and DATABASE_URL.",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:46:59-07:00"
+            }
+          ],
+          "reason": "Found: [environment], Missing: [deployed]"
+        }
+      ],
+      "avgLatencyMs": 647,
+      "totalTokens": 127
+    },
+    {
+      "category": "multi-agent",
+      "name": "Multi-Agent Collaboration",
+      "score": 16.666666666666664,
+      "passed": 1,
+      "total": 6,
+      "details": [
+        {
+          "testId": "ma-01",
+          "queryId": "ma-01-q1",
+          "query": "what changed in authentication",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 535,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [middleware, auth]"
+        },
+        {
+          "testId": "ma-02",
+          "queryId": "ma-02-q1",
+          "query": "what decisions were made",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 485,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Tailwind, Hono]"
+        },
+        {
+          "testId": "ma-03",
+          "queryId": "ma-03-q1",
+          "query": "what is the bug",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 525,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "c4dcc95f-5ead-49fa-80bf-cde6c51707b2",
+              "content": "User applied a fix that increased the connection pool to 100 and added a connection timeout of 5 seconds",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:38:49-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [race condition, queue]"
+        },
+        {
+          "testId": "ma-04",
+          "queryId": "ma-04-q1",
+          "query": "what experimental approaches are being tried",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 482,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ma-05",
+          "queryId": "ma-05-q1",
+          "query": "what are the logging standards",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 489,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [JSON logging, correlation]"
+        },
+        {
+          "testId": "ma-06",
+          "queryId": "ma-06-q1",
+          "query": "how does user registration work end to end",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 484,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [email, name]"
+        }
+      ],
+      "avgLatencyMs": 500,
+      "totalTokens": 74
+    },
+    {
+      "category": "cost-efficiency",
+      "name": "Cost Efficiency",
+      "score": 25,
+      "passed": 4,
+      "total": 16,
+      "details": [
+        {
+          "testId": "ce-01",
+          "queryId": "ce-01-q1",
+          "query": "what is the project architecture",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 644,
+          "tokensEstimated": 21,
+          "topResults": [
+            {
+              "id": "55eb3da4-f7d9-41b1-9989-7fac4cf06a9b",
+              "content": "The project architecture follows a monorepo pattern",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:47:54-07:00"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-02",
+          "queryId": "ce-02-q1",
+          "query": "what port does the server use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 537,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [3000]"
+        },
+        {
+          "testId": "ce-03",
+          "queryId": "ce-03-q1",
+          "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 605,
+          "tokensEstimated": 56,
+          "topResults": [],
+          "reason": "Found: [], Missing: [JWT, RS256]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q1",
+          "query": "what is configuration setting A",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 479,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q2",
+          "query": "what is configuration setting B",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 483,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            },
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q3",
+          "query": "what is configuration setting C",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 515,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_3]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q4",
+          "query": "what is configuration setting D",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 459,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_4]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q5",
+          "query": "what is configuration setting E",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 522,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_5]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q6",
+          "query": "what is configuration setting F",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 536,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_6]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q7",
+          "query": "what is configuration setting G",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 472,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            },
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_7]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q8",
+          "query": "what is configuration setting H",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 499,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_8]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q9",
+          "query": "what is configuration setting I",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 1181,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_9]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q10",
+          "query": "what is configuration setting J",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 533,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "3f418362-2ea8-4d7e-ab0b-439ae3e73546",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:48:28-07:00"
+            },
+            {
+              "id": "af8b548e-5292-4049-84ef-8eadceff38ca",
+              "content": "Configuration setting B is set to value_2 for the production environment (Batch memory 2)",
+              "score": 0.8181818181818181,
+              "createdAt": "2026-03-31T14:48:35-07:00"
+            }
+          ],
+          "reason": "Found: [], Missing: [value_10]"
+        },
+        {
+          "testId": "ce-05",
+          "queryId": "ce-05-q1",
+          "query": "temporary test data",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 489,
+          "tokensEstimated": 34,
+          "topResults": [
+            {
+              "id": "2fb2c747-0f88-402a-bd58-7d1e5187364a",
+              "content": "User has a deletable memory labeled 'Deletable memory 1' containing temporary test data for benchmarking purposes",
+              "score": 0.9,
+              "createdAt": "2026-03-31T14:49:09-07:00"
+            }
+          ],
+          "reason": "Expected empty but got 1 results (scores: 0.9)"
+        },
+        {
+          "testId": "ce-06",
+          "queryId": "ce-06-q1",
+          "query": "cold start test",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 462,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Found: [], Missing: [cold start]"
+        },
+        {
+          "testId": "ce-07",
+          "queryId": "ce-07-q1",
+          "query": "lifecycle test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 482,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 556,
+      "totalTokens": 657
+    }
+  ],
+  "layer2": {
+    "score": 0,
+    "passed": 0,
+    "total": 5,
+    "scenarios": [
+      {
+        "scenarioId": "l2-03",
+        "name": "Conflict Resolution (Multi-Step)",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 10862,
+        "reason": "Missing keywords: [GraphQL, 4]. Found: []",
+        "retrievedContent": [
+          "API version is v1 with REST endpoints",
+          "API version is v1 with REST endpoints"
+        ]
+      },
+      {
+        "scenarioId": "l2-02",
+        "name": "Context Continuity",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 8142,
+        "reason": "Missing keywords: [Lucia, Turso, rate limiting]. Found: [Hono]",
+        "retrievedContent": [
+          "User is setting up a project with the Hono framework on Cloudflare Workers"
+        ]
+      },
+      {
+        "scenarioId": "l2-04",
+        "name": "Cross-Agent Handoff",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 7010,
+        "reason": "Missing keywords: [502, connection pool, 100]. Found: []",
+        "retrievedContent": []
+      },
+      {
+        "scenarioId": "l2-01",
+        "name": "Preference Application",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 8885,
+        "reason": "Missing keywords: [Fly.io, PostgreSQL, vitest]. Found: [TypeScript]",
+        "retrievedContent": [
+          "User prefers TypeScript with strict mode enabled for all projects",
+          "User prefers TypeScript with strict mode enabled for all projects"
+        ]
+      },
+      {
+        "scenarioId": "l2-05",
+        "name": "Redundancy Check",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 9931,
+        "reason": "Missing keywords: [BullMQ, Resend, MinIO, Meilisearch]. Found: [Redis]",
+        "retrievedContent": [
+          "The application uses Redis for caching with a 15-minute TTL",
+          "The application uses Redis for caching with a 15-minute TTL",
+          "The application uses Redis for caching with a 15-minute TTL",
+          "The application uses Redis for caching with a 15-minute TTL",
+          "The application uses Redis for caching with a 15-minute TTL"
+        ]
+      }
+    ],
+    "avgLatencyMs": 8966
+  },
+  "meta": {
+    "totalLatencyMs": 81126,
+    "totalTokens": 1276,
+    "totalApiCalls": 70
+  }
+}

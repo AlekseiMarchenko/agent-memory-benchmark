@@ -51,9 +51,13 @@ export class Mem0Adapter implements MemoryAdapter {
       throw new Error(`Mem0 store failed (${res.status}): ${text}`);
     }
 
-    const data = await res.json() as { results: Array<{ id: string; memory: string; event: string }> };
+    const raw = await res.json() as
+      | Array<{ id?: string; memory?: string; event?: string; event_id?: string; status?: string }>
+      | { results: Array<{ id?: string; memory?: string; event?: string; status?: string }> };
 
-    const added = data.results?.find((r) => r.event === "ADD");
+    // Mem0 v1 returned {results: [...]}, v2 returns a flat array
+    const items = Array.isArray(raw) ? raw : raw.results || [];
+    const added = items.find((r) => r.event === "ADD" || r.status === "PENDING");
     const id = added?.id || `mem0-${Date.now()}`;
     if (added?.id) this.storedIds.push(added.id);
 
@@ -85,9 +89,12 @@ export class Mem0Adapter implements MemoryAdapter {
       throw new Error(`Mem0 search failed (${res.status}): ${text}`);
     }
 
-    const data = await res.json() as { results: Array<{ id: string; memory: string; score: number; created_at: string }> };
+    const raw = await res.json() as
+      | Array<{ id: string; memory: string; score: number; created_at: string }>
+      | { results: Array<{ id: string; memory: string; score: number; created_at: string }> };
 
-    return (data.results || []).map((m) => ({
+    const items = Array.isArray(raw) ? raw : raw.results || [];
+    return items.map((m) => ({
       id: m.id,
       content: m.memory,
       score: m.score,

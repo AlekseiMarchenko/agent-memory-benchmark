@@ -1,0 +1,1771 @@
+{
+  "provider": "Zep",
+  "timestamp": "2026-03-31T21:28:09.959Z",
+  "version": "2.0.0",
+  "overallScore": 11,
+  "categories": [
+    {
+      "category": "factual-recall",
+      "name": "Factual Recall",
+      "score": 0,
+      "passed": 0,
+      "total": 8,
+      "details": [
+        {
+          "testId": "fr-01",
+          "queryId": "fr-01-q1",
+          "query": "what database does the project use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 984,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [PostgreSQL, pgvector]"
+        },
+        {
+          "testId": "fr-02",
+          "queryId": "fr-02-q1",
+          "query": "how is the API authenticated",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 365,
+          "tokensEstimated": 41,
+          "topResults": [
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016393442
+            },
+            {
+              "id": "9630e656-02a2-4c73-8709-7796123fb184",
+              "content": "The pgvector extension is used with PostgreSQL 15 for vector storage.",
+              "score": 0.016129032
+            }
+          ],
+          "reason": "Found: [], Missing: [Bearer, JWT, RS256]"
+        },
+        {
+          "testId": "fr-03",
+          "queryId": "fr-03-q1",
+          "query": "what are the deployment specs",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 355,
+          "tokensEstimated": 42,
+          "topResults": [
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016393442
+            },
+            {
+              "id": "9630e656-02a2-4c73-8709-7796123fb184",
+              "content": "The pgvector extension is used with PostgreSQL 15 for vector storage.",
+              "score": 0.016129032
+            }
+          ],
+          "reason": "Found: [], Missing: [Kubernetes, 3, 2GB]"
+        },
+        {
+          "testId": "fr-04",
+          "queryId": "fr-04-q1",
+          "query": "what is the rate limit",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 373,
+          "tokensEstimated": 44,
+          "topResults": [
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016393442
+            },
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.016129032
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [100, minute]"
+        },
+        {
+          "testId": "fr-05",
+          "queryId": "fr-05-q1",
+          "query": "what CI/CD system do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 358,
+          "tokensEstimated": 65,
+          "topResults": [
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.016393442
+            },
+            {
+              "id": "e66a4f9f-9908-4893-aea4-5b5b4bc578b6",
+              "content": "amb-user-1774992130225 is associated with a deployment running on 3 Kubernetes pods.",
+              "score": 0.016129032
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [15], Missing: [GitHub Actions]"
+        },
+        {
+          "testId": "fr-06",
+          "queryId": "fr-06-q1",
+          "query": "what format do error responses use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 563,
+          "tokensEstimated": 52,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.016393442
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016129032
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [RFC 7807, Problem Details]"
+        },
+        {
+          "testId": "fr-07",
+          "queryId": "fr-07-q1",
+          "query": "what is the staging URL",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 551,
+          "tokensEstimated": 49,
+          "topResults": [
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.016393442
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [staging.example.com, 8443]"
+        },
+        {
+          "testId": "fr-08",
+          "queryId": "fr-08-q1",
+          "query": "what tool handles database migrations",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 370,
+          "tokensEstimated": 57,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "9630e656-02a2-4c73-8709-7796123fb184",
+              "content": "The pgvector extension is used with PostgreSQL 15 for vector storage.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Drizzle]"
+        }
+      ],
+      "avgLatencyMs": 490,
+      "totalTokens": 359
+    },
+    {
+      "category": "semantic-search",
+      "name": "Semantic Search",
+      "score": 0,
+      "passed": 0,
+      "total": 8,
+      "details": [
+        {
+          "testId": "ss-01",
+          "queryId": "ss-01-q1",
+          "query": "why did we pick this frontend framework",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 366,
+          "tokensEstimated": 60,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [React, experience]"
+        },
+        {
+          "testId": "ss-02",
+          "queryId": "ss-02-q1",
+          "query": "how do we handle money",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 355,
+          "tokensEstimated": 63,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.016129032
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Stripe, payment]"
+        },
+        {
+          "testId": "ss-03",
+          "queryId": "ss-03-q1",
+          "query": "when do we show progress to leadership",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 363,
+          "tokensEstimated": 61,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016129032
+            },
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Friday, 3pm]"
+        },
+        {
+          "testId": "ss-04",
+          "queryId": "ss-04-q1",
+          "query": "how do we protect sensitive information",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 358,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [encrypted, AES-256]"
+        },
+        {
+          "testId": "ss-05",
+          "queryId": "ss-05-q1",
+          "query": "what happens when a new user joins",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 369,
+          "tokensEstimated": 86,
+          "topResults": [
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.032786883
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.031513646
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.031257633
+            }
+          ],
+          "reason": "Found: [], Missing: [onboarding, signup]"
+        },
+        {
+          "testId": "ss-06",
+          "queryId": "ss-06-q1",
+          "query": "which programming languages do we support",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 368,
+          "tokensEstimated": 72,
+          "topResults": [
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.031318814
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            }
+          ],
+          "reason": "Found: [], Missing: [TypeScript]"
+        },
+        {
+          "testId": "ss-07",
+          "queryId": "ss-07-q1",
+          "query": "how fast should the system respond",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 378,
+          "tokensEstimated": 61,
+          "topResults": [
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.016393442
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016129032
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [200ms, latency]"
+        },
+        {
+          "testId": "ss-08",
+          "queryId": "ss-08-q1",
+          "query": "what can users do without paying",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 367,
+          "tokensEstimated": 83,
+          "topResults": [
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016393442
+            },
+            {
+              "id": "d608c39f-916d-4292-92d7-fb41a24add0f",
+              "content": "Webhooks are associated with Stripe in the context of payment processing.",
+              "score": 0.016129032
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [free, 500]"
+        }
+      ],
+      "avgLatencyMs": 366,
+      "totalTokens": 539
+    },
+    {
+      "category": "temporal-reasoning",
+      "name": "Temporal Reasoning",
+      "score": 14.285714285714285,
+      "passed": 1,
+      "total": 7,
+      "details": [
+        {
+          "testId": "tr-01",
+          "queryId": "tr-01-q1",
+          "query": "what database do we currently use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 442,
+          "tokensEstimated": 48,
+          "topResults": [
+            {
+              "id": "454f8cfc-9d8a-4b41-bcec-9b2398b16d50",
+              "content": "Database migrations utilize Drizzle ORM",
+              "score": 0.032786883
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [PostgreSQL 16]"
+        },
+        {
+          "testId": "tr-02",
+          "queryId": "tr-02-q1",
+          "query": "what database did we use before the migration",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 355,
+          "tokensEstimated": 51,
+          "topResults": [
+            {
+              "id": "454f8cfc-9d8a-4b41-bcec-9b2398b16d50",
+              "content": "Database migrations utilize Drizzle ORM",
+              "score": 0.032786883
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [MySQL]"
+        },
+        {
+          "testId": "tr-03",
+          "queryId": "tr-03-q1",
+          "query": "what is our current velocity",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 358,
+          "tokensEstimated": 45,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016129032
+            },
+            {
+              "id": "454f8cfc-9d8a-4b41-bcec-9b2398b16d50",
+              "content": "Database migrations utilize Drizzle ORM",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [34]"
+        },
+        {
+          "testId": "tr-04",
+          "queryId": "tr-04-q1",
+          "query": "where do we deploy now",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 360,
+          "tokensEstimated": 61,
+          "topResults": [
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "e66a4f9f-9908-4893-aea4-5b5b4bc578b6",
+              "content": "amb-user-1774992130225 is associated with a deployment running on 3 Kubernetes pods.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Fly.io]"
+        },
+        {
+          "testId": "tr-05",
+          "queryId": "tr-05-q1",
+          "query": "what cloud providers have we used",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 354,
+          "tokensEstimated": 96,
+          "topResults": [
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.030092072
+            },
+            {
+              "id": "9630e656-02a2-4c73-8709-7796123fb184",
+              "content": "The pgvector extension is used with PostgreSQL 15 for vector storage.",
+              "score": 0.028949544
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            }
+          ],
+          "reason": "Found: [], Missing: [Heroku, AWS, Fly.io]"
+        },
+        {
+          "testId": "tr-06",
+          "queryId": "tr-06-q1",
+          "query": "how many people on the team",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 350,
+          "tokensEstimated": 59,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.032786883
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-07",
+          "queryId": "tr-07-q1",
+          "query": "what is the latest API version",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 353,
+          "tokensEstimated": 42,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.032786883
+            },
+            {
+              "id": "e15e5ba6-8577-43c2-a3f4-afd626822423",
+              "content": "The Python SDK was sunset in favor of TypeScript",
+              "score": 0.016129032
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [v2.1]"
+        }
+      ],
+      "avgLatencyMs": 367,
+      "totalTokens": 402
+    },
+    {
+      "category": "conflict-resolution",
+      "name": "Conflict Resolution",
+      "score": 0,
+      "passed": 0,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cr-01",
+          "queryId": "cr-01-q1",
+          "query": "what is the default timeout",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 418,
+          "tokensEstimated": 63,
+          "topResults": [
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.032786883
+            },
+            {
+              "id": "1bfd6680-a270-42fd-bbc0-23b0960b6984",
+              "content": "The Performance SLA specifies that p99 latency must be under 200ms for recall operations.",
+              "score": 0.016129032
+            },
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [60]"
+        },
+        {
+          "testId": "cr-02",
+          "queryId": "cr-02-q1",
+          "query": "what logging library do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 360,
+          "tokensEstimated": 45,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "e15e5ba6-8577-43c2-a3f4-afd626822423",
+              "content": "The Python SDK was sunset in favor of TypeScript",
+              "score": 0.016129032
+            },
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Pino]"
+        },
+        {
+          "testId": "cr-03",
+          "queryId": "cr-03-q1",
+          "query": "what is the max file upload size",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 356,
+          "tokensEstimated": 65,
+          "topResults": [
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.016393442
+            },
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [50MB]"
+        },
+        {
+          "testId": "cr-04",
+          "queryId": "cr-04-q1",
+          "query": "what is the main git branch",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 358,
+          "tokensEstimated": 58,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [main]"
+        },
+        {
+          "testId": "cr-05",
+          "queryId": "cr-05-q1",
+          "query": "do we use semicolons",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 374,
+          "tokensEstimated": 51,
+          "topResults": [
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016393442
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016129032
+            },
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [disable]"
+        },
+        {
+          "testId": "cr-06",
+          "queryId": "cr-06-q1",
+          "query": "what Node version do we need",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 374,
+          "tokensEstimated": 51,
+          "topResults": [
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [20]"
+        },
+        {
+          "testId": "cr-07",
+          "queryId": "cr-07-q1",
+          "query": "what format does the API return",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 367,
+          "tokensEstimated": 53,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.032786883
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.032258064
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [JSON]"
+        }
+      ],
+      "avgLatencyMs": 372,
+      "totalTokens": 386
+    },
+    {
+      "category": "selective-forgetting",
+      "name": "Selective Forgetting",
+      "score": 66.66666666666666,
+      "passed": 4,
+      "total": 6,
+      "details": [
+        {
+          "testId": "sf-01",
+          "queryId": "sf-01-q1",
+          "query": "what is the API key",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 370,
+          "tokensEstimated": 46,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.032786883
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016129032
+            },
+            {
+              "id": "d608c39f-916d-4292-92d7-fb41a24add0f",
+              "content": "Webhooks are associated with Stripe in the context of payment processing.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-02",
+          "queryId": "sf-02-q1",
+          "query": "what workarounds do we have",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 351,
+          "tokensEstimated": 81,
+          "topResults": [
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.016393442
+            },
+            {
+              "id": "d608c39f-916d-4292-92d7-fb41a24add0f",
+              "content": "Webhooks are associated with Stripe in the context of payment processing.",
+              "score": 0.016129032
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-03",
+          "queryId": "sf-03-q1",
+          "query": "what linter do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 357,
+          "tokensEstimated": 47,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.016129032
+            },
+            {
+              "id": "e15e5ba6-8577-43c2-a3f4-afd626822423",
+              "content": "The Python SDK was sunset in favor of TypeScript",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [Biome]"
+        },
+        {
+          "testId": "sf-04",
+          "queryId": "sf-04-q1",
+          "query": "list project details",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 363,
+          "tokensEstimated": 57,
+          "topResults": [
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.032786883
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.031280547
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            }
+          ],
+          "reason": "Found: [], Missing: [delta, epsilon]"
+        },
+        {
+          "testId": "sf-05",
+          "queryId": "sf-05-q1",
+          "query": "what endpoints are deprecated",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 370,
+          "tokensEstimated": 55,
+          "topResults": [
+            {
+              "id": "e15e5ba6-8577-43c2-a3f4-afd626822423",
+              "content": "The Python SDK was sunset in favor of TypeScript",
+              "score": 0.016393442
+            },
+            {
+              "id": "d608c39f-916d-4292-92d7-fb41a24add0f",
+              "content": "Webhooks are associated with Stripe in the context of payment processing.",
+              "score": 0.016129032
+            },
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-06",
+          "queryId": "sf-06-q1",
+          "query": "what bugs exist in auth",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 448,
+          "tokensEstimated": 51,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.016393442
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016129032
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 377,
+      "totalTokens": 337
+    },
+    {
+      "category": "cross-session",
+      "name": "Cross-Session Continuity",
+      "score": 0,
+      "passed": 0,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cs-01",
+          "queryId": "cs-01-q1",
+          "query": "what are the user's editor preferences",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 360,
+          "tokensEstimated": 61,
+          "topResults": [
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016393442
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016129032
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [dark mode, vim, 2-space]"
+        },
+        {
+          "testId": "cs-02",
+          "queryId": "cs-02-q1",
+          "query": "what caused the out of memory crash",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 378,
+          "tokensEstimated": 76,
+          "topResults": [
+            {
+              "id": "1bfd6680-a270-42fd-bbc0-23b0960b6984",
+              "content": "The Performance SLA specifies that p99 latency must be under 200ms for recall operations.",
+              "score": 0.016393442
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.016129032
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [unbounded cache, UserService]"
+        },
+        {
+          "testId": "cs-03",
+          "queryId": "cs-03-q1",
+          "query": "why did we pick this data pattern",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 419,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "f4274945-7bc1-4d4c-8842-83dacc71685d",
+              "content": "User data belonging to amb-user-1774992130225 is encrypted at rest using AES-256.",
+              "score": 0.030886196
+            },
+            {
+              "id": "0d9c082c-2336-4053-a580-cdd3eaba5e79",
+              "content": "User data belonging to amb-user-1774992130225 is encrypted in transit using TLS 1.3.",
+              "score": 0.029642545
+            },
+            {
+              "id": "8989dc90-cb4d-4c9e-a307-7e7a0dc3e261",
+              "content": "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+              "score": 0.016393442
+            }
+          ],
+          "reason": "Found: [], Missing: [event sourcing, audit trail]"
+        },
+        {
+          "testId": "cs-04",
+          "queryId": "cs-04-q1",
+          "query": "what is the status of the dashboard feature",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 361,
+          "tokensEstimated": 110,
+          "topResults": [
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.016393442
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016129032
+            },
+            {
+              "id": "a04a2fa1-5638-4b2d-b147-24b766f9c6db",
+              "content": "amb-user-1774992130225 has set Heroku as the deployment target.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [dashboard, 70%]"
+        },
+        {
+          "testId": "cs-05",
+          "queryId": "cs-05-q1",
+          "query": "summarize what happened this week",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 469,
+          "tokensEstimated": 89,
+          "topResults": [
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "0a72643b-5a76-4fa4-af48-a0863f748214",
+              "content": "amb-user-1774992130225 migrated away from Heroku",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [CI/CD], Missing: [authentication]"
+        },
+        {
+          "testId": "cs-06",
+          "queryId": "cs-06-q1",
+          "query": "what happened with the search task",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 379,
+          "tokensEstimated": 85,
+          "topResults": [
+            {
+              "id": "0a72643b-5a76-4fa4-af48-a0863f748214",
+              "content": "amb-user-1774992130225 migrated away from Heroku",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [search, completed]"
+        },
+        {
+          "testId": "cs-07",
+          "queryId": "cs-07-q1",
+          "query": "trace the deploy process",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 383,
+          "tokensEstimated": 101,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "b0c88f57-7d4d-4b68-b38b-e1cb4c801b56",
+              "content": "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+              "score": 0.016129032
+            },
+            {
+              "id": "a04a2fa1-5638-4b2d-b147-24b766f9c6db",
+              "content": "amb-user-1774992130225 has set Heroku as the deployment target.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [environment], Missing: [deployed]"
+        }
+      ],
+      "avgLatencyMs": 393,
+      "totalTokens": 596
+    },
+    {
+      "category": "multi-agent",
+      "name": "Multi-Agent Collaboration",
+      "score": 0,
+      "passed": 0,
+      "total": 6,
+      "details": [],
+      "avgLatencyMs": 0,
+      "totalTokens": 0,
+      "skipped": true,
+      "skipReason": "Adapter does not support multi-agent"
+    },
+    {
+      "category": "cost-efficiency",
+      "name": "Cost Efficiency",
+      "score": 18.75,
+      "passed": 3,
+      "total": 16,
+      "details": [
+        {
+          "testId": "ce-01",
+          "queryId": "ce-01-q1",
+          "query": "what is the project architecture",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 379,
+          "tokensEstimated": 56,
+          "topResults": [
+            {
+              "id": "91c7cb20-b20b-4ac0-984e-ec4f0c79f3a9",
+              "content": "The project utilizes the pgvector extension with PostgreSQL 15.",
+              "score": 0.032786883
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "049a6d74-3960-4b0a-ac77-785fc32e7dcb",
+              "content": "The user hired 2 additional engineers, bringing the total team size to 5.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [monorepo]"
+        },
+        {
+          "testId": "ce-02",
+          "queryId": "ce-02-q1",
+          "query": "what port does the server use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 371,
+          "tokensEstimated": 65,
+          "topResults": [
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.032786883
+            },
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016129032
+            },
+            {
+              "id": "b8414635-3a0a-4ae1-9cd8-ded5d73a89c9",
+              "content": "Database was migrated from MySQL to PostgreSQL 14",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [3000]"
+        },
+        {
+          "testId": "ce-03",
+          "queryId": "ce-03-q1",
+          "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 370,
+          "tokensEstimated": 90,
+          "topResults": [
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.032786883
+            },
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.032258064
+            },
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.031024532
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q1",
+          "query": "what is configuration setting A",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 363,
+          "tokensEstimated": 69,
+          "topResults": [
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016393442
+            },
+            {
+              "id": "f4274945-7bc1-4d4c-8842-83dacc71685d",
+              "content": "User data belonging to amb-user-1774992130225 is encrypted at rest using AES-256.",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_1]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q2",
+          "query": "what is configuration setting B",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 365,
+          "tokensEstimated": 68,
+          "topResults": [
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016393442
+            },
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016129032
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_2]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q3",
+          "query": "what is configuration setting C",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 436,
+          "tokensEstimated": 49,
+          "topResults": [
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016393442
+            },
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016129032
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_3]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q4",
+          "query": "what is configuration setting D",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 408,
+          "tokensEstimated": 46,
+          "topResults": [
+            {
+              "id": "454f8cfc-9d8a-4b41-bcec-9b2398b16d50",
+              "content": "Database migrations utilize Drizzle ORM",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "1cea46c6-fa09-49f5-8894-aeaa1b96167e",
+              "content": "Sprint velocity was measured at 34 story points",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_4]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q5",
+          "query": "what is configuration setting E",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 366,
+          "tokensEstimated": 76,
+          "topResults": [
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.016393442
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016129032
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_5]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q6",
+          "query": "what is configuration setting F",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 361,
+          "tokensEstimated": 55,
+          "topResults": [
+            {
+              "id": "3e2efee4-c0f7-4d03-95c5-17f391f2a5e4",
+              "content": "The CEO wants weekly demos from the user every Friday at 3pm Pacific time.",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "03266b67-6a08-4a32-942d-50f935ee7fc3",
+              "content": "The user is using the database system MySQL 5.7.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_6]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q7",
+          "query": "what is configuration setting G",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 400,
+          "tokensEstimated": 51,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "81c3df4e-50db-4e7b-8311-bfc3d5dbe2e8",
+              "content": "GitHub Actions is used with a 15-minute build timeout.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_7]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q8",
+          "query": "what is configuration setting H",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 353,
+          "tokensEstimated": 72,
+          "topResults": [
+            {
+              "id": "a04a2fa1-5638-4b2d-b147-24b766f9c6db",
+              "content": "amb-user-1774992130225 has set Heroku as the deployment target.",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "eaa22200-0ede-4b3f-b559-061cf85dcd0e",
+              "content": "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_8]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q9",
+          "query": "what is configuration setting I",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 365,
+          "tokensEstimated": 63,
+          "topResults": [
+            {
+              "id": "2f681313-4051-4bea-a790-7734dde31ca3",
+              "content": "API version v1 was launched for user amb-user-1774992130225",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_9]"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q10",
+          "query": "what is configuration setting J",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 408,
+          "tokensEstimated": 46,
+          "topResults": [
+            {
+              "id": "2f6fead1-9334-4745-9f96-4ca6552cd987",
+              "content": "JWT is signed by RS256",
+              "score": 0.016393442
+            },
+            {
+              "id": "f9697837-164a-463f-a867-6b3e893416d4",
+              "content": "Version 2 was released with breaking changes that affect users",
+              "score": 0.016129032
+            },
+            {
+              "id": "0b8f45ac-2a33-48ed-ac1f-28c16b7f96c5",
+              "content": "API authentication uses Bearer tokens in conjunction with JWT",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [value_10]"
+        },
+        {
+          "testId": "ce-05",
+          "queryId": "ce-05-q1",
+          "query": "temporary test data",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 374,
+          "tokensEstimated": 71,
+          "topResults": [
+            {
+              "id": "f4274945-7bc1-4d4c-8842-83dacc71685d",
+              "content": "User data belonging to amb-user-1774992130225 is encrypted at rest using AES-256.",
+              "score": 0.03226646
+            },
+            {
+              "id": "0d9c082c-2336-4053-a580-cdd3eaba5e79",
+              "content": "User data belonging to amb-user-1774992130225 is encrypted in transit using TLS 1.3.",
+              "score": 0.031280547
+            },
+            {
+              "id": "19d07325-7321-4330-afbf-af62fe2c51a7",
+              "content": "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+              "score": 0.016393442
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ce-06",
+          "queryId": "ce-06-q1",
+          "query": "cold start test",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 377,
+          "tokensEstimated": 50,
+          "topResults": [
+            {
+              "id": "aaf01226-b48d-48f1-864a-73688cd66d13",
+              "content": "Sprint velocity is measured in story points",
+              "score": 0.016393442
+            },
+            {
+              "id": "1cea46c6-fa09-49f5-8894-aeaa1b96167e",
+              "content": "Sprint velocity was measured at 34 story points",
+              "score": 0.016129032
+            },
+            {
+              "id": "1bfd6680-a270-42fd-bbc0-23b0960b6984",
+              "content": "The Performance SLA specifies that p99 latency must be under 200ms for recall operations.",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Found: [], Missing: [cold start]"
+        },
+        {
+          "testId": "ce-07",
+          "queryId": "ce-07-q1",
+          "query": "lifecycle test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 394,
+          "tokensEstimated": 43,
+          "topResults": [
+            {
+              "id": "2db74056-756d-4a07-b097-9c50933ff895",
+              "content": "The team uses GitHub Actions for CI/CD processes.",
+              "score": 0.016393442
+            },
+            {
+              "id": "3613439b-5aba-476b-a84e-8e57d39229f8",
+              "content": "The user has 5 years of collective experience with React.",
+              "score": 0.016129032
+            },
+            {
+              "id": "aaf01226-b48d-48f1-864a-73688cd66d13",
+              "content": "Sprint velocity is measured in story points",
+              "score": 0.015873017
+            }
+          ],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 381,
+      "totalTokens": 970
+    }
+  ],
+  "layer2": {
+    "score": 0,
+    "passed": 0,
+    "total": 5,
+    "scenarios": [
+      {
+        "scenarioId": "l2-03",
+        "name": "Conflict Resolution (Multi-Step)",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 7521,
+        "reason": "Missing keywords: [GraphQL]. Found: [4]",
+        "retrievedContent": [
+          "API authentication uses Bearer tokens in conjunction with JWT",
+          "API version v1 was launched for user amb-user-1774992130225",
+          "The user is using the database system MySQL 5.7.",
+          "Alice left the team, resulting in the team size being 4 engineers.",
+          "The user hired 2 additional engineers, bringing the total team size to 5.",
+          "The team uses GitHub Actions for CI/CD processes."
+        ]
+      },
+      {
+        "scenarioId": "l2-02",
+        "name": "Context Continuity",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 6147,
+        "reason": "Missing keywords: [Hono, Lucia, Turso, rate limiting]. Found: []",
+        "retrievedContent": [
+          "The Python SDK was sunset in favor of TypeScript",
+          "The user has 5 years of collective experience with React.",
+          "The team uses GitHub Actions for CI/CD processes.",
+          "The user hired 2 additional engineers, bringing the total team size to 5.",
+          "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+          "The user hired 2 additional engineers, bringing the total team size to 5.",
+          "The team uses GitHub Actions for CI/CD processes.",
+          "The deployment utilizing these Kubernetes pods is related to amb-user-1774992130225.",
+          "amb-user-1774992130225 has set Heroku as the deployment target.",
+          "Winston was replaced by Pino for better performance"
+        ]
+      },
+      {
+        "scenarioId": "l2-04",
+        "name": "Cross-Agent Handoff",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 6477,
+        "reason": "Missing keywords: [502, connection pool, 100]. Found: []",
+        "retrievedContent": [
+          "Webhooks are associated with Stripe in the context of payment processing.",
+          "Version 2 was released with breaking changes that affect users",
+          "amb-user-1774992130225 indicates that error codes follow the RFC 7807 Problem Details format",
+          "The increased maximum upload limit of 50MB applies to the enterprise tier.",
+          "API version v1 was launched for user amb-user-1774992130225",
+          "The user employs Winston for logging purposes.",
+          "The user hired 2 additional engineers, bringing the total team size to 5.",
+          "Version 2 was released with breaking changes that affect users"
+        ]
+      },
+      {
+        "scenarioId": "l2-01",
+        "name": "Preference Application",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 6281,
+        "reason": "Missing keywords: [TypeScript, Fly.io, vitest]. Found: [PostgreSQL]",
+        "retrievedContent": [
+          "The project utilizes the pgvector extension with PostgreSQL 15.",
+          "The team uses GitHub Actions for CI/CD processes.",
+          "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+          "The user has 5 years of collective experience with React.",
+          "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+          "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+          "The user employs Winston for logging purposes.",
+          "User amb-user-1774992130225 migrated away from AWS.",
+          "The user has 5 years of collective experience with React.",
+          "amb-user-1774992130225 migrated away from Heroku"
+        ]
+      },
+      {
+        "scenarioId": "l2-05",
+        "name": "Redundancy Check",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 7164,
+        "reason": "Missing keywords: [Redis, BullMQ, Resend, MinIO, Meilisearch]. Found: []",
+        "retrievedContent": [
+          "The user is using the database system MySQL 5.7.",
+          "The user employs Winston for logging purposes.",
+          "The team uses GitHub Actions for CI/CD processes.",
+          "The user employs Winston for logging purposes.",
+          "The team uses GitHub Actions for CI/CD processes.",
+          "The user hired 2 additional engineers, bringing the total team size to 5.",
+          "The staging environment URL staging.example.com is associated with user amb-user-1774992130225",
+          "The user employs Winston for logging purposes.",
+          "The staging environment URL staging.example.com operates on port 8443, which is relevant to amb-user-1774992130225's environment",
+          "The user increased the maximum upload size to 50MB."
+        ]
+      }
+    ],
+    "avgLatencyMs": 6718
+  },
+  "meta": {
+    "totalLatencyMs": 56710,
+    "totalTokens": 3589,
+    "totalApiCalls": 64
+  }
+}
