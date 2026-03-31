@@ -53,13 +53,14 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 
 | Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
 |---|---|---|---|---|---|---|---|---|---|
-| Central Intelligence | **92** | 100 | 100 | 86 | 86 | 83 | 86 | 83 | 100 |
+| Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 67 | 94 |
 | In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
 
 ### Layer 2
 
 | Provider | Overall | Preference | Continuity | Conflict | Handoff | Redundancy |
 |---|---|---|---|---|---|---|
+| Central Intelligence | **60** | FAIL | FAIL | PASS | PASS | PASS |
 | In-Memory Baseline | 20 | FAIL | FAIL | FAIL | FAIL | PASS |
 
 *Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*
