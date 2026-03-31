@@ -79,6 +79,8 @@ export interface TestCase {
   seeds: SeedMemory[];
   queries: TestQuery[];
   setup?: "store-then-delete" | "store-with-delay" | "multi-agent-store";
+  /** For store-then-delete: which seeded memories to delete. Default: "all" */
+  deletePattern?: "all" | "first" | { keepLast: number } | "search-then-delete";
   weight?: number;
 }
 
@@ -107,12 +109,61 @@ export interface CategoryResult {
   skipReason?: string;
 }
 
+// Layer 2: Multi-step retrieval scenarios
+
+export interface Layer2SeedMemory {
+  content: string;
+  agentId?: string;
+  scope?: "agent" | "user" | "org";
+  tags?: string[];
+  storeDelay?: number;
+}
+
+export interface Layer2Query {
+  id: string;
+  query: string;
+  agentId?: string;
+  scope?: "agent" | "user" | "org";
+  limit?: number;
+}
+
+export interface Layer2Scenario {
+  id: string;
+  name: string;
+  description: string;
+  seeds: Layer2SeedMemory[];
+  queries: Layer2Query[];
+  expected: {
+    mustContain: string[];
+    mustNotContain?: string[];
+  };
+}
+
+export interface Layer2ScenarioResult {
+  scenarioId: string;
+  name: string;
+  passed: boolean;
+  score: number;
+  latencyMs: number;
+  reason: string;
+  retrievedContent: string[];
+}
+
+export interface Layer2Result {
+  score: number;
+  passed: number;
+  total: number;
+  scenarios: Layer2ScenarioResult[];
+  avgLatencyMs: number;
+}
+
 export interface BenchmarkResult {
   provider: string;
   timestamp: string;
   version: string;
   overallScore: number;
   categories: CategoryResult[];
+  layer2?: Layer2Result;
   meta: {
     totalLatencyMs: number;
     totalTokens: number;

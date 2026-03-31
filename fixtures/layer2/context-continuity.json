@@ -1,0 +1,20 @@
+{
+  "id": "l2-02",
+  "name": "Context Continuity",
+  "description": "Retrieve related context from multiple simulated prior sessions",
+  "seeds": [
+    { "content": "Session 1: Set up the project with Hono framework on Cloudflare Workers" },
+    { "content": "Session 2: Added authentication using Lucia Auth with GitHub OAuth provider" },
+    { "content": "Session 3: Migrated database from SQLite to Turso for edge deployment" },
+    { "content": "Session 4: Implemented rate limiting at 60 requests per minute per user" },
+    { "content": "Session 5: Added WebSocket support for real-time notifications" }
+  ],
+  "queries": [
+    { "id": "l2-02-q1", "query": "what is the current tech stack and architecture", "limit": 5 },
+    { "id": "l2-02-q2", "query": "what infrastructure decisions were made", "limit": 5 }
+  ],
+  "expected": {
+    "mustContain": ["Hono", "Lucia", "Turso", "rate limiting"],
+    "mustNotContain": ["SQLite"]
+  }
+}

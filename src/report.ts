@@ -9,7 +9,12 @@ export function generateMarkdown(result: BenchmarkResult): string {
   md += `**Provider:** ${result.provider}\n`;
   md += `**Date:** ${result.timestamp}\n`;
   md += `**AMB Version:** ${result.version}\n`;
-  md += `**Overall Score:** ${result.overallScore}/100 (${grade})\n\n`;
+  md += `**Layer 1 Score:** ${result.overallScore}/100 (${grade})\n`;
+  if (result.layer2 && result.layer2.total > 0) {
+    const l2Grade = getGrade(result.layer2.score);
+    md += `**Layer 2 Score:** ${Math.round(result.layer2.score)}/100 (${l2Grade})\n`;
+  }
+  md += `\n`;
 
   md += `## Category Scores\n\n`;
   md += `| Category | Score | Passed | Avg Latency |\n`;
@@ -31,7 +36,28 @@ export function generateMarkdown(result: BenchmarkResult): string {
   md += `| Total Latency | ${(result.meta.totalLatencyMs / 1000).toFixed(1)}s |\n`;
   md += `| Est. Token Usage | ${result.meta.totalTokens.toLocaleString()} |\n`;
 
-  // Failed tests
+  // Layer 2 results
+  if (result.layer2 && result.layer2.total > 0) {
+    md += `\n## Layer 2: Multi-Step Retrieval\n\n`;
+    md += `| Scenario | Score | Latency |\n`;
+    md += `|---|---|---|\n`;
+    for (const s of result.layer2.scenarios) {
+      const icon = s.passed ? "✅" : "❌";
+      md += `| ${icon} ${s.name} | ${s.passed ? "PASS" : "FAIL"} | ${s.latencyMs}ms |\n`;
+    }
+    md += `\n**Layer 2 Score:** ${result.layer2.passed}/${result.layer2.total} scenarios passed (${Math.round(result.layer2.score)}%)\n`;
+
+    const l2Failures = result.layer2.scenarios.filter((s) => !s.passed);
+    if (l2Failures.length > 0) {
+      md += `\n### Layer 2 Failures\n\n`;
+      for (const f of l2Failures) {
+        md += `**${f.scenarioId}: ${f.name}**\n`;
+        md += `- ${f.reason}\n\n`;
+      }
+    }
+  }
+
+  // Failed tests (Layer 1)
   const failures = result.categories.flatMap((c) => c.details.filter((d) => !d.passed));
   if (failures.length > 0) {
     md += `\n## Failed Tests (${failures.length})\n\n`;

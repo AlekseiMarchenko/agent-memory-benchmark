@@ -1,0 +1,19 @@
+{
+  "id": "l2-04",
+  "name": "Cross-Agent Handoff",
+  "description": "Agent B retrieves context stored by Agent A using scoped memory",
+  "seeds": [
+    { "content": "Bug report: users experiencing 502 errors on the /api/billing endpoint during peak hours", "agentId": "triage-agent", "scope": "org" },
+    { "content": "Root cause: connection pool exhaustion. Max connections set to 10, need at least 50 for peak load", "agentId": "debug-agent", "scope": "org" },
+    { "content": "Fix applied: increased connection pool to 100, added connection timeout of 5 seconds", "agentId": "fix-agent", "scope": "org" },
+    { "content": "Private debug notes: tried increasing to 25 first but still saw intermittent failures", "agentId": "debug-agent", "scope": "agent" }
+  ],
+  "queries": [
+    { "id": "l2-04-q1", "query": "what was the billing endpoint issue and how was it resolved", "agentId": "pm-agent", "scope": "org", "limit": 5 },
+    { "id": "l2-04-q2", "query": "debug notes about the investigation", "agentId": "pm-agent", "scope": "agent", "limit": 3 }
+  ],
+  "expected": {
+    "mustContain": ["502", "connection pool", "100"],
+    "mustNotContain": []
+  }
+}

@@ -1,0 +1,54 @@
+name: "Agent Memory Benchmark"
+description: "Run AMB against your memory provider"
+inputs:
+  provider:
+    description: "Provider name (central-intelligence, mem0, in-memory, hindsight, zep)"
+    required: true
+  api-key:
+    description: "API key for the provider"
+    required: false
+  api-url:
+    description: "API base URL override"
+    required: false
+  layer:
+    description: "Which layer to run: 1, 2, or all"
+    required: false
+    default: "all"
+  verbose:
+    description: "Show detailed output"
+    required: false
+    default: "false"
+outputs:
+  overall-score:
+    description: "Layer 1 overall score (0-100)"
+    value: ${{ steps.run.outputs.overall-score }}
+  layer2-score:
+    description: "Layer 2 score (0-100)"
+    value: ${{ steps.run.outputs.layer2-score }}
+  results-path:
+    description: "Path to results directory"
+    value: ${{ steps.run.outputs.results-path }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - shell: bash
+      id: run
+      run: |
+        npx agent-memory-benchmark@2 \
+          --provider "${{ inputs.provider }}" \
+          ${{ inputs.api-key && format('--api-key "{0}"', inputs.api-key) || '' }} \
+          ${{ inputs.api-url && format('--api-url "{0}"', inputs.api-url) || '' }} \
+          --layer "${{ inputs.layer }}" \
+          ${{ inputs.verbose == 'true' && '--verbose' || '' }} \
+          --output ./amb-results || true
+
+        if [ -f ./amb-results/results.json ]; then
+          SCORE=$(node -e "console.log(JSON.parse(require('fs').readFileSync('./amb-results/results.json','utf8')).overallScore)")
+          L2=$(node -e "const r=JSON.parse(require('fs').readFileSync('./amb-results/results.json','utf8'));console.log(r.layer2?.score??'N/A')")
+          echo "overall-score=$SCORE" >> $GITHUB_OUTPUT
+          echo "layer2-score=$L2" >> $GITHUB_OUTPUT
+          echo "results-path=./amb-results" >> $GITHUB_OUTPUT
+        fi

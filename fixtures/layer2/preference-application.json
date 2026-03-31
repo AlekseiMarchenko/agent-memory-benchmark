@@ -1,0 +1,20 @@
+{
+  "id": "l2-01",
+  "name": "Preference Application",
+  "description": "Retrieve multiple stored preferences to assemble a complete configuration",
+  "seeds": [
+    { "content": "User prefers TypeScript with strict mode enabled for all projects" },
+    { "content": "Default deploy target is Fly.io with auto-scaling enabled" },
+    { "content": "Database preference: PostgreSQL 16 with pgvector extension" },
+    { "content": "Testing framework: vitest with coverage threshold at 80%" },
+    { "content": "Code style: 2-space indent, no semicolons, single quotes" }
+  ],
+  "queries": [
+    { "id": "l2-01-q1", "query": "what are the project configuration preferences", "limit": 5 },
+    { "id": "l2-01-q2", "query": "what technology stack does the user prefer", "limit": 5 }
+  ],
+  "expected": {
+    "mustContain": ["TypeScript", "Fly.io", "PostgreSQL", "vitest"],
+    "mustNotContain": []
+  }
+}

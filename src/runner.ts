@@ -1,9 +1,39 @@
 import { MemoryAdapter, TestCase, TestQuery, CategoryId, CategoryResult, QueryResult, BenchmarkResult, CATEGORY_NAMES } from "./types.js";
 import { getTestsByCategory, getCategories } from "./categories/index.js";
 import { computeOverallScore } from "./scoring.js";
+import { runLayer2 } from "./layer2/runner.js";
 
 function estimateTokens(text: string): number {
   return Math.ceil(text.length / 4);
+}
+
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  maxRetries: number = 3,
+  baseDelayMs: number = 1000
+): Promise<T> {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const isRateLimit = err instanceof Error && (
+        err.message.includes("429") || err.message.includes("rate") || err.message.includes("Rate")
+      );
+      if (!isRateLimit || attempt === maxRetries) throw err;
+      const delay = baseDelayMs * Math.pow(2, attempt);
+      await sleep(delay);
+    }
+  }
+  throw new Error("Unreachable");
+}
+
+async function verifiedDelete(adapter: MemoryAdapter, id: string, verbose: boolean): Promise<void> {
+  const deleted = await adapter.delete(id);
+  if (!deleted && verbose) {
+    console.log(`     ⚠️  Delete returned false for ${id}, retrying...`);
+    await sleep(500);
+    await adapter.delete(id);
+  }
 }
 
 function checkKeywords(results: { content: string }[], keywords: string[]): boolean {
@@ -27,65 +57,41 @@ async function runTestCase(
   const defaultAgentId = `amb-${test.id}-${Date.now()}`;
 
   try {
-    // Seed memories
-    if (test.setup === "store-with-delay") {
-      for (const seed of test.seeds) {
-        if (seed.storeDelay) await sleep(seed.storeDelay);
-        const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId || defaultAgentId,
-          tags: seed.tags,
-          scope: seed.scope,
-        });
-        storedIds.push(entry.id);
+    // Seed memories (unified loop with per-setup options)
+    for (const seed of test.seeds) {
+      if (test.setup === "store-with-delay" && seed.storeDelay) {
+        await sleep(seed.storeDelay);
       }
-    } else if (test.setup === "multi-agent-store") {
-      for (const seed of test.seeds) {
-        const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId || defaultAgentId,
-          tags: seed.tags,
-          scope: seed.scope || "org",
-        });
-        storedIds.push(entry.id);
-      }
-    } else {
-      for (const seed of test.seeds) {
-        const entry = await adapter.store(seed.content, {
-          agentId: seed.agentId || defaultAgentId,
-          tags: seed.tags,
-          scope: seed.scope,
-        });
-        storedIds.push(entry.id);
-      }
+      const entry = await withRetry(() => adapter.store(seed.content, {
+        agentId: seed.agentId || defaultAgentId,
+        tags: seed.tags,
+        scope: seed.scope || (test.setup === "multi-agent-store" ? "org" : seed.scope),
+      }));
+      storedIds.push(entry.id);
     }
 
-    // For store-then-delete tests, delete specific memories
+    // For store-then-delete tests, delete based on deletePattern
     if (test.setup === "store-then-delete") {
-      if (test.id === "sf-03") {
-        // Delete only the first (ESLint), keep the second (Biome)
-        await adapter.delete(storedIds[0]);
-      } else if (test.id === "sf-04") {
-        // Delete first 3, keep last 2
-        for (let i = 0; i < 3; i++) {
-          await adapter.delete(storedIds[i]);
-        }
-      } else if (test.id === "ce-05") {
-        // Delete all for cost efficiency measurement
-        for (const id of storedIds) {
-          await adapter.delete(id);
-        }
-      } else if (test.id === "ce-07") {
-        // First search, then delete
-        const searchStart = Date.now();
+      const pattern = test.deletePattern || "all";
+
+      if (pattern === "first") {
+        await verifiedDelete(adapter, storedIds[0], verbose);
+      } else if (pattern === "search-then-delete") {
+        // Search first (for lifecycle timing tests), then delete all
         await adapter.search("lifecycle test", { limit: 5 });
-        const searchLatency = Date.now() - searchStart;
-        // Now delete all
         for (const id of storedIds) {
-          await adapter.delete(id);
+          await verifiedDelete(adapter, id, verbose);
+        }
+      } else if (typeof pattern === "object" && "keepLast" in pattern) {
+        // Delete all except the last N
+        const deleteCount = storedIds.length - pattern.keepLast;
+        for (let i = 0; i < deleteCount; i++) {
+          await verifiedDelete(adapter, storedIds[i], verbose);
         }
       } else {
-        // Default: delete all seeded memories
+        // "all" — delete everything
         for (const id of storedIds) {
-          await adapter.delete(id);
+          await verifiedDelete(adapter, id, verbose);
         }
       }
     }
@@ -96,11 +102,11 @@ async function runTestCase(
     // Run queries
     for (const query of test.queries) {
       const start = Date.now();
-      const searchResults = await adapter.search(query.query, {
+      const searchResults = await withRetry(() => adapter.search(query.query, {
         limit: query.topK || 3,
         agentId: query.agentId || defaultAgentId,
         scope: query.scope,
-      });
+      }));
       const latency = Date.now() - start;
       const tokens = estimateTokens(query.query) + searchResults.reduce((sum, r) => sum + estimateTokens(r.content), 0);
 
@@ -108,8 +114,10 @@ async function runTestCase(
       let reason = "";
 
       if (query.expectEmpty) {
-        passed = searchResults.length === 0 || searchResults.every((r) => (r.score ?? 1) < 0.1);
-        reason = passed ? "Correctly returned empty/low-score results" : `Expected empty but got ${searchResults.length} results`;
+        // Pass if no results, or all results have explicitly low scores.
+        // If score is undefined (provider doesn't return scores), only pass on truly empty results.
+        passed = searchResults.length === 0 || searchResults.every((r) => r.score !== undefined && r.score < 0.1);
+        reason = passed ? "Correctly returned empty/low-score results" : `Expected empty but got ${searchResults.length} results (scores: ${searchResults.map(r => r.score ?? 'undefined').join(', ')})`;
       } else if (query.expectedKeywords && query.expectedKeywords.length > 0) {
         passed = checkKeywords(searchResults, query.expectedKeywords);
         if (!passed) {
@@ -125,14 +133,15 @@ async function runTestCase(
         }
       }
 
-      // Check unexpected keywords
+      // Check unexpected keywords across ALL results
       if (passed && query.unexpectedKeywords) {
-        const hasUnexpected = query.unexpectedKeywords.some((kw) =>
-          searchResults.length > 0 && searchResults[0].content.toLowerCase().includes(kw.toLowerCase())
+        const combined = searchResults.map((r) => r.content).join(" ").toLowerCase();
+        const foundUnexpected = query.unexpectedKeywords.filter((kw) =>
+          combined.includes(kw.toLowerCase())
         );
-        if (hasUnexpected) {
+        if (foundUnexpected.length > 0) {
           passed = false;
-          reason = `Top result contains unexpected keyword`;
+          reason = `Results contain unexpected keywords: [${foundUnexpected.join(", ")}]`;
         }
       }
 
@@ -192,13 +201,19 @@ export async function runBenchmark(
   options: {
     categories?: CategoryId[];
     verbose?: boolean;
+    layer?: "1" | "2" | "all";
+    noDelay?: boolean;
+    fixturesDir?: string;
   } = {}
 ): Promise<BenchmarkResult> {
   const verbose = options.verbose ?? false;
+  const layer = options.layer ?? "all";
+  const noDelay = options.noDelay ?? false;
   const categoriesToRun = options.categories || getCategories();
 
-  console.log(`\n🧠 Agent Memory Benchmark v1.0.0`);
+  console.log(`\n🧠 Agent Memory Benchmark v2.0.0`);
   console.log(`   Provider: ${adapter.name}`);
+  console.log(`   Layer: ${layer}`);
   console.log(`   Categories: ${categoriesToRun.length}`);
   console.log(`   Tests: ${categoriesToRun.reduce((sum, c) => sum + getTestsByCategory(c).length, 0)}\n`);
 
@@ -206,7 +221,12 @@ export async function runBenchmark(
 
   const categoryResults: CategoryResult[] = [];
 
-  for (const categoryId of categoriesToRun) {
+  // Run Layer 1 unless only Layer 2 was requested
+  if (layer === "2") {
+    console.log(`⏭️  Layer 1 — skipped (--layer 2)\n`);
+  }
+
+  for (const categoryId of (layer === "2" ? [] : categoriesToRun)) {
     const tests = getTestsByCategory(categoryId);
     const categoryName = CATEGORY_NAMES[categoryId];
 
@@ -260,26 +280,46 @@ export async function runBenchmark(
     });
   }
 
+  // Run Layer 2 if requested
+  let layer2Result = undefined;
+  if (layer === "2" || layer === "all") {
+    layer2Result = await runLayer2(adapter, {
+      verbose,
+      noDelay,
+      fixturesDir: options.fixturesDir,
+    });
+  }
+
   // Final cleanup
   await adapter.cleanup();
 
   const overall = computeOverallScore(categoryResults);
 
+  const l1Meta = {
+    totalLatencyMs: categoryResults.reduce((sum, c) => sum + c.details.reduce((s, d) => s + d.latencyMs, 0), 0),
+    totalTokens: categoryResults.reduce((sum, c) => sum + c.totalTokens, 0),
+    totalApiCalls: categoryResults.reduce((sum, c) => sum + c.details.length, 0),
+  };
+
   const result: BenchmarkResult = {
     provider: adapter.name,
     timestamp: new Date().toISOString(),
-    version: "1.0.0",
+    version: "2.0.0",
     overallScore: Math.round(overall),
     categories: categoryResults,
+    layer2: layer2Result,
     meta: {
-      totalLatencyMs: categoryResults.reduce((sum, c) => sum + c.details.reduce((s, d) => s + d.latencyMs, 0), 0),
-      totalTokens: categoryResults.reduce((sum, c) => sum + c.totalTokens, 0),
-      totalApiCalls: categoryResults.reduce((sum, c) => sum + c.details.length, 0),
+      totalLatencyMs: l1Meta.totalLatencyMs + (layer2Result?.scenarios.reduce((s, r) => s + r.latencyMs, 0) || 0),
+      totalTokens: l1Meta.totalTokens,
+      totalApiCalls: l1Meta.totalApiCalls + (layer2Result?.scenarios.length || 0),
     },
   };
 
   console.log(`\n${"═".repeat(50)}`);
-  console.log(`🏆 Overall Score: ${result.overallScore}/100`);
+  console.log(`🏆 Layer 1 Score: ${result.overallScore}/100`);
+  if (layer2Result && layer2Result.total > 0) {
+    console.log(`🏆 Layer 2 Score: ${Math.round(layer2Result.score)}/100`);
+  }
   console.log(`${"═".repeat(50)}\n`);
 
   return result;

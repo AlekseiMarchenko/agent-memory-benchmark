@@ -1,0 +1,21 @@
+{
+  "id": "l2-03",
+  "name": "Conflict Resolution (Multi-Step)",
+  "description": "Handle a chain of superseding facts across multiple stores",
+  "seeds": [
+    { "content": "API version is v1 with REST endpoints", "storeDelay": 0 },
+    { "content": "Upgraded API to v2, added GraphQL alongside REST", "storeDelay": 200 },
+    { "content": "Deprecated REST in v2.1, GraphQL is now the only supported API", "storeDelay": 400 },
+    { "content": "Team size is 3 backend engineers", "storeDelay": 0 },
+    { "content": "Hired 2 frontend engineers, team is now 5 total", "storeDelay": 200 },
+    { "content": "Backend lead left, team is 4 engineers: 2 backend, 2 frontend", "storeDelay": 400 }
+  ],
+  "queries": [
+    { "id": "l2-03-q1", "query": "what API format does the system use currently", "limit": 3 },
+    { "id": "l2-03-q2", "query": "what is the current team composition", "limit": 3 }
+  ],
+  "expected": {
+    "mustContain": ["GraphQL", "4"],
+    "mustNotContain": []
+  }
+}

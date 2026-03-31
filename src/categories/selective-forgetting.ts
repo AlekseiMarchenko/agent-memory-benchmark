@@ -23,6 +23,7 @@ export const selectiveForgettingTests: TestCase[] = [
       { content: "Switched linter from ESLint to Biome for faster checks" },
     ],
     setup: "store-then-delete",
+    deletePattern: "first",
     queries: [{ id: "sf-03-q1", query: "what linter do we use", expectedKeywords: ["Biome"] }],
   },
   {
@@ -36,6 +37,7 @@ export const selectiveForgettingTests: TestCase[] = [
       { content: "Memory epsilon: Hono framework" },
     ],
     setup: "store-then-delete",
+    deletePattern: { keepLast: 2 },
     queries: [{ id: "sf-04-q1", query: "list project details", expectedKeywords: ["delta", "epsilon"] }],
   },
   {

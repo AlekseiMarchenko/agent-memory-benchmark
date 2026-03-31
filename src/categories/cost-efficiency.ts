@@ -66,6 +66,7 @@ export const costEfficiencyTests: TestCase[] = [
     description: "Measure complete store → search → delete cycle",
     seeds: [{ content: "Lifecycle test: this memory will be stored, searched, and then deleted to measure full cycle" }],
     setup: "store-then-delete" as const,
+    deletePattern: "search-then-delete",
     queries: [{ id: "ce-07-q1", query: "lifecycle test", expectEmpty: true }],
   },
 ];

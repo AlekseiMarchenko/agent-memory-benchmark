@@ -6,6 +6,9 @@ import { writeResults } from "./report.js";
 import { InMemoryAdapter } from "./adapters/in-memory.js";
 import { CentralIntelligenceAdapter } from "./adapters/central-intelligence.js";
 import { Mem0Adapter } from "./adapters/mem0.js";
+import { HindsightAdapter } from "./adapters/hindsight.js";
+import { ZepAdapter } from "./adapters/zep.js";
+import { McpAdapter } from "./adapters/mcp-adapter.js";
 import { CategoryId } from "./types.js";
 
 const program = new Command();
@@ -13,13 +16,20 @@ const program = new Command();
 program
   .name("amb")
   .description("Agent Memory Benchmark — the definitive benchmark for agent memory systems")
-  .version("1.0.0")
-  .requiredOption("--provider <name>", "Provider: central-intelligence | mem0 | in-memory")
+  .version("2.0.0")
+  .requiredOption("--provider <name>", "Provider: central-intelligence | mem0 | in-memory | hindsight | zep | mcp")
   .option("--api-key <key>", "API key (or set AMB_API_KEY env var)")
   .option("--api-url <url>", "API base URL override")
   .option("--categories <list>", "Comma-separated category IDs (default: all)")
   .option("--output <dir>", "Output directory", "./amb-results")
-  .option("--verbose", "Show detailed per-query output", false);
+  .option("--verbose", "Show detailed per-query output", false)
+  .option("--layer <layer>", "Which layer to run: 1, 2, or all", "all")
+  .option("--no-delay", "Skip inter-test delays (useful for local/in-memory adapters)")
+  .option("--fixtures-dir <dir>", "Fixtures directory for Layer 2 scenarios")
+  .option("--mcp-command <cmd>", "MCP server command (for --provider mcp)")
+  .option("--mcp-store-tool <name>", "Override MCP store tool name")
+  .option("--mcp-search-tool <name>", "Override MCP search tool name")
+  .option("--mcp-delete-tool <name>", "Override MCP delete tool name");
 
 program.parse();
 
@@ -53,9 +63,34 @@ async function main() {
       adapter = new Mem0Adapter(apiKey, opts.apiUrl);
       break;
 
+    case "hindsight":
+      adapter = new HindsightAdapter(opts.apiUrl);
+      break;
+
+    case "zep":
+      if (!apiKey) {
+        console.error("❌ --api-key or AMB_API_KEY required for Zep");
+        process.exit(1);
+      }
+      adapter = new ZepAdapter(apiKey, opts.apiUrl);
+      break;
+
+    case "mcp":
+      if (!opts.mcpCommand) {
+        console.error("❌ --mcp-command required for MCP provider");
+        console.error('   Example: --provider mcp --mcp-command "npx my-memory-server"');
+        process.exit(1);
+      }
+      adapter = new McpAdapter(opts.mcpCommand, {
+        store: opts.mcpStoreTool,
+        search: opts.mcpSearchTool,
+        delete: opts.mcpDeleteTool,
+      });
+      break;
+
     default:
       console.error(`❌ Unknown provider: ${provider}`);
-      console.error("   Available: central-intelligence, mem0, in-memory");
+      console.error("   Available: central-intelligence, mem0, in-memory, hindsight, zep, mcp");
       process.exit(1);
   }
 
@@ -63,10 +98,15 @@ async function main() {
     ? (opts.categories as string).split(",").map((c: string) => c.trim() as CategoryId)
     : undefined;
 
+  const layer = opts.layer as "1" | "2" | "all";
+
   try {
     const result = await runBenchmark(adapter, {
       categories,
       verbose: opts.verbose,
+      layer,
+      noDelay: opts.delay === false,
+      fixturesDir: opts.fixturesDir,
     });
 
     writeResults(result, opts.output);

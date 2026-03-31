@@ -1,0 +1,23 @@
+{
+  "id": "l2-05",
+  "name": "Redundancy Check",
+  "description": "Verify that previously stored facts remain retrievable without re-storing",
+  "seeds": [
+    { "content": "The application uses Redis for caching with a 15-minute TTL" },
+    { "content": "Background jobs are processed by BullMQ with 3 worker threads" },
+    { "content": "Email notifications are sent via Resend with rate limit of 100 per hour" },
+    { "content": "File uploads are stored in S3-compatible MinIO with 50MB size limit" },
+    { "content": "Search is powered by Meilisearch with auto-indexing on model save" }
+  ],
+  "queries": [
+    { "id": "l2-05-q1", "query": "what caching system do we use", "limit": 3 },
+    { "id": "l2-05-q2", "query": "how are background jobs handled", "limit": 3 },
+    { "id": "l2-05-q3", "query": "what is the email sending setup", "limit": 3 },
+    { "id": "l2-05-q4", "query": "where are files stored", "limit": 3 },
+    { "id": "l2-05-q5", "query": "what powers the search feature", "limit": 3 }
+  ],
+  "expected": {
+    "mustContain": ["Redis", "BullMQ", "Resend", "MinIO", "Meilisearch"],
+    "mustNotContain": []
+  }
+}

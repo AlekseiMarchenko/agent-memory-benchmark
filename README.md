@@ -1,8 +1,8 @@
-# 🧠 Agent Memory Benchmark (AMB)
+# Agent Memory Benchmark (AMB)
 
-The definitive benchmark for agent memory systems. 56 real-world tests across 8 categories.
+The definitive benchmark for agent memory systems. Two evaluation layers, 56+ tests, provider-agnostic.
 
-**Why another benchmark?** LoCoMo tests synthetic conversational recall. AMB tests what agents actually need: semantic search, temporal reasoning, conflict resolution, selective forgetting, multi-agent collaboration, and cost efficiency.
+**Why another benchmark?** LoCoMo tests synthetic conversational recall. LongMemEval tests long-context extraction. AMB tests what agents actually need: can the memory system store, retrieve, scope, forget, and maintain consistency across the operations that real agents perform?
 
 ## Quick Start
 
@@ -15,18 +15,14 @@ npx agent-memory-benchmark --provider mem0 --api-key $MEM0_API_KEY
 
 # Run the in-memory baseline
 npx agent-memory-benchmark --provider in-memory
+
+# Run against any MCP memory server
+npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 ```
 
-## Scores
+## Two Evaluation Layers
 
-| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
-|---|---|---|---|---|---|---|---|---|---|
-| Central Intelligence | **92** | 100 | 100 | 86 | 86 | 83 | 86 | 83 | 100 |
-| In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
-
-*Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*
-
-## 8 Test Categories
+### Layer 1: Single-Operation Retrieval (56 tests, 8 categories)
 
 | # | Category | Tests | Weight | What It Measures |
 |---|---|---|---|---|
@@ -39,24 +35,62 @@ npx agent-memory-benchmark --provider in-memory
 | 7 | **Multi-Agent** | 6 | 5% | Agent A stores, Agent B retrieves |
 | 8 | **Cost Efficiency** | 7 | 10% | Latency, tokens, API calls per operation |
 
-## Output
+### Layer 2: Multi-Step Retrieval (5 scenarios)
 
-AMB generates three files in `./amb-results/`:
+| Scenario | What It Tests |
+|---|---|
+| Preference Application | Retrieve multiple stored preferences to assemble a complete configuration |
+| Context Continuity | Retrieve related context from multiple simulated prior sessions |
+| Conflict Resolution (Multi-Step) | Handle chains of superseding facts |
+| Cross-Agent Handoff | Agent B retrieves context stored by Agent A |
+| Redundancy Check | Verify stored facts remain retrievable without re-storing |
 
-- **results.json** — Machine-readable full results (for CI/CD)
-- **report.md** — Human-readable report with tables and failure details
-- **badge.svg** — Embeddable score badge
+Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is backward-compatible with v1.0.
+
+## Scores
+
+### Layer 1
+
+| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
+|---|---|---|---|---|---|---|---|---|---|
+| Central Intelligence | **92** | 100 | 100 | 86 | 86 | 83 | 86 | 83 | 100 |
+| In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
+
+### Layer 2
+
+| Provider | Overall | Preference | Continuity | Conflict | Handoff | Redundancy |
+|---|---|---|---|---|---|---|
+| In-Memory Baseline | 20 | FAIL | FAIL | FAIL | FAIL | PASS |
+
+*Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*
 
 ## CLI Options
 
 ```
---provider <name>    Provider: central-intelligence | mem0 | in-memory (required)
---api-key <key>      API key (or set AMB_API_KEY env var)
---api-url <url>      API base URL override
---categories <list>  Comma-separated category IDs (default: all)
---output <dir>       Output directory (default: ./amb-results)
---verbose            Show detailed per-query output
+--provider <name>         Provider: central-intelligence | mem0 | in-memory | hindsight | zep | mcp
+--api-key <key>           API key (or set AMB_API_KEY env var)
+--api-url <url>           API base URL override
+--categories <list>       Comma-separated category IDs (default: all)
+--output <dir>            Output directory (default: ./amb-results)
+--verbose                 Show detailed per-query output
+--layer <1|2|all>         Which layer to run (default: all)
+--no-delay                Skip inter-test delays (for local/in-memory adapters)
+--fixtures-dir <dir>      Fixtures directory for Layer 2 scenarios
+
+MCP-specific:
+--mcp-command <cmd>       MCP server command (required for --provider mcp)
+--mcp-store-tool <name>   Override MCP store tool name
+--mcp-search-tool <name>  Override MCP search tool name
+--mcp-delete-tool <name>  Override MCP delete tool name
 ```
+
+## Output
+
+AMB generates files in `./amb-results/`:
+
+- **results.json** -- Machine-readable results with Layer 1 + Layer 2 scores
+- **report.md** -- Human-readable report with tables and failure details
+- **badge.svg** -- Embeddable Layer 1 score badge
 
 ## Adding Your Provider
 
@@ -77,33 +111,42 @@ class MyAdapter implements MemoryAdapter {
 }
 ```
 
-Then run programmatically:
+Or use the MCP adapter for any MCP-compatible memory server:
 
-```typescript
-import { runBenchmark, writeResults } from "agent-memory-benchmark";
+```bash
+npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
+```
 
-const result = await runBenchmark(new MyAdapter(), { verbose: true });
-writeResults(result, "./amb-results");
+## GitHub Action
+
+Add AMB to your CI:
+
+```yaml
+- uses: AlekseiMarchenko/agent-memory-benchmark/.github/actions/amb@v2
+  with:
+    provider: your-provider
+    api-key: ${{ secrets.PROVIDER_API_KEY }}
 ```
 
 ## Scoring
 
-- **Per-query**: Binary pass/fail based on expected keywords in results
-- **Per-category**: (passed / total) × 100
-- **Overall**: Weighted average (weights reflect real-world importance)
-- **Exit code**: 0 if score ≥ 70, 1 otherwise (CI/CD friendly)
+- **Layer 1**: Per-query binary pass/fail based on expected keywords. Per-category: (passed / total) * 100. Overall: weighted average.
+- **Layer 2**: Per-scenario binary pass/fail. Score: (passed / total) * 100.
+- **Scores are separate**: Layer 1 and Layer 2 are independent metrics, not blended.
+- **Exit code**: 0 if Layer 1 score >= 70, 1 otherwise.
 
 ## Philosophy
 
-1. **Real-world scenarios** — Every test case maps to an actual agent workflow
-2. **Provider-agnostic** — Same tests, fair comparison
-3. **Accuracy AND efficiency** — Best memory is useless if it's too slow or expensive
-4. **Open source** — MIT licensed. Add your provider, submit PRs
+1. **Real-world scenarios** -- Every test maps to an actual agent workflow
+2. **Provider-agnostic** -- Same tests, fair comparison
+3. **Deterministic scoring** -- No LLM-as-judge, no embedding similarity
+4. **Two layers** -- Single-operation retrieval + multi-step retrieval scenarios
+5. **Open source** -- MIT licensed. Add your provider, submit PRs
 
 ## Contributing
 
 1. Fork the repo
-2. Add your adapter in `contrib/`
+2. Add your adapter in `contrib/` or `src/adapters/`
 3. Run the benchmark and include results
 4. Submit a PR
 
@@ -111,4 +154,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-MIT — [Aleksei Marchenko](https://github.com/AlekseiMarchenko)
+MIT -- [Aleksei Marchenko](https://github.com/AlekseiMarchenko)
