@@ -1,75 +1,55 @@
 # Agent Memory Benchmark (AMB)
 
-The definitive benchmark for agent memory systems. Two evaluation layers, 56+ tests, provider-agnostic.
-
-**Why another benchmark?** LoCoMo tests synthetic conversational recall. LongMemEval tests long-context extraction. AMB tests what agents actually need: can the memory system store, retrieve, scope, forget, and maintain consistency across the operations that real agents perform?
-
-## Quick Start
+An open-source tool to test and compare agent memory providers. Run the same 56 tests against any provider, get comparable scores.
 
 ```bash
-# Run against Central Intelligence
 npx agent-memory-benchmark --provider central-intelligence --api-key $CI_API_KEY
-
-# Run against Mem0
 npx agent-memory-benchmark --provider mem0 --api-key $MEM0_API_KEY
-
-# Run the in-memory baseline
-npx agent-memory-benchmark --provider in-memory
-
-# Run against any MCP memory server
+npx agent-memory-benchmark --provider zep --api-key $ZEP_API_KEY
 npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
+npx agent-memory-benchmark --provider in-memory  # baseline
 ```
 
-## Two Evaluation Layers
+## What It Tests
 
-### Layer 1: Single-Operation Retrieval (56 tests, 8 categories)
+56 tests across 8 categories, plus 5 multi-step scenarios:
 
-| # | Category | Tests | Weight | What It Measures |
-|---|---|---|---|---|
-| 1 | **Factual Recall** | 8 | 15% | Store a fact, retrieve it with a direct query |
-| 2 | **Semantic Search** | 8 | 20% | Retrieve using paraphrased/conceptual queries |
-| 3 | **Temporal Reasoning** | 7 | 15% | Handle "before/after" and "latest" queries |
-| 4 | **Conflict Resolution** | 7 | 10% | When facts contradict, latest should win |
-| 5 | **Selective Forgetting** | 6 | 10% | Deleted memories must not resurface |
-| 6 | **Cross-Session** | 7 | 15% | Context carries over across sessions |
-| 7 | **Multi-Agent** | 6 | 5% | Agent A stores, Agent B retrieves |
-| 8 | **Cost Efficiency** | 7 | 10% | Latency, tokens, API calls per operation |
+| # | Category | Tests | What It Tests |
+|---|---|---|---|
+| 1 | Factual Recall | 8 | Store a fact, retrieve it with a direct query |
+| 2 | Semantic Search | 8 | Retrieve using paraphrased/conceptual queries |
+| 3 | Temporal Reasoning | 7 | Handle "before/after" and "latest" queries |
+| 4 | Conflict Resolution | 7 | When facts contradict, latest should win |
+| 5 | Selective Forgetting | 6 | Deleted memories must not resurface |
+| 6 | Cross-Session | 7 | Context carries over across sessions |
+| 7 | Multi-Agent | 6 | Agent A stores, Agent B retrieves |
+| 8 | Cost Efficiency | 7 | Latency and operation counts |
 
-### Layer 2: Multi-Step Retrieval (5 scenarios)
-
-| Scenario | What It Tests |
-|---|---|
-| Preference Application | Retrieve multiple stored preferences to assemble a complete configuration |
-| Context Continuity | Retrieve related context from multiple simulated prior sessions |
-| Conflict Resolution (Multi-Step) | Handle chains of superseding facts |
-| Cross-Agent Handoff | Agent B retrieves context stored by Agent A |
-| Redundancy Check | Verify stored facts remain retrievable without re-storing |
-
-Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is backward-compatible with v1.0.
+**Layer 2** adds 5 multi-step scenarios (preference assembly, context continuity, conflict chains, cross-agent handoff, redundancy check) that mirror real agent workflows.
 
 ## Scores
 
-### Layer 1
+> **Disclosure:** Central Intelligence is maintained by the same author as this benchmark. Run it yourself and verify. Scores below are from AMB v2.0.2. PRs with new provider adapters are welcome.
 
 **Default (3s store delay)**
 
-| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
-|---|---|---|---|---|---|---|---|---|---|
-| Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 67 | 94 |
-| In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 50 | 56 |
-| Zep | 11 | 0 | 0 | 14 | 0 | 67 | 0 | — | 19 |
-| Mem0 | 7 | 0 | 0 | 14 | 0 | 50 | 0 | 17 | 25 |
+| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Cost |
+|---|---|---|---|---|---|---|---|---|
+| Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 94 |
+| In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 56 |
+| Zep | 11 | 0 | 0 | 14 | 0 | 67 | 0 | 19 |
+| Mem0 | 7 | 0 | 0 | 14 | 0 | 50 | 0 | 25 |
 
-**Extended delay (10s, `--store-delay 10`) — async providers at their best**
+**Extended delay (10s) for async providers**
 
-| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Multi-Agent | Cost |
-|---|---|---|---|---|---|---|---|---|---|
-| Zep | 39 | 75 | 63 | 29 | 0 | 67 | 0 | — | 19 |
-| Mem0 | **54** | 100 | 100 | 29 | 29 | 0 | 43 | 17 | 44 |
+| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Cost |
+|---|---|---|---|---|---|---|---|---|
+| Mem0 | **54** | 100 | 100 | 29 | 29 | 0 | 43 | 44 |
+| Zep | 39 | 75 | 63 | 29 | 0 | 67 | 0 | 19 |
 
-> **Note on Zep and Mem0:** Both use LLM-based async fact extraction. At the default 3s delay, most memories aren't indexed yet. The 10s table shows scores after allowing more indexing time. For production workloads where memories are stored ahead of retrieval, the 10s scores are more representative.
+Mem0 and Zep use async LLM-based fact extraction. At 3s most memories aren't indexed. Use `--store-delay 10` to give them more time.
 
-### Layer 2
+**Layer 2 (multi-step)**
 
 | Provider | Overall | Preference | Continuity | Conflict | Handoff | Redundancy |
 |---|---|---|---|---|---|---|
@@ -78,64 +58,75 @@ Scores are reported separately (Layer 1 score + Layer 2 score). Layer 1 score is
 | Zep | 0 | FAIL | FAIL | FAIL | FAIL | FAIL |
 | Mem0 | 0 | FAIL | FAIL | FAIL | FAIL | FAIL |
 
-*Run `npx agent-memory-benchmark --provider <name>` to add your provider's scores.*
-
-## CLI Options
-
-```
---provider <name>         Provider: central-intelligence | mem0 | in-memory | hindsight | zep | mcp
---api-key <key>           API key (or set AMB_API_KEY env var)
---api-url <url>           API base URL override
---categories <list>       Comma-separated category IDs (default: all)
---output <dir>            Output directory (default: ./amb-results)
---verbose                 Show detailed per-query output
---layer <1|2|all>         Which layer to run (default: all)
---no-delay                Skip inter-test delays (for local/in-memory adapters)
---fixtures-dir <dir>      Fixtures directory for Layer 2 scenarios
-
-MCP-specific:
---mcp-command <cmd>       MCP server command (required for --provider mcp)
---mcp-store-tool <name>   Override MCP store tool name
---mcp-search-tool <name>  Override MCP search tool name
---mcp-delete-tool <name>  Override MCP delete tool name
-```
-
-## Output
-
-AMB generates files in `./amb-results/`:
-
-- **results.json** -- Machine-readable results with Layer 1 + Layer 2 scores
-- **report.md** -- Human-readable report with tables and failure details
-- **badge.svg** -- Embeddable Layer 1 score badge
-
 ## Adding Your Provider
 
-Implement the `MemoryAdapter` interface:
+Implement 5 methods:
 
 ```typescript
-import { MemoryAdapter, MemoryEntry, StoreOptions, SearchOptions } from "agent-memory-benchmark";
+import { MemoryAdapter } from "agent-memory-benchmark";
 
 class MyAdapter implements MemoryAdapter {
-  name = "My Memory Provider";
-  capabilities = { multiAgent: true, scoping: true, temporalDecay: false };
+  name = "My Provider";
+  capabilities = { multiAgent: true, scoping: true };
 
-  async initialize(): Promise<void> { /* connect */ }
-  async store(content: string, options?: StoreOptions): Promise<MemoryEntry> { /* store */ }
-  async search(query: string, options?: SearchOptions): Promise<MemoryEntry[]> { /* search */ }
-  async delete(id: string): Promise<boolean> { /* delete */ }
-  async cleanup(): Promise<void> { /* cleanup test data */ }
+  async initialize() { /* connect */ }
+  async store(content, options?) { /* store, return MemoryEntry */ }
+  async search(query, options?) { /* search, return MemoryEntry[] */ }
+  async delete(id) { /* delete, return boolean */ }
+  async cleanup() { /* remove test data */ }
 }
 ```
 
-Or use the MCP adapter for any MCP-compatible memory server:
+Or test any MCP-compatible memory server directly:
 
 ```bash
 npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 ```
 
-## GitHub Action
+## CLI Options
 
-Add AMB to your CI:
+```
+--provider <name>         central-intelligence | mem0 | in-memory | hindsight | zep | mcp
+--api-key <key>           API key (or set AMB_API_KEY)
+--api-url <url>           API base URL override
+--store-delay <seconds>   Wait time after store before search (default: 3)
+--categories <list>       Comma-separated category IDs
+--output <dir>            Output directory (default: ./amb-results)
+--verbose                 Show detailed per-query output
+--layer <1|2|all>         Which layer to run (default: all)
+--no-delay                Skip delays (for local/in-memory adapters)
+
+MCP-specific:
+--mcp-command <cmd>       MCP server command
+--mcp-store-tool <name>   Override store tool name
+--mcp-search-tool <name>  Override search tool name
+--mcp-delete-tool <name>  Override delete tool name
+```
+
+## Output
+
+Results go to `./amb-results/`:
+- **results.json** -- machine-readable scores
+- **report.md** -- human-readable report with failure details
+- **badge.svg** -- embeddable score badge
+
+## Scoring
+
+- **Layer 1**: Binary pass/fail per query based on keyword presence. Category score = (passed / total) * 100. Overall = weighted average.
+- **Layer 2**: Binary pass/fail per scenario. Score = (passed / total) * 100.
+- **Exit code**: 0 if Layer 1 >= 70, 1 otherwise.
+
+No LLM-as-judge. No embedding similarity thresholds. Same inputs produce identical scores every run.
+
+## Known Limitations
+
+- Test corpus is small (1-20 memories per test). Doesn't test retrieval at scale (10K+ memories).
+- The in-memory baseline uses exact keyword matching, not embeddings. It's a floor, not a meaningful comparison for semantic capabilities.
+- Factual recall and semantic search categories will saturate with any decent embedding model given enough indexing time.
+- The hard categories are temporal reasoning, conflict resolution, and selective forgetting -- these test system architecture, not model quality.
+- This benchmark is maintained by the author of Central Intelligence. Independent verification is encouraged.
+
+## GitHub Action
 
 ```yaml
 - uses: AlekseiMarchenko/agent-memory-benchmark/.github/actions/amb@v2
@@ -144,25 +135,10 @@ Add AMB to your CI:
     api-key: ${{ secrets.PROVIDER_API_KEY }}
 ```
 
-## Scoring
-
-- **Layer 1**: Per-query binary pass/fail based on expected keywords. Per-category: (passed / total) * 100. Overall: weighted average.
-- **Layer 2**: Per-scenario binary pass/fail. Score: (passed / total) * 100.
-- **Scores are separate**: Layer 1 and Layer 2 are independent metrics, not blended.
-- **Exit code**: 0 if Layer 1 score >= 70, 1 otherwise.
-
-## Philosophy
-
-1. **Real-world scenarios** -- Every test maps to an actual agent workflow
-2. **Provider-agnostic** -- Same tests, fair comparison
-3. **Deterministic scoring** -- No LLM-as-judge, no embedding similarity
-4. **Two layers** -- Single-operation retrieval + multi-step retrieval scenarios
-5. **Open source** -- Apache 2.0 licensed. Add your provider, submit PRs
-
 ## Contributing
 
 1. Fork the repo
-2. Add your adapter in `contrib/` or `src/adapters/`
+2. Add your adapter in `src/adapters/`
 3. Run the benchmark and include results
 4. Submit a PR
 
@@ -170,4 +146,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
-Apache 2.0 -- [Aleksei Marchenko](https://github.com/AlekseiMarchenko)
+Apache 2.0
