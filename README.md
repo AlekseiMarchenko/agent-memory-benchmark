@@ -4,8 +4,6 @@ An open-source tool to test and compare agent memory providers. Run the same 56 
 
 ```bash
 npx agent-memory-benchmark --provider central-intelligence --api-key $CI_API_KEY
-npx agent-memory-benchmark --provider mem0 --api-key $MEM0_API_KEY
-npx agent-memory-benchmark --provider zep --api-key $ZEP_API_KEY
 npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 npx agent-memory-benchmark --provider in-memory  # baseline
 ```
@@ -31,25 +29,14 @@ npx agent-memory-benchmark --provider in-memory  # baseline
 
 ## Scores
 
-> **Disclosure:** Central Intelligence is maintained by the same author as this benchmark. Run it yourself and verify. Scores below are from AMB v2.0.2. PRs with new provider adapters are welcome.
+> **Disclosure:** Central Intelligence is maintained by the same author as this benchmark. Run it yourself and verify. PRs with new provider adapters are welcome.
 
-**Default (3s store delay)**
+**Layer 1 (3s store delay)**
 
 | Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Cost |
 |---|---|---|---|---|---|---|---|---|
 | Central Intelligence | **90** | 100 | 100 | 86 | 86 | 83 | 86 | 94 |
 | In-Memory Baseline | 55 | 100 | 0 | 43 | 86 | 83 | 57 | 56 |
-| Zep | 11 | 0 | 0 | 14 | 0 | 67 | 0 | 19 |
-| Mem0 | 7 | 0 | 0 | 14 | 0 | 50 | 0 | 25 |
-
-**Extended delay (10s) for async providers**
-
-| Provider | Overall | Factual | Semantic | Temporal | Conflict | Forgetting | Cross-Session | Cost |
-|---|---|---|---|---|---|---|---|---|
-| Mem0 | **54** | 100 | 100 | 29 | 29 | 0 | 43 | 44 |
-| Zep | 39 | 75 | 63 | 29 | 0 | 67 | 0 | 19 |
-
-Mem0 and Zep use async LLM-based fact extraction. At 3s most memories aren't indexed. Use `--store-delay 10` to give them more time.
 
 **Layer 2 (multi-step)**
 
@@ -57,8 +44,6 @@ Mem0 and Zep use async LLM-based fact extraction. At 3s most memories aren't ind
 |---|---|---|---|---|---|---|
 | Central Intelligence | **60** | FAIL | FAIL | PASS | PASS | PASS |
 | In-Memory Baseline | 20 | FAIL | FAIL | FAIL | FAIL | PASS |
-| Zep | 0 | FAIL | FAIL | FAIL | FAIL | FAIL |
-| Mem0 | 0 | FAIL | FAIL | FAIL | FAIL | FAIL |
 
 ## Adding Your Provider
 
@@ -88,7 +73,7 @@ npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 ## CLI Options
 
 ```
---provider <name>         central-intelligence | mem0 | in-memory | hindsight | zep | mcp
+--provider <name>         central-intelligence | in-memory | mcp (+ mem0, hindsight, zep adapters available)
 --api-key <key>           API key (or set AMB_API_KEY)
 --api-url <url>           API base URL override
 --store-delay <seconds>   Wait time after store before search (default: 3)
