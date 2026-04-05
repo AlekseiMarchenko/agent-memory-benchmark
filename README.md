@@ -27,6 +27,8 @@ npx agent-memory-benchmark --provider in-memory  # baseline
 
 **Layer 2** adds 5 multi-step scenarios (preference assembly, context continuity, conflict chains, cross-agent handoff, redundancy check) that mirror real agent workflows.
 
+**Layer 3** (new in v3.0.0) injects 1K / 5K / 10K distractor memories before running the same Layer 1 queries. Tests whether retrieval holds up at scale, not just with 3 memories in the store.
+
 ## Scores
 
 > **Disclosure:** Central Intelligence is maintained by the same author as this benchmark. Run it yourself and verify. Scores below are from AMB v2.0.2. PRs with new provider adapters are welcome.
@@ -93,8 +95,10 @@ npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 --categories <list>       Comma-separated category IDs
 --output <dir>            Output directory (default: ./amb-results)
 --verbose                 Show detailed per-query output
---layer <1|2|all>         Which layer to run (default: all)
+--layer <1|2|3|all>       Which layer to run (default: all)
 --no-delay                Skip delays (for local/in-memory adapters)
+--layer3-scales <list>    Distractor counts for Layer 3 (default: 1000)
+--layer3-categories <list> Subset of categories for Layer 3
 
 MCP-specific:
 --mcp-command <cmd>       MCP server command
@@ -114,22 +118,23 @@ Results go to `./amb-results/`:
 
 - **Layer 1**: Binary pass/fail per query based on keyword presence. Category score = (passed / total) * 100. Overall = weighted average.
 - **Layer 2**: Binary pass/fail per scenario. Score = (passed / total) * 100.
+- **Layer 3**: Same scoring as Layer 1 but with 1K-10K distractors. Reports per-scale accuracy and degradation vs Layer 1 baseline.
 - **Exit code**: 0 if Layer 1 >= 70, 1 otherwise.
 
 No LLM-as-judge. No embedding similarity thresholds. Same inputs produce identical scores every run.
 
 ## Known Limitations
 
-- Test corpus is small (1-20 memories per test). Doesn't test retrieval at scale (10K+ memories).
+- **Layer 1 tests are small** (1-20 memories per test). Factual recall and semantic search will saturate with any decent embedding model given enough indexing time. Use **Layer 3** (`--layer 3`) to test retrieval at scale with 1K-10K distractor memories.
 - The in-memory baseline uses exact keyword matching, not embeddings. It's a floor, not a meaningful comparison for semantic capabilities.
-- Factual recall and semantic search categories will saturate with any decent embedding model given enough indexing time.
 - The hard categories are temporal reasoning, conflict resolution, and selective forgetting -- these test system architecture, not model quality.
+- Layer 3 generates deterministic distractors from 150 templates. Real-world memory distributions may differ.
 - This benchmark is maintained by the author of Central Intelligence. Independent verification is encouraged.
 
 ## GitHub Action
 
 ```yaml
-- uses: AlekseiMarchenko/agent-memory-benchmark/.github/actions/amb@v2
+- uses: AlekseiMarchenko/agent-memory-benchmark/.github/actions/amb@v3
   with:
     provider: your-provider
     api-key: ${{ secrets.PROVIDER_API_KEY }}
