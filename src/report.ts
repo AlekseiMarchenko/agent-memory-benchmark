@@ -57,6 +57,43 @@ export function generateMarkdown(result: BenchmarkResult): string {
     }
   }
 
+  // Layer 3 results
+  if (result.layer3 && result.layer3.scales.length > 0) {
+    md += `\n## Layer 3: Scale Testing\n\n`;
+    md += `Tests the same Layer 1 queries against a noisy store with distractor memories.\n\n`;
+
+    // Summary table
+    const catNames = result.layer3.scales[0].categories
+      .filter((c) => !c.skipped)
+      .map((c) => c.category);
+    md += `| Scale | Overall | ${catNames.map((c) => c.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ")).join(" | ")} |\n`;
+    md += `|---|---|${catNames.map(() => "---").join("|")}|\n`;
+
+    for (const s of result.layer3.scales) {
+      const catScores = catNames.map((name) => {
+        const cat = s.categories.find((c) => c.category === name);
+        return cat && !cat.skipped ? `${cat.score.toFixed(0)}%` : "—";
+      });
+      md += `| ${s.scale.toLocaleString()} | ${s.overallScore.toFixed(1)}% | ${catScores.join(" | ")} |\n`;
+    }
+
+    // Degradation
+    if (result.layer3.degradation.length > 0 && result.layer3.degradation[0].scoreDropPercent !== 0) {
+      md += `\n**Score Degradation** (vs Layer 1 baseline of ${result.overallScore}%):\n\n`;
+      for (const d of result.layer3.degradation) {
+        const sign = d.scoreDropPercent > 0 ? "+" : "";
+        md += `- ${d.scale.toLocaleString()} distractors: ${sign}${d.scoreDropPercent.toFixed(1)}%\n`;
+      }
+    }
+
+    // Ingestion times
+    md += `\n**Distractor Ingestion:**\n\n`;
+    for (const s of result.layer3.scales) {
+      md += `- ${s.scale.toLocaleString()}: ${(s.distractorStoreTimeMs / 1000).toFixed(1)}s\n`;
+    }
+    md += `\n`;
+  }
+
   // Failed tests (Layer 1)
   const failures = result.categories.flatMap((c) => c.details.filter((d) => !d.passed));
   if (failures.length > 0) {

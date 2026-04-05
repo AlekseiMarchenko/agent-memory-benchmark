@@ -202,10 +202,12 @@ export async function runBenchmark(
   options: {
     categories?: CategoryId[];
     verbose?: boolean;
-    layer?: "1" | "2" | "all";
+    layer?: "1" | "2" | "3" | "all";
     noDelay?: boolean;
     storeDelayMs?: number;
     fixturesDir?: string;
+    layer3Scales?: number[];
+    layer3Categories?: CategoryId[];
   } = {}
 ): Promise<BenchmarkResult> {
   const verbose = options.verbose ?? false;
@@ -295,6 +297,20 @@ export async function runBenchmark(
     });
   }
 
+  // Run Layer 3 if requested
+  let layer3Result = undefined;
+  if (layer === "3" || layer === "all") {
+    const { runLayer3 } = await import("./layer3/runner.js");
+    layer3Result = await runLayer3(adapter, {
+      scales: options.layer3Scales || [1000],
+      categories: options.layer3Categories,
+      storeDelayMs,
+      noDelay,
+      verbose,
+      layer1Results: categoryResults.length > 0 ? categoryResults : undefined,
+    });
+  }
+
   // Final cleanup
   await adapter.cleanup();
 
@@ -309,10 +325,11 @@ export async function runBenchmark(
   const result: BenchmarkResult = {
     provider: adapter.name,
     timestamp: new Date().toISOString(),
-    version: "2.0.0",
+    version: "3.0.0",
     overallScore: Math.round(overall),
     categories: categoryResults,
     layer2: layer2Result,
+    layer3: layer3Result,
     meta: {
       totalLatencyMs: l1Meta.totalLatencyMs + (layer2Result?.scenarios.reduce((s, r) => s + r.latencyMs, 0) || 0),
       totalTokens: l1Meta.totalTokens,
@@ -324,6 +341,11 @@ export async function runBenchmark(
   console.log(`🏆 Layer 1 Score: ${result.overallScore}/100`);
   if (layer2Result && layer2Result.total > 0) {
     console.log(`🏆 Layer 2 Score: ${Math.round(layer2Result.score)}/100`);
+  }
+  if (layer3Result) {
+    for (const s of layer3Result.scales) {
+      console.log(`🏆 Layer 3 Score (${s.scale.toLocaleString()} distractors): ${s.overallScore.toFixed(1)}/100`);
+    }
   }
   console.log(`${"═".repeat(50)}\n`);
 

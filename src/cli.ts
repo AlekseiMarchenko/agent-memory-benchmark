@@ -23,10 +23,12 @@ program
   .option("--categories <list>", "Comma-separated category IDs (default: all)")
   .option("--output <dir>", "Output directory", "./amb-results")
   .option("--verbose", "Show detailed per-query output", false)
-  .option("--layer <layer>", "Which layer to run: 1, 2, or all", "all")
+  .option("--layer <layer>", "Which layer to run: 1, 2, 3, or all", "all")
   .option("--no-delay", "Skip inter-test delays (useful for local/in-memory adapters)")
   .option("--store-delay <seconds>", "Seconds to wait after storing before searching (default: 3)", parseFloat)
   .option("--fixtures-dir <dir>", "Fixtures directory for Layer 2 scenarios")
+  .option("--layer3-scales <list>", "Comma-separated distractor counts for Layer 3 (default: 1000)", "1000")
+  .option("--layer3-categories <list>", "Comma-separated categories for Layer 3 (default: all)")
   .option("--mcp-command <cmd>", "MCP server command (for --provider mcp)")
   .option("--mcp-store-tool <name>", "Override MCP store tool name")
   .option("--mcp-search-tool <name>", "Override MCP search tool name")
@@ -99,7 +101,15 @@ async function main() {
     ? (opts.categories as string).split(",").map((c: string) => c.trim() as CategoryId)
     : undefined;
 
-  const layer = opts.layer as "1" | "2" | "all";
+  const layer = opts.layer as "1" | "2" | "3" | "all";
+
+  const layer3Scales = opts.layer3Scales
+    ? (opts.layer3Scales as string).split(",").map((s: string) => parseInt(s.trim(), 10))
+    : [1000];
+
+  const layer3Categories = opts.layer3Categories
+    ? (opts.layer3Categories as string).split(",").map((c: string) => c.trim() as CategoryId)
+    : undefined;
 
   try {
     const result = await runBenchmark(adapter, {
@@ -109,6 +119,8 @@ async function main() {
       noDelay: opts.delay === false,
       storeDelayMs: opts.storeDelay ? opts.storeDelay * 1000 : undefined,
       fixturesDir: opts.fixturesDir,
+      layer3Scales,
+      layer3Categories,
     });
 
     writeResults(result, opts.output);

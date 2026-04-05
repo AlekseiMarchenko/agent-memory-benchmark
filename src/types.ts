@@ -157,6 +157,24 @@ export interface Layer2Result {
   avgLatencyMs: number;
 }
 
+// Layer 3: Scale testing
+
+export interface Layer3ScaleResult {
+  scale: number;
+  categories: CategoryResult[];
+  overallScore: number;
+  avgLatencyMs: number;
+  distractorStoreTimeMs: number;
+}
+
+export interface Layer3Result {
+  scales: Layer3ScaleResult[];
+  degradation: {
+    scale: number;
+    scoreDropPercent: number;
+  }[];
+}
+
 export interface BenchmarkResult {
   provider: string;
   timestamp: string;
@@ -164,6 +182,7 @@ export interface BenchmarkResult {
   overallScore: number;
   categories: CategoryResult[];
   layer2?: Layer2Result;
+  layer3?: Layer3Result;
   meta: {
     totalLatencyMs: number;
     totalTokens: number;

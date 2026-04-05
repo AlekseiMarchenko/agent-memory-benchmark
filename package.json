@@ -1,7 +1,7 @@
 {
   "name": "agent-memory-benchmark",
-  "version": "2.0.2",
-  "description": "The definitive benchmark for agent memory systems. 56 tests across 8 categories.",
+  "version": "3.0.0",
+  "description": "The definitive benchmark for agent memory systems. 56 tests, 8 categories, scale testing up to 10K memories.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
