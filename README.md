@@ -5,6 +5,7 @@ An open-source tool to test and compare agent memory providers. Run the same 56 
 ```bash
 npx agent-memory-benchmark --provider central-intelligence --api-key $CI_API_KEY
 npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
+npx agent-memory-benchmark --provider tree-ring --no-delay
 npx agent-memory-benchmark --provider in-memory  # baseline
 ```
 
@@ -73,7 +74,7 @@ npx agent-memory-benchmark --provider mcp --mcp-command "npx your-memory-server"
 ## CLI Options
 
 ```
---provider <name>         central-intelligence | in-memory | mcp (+ mem0, hindsight, zep adapters available)
+--provider <name>         central-intelligence | in-memory | tree-ring | mcp (+ mem0, hindsight, zep adapters available)
 --api-key <key>           API key (or set AMB_API_KEY)
 --api-url <url>           API base URL override
 --store-delay <seconds>   Wait time after store before search (default: 3)
@@ -90,7 +91,25 @@ MCP-specific:
 --mcp-store-tool <name>   Override store tool name
 --mcp-search-tool <name>  Override search tool name
 --mcp-delete-tool <name>  Override delete tool name
+
+Tree Ring-specific:
+TREE_RING_BIN             Path to the tree-ring CLI if it is not on PATH
+TREE_RING_ROOT            Optional existing memory root; defaults to a temp root per run
+TREE_RING_PROJECT         Shared project name for org-scoped benchmark cases
 ```
+
+### Tree Ring Memory
+
+The Tree Ring adapter runs against the local `tree-ring` CLI, so it does not need
+an API key or background service:
+
+```bash
+TREE_RING_BIN=/path/to/tree-ring npx tsx src/cli.ts --provider tree-ring --no-delay --layer 1
+```
+
+By default the adapter creates an isolated temporary memory root and deletes it
+after the benchmark. Set `TREE_RING_ROOT` only if you intentionally want to run
+against an existing Tree Ring store.
 
 ## Output
 

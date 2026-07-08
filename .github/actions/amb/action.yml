@@ -2,7 +2,7 @@ name: "Agent Memory Benchmark"
 description: "Run AMB against your memory provider"
 inputs:
   provider:
-    description: "Provider name (central-intelligence, mem0, in-memory, hindsight, zep)"
+    description: "Provider name (central-intelligence, mem0, in-memory, hindsight, zep, tree-ring)"
     required: true
   api-key:
     description: "API key for the provider"
