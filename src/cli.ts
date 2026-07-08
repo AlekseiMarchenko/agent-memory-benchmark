@@ -9,6 +9,7 @@ import { Mem0Adapter } from "./adapters/mem0.js";
 import { HindsightAdapter } from "./adapters/hindsight.js";
 import { ZepAdapter } from "./adapters/zep.js";
 import { McpAdapter } from "./adapters/mcp-adapter.js";
+import { TreeRingAdapter } from "./adapters/tree-ring.js";
 import { CategoryId } from "./types.js";
 
 const program = new Command();
@@ -17,7 +18,7 @@ program
   .name("amb")
   .description("Agent Memory Benchmark — the definitive benchmark for agent memory systems")
   .version("2.0.0")
-  .requiredOption("--provider <name>", "Provider: central-intelligence | mem0 | in-memory | hindsight | zep | mcp")
+  .requiredOption("--provider <name>", "Provider: central-intelligence | mem0 | in-memory | hindsight | zep | mcp | tree-ring")
   .option("--api-key <key>", "API key (or set AMB_API_KEY env var)")
   .option("--api-url <url>", "API base URL override")
   .option("--categories <list>", "Comma-separated category IDs (default: all)")
@@ -70,6 +71,11 @@ async function main() {
       adapter = new HindsightAdapter(opts.apiUrl);
       break;
 
+    case "tree-ring":
+    case "trm":
+      adapter = new TreeRingAdapter();
+      break;
+
     case "zep":
       if (!apiKey) {
         console.error("❌ --api-key or AMB_API_KEY required for Zep");
@@ -93,7 +99,7 @@ async function main() {
 
     default:
       console.error(`❌ Unknown provider: ${provider}`);
-      console.error("   Available: central-intelligence, mem0, in-memory, hindsight, zep, mcp");
+      console.error("   Available: central-intelligence, mem0, in-memory, hindsight, zep, mcp, tree-ring");
       process.exit(1);
   }
 

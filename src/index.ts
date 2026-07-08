@@ -6,6 +6,7 @@ export { scoreScenario } from "./layer2/scorer.js";
 export { InMemoryAdapter } from "./adapters/in-memory.js";
 export { CentralIntelligenceAdapter } from "./adapters/central-intelligence.js";
 export { Mem0Adapter } from "./adapters/mem0.js";
+export { TreeRingAdapter } from "./adapters/tree-ring.js";
 export { ALL_TESTS, getTestsByCategory, getCategories } from "./categories/index.js";
 export type {
   MemoryAdapter,

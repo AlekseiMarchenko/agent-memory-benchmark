@@ -1,0 +1,4076 @@
+{
+  "provider": "Tree Ring Memory",
+  "timestamp": "2026-07-08T16:17:16.217Z",
+  "version": "3.0.0",
+  "overallScore": 61,
+  "categories": [
+    {
+      "category": "factual-recall",
+      "name": "Factual Recall",
+      "score": 100,
+      "passed": 8,
+      "total": 8,
+      "details": [
+        {
+          "testId": "fr-01",
+          "queryId": "fr-01-q1",
+          "query": "what database does the project use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 31,
+          "tokensEstimated": 28,
+          "topResults": [
+            {
+              "id": "mem_20260708_161532_c6f99970f279",
+              "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
+              "tags": [
+                "amb",
+                "agent:amb-fr-01-1783527332542"
+              ],
+              "metadata": {
+                "project": "amb-fr-01-1783527332542"
+              },
+              "createdAt": "2026-07-08T16:15:32.561371Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-02",
+          "queryId": "fr-02-q1",
+          "query": "how is the API authenticated",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 33,
+          "tokensEstimated": 23,
+          "topResults": [
+            {
+              "id": "mem_20260708_161534_36b1ef1ba4ff",
+              "content": "API authentication uses Bearer tokens with JWT signed by RS256",
+              "tags": [
+                "amb",
+                "agent:amb-fr-02-1783527334103"
+              ],
+              "metadata": {
+                "project": "amb-fr-02-1783527334103"
+              },
+              "createdAt": "2026-07-08T16:15:34.117783Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-03",
+          "queryId": "fr-03-q1",
+          "query": "what are the deployment specs",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 28,
+          "tokensEstimated": 23,
+          "topResults": [
+            {
+              "id": "mem_20260708_161535_f9aed06319e2",
+              "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
+              "tags": [
+                "amb",
+                "agent:amb-fr-03-1783527335660"
+              ],
+              "metadata": {
+                "project": "amb-fr-03-1783527335660"
+              },
+              "createdAt": "2026-07-08T16:15:35.680571Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-04",
+          "queryId": "fr-04-q1",
+          "query": "what is the rate limit",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 21,
+          "tokensEstimated": 21,
+          "topResults": [
+            {
+              "id": "mem_20260708_161537_22c9e2550fe7",
+              "content": "Rate limiting is set to 100 requests per minute per API key",
+              "tags": [
+                "amb",
+                "agent:amb-fr-04-1783527337217"
+              ],
+              "metadata": {
+                "project": "amb-fr-04-1783527337217"
+              },
+              "createdAt": "2026-07-08T16:15:37.233368Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-05",
+          "queryId": "fr-05-q1",
+          "query": "what CI/CD system do we use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 32,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "mem_20260708_161538_277f0e9882b3",
+              "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
+              "tags": [
+                "amb",
+                "agent:amb-fr-05-1783527338763"
+              ],
+              "metadata": {
+                "project": "amb-fr-05-1783527338763"
+              },
+              "createdAt": "2026-07-08T16:15:38.795682Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-06",
+          "queryId": "fr-06-q1",
+          "query": "what format do error responses use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 51,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "mem_20260708_161540_bc2a55c2580c",
+              "content": "Error codes follow RFC 7807 Problem Details format",
+              "tags": [
+                "amb",
+                "agent:amb-fr-06-1783527340337"
+              ],
+              "metadata": {
+                "project": "amb-fr-06-1783527340337"
+              },
+              "createdAt": "2026-07-08T16:15:40.369132Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-07",
+          "queryId": "fr-07-q1",
+          "query": "what is the staging URL",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 32,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "mem_20260708_161541_fc878907b93a",
+              "content": "The staging environment URL is staging.example.com on port 8443",
+              "tags": [
+                "amb",
+                "agent:amb-fr-07-1783527341932"
+              ],
+              "metadata": {
+                "project": "amb-fr-07-1783527341932"
+              },
+              "createdAt": "2026-07-08T16:15:41.951342Z",
+              "score": 0.67
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "fr-08",
+          "queryId": "fr-08-q1",
+          "query": "what tool handles database migrations",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 43,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "mem_20260708_161543_246188705338",
+              "content": "Database migrations use Drizzle ORM with sequential version numbers",
+              "tags": [
+                "amb",
+                "agent:amb-fr-08-1783527343493"
+              ],
+              "metadata": {
+                "project": "amb-fr-08-1783527343493"
+              },
+              "createdAt": "2026-07-08T16:15:43.509732Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 34,
+      "totalTokens": 191
+    },
+    {
+      "category": "semantic-search",
+      "name": "Semantic Search",
+      "score": 0,
+      "passed": 0,
+      "total": 8,
+      "details": [
+        {
+          "testId": "ss-01",
+          "queryId": "ss-01-q1",
+          "query": "why did we pick this frontend framework",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 33,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [React, experience]"
+        },
+        {
+          "testId": "ss-02",
+          "queryId": "ss-02-q1",
+          "query": "how do we handle money",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 25,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Stripe, payment]"
+        },
+        {
+          "testId": "ss-03",
+          "queryId": "ss-03-q1",
+          "query": "when do we show progress to leadership",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 30,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Friday, 3pm]"
+        },
+        {
+          "testId": "ss-04",
+          "queryId": "ss-04-q1",
+          "query": "how do we protect sensitive information",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 35,
+          "tokensEstimated": 10,
+          "topResults": [],
+          "reason": "Found: [], Missing: [encrypted, AES-256]"
+        },
+        {
+          "testId": "ss-05",
+          "queryId": "ss-05-q1",
+          "query": "what happens when a new user joins",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 42,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [onboarding, signup]"
+        },
+        {
+          "testId": "ss-06",
+          "queryId": "ss-06-q1",
+          "query": "which programming languages do we support",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 37,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [TypeScript]"
+        },
+        {
+          "testId": "ss-07",
+          "queryId": "ss-07-q1",
+          "query": "how fast should the system respond",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 41,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [200ms, latency]"
+        },
+        {
+          "testId": "ss-08",
+          "queryId": "ss-08-q1",
+          "query": "what can users do without paying",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 49,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [free, 500]"
+        }
+      ],
+      "avgLatencyMs": 37,
+      "totalTokens": 73
+    },
+    {
+      "category": "temporal-reasoning",
+      "name": "Temporal Reasoning",
+      "score": 42.857142857142854,
+      "passed": 3,
+      "total": 7,
+      "details": [
+        {
+          "testId": "tr-01",
+          "queryId": "tr-01-q1",
+          "query": "what database do we currently use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 24,
+          "tokensEstimated": 24,
+          "topResults": [
+            {
+              "id": "mem_20260708_161557_e70db3971eb9",
+              "content": "Database is MySQL 5.7",
+              "tags": [
+                "amb",
+                "agent:amb-tr-01-1783527357593"
+              ],
+              "metadata": {
+                "project": "amb-tr-01-1783527357593"
+              },
+              "createdAt": "2026-07-08T16:15:57.615686Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161557_6b6448959b9f",
+              "content": "Migrated database to PostgreSQL 14",
+              "tags": [
+                "amb",
+                "agent:amb-tr-01-1783527357593"
+              ],
+              "metadata": {
+                "project": "amb-tr-01-1783527357593"
+              },
+              "createdAt": "2026-07-08T16:15:57.833209Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "Found: [], Missing: [PostgreSQL 16]"
+        },
+        {
+          "testId": "tr-02",
+          "queryId": "tr-02-q1",
+          "query": "what database did we use before the migration",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 31,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "mem_20260708_161559_8afd94e17ff8",
+              "content": "Database is MySQL 5.7",
+              "tags": [
+                "amb",
+                "agent:amb-tr-02-1783527359802"
+              ],
+              "metadata": {
+                "project": "amb-tr-02-1783527359802"
+              },
+              "createdAt": "2026-07-08T16:15:59.826858Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161600_75c739a0b4f1",
+              "content": "Migrated database from MySQL to PostgreSQL 14",
+              "tags": [
+                "amb",
+                "agent:amb-tr-02-1783527359802"
+              ],
+              "metadata": {
+                "project": "amb-tr-02-1783527359802"
+              },
+              "createdAt": "2026-07-08T16:16:00.044828Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-03",
+          "queryId": "tr-03-q1",
+          "query": "what is our current velocity",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "mem_20260708_161601_0a2d54519f55",
+              "content": "Sprint velocity is 21 story points",
+              "tags": [
+                "amb",
+                "agent:amb-tr-03-1783527361590"
+              ],
+              "metadata": {
+                "project": "amb-tr-03-1783527361590"
+              },
+              "createdAt": "2026-07-08T16:16:01.611090Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161601_d0800b6a83d7",
+              "content": "Sprint velocity increased to 34 story points",
+              "tags": [
+                "amb",
+                "agent:amb-tr-03-1783527361590"
+              ],
+              "metadata": {
+                "project": "amb-tr-03-1783527361590"
+              },
+              "createdAt": "2026-07-08T16:16:01.827503Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-04",
+          "queryId": "tr-04-q1",
+          "query": "where do we deploy now",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 15,
+          "tokensEstimated": 12,
+          "topResults": [
+            {
+              "id": "mem_20260708_161603_c11a9551f10d",
+              "content": "Deploy target: Heroku",
+              "tags": [
+                "amb",
+                "agent:amb-tr-04-1783527363357"
+              ],
+              "metadata": {
+                "project": "amb-tr-04-1783527363357"
+              },
+              "createdAt": "2026-07-08T16:16:03.376769Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "Found: [], Missing: [Fly.io]"
+        },
+        {
+          "testId": "tr-05",
+          "queryId": "tr-05-q1",
+          "query": "what cloud providers have we used",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 32,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Heroku, AWS, Fly.io]"
+        },
+        {
+          "testId": "tr-06",
+          "queryId": "tr-06-q1",
+          "query": "how many people on the team",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 33,
+          "tokensEstimated": 31,
+          "topResults": [
+            {
+              "id": "mem_20260708_161607_14c4083bb97a",
+              "content": "Team size: 3 engineers",
+              "tags": [
+                "amb",
+                "agent:amb-tr-06-1783527367762"
+              ],
+              "metadata": {
+                "project": "amb-tr-06-1783527367762"
+              },
+              "createdAt": "2026-07-08T16:16:07.785215Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161608_f5f2de799eb0",
+              "content": "Alice left, team is 4 engineers",
+              "tags": [
+                "amb",
+                "agent:amb-tr-06-1783527367762"
+              ],
+              "metadata": {
+                "project": "amb-tr-06-1783527367762"
+              },
+              "createdAt": "2026-07-08T16:16:08.423146Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161608_cea6328af4ef",
+              "content": "Hired 2 more, team is now 5 engineers",
+              "tags": [
+                "amb",
+                "agent:amb-tr-06-1783527367762"
+              ],
+              "metadata": {
+                "project": "amb-tr-06-1783527367762"
+              },
+              "createdAt": "2026-07-08T16:16:08.005628Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "tr-07",
+          "queryId": "tr-07-q1",
+          "query": "what is the latest API version",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 35,
+          "tokensEstimated": 14,
+          "topResults": [
+            {
+              "id": "mem_20260708_161609_975d0e4075c9",
+              "content": "API version v1 launched",
+              "tags": [
+                "amb",
+                "agent:amb-tr-07-1783527369976"
+              ],
+              "metadata": {
+                "project": "amb-tr-07-1783527369976"
+              },
+              "createdAt": "2026-07-08T16:16:09.997192Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "Found: [], Missing: [v2.1]"
+        }
+      ],
+      "avgLatencyMs": 26,
+      "totalTokens": 147
+    },
+    {
+      "category": "conflict-resolution",
+      "name": "Conflict Resolution",
+      "score": 85.71428571428571,
+      "passed": 6,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cr-01",
+          "queryId": "cr-01-q1",
+          "query": "what is the default timeout",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 25,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "mem_20260708_161612_971076bb4c45",
+              "content": "Default timeout is 30 seconds",
+              "tags": [
+                "amb",
+                "agent:amb-cr-01-1783527372199"
+              ],
+              "metadata": {
+                "project": "amb-cr-01-1783527372199"
+              },
+              "createdAt": "2026-07-08T16:16:12.215805Z",
+              "score": 0.6200000000000001
+            },
+            {
+              "id": "mem_20260708_161612_b9e003e2702d",
+              "content": "Changed default timeout to 60 seconds",
+              "tags": [
+                "amb",
+                "agent:amb-cr-01-1783527372199"
+              ],
+              "metadata": {
+                "project": "amb-cr-01-1783527372199"
+              },
+              "createdAt": "2026-07-08T16:16:12.439032Z",
+              "score": 0.5700000000000001
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-02",
+          "queryId": "cr-02-q1",
+          "query": "what logging library do we use",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 36,
+          "tokensEstimated": 13,
+          "topResults": [
+            {
+              "id": "mem_20260708_161614_874498764ce6",
+              "content": "Logging uses Winston",
+              "tags": [
+                "amb",
+                "agent:amb-cr-02-1783527373980"
+              ],
+              "metadata": {
+                "project": "amb-cr-02-1783527373980"
+              },
+              "createdAt": "2026-07-08T16:16:14.002048Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "Found: [], Missing: [Pino]"
+        },
+        {
+          "testId": "cr-03",
+          "queryId": "cr-03-q1",
+          "query": "what is the max file upload size",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 37,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "mem_20260708_161615_2bdf77763890",
+              "content": "Max file upload size is 5MB",
+              "tags": [
+                "amb",
+                "agent:amb-cr-03-1783527375775"
+              ],
+              "metadata": {
+                "project": "amb-cr-03-1783527375775"
+              },
+              "createdAt": "2026-07-08T16:16:15.792629Z",
+              "score": 0.6485714285714286
+            },
+            {
+              "id": "mem_20260708_161616_97060242d833",
+              "content": "Increased max upload to 50MB for enterprise tier",
+              "tags": [
+                "amb",
+                "agent:amb-cr-03-1783527375775"
+              ],
+              "metadata": {
+                "project": "amb-cr-03-1783527375775"
+              },
+              "createdAt": "2026-07-08T16:16:16.014587Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-04",
+          "queryId": "cr-04-q1",
+          "query": "what is the main git branch",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 36,
+          "tokensEstimated": 21,
+          "topResults": [
+            {
+              "id": "mem_20260708_161617_411cf63d8af9",
+              "content": "Renamed primary branch to main",
+              "tags": [
+                "amb",
+                "agent:amb-cr-04-1783527377566"
+              ],
+              "metadata": {
+                "project": "amb-cr-04-1783527377566"
+              },
+              "createdAt": "2026-07-08T16:16:17.807769Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161617_1fdb7a8bb7d4",
+              "content": "Primary branch is master",
+              "tags": [
+                "amb",
+                "agent:amb-cr-04-1783527377566"
+              ],
+              "metadata": {
+                "project": "amb-cr-04-1783527377566"
+              },
+              "createdAt": "2026-07-08T16:16:17.586263Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-05",
+          "queryId": "cr-05-q1",
+          "query": "do we use semicolons",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 29,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "mem_20260708_161619_9bb76e73d7c6",
+              "content": "Use Prettier with semicolons enabled",
+              "tags": [
+                "amb",
+                "agent:amb-cr-05-1783527379358"
+              ],
+              "metadata": {
+                "project": "amb-cr-05-1783527379358"
+              },
+              "createdAt": "2026-07-08T16:16:19.383629Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161619_90f0651408fa",
+              "content": "Team voted to disable semicolons in Prettier config",
+              "tags": [
+                "amb",
+                "agent:amb-cr-05-1783527379358"
+              ],
+              "metadata": {
+                "project": "amb-cr-05-1783527379358"
+              },
+              "createdAt": "2026-07-08T16:16:19.600187Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-06",
+          "queryId": "cr-06-q1",
+          "query": "what Node version do we need",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 32,
+          "tokensEstimated": 25,
+          "topResults": [
+            {
+              "id": "mem_20260708_161621_65f46ebb8262",
+              "content": "Upgraded minimum to Node.js 20",
+              "tags": [
+                "amb",
+                "agent:amb-cr-06-1783527381142"
+              ],
+              "metadata": {
+                "project": "amb-cr-06-1783527381142"
+              },
+              "createdAt": "2026-07-08T16:16:21.387916Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161621_092984551480",
+              "content": "Node.js 18 is required minimum version",
+              "tags": [
+                "amb",
+                "agent:amb-cr-06-1783527381142"
+              ],
+              "metadata": {
+                "project": "amb-cr-06-1783527381142"
+              },
+              "createdAt": "2026-07-08T16:16:21.162378Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cr-07",
+          "queryId": "cr-07-q1",
+          "query": "what format does the API return",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 32,
+          "tokensEstimated": 26,
+          "topResults": [
+            {
+              "id": "mem_20260708_161622_5f2f484ac246",
+              "content": "The API returns XML responses",
+              "tags": [
+                "amb",
+                "agent:amb-cr-07-1783527382933"
+              ],
+              "metadata": {
+                "project": "amb-cr-07-1783527382933"
+              },
+              "createdAt": "2026-07-08T16:16:22.952097Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161623_9867b6381307",
+              "content": "Switched API to return JSON exclusively",
+              "tags": [
+                "amb",
+                "agent:amb-cr-07-1783527382933"
+              ],
+              "metadata": {
+                "project": "amb-cr-07-1783527382933"
+              },
+              "createdAt": "2026-07-08T16:16:23.174245Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        }
+      ],
+      "avgLatencyMs": 32,
+      "totalTokens": 164
+    },
+    {
+      "category": "selective-forgetting",
+      "name": "Selective Forgetting",
+      "score": 83.33333333333334,
+      "passed": 5,
+      "total": 6,
+      "details": [
+        {
+          "testId": "sf-01",
+          "queryId": "sf-01-q1",
+          "query": "what is the API key",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 20,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-02",
+          "queryId": "sf-02-q1",
+          "query": "what workarounds do we have",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 18,
+          "tokensEstimated": 7,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-03",
+          "queryId": "sf-03-q1",
+          "query": "what linter do we use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 22,
+          "tokensEstimated": 20,
+          "topResults": [
+            {
+              "id": "mem_20260708_161627_bbb9a3ea272c",
+              "content": "Switched linter from ESLint to Biome for faster checks",
+              "tags": [
+                "amb",
+                "agent:amb-sf-03-1783527387823"
+              ],
+              "metadata": {
+                "project": "amb-sf-03-1783527387823"
+              },
+              "createdAt": "2026-07-08T16:16:27.853577Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "sf-04",
+          "queryId": "sf-04-q1",
+          "query": "list project details",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 23,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Found: [], Missing: [delta, epsilon]"
+        },
+        {
+          "testId": "sf-05",
+          "queryId": "sf-05-q1",
+          "query": "what endpoints are deprecated",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 28,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "sf-06",
+          "queryId": "sf-06-q1",
+          "query": "what bugs exist in auth",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 26,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 23,
+      "totalTokens": 51
+    },
+    {
+      "category": "cross-session",
+      "name": "Cross-Session Continuity",
+      "score": 71.42857142857143,
+      "passed": 5,
+      "total": 7,
+      "details": [
+        {
+          "testId": "cs-01",
+          "queryId": "cs-01-q1",
+          "query": "what are the user's editor preferences",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 37,
+          "tokensEstimated": 29,
+          "topResults": [
+            {
+              "id": "mem_20260708_161634_bc6a51468e92",
+              "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
+              "tags": [
+                "amb",
+                "agent:amb-cs-01-1783527394116"
+              ],
+              "metadata": {
+                "project": "amb-cs-01-1783527394116"
+              },
+              "createdAt": "2026-07-08T16:16:34.146427Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-02",
+          "queryId": "cs-02-q1",
+          "query": "what caused the out of memory crash",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 34,
+          "tokensEstimated": 46,
+          "topResults": [
+            {
+              "id": "mem_20260708_161635_3864e924f6c6",
+              "content": "Investigated OOM crash at 2am. Root cause was unbounded cache in UserService.getAll() method. Fixed by adding LRU eviction with max 1000 entries.",
+              "tags": [
+                "amb",
+                "agent:amb-cs-02-1783527395692"
+              ],
+              "metadata": {
+                "project": "amb-cs-02-1783527395692"
+              },
+              "createdAt": "2026-07-08T16:16:35.706489Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-03",
+          "queryId": "cs-03-q1",
+          "query": "why did we pick this data pattern",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 30,
+          "tokensEstimated": 44,
+          "topResults": [
+            {
+              "id": "mem_20260708_161637_63b9461ccf5f",
+              "content": "Architecture decision: chose event sourcing over CRUD for the audit trail requirements. CQRS pattern with separate read and write models.",
+              "tags": [
+                "amb",
+                "agent:amb-cs-03-1783527397248"
+              ],
+              "metadata": {
+                "project": "amb-cs-03-1783527397248"
+              },
+              "createdAt": "2026-07-08T16:16:37.262886Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-04",
+          "queryId": "cs-04-q1",
+          "query": "what is the status of the dashboard feature",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 31,
+          "tokensEstimated": 84,
+          "topResults": [
+            {
+              "id": "mem_20260708_161638_0ecfe568cb0c",
+              "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
+              "tags": [
+                "amb",
+                "agent:amb-cs-04-1783527398802"
+              ],
+              "metadata": {
+                "project": "amb-cs-04-1783527398802"
+              },
+              "createdAt": "2026-07-08T16:16:38.833930Z",
+              "score": 0.56375
+            },
+            {
+              "id": "mem_20260708_161638_ffca13c9ffbb",
+              "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
+              "tags": [
+                "amb",
+                "agent:amb-cs-04-1783527398802"
+              ],
+              "metadata": {
+                "project": "amb-cs-04-1783527398802"
+              },
+              "createdAt": "2026-07-08T16:16:38.869500Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161638_d7480322d677",
+              "content": "Dashboard design: use Recharts for graphs, card layout for metrics, infinite scroll for API log.",
+              "tags": [
+                "amb",
+                "agent:amb-cs-04-1783527398802"
+              ],
+              "metadata": {
+                "project": "amb-cs-04-1783527398802"
+              },
+              "createdAt": "2026-07-08T16:16:38.853490Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-05",
+          "queryId": "cs-05-q1",
+          "query": "summarize what happened this week",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 28,
+          "tokensEstimated": 9,
+          "topResults": [],
+          "reason": "Found: [], Missing: [CI/CD, authentication]"
+        },
+        {
+          "testId": "cs-06",
+          "queryId": "cs-06-q1",
+          "query": "what happened with the search task",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 28,
+          "tokensEstimated": 69,
+          "topResults": [
+            {
+              "id": "mem_20260708_161642_953241b756bb",
+              "content": "Task started: implement search functionality for the API",
+              "tags": [
+                "amb",
+                "agent:amb-cs-06-1783527402059"
+              ],
+              "metadata": {
+                "project": "amb-cs-06-1783527402059"
+              },
+              "createdAt": "2026-07-08T16:16:42.079151Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161642_bb7e9f43a9b4",
+              "content": "Task completed: search functionality shipped with vector + BM25 + trigram hybrid approach",
+              "tags": [
+                "amb",
+                "agent:amb-cs-06-1783527402059"
+              ],
+              "metadata": {
+                "project": "amb-cs-06-1783527402059"
+              },
+              "createdAt": "2026-07-08T16:16:42.122575Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161642_24da21dc6c34",
+              "content": "Blocker found: full-text search requires pg_trgm extension not available on managed Postgres",
+              "tags": [
+                "amb",
+                "agent:amb-cs-06-1783527402059"
+              ],
+              "metadata": {
+                "project": "amb-cs-06-1783527402059"
+              },
+              "createdAt": "2026-07-08T16:16:42.093795Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "cs-07",
+          "queryId": "cs-07-q1",
+          "query": "trace the deploy process",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 38,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [environment, deployed]"
+        }
+      ],
+      "avgLatencyMs": 32,
+      "totalTokens": 287
+    },
+    {
+      "category": "multi-agent",
+      "name": "Multi-Agent Collaboration",
+      "score": 33.33333333333333,
+      "passed": 2,
+      "total": 6,
+      "details": [
+        {
+          "testId": "ma-01",
+          "queryId": "ma-01-q1",
+          "query": "what changed in authentication",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 34,
+          "tokensEstimated": 8,
+          "topResults": [],
+          "reason": "Found: [], Missing: [middleware, auth]"
+        },
+        {
+          "testId": "ma-02",
+          "queryId": "ma-02-q1",
+          "query": "what decisions were made",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 19,
+          "tokensEstimated": 6,
+          "topResults": [],
+          "reason": "Found: [], Missing: [Tailwind, Hono]"
+        },
+        {
+          "testId": "ma-03",
+          "queryId": "ma-03-q1",
+          "query": "what is the bug",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 19,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Found: [], Missing: [race condition, queue]"
+        },
+        {
+          "testId": "ma-04",
+          "queryId": "ma-04-q1",
+          "query": "what experimental approaches are being tried",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 43,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ma-05",
+          "queryId": "ma-05-q1",
+          "query": "what are the logging standards",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 42,
+          "tokensEstimated": 30,
+          "topResults": [
+            {
+              "id": "mem_20260708_161651_f521b40b15a0",
+              "content": "Org-wide standard: all services must use structured JSON logging with correlation IDs",
+              "tags": [
+                "amb",
+                "agent:platform-agent",
+                "scope:org"
+              ],
+              "metadata": {
+                "project": "amb-tree-ring"
+              },
+              "createdAt": "2026-07-08T16:16:51.607848Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ma-06",
+          "queryId": "ma-06-q1",
+          "query": "how does user registration work end to end",
+          "passed": false,
+          "score": 0,
+          "latencyMs": 30,
+          "tokensEstimated": 11,
+          "topResults": [],
+          "reason": "Found: [], Missing: [email, name]"
+        }
+      ],
+      "avgLatencyMs": 31,
+      "totalTokens": 70
+    },
+    {
+      "category": "cost-efficiency",
+      "name": "Cost Efficiency",
+      "score": 100,
+      "passed": 16,
+      "total": 16,
+      "details": [
+        {
+          "testId": "ce-01",
+          "queryId": "ce-01-q1",
+          "query": "what is the project architecture",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 18,
+          "tokensEstimated": 26,
+          "topResults": [
+            {
+              "id": "mem_20260708_161654_92548c1cf072",
+              "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
+              "tags": [
+                "amb",
+                "agent:amb-ce-01-1783527414747"
+              ],
+              "metadata": {
+                "project": "amb-ce-01-1783527414747"
+              },
+              "createdAt": "2026-07-08T16:16:54.761463Z",
+              "score": 0.6200000000000001
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-02",
+          "queryId": "ce-02-q1",
+          "query": "what port does the server use",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 33,
+          "tokensEstimated": 27,
+          "topResults": [
+            {
+              "id": "mem_20260708_161656_1017d490cc35",
+              "content": "The main API server runs on port 3000 with hot reload enabled in development",
+              "tags": [
+                "amb",
+                "agent:amb-ce-02-1783527416452"
+              ],
+              "metadata": {
+                "project": "amb-ce-02-1783527416452"
+              },
+              "createdAt": "2026-07-08T16:16:56.481467Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-03",
+          "queryId": "ce-03-q1",
+          "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 200,
+          "tokensEstimated": 109,
+          "topResults": [
+            {
+              "id": "mem_20260708_161658_b1ee4d601d03",
+              "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
+              "tags": [
+                "amb",
+                "agent:amb-ce-03-1783527418024"
+              ],
+              "metadata": {
+                "project": "amb-ce-03-1783527418024"
+              },
+              "createdAt": "2026-07-08T16:16:58.040815Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q1",
+          "query": "what is configuration setting A",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 9,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_6d0106c82915",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.797325Z",
+              "score": 0.67
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q2",
+          "query": "what is configuration setting B",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_6d0106c82915",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.797325Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q3",
+          "query": "what is configuration setting C",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 17,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_6d0106c82915",
+              "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.797325Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q4",
+          "query": "what is configuration setting D",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 16,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_8566a696d05e",
+              "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.812513Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q5",
+          "query": "what is configuration setting E",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_095cc00cde0c",
+              "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.827908Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q6",
+          "query": "what is configuration setting F",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_13c57439d7b2",
+              "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.843556Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q7",
+          "query": "what is configuration setting G",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 14,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_f0c02fa0b0df",
+              "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.858000Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q8",
+          "query": "what is configuration setting H",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_e8f4015ef7ec",
+              "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.871872Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q9",
+          "query": "what is configuration setting I",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 14,
+          "tokensEstimated": 74,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_28ad04797ba2",
+              "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.886359Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-04",
+          "queryId": "ce-04-q10",
+          "query": "what is configuration setting J",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 15,
+          "tokensEstimated": 75,
+          "topResults": [
+            {
+              "id": "mem_20260708_161659_9162114db84e",
+              "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.900300Z",
+              "score": 0.67
+            },
+            {
+              "id": "mem_20260708_161659_b9baa93ace2a",
+              "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.763438Z",
+              "score": 0.72
+            },
+            {
+              "id": "mem_20260708_161659_9aab58c9fc69",
+              "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+              "tags": [
+                "amb",
+                "agent:amb-ce-04-1783527419749"
+              ],
+              "metadata": {
+                "project": "amb-ce-04-1783527419749"
+              },
+              "createdAt": "2026-07-08T16:16:59.781589Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-05",
+          "queryId": "ce-05-q1",
+          "query": "temporary test data",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 27,
+          "tokensEstimated": 5,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        },
+        {
+          "testId": "ce-06",
+          "queryId": "ce-06-q1",
+          "query": "cold start test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 31,
+          "tokensEstimated": 22,
+          "topResults": [
+            {
+              "id": "mem_20260708_161703_cf2fbf3fc23f",
+              "content": "Cold start test: this memory exists to measure initial search latency",
+              "tags": [
+                "amb",
+                "agent:amb-ce-06-1783527423530"
+              ],
+              "metadata": {
+                "project": "amb-ce-06-1783527423530"
+              },
+              "createdAt": "2026-07-08T16:17:03.545792Z",
+              "score": 0.72
+            }
+          ],
+          "reason": "All expected keywords found in results"
+        },
+        {
+          "testId": "ce-07",
+          "queryId": "ce-07-q1",
+          "query": "lifecycle test",
+          "passed": true,
+          "score": 1,
+          "latencyMs": 17,
+          "tokensEstimated": 4,
+          "topResults": [],
+          "reason": "Correctly returned empty/low-score results"
+        }
+      ],
+      "avgLatencyMs": 29,
+      "totalTokens": 934
+    }
+  ],
+  "layer2": {
+    "score": 40,
+    "passed": 2,
+    "total": 5,
+    "scenarios": [
+      {
+        "scenarioId": "l2-03",
+        "name": "Conflict Resolution (Multi-Step)",
+        "passed": true,
+        "score": 1,
+        "latencyMs": 131,
+        "reason": "All 2 expected keywords found",
+        "retrievedContent": [
+          "API version is v1 with REST endpoints",
+          "Upgraded API to v2, added GraphQL alongside REST",
+          "Deprecated REST in v2.1, GraphQL is now the only supported API",
+          "Team size is 3 backend engineers",
+          "Hired 2 frontend engineers, team is now 5 total",
+          "Backend lead left, team is 4 engineers: 2 backend, 2 frontend"
+        ]
+      },
+      {
+        "scenarioId": "l2-02",
+        "name": "Context Continuity",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 137,
+        "reason": "Missing keywords: [Hono, Lucia, Turso, rate limiting]. Found: []",
+        "retrievedContent": []
+      },
+      {
+        "scenarioId": "l2-04",
+        "name": "Cross-Agent Handoff",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 146,
+        "reason": "Missing keywords: [connection pool, 100]. Found: [502]",
+        "retrievedContent": [
+          "Bug report: users experiencing 502 errors on the /api/billing endpoint during peak hours"
+        ]
+      },
+      {
+        "scenarioId": "l2-01",
+        "name": "Preference Application",
+        "passed": false,
+        "score": 0,
+        "latencyMs": 128,
+        "reason": "Missing keywords: [Fly.io, vitest]. Found: [TypeScript, PostgreSQL]",
+        "retrievedContent": [
+          "Database preference: PostgreSQL 16 with pgvector extension",
+          "User prefers TypeScript with strict mode enabled for all projects"
+        ]
+      },
+      {
+        "scenarioId": "l2-05",
+        "name": "Redundancy Check",
+        "passed": true,
+        "score": 1,
+        "latencyMs": 225,
+        "reason": "All 5 expected keywords found",
+        "retrievedContent": [
+          "The application uses Redis for caching with a 15-minute TTL",
+          "Background jobs are processed by BullMQ with 3 worker threads",
+          "Email notifications are sent via Resend with rate limit of 100 per hour",
+          "File uploads are stored in S3-compatible MinIO with 50MB size limit",
+          "Search is powered by Meilisearch with auto-indexing on model save"
+        ]
+      }
+    ],
+    "avgLatencyMs": 153
+  },
+  "layer3": {
+    "scales": [
+      {
+        "scale": 25,
+        "categories": [
+          {
+            "category": "factual-recall",
+            "name": "factual-recall",
+            "score": 100,
+            "passed": 8,
+            "total": 8,
+            "details": [
+              {
+                "testId": "fr-01",
+                "queryId": "fr-01-q1",
+                "query": "what database does the project use",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 25,
+                "tokensEstimated": 55,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_428cffd740bb",
+                    "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.911566Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-02",
+                "queryId": "fr-02-q1",
+                "query": "how is the API authenticated",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 14,
+                "tokensEstimated": 86,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_b17c42ccf0e2",
+                    "content": "API authentication uses Bearer tokens with JWT signed by RS256",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.954588Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_0761bb9dd572",
+                    "content": "Implemented multi-tenant data isolation using row-level security policies. Average API response time is now 45ms at the 95th percentile.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.840218Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_be41a7581cb6",
+                    "content": "Cross-team sync: the mobile team needs the API v3 endpoints ready by March 15. Action items assigned to 3 team members with a 2-week deadline.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.620320Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-03",
+                "queryId": "fr-03-q1",
+                "query": "what are the deployment specs",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 24,
+                "tokensEstimated": 15,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_9acbce14375c",
+                    "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.985892Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-04",
+                "queryId": "fr-04-q1",
+                "query": "what is the rate limit",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 19,
+                "tokensEstimated": 15,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_90b3b04c5392",
+                    "content": "Rate limiting is set to 100 requests per minute per API key",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.028933Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-05",
+                "queryId": "fr-05-q1",
+                "query": "what CI/CD system do we use",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 24,
+                "tokensEstimated": 90,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_c3d0b8c91332",
+                    "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.066714Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_e6ba499eef12",
+                    "content": "Implemented a consistent spacing system using 4px grid increments. The design was approved by the product team after two rounds of iteration.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.662312Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-06",
+                "queryId": "fr-06-q1",
+                "query": "what format do error responses use",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 35,
+                "tokensEstimated": 84,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_cfcfc8e6a1fa",
+                    "content": "Error codes follow RFC 7807 Problem Details format",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.107831Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_0761bb9dd572",
+                    "content": "Implemented multi-tenant data isolation using row-level security policies. Average API response time is now 45ms at the 95th percentile.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.840218Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "fr-07",
+                "queryId": "fr-07-q1",
+                "query": "what is the staging URL",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 25,
+                "tokensEstimated": 16,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_7d884c7ae0d4",
+                    "content": "The staging environment URL is staging.example.com on port 8443",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.159604Z",
+                    "score": 0.67
+                  }
+                ]
+              },
+              {
+                "testId": "fr-08",
+                "queryId": "fr-08-q1",
+                "query": "what tool handles database migrations",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 42,
+                "tokensEstimated": 53,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_1f73716bc08b",
+                    "content": "Database migrations use Drizzle ORM with sequential version numbers",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.203846Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_c8cc1d219b47",
+                    "content": "Migrated from MySQL 5.7 to MariaDB 11 for better JSON column performance. The migration ran in 3 minutes with zero downtime using online DDL.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.869151Z",
+                    "score": 0.72
+                  }
+                ]
+              }
+            ],
+            "avgLatencyMs": 26,
+            "totalTokens": 414
+          },
+          {
+            "category": "semantic-search",
+            "name": "semantic-search",
+            "score": 0,
+            "passed": 0,
+            "total": 8,
+            "details": [
+              {
+                "testId": "ss-01",
+                "queryId": "ss-01-q1",
+                "query": "why did we pick this frontend framework",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 27,
+                "tokensEstimated": 0,
+                "topResults": [],
+                "reason": "Missing keyword: \"React\""
+              },
+              {
+                "testId": "ss-02",
+                "queryId": "ss-02-q1",
+                "query": "how do we handle money",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 20,
+                "tokensEstimated": 0,
+                "topResults": [],
+                "reason": "Missing keyword: \"Stripe\""
+              },
+              {
+                "testId": "ss-03",
+                "queryId": "ss-03-q1",
+                "query": "when do we show progress to leadership",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 37,
+                "tokensEstimated": 0,
+                "topResults": [],
+                "reason": "Missing keyword: \"Friday\""
+              },
+              {
+                "testId": "ss-04",
+                "queryId": "ss-04-q1",
+                "query": "how do we protect sensitive information",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 27,
+                "tokensEstimated": 40,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_8cf63236baab",
+                    "content": "Added revenue attribution tracking linking marketing channels to paid conversions. The funnel analysis revealed a 45% drop-off at the payment information step.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.897542Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"encrypted\""
+              },
+              {
+                "testId": "ss-05",
+                "queryId": "ss-05-q1",
+                "query": "what happens when a new user joins",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 33,
+                "tokensEstimated": 75,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_afc886b80274",
+                    "content": "Implemented session replay using PostHog for debugging user-reported issues",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.676284Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_1ec5d93b0120",
+                    "content": "Refactored the user authentication flow to support passkeys via WebAuthn",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.826725Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_8514456843a9",
+                    "content": "Implemented session replay using PostHog for debugging user-reported issues. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.731628Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"onboarding\""
+              },
+              {
+                "testId": "ss-06",
+                "queryId": "ss-06-q1",
+                "query": "which programming languages do we support",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 41,
+                "tokensEstimated": 57,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_1ec5d93b0120",
+                    "content": "Refactored the user authentication flow to support passkeys via WebAuthn",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.826725Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_45fb19ee36ad",
+                    "content": "Updated the color theme to support both light and dark modes via CSS custom properties. This reduces initial page load from 4.2s to 1.8s on 3G connections.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.647956Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"TypeScript\""
+              },
+              {
+                "testId": "ss-07",
+                "queryId": "ss-07-q1",
+                "query": "how fast should the system respond",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 29,
+                "tokensEstimated": 36,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_e6ba499eef12",
+                    "content": "Implemented a consistent spacing system using 4px grid increments. The design was approved by the product team after two rounds of iteration.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.662312Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"200ms\""
+              },
+              {
+                "testId": "ss-08",
+                "queryId": "ss-08-q1",
+                "query": "what can users do without paying",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 18,
+                "tokensEstimated": 93,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_8514456843a9",
+                    "content": "Implemented session replay using PostHog for debugging user-reported issues. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.731628Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.7199999228395211
+                  },
+                  {
+                    "id": "mem_20260708_161707_afc886b80274",
+                    "content": "Implemented session replay using PostHog for debugging user-reported issues",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.676284Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"free\""
+              }
+            ],
+            "avgLatencyMs": 29,
+            "totalTokens": 301
+          },
+          {
+            "category": "temporal-reasoning",
+            "name": "temporal-reasoning",
+            "score": 42.857142857142854,
+            "passed": 3,
+            "total": 7,
+            "details": [
+              {
+                "testId": "tr-01",
+                "queryId": "tr-01-q1",
+                "query": "what database do we currently use",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 21,
+                "tokensEstimated": 51,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161708_6dbacd085142",
+                    "content": "Database is MySQL 5.7",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.645796Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161708_f5869a898bb1",
+                    "content": "Migrated database to PostgreSQL 14",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:08.659720Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.7199999228395211
+                  }
+                ],
+                "reason": "Missing keyword: \"PostgreSQL 16\""
+              },
+              {
+                "testId": "tr-02",
+                "queryId": "tr-02-q1",
+                "query": "what database did we use before the migration",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 28,
+                "tokensEstimated": 54,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161709_ca9caa203ee0",
+                    "content": "Database is MySQL 5.7",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:09.330455Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161709_af019f155875",
+                    "content": "Migrated database from MySQL to PostgreSQL 14",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:09.343654Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.7199999228395211
+                  }
+                ]
+              },
+              {
+                "testId": "tr-03",
+                "queryId": "tr-03-q1",
+                "query": "what is our current velocity",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 28,
+                "tokensEstimated": 20,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161709_ea67fadafa71",
+                    "content": "Sprint velocity is 21 story points",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:09.594159Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161709_ff7e0edb55cd",
+                    "content": "Sprint velocity increased to 34 story points",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:09.607272Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "tr-04",
+                "queryId": "tr-04-q1",
+                "query": "where do we deploy now",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 15,
+                "tokensEstimated": 6,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161709_71fe6f6ac951",
+                    "content": "Deploy target: Heroku",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:09.868350Z",
+                    "score": 0.72
+                  }
+                ],
+                "reason": "Missing keyword: \"Fly.io\""
+              },
+              {
+                "testId": "tr-05",
+                "queryId": "tr-05-q1",
+                "query": "what cloud providers have we used",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 38,
+                "tokensEstimated": 0,
+                "topResults": [],
+                "reason": "Missing keyword: \"Heroku\""
+              },
+              {
+                "testId": "tr-06",
+                "queryId": "tr-06-q1",
+                "query": "how many people on the team",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 50,
+                "tokensEstimated": 23,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161711_495e60fb3f3a",
+                    "content": "Team size: 3 engineers",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:11.252542Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161711_4af679d1f0f5",
+                    "content": "Alice left, team is 4 engineers",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:11.486222Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161711_1a15978168c8",
+                    "content": "Hired 2 more, team is now 5 engineers",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:11.267936Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "tr-07",
+                "queryId": "tr-07-q1",
+                "query": "what is the latest API version",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 42,
+                "tokensEstimated": 76,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161711_bacab4b9b3cd",
+                    "content": "API version v1 launched",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:11.968151Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_0761bb9dd572",
+                    "content": "Implemented multi-tenant data isolation using row-level security policies. Average API response time is now 45ms at the 95th percentile.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.840218Z",
+                    "score": 0.7199996913582629
+                  },
+                  {
+                    "id": "mem_20260708_161707_be41a7581cb6",
+                    "content": "Cross-team sync: the mobile team needs the API v3 endpoints ready by March 15. Action items assigned to 3 team members with a 2-week deadline.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.620320Z",
+                    "score": 0.719999614197903
+                  }
+                ],
+                "reason": "Missing keyword: \"v2.1\""
+              }
+            ],
+            "avgLatencyMs": 31.714285714285715,
+            "totalTokens": 230
+          },
+          {
+            "category": "conflict-resolution",
+            "name": "conflict-resolution",
+            "score": 85.71428571428571,
+            "passed": 6,
+            "total": 7,
+            "details": [
+              {
+                "testId": "cr-01",
+                "queryId": "cr-01-q1",
+                "query": "what is the default timeout",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 23,
+                "tokensEstimated": 17,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161712_21c945f64d07",
+                    "content": "Default timeout is 30 seconds",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:12.689838Z",
+                    "score": 0.6200000000000001
+                  },
+                  {
+                    "id": "mem_20260708_161712_84cd92955a0a",
+                    "content": "Changed default timeout to 60 seconds",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:12.707994Z",
+                    "score": 0.5700000000000001
+                  }
+                ]
+              },
+              {
+                "testId": "cr-02",
+                "queryId": "cr-02-q1",
+                "query": "what logging library do we use",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 40,
+                "tokensEstimated": 80,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161712_55673e24d554",
+                    "content": "Logging uses Winston",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:12.959027Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_c8bb6b624bd8",
+                    "content": "Added security event logging for failed auth attempts and permission escalations. Compliance with SOC 2 Type II requirements verified after the change.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.854830Z",
+                    "score": 0.719999614197903
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.719999614197903
+                  }
+                ],
+                "reason": "Missing keyword: \"Pino\""
+              },
+              {
+                "testId": "cr-03",
+                "queryId": "cr-03-q1",
+                "query": "what is the max file upload size",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 37,
+                "tokensEstimated": 19,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161713_02a9a27d95c0",
+                    "content": "Max file upload size is 5MB",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.235888Z",
+                    "score": 0.6485714285714286
+                  },
+                  {
+                    "id": "mem_20260708_161713_375bcd2a75ae",
+                    "content": "Increased max upload to 50MB for enterprise tier",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.249182Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cr-04",
+                "queryId": "cr-04-q1",
+                "query": "what is the main git branch",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 26,
+                "tokensEstimated": 14,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161713_d72c80a2ffd9",
+                    "content": "Renamed primary branch to main",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.524271Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161713_07133aeaf1bc",
+                    "content": "Primary branch is master",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.509745Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cr-05",
+                "queryId": "cr-05-q1",
+                "query": "do we use semicolons",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 28,
+                "tokensEstimated": 59,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161713_50ae8bdefe34",
+                    "content": "Use Prettier with semicolons enabled",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.773713Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.7199995370375729
+                  },
+                  {
+                    "id": "mem_20260708_161713_20908fa127b9",
+                    "content": "Team voted to disable semicolons in Prettier config",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:13.787682Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cr-06",
+                "queryId": "cr-06-q1",
+                "query": "what Node version do we need",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 42,
+                "tokensEstimated": 18,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161714_dfa0e41a6946",
+                    "content": "Upgraded minimum to Node.js 20",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.059236Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161714_ef032e7dc4f0",
+                    "content": "Node.js 18 is required minimum version",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.043397Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cr-07",
+                "queryId": "cr-07-q1",
+                "query": "what format does the API return",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 25,
+                "tokensEstimated": 52,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161714_284cc3ed5b8f",
+                    "content": "The API returns XML responses",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.330381Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161714_8b790dc91576",
+                    "content": "Switched API to return JSON exclusively",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.347164Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_0761bb9dd572",
+                    "content": "Implemented multi-tenant data isolation using row-level security policies. Average API response time is now 45ms at the 95th percentile.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.840218Z",
+                    "score": 0.7199995370375729
+                  }
+                ]
+              }
+            ],
+            "avgLatencyMs": 31.571428571428573,
+            "totalTokens": 259
+          },
+          {
+            "category": "selective-forgetting",
+            "name": "selective-forgetting",
+            "score": 0,
+            "passed": 0,
+            "total": 0,
+            "details": [],
+            "avgLatencyMs": 0,
+            "totalTokens": 0
+          },
+          {
+            "category": "cross-session",
+            "name": "cross-session",
+            "score": 57.14285714285714,
+            "passed": 4,
+            "total": 7,
+            "details": [
+              {
+                "testId": "cs-01",
+                "queryId": "cs-01-q1",
+                "query": "what are the user's editor preferences",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 16,
+                "tokensEstimated": 56,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161714_92ccc8df00a1",
+                    "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.600164Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_afc886b80274",
+                    "content": "Implemented session replay using PostHog for debugging user-reported issues",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.676284Z",
+                    "score": 0.7199995370375729
+                  },
+                  {
+                    "id": "mem_20260708_161707_1ec5d93b0120",
+                    "content": "Refactored the user authentication flow to support passkeys via WebAuthn",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.826725Z",
+                    "score": 0.7199995370375729
+                  }
+                ]
+              },
+              {
+                "testId": "cs-02",
+                "queryId": "cs-02-q1",
+                "query": "what caused the out of memory crash",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 17,
+                "tokensEstimated": 130,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_89f55a48cc2e",
+                    "content": "Fixed the webhook signature verification failure caused by request body parsing middleware. The fix was deployed to production within 2 hours of root cause identification.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.759125Z",
+                    "score": 0.7199995370375729
+                  },
+                  {
+                    "id": "mem_20260708_161707_47f15a781ac0",
+                    "content": "Fixed a hydration mismatch in the product catalog caused by locale-dependent date formatting. Lighthouse performance score improved from 62 to 89 after this change.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.786916Z",
+                    "score": 0.7199995370375729
+                  },
+                  {
+                    "id": "mem_20260708_161707_2d7f44b42b34",
+                    "content": "Fixed the race condition in the checkout flow where concurrent requests caused double charges. Root cause was a closure capturing a stale reference to the previous connection object.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.580838Z",
+                    "score": 0.7199994598772725
+                  }
+                ],
+                "reason": "Missing keyword: \"unbounded cache\""
+              },
+              {
+                "testId": "cs-03",
+                "queryId": "cs-03-q1",
+                "query": "why did we pick this data pattern",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 28,
+                "tokensEstimated": 69,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_0761bb9dd572",
+                    "content": "Implemented multi-tenant data isolation using row-level security policies. Average API response time is now 45ms at the 95th percentile.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.840218Z",
+                    "score": 0.7199995370375729
+                  },
+                  {
+                    "id": "mem_20260708_161714_633e1ed75f1b",
+                    "content": "Architecture decision: chose event sourcing over CRUD for the audit trail requirements. CQRS pattern with separate read and write models.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.675446Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cs-04",
+                "queryId": "cs-04-q1",
+                "query": "what is the status of the dashboard feature",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 39,
+                "tokensEstimated": 111,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161714_6cd0374b1f45",
+                    "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.724462Z",
+                    "score": 0.56375
+                  },
+                  {
+                    "id": "mem_20260708_161714_c399f821dffd",
+                    "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.764285Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161714_967930e979bb",
+                    "content": "Dashboard design: use Recharts for graphs, card layout for metrics, infinite scroll for API log.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.748027Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cs-05",
+                "queryId": "cs-05-q1",
+                "query": "summarize what happened this week",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 26,
+                "tokensEstimated": 36,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161707_be41a7581cb6",
+                    "content": "Cross-team sync: the mobile team needs the API v3 endpoints ready by March 15. Action items assigned to 3 team members with a 2-week deadline.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.620320Z",
+                    "score": 0.7199994598772725
+                  }
+                ],
+                "reason": "Missing keyword: \"CI/CD\""
+              },
+              {
+                "testId": "cs-06",
+                "queryId": "cs-06-q1",
+                "query": "what happened with the search task",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 30,
+                "tokensEstimated": 60,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161714_d245b9575639",
+                    "content": "Task started: implement search functionality for the API",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.961014Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_b927e0efab1d",
+                    "content": "Task completed: search functionality shipped with vector + BM25 + trigram hybrid approach",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.006191Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161714_f9b6210c96f3",
+                    "content": "Blocker found: full-text search requires pg_trgm extension not available on managed Postgres",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:14.975793Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "cs-07",
+                "queryId": "cs-07-q1",
+                "query": "trace the deploy process",
+                "passed": false,
+                "score": 0,
+                "latencyMs": 34,
+                "tokensEstimated": 0,
+                "topResults": [],
+                "reason": "Missing keyword: \"environment\""
+              }
+            ],
+            "avgLatencyMs": 27.142857142857142,
+            "totalTokens": 462
+          },
+          {
+            "category": "multi-agent",
+            "name": "multi-agent",
+            "score": 0,
+            "passed": 0,
+            "total": 0,
+            "details": [],
+            "avgLatencyMs": 0,
+            "totalTokens": 0
+          },
+          {
+            "category": "cost-efficiency",
+            "name": "cost-efficiency",
+            "score": 100,
+            "passed": 14,
+            "total": 14,
+            "details": [
+              {
+                "testId": "ce-01",
+                "queryId": "ce-01-q1",
+                "query": "what is the project architecture",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 22,
+                "tokensEstimated": 37,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_97f6829e86e4",
+                    "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.187938Z",
+                    "score": 0.6200000000000001
+                  },
+                  {
+                    "id": "mem_20260708_161707_4e43413d9fa7",
+                    "content": "Code review style preference: focus on architecture, not nitpick formatting",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.813850Z",
+                    "score": 0.7199994598772725
+                  }
+                ]
+              },
+              {
+                "testId": "ce-02",
+                "queryId": "ce-02-q1",
+                "query": "what port does the server use",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 30,
+                "tokensEstimated": 76,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_5241e68b268d",
+                    "content": "The main API server runs on port 3000 with hot reload enabled in development",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.424040Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_c41593c06793",
+                    "content": "Implemented server-side event tracking to capture ad-blocker-resistant metrics",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.800638Z",
+                    "score": 0.7199994598772725
+                  },
+                  {
+                    "id": "mem_20260708_161707_734427dffdf1",
+                    "content": "Added product analytics for feature adoption measuring time-to-first-use. Daily active users increased from 2,300 to 3,100 after the optimization.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.607362Z",
+                    "score": 0.7199994598772725
+                  }
+                ]
+              },
+              {
+                "testId": "ce-03",
+                "queryId": "ce-03-q1",
+                "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 43,
+                "tokensEstimated": 109,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_48ed44dd3bd3",
+                    "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.474152Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_1ec5d93b0120",
+                    "content": "Refactored the user authentication flow to support passkeys via WebAuthn",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.826725Z",
+                    "score": 0.7199994598772725
+                  },
+                  {
+                    "id": "mem_20260708_161707_c8bb6b624bd8",
+                    "content": "Added security event logging for failed auth attempts and permission escalations. Compliance with SOC 2 Type II requirements verified after the change.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.854830Z",
+                    "score": 0.7199994598772725
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q1",
+                "query": "what is configuration setting A",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 8,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_ea0b71f02077",
+                    "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.567407Z",
+                    "score": 0.67
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q2",
+                "query": "what is configuration setting B",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 12,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_ea0b71f02077",
+                    "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.567407Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q3",
+                "query": "what is configuration setting C",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 15,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_ea0b71f02077",
+                    "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.567407Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q4",
+                "query": "what is configuration setting D",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 14,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_9eb4746e941a",
+                    "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.582574Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q5",
+                "query": "what is configuration setting E",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 15,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_58d08dc01beb",
+                    "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.597754Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q6",
+                "query": "what is configuration setting F",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 15,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_81af4a1ba4da",
+                    "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.612482Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q7",
+                "query": "what is configuration setting G",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 16,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_c20d733b8d43",
+                    "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.627581Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q8",
+                "query": "what is configuration setting H",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 16,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_931d46044d9e",
+                    "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.642147Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q9",
+                "query": "what is configuration setting I",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 16,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_e3e505c3d310",
+                    "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.656900Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-04",
+                "queryId": "ce-04-q10",
+                "query": "what is configuration setting J",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 16,
+                "tokensEstimated": 67,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161715_8a75043e1f04",
+                    "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.671770Z",
+                    "score": 0.67
+                  },
+                  {
+                    "id": "mem_20260708_161715_156c49154382",
+                    "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.537135Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161715_a0f972165a36",
+                    "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:15.552362Z",
+                    "score": 0.72
+                  }
+                ]
+              },
+              {
+                "testId": "ce-06",
+                "queryId": "ce-06-q1",
+                "query": "cold start test",
+                "passed": true,
+                "score": 1,
+                "latencyMs": 27,
+                "tokensEstimated": 54,
+                "topResults": [
+                  {
+                    "id": "mem_20260708_161716_f365073c4fc9",
+                    "content": "Cold start test: this memory exists to measure initial search latency",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:16.064497Z",
+                    "score": 0.72
+                  },
+                  {
+                    "id": "mem_20260708_161707_017ae7d02787",
+                    "content": "Set up GitHub Actions CI pipeline with parallel test execution across 4 runners. Build times reduced from 12 minutes to 3 minutes with caching.",
+                    "tags": [
+                      "amb",
+                      "agent:amb-l3-25-1783527427555"
+                    ],
+                    "metadata": {
+                      "project": "amb-l3-25-1783527427555"
+                    },
+                    "createdAt": "2026-07-08T16:17:07.745723Z",
+                    "score": 0.719999382717002
+                  }
+                ]
+              }
+            ],
+            "avgLatencyMs": 18.928571428571427,
+            "totalTokens": 946
+          }
+        ],
+        "overallScore": 48.57,
+        "avgLatencyMs": 21,
+        "distractorStoreTimeMs": 343
+      }
+    ],
+    "degradation": [
+      {
+        "scale": 25,
+        "scoreDropPercent": -12.14
+      }
+    ]
+  },
+  "meta": {
+    "totalLatencyMs": 2763,
+    "totalTokens": 1917,
+    "totalApiCalls": 70
+  }
+}
