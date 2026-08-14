@@ -1,21 +1,21 @@
 # Agent Memory Benchmark Results
 
 **Provider:** tdai-memory-mcp
-**Date:** 2026-08-14T00:41:05.227Z
+**Date:** 2026-08-14T01:15:24.185Z
 **AMB Version:** 3.0.0
-**Layer 1 Score:** 91/100 (A+)
+**Layer 1 Score:** 93/100 (A+)
 **Layer 2 Score:** 60/100 (C)
 
 ## Category Scores
 
 | Category | Score | Passed | Avg Latency |
 |---|---|---|---|
-| Factual Recall | 100% (A+) | 8/8 | 7ms |
-| Semantic Search | 100% (A+) | 8/8 | 7ms |
-| Temporal Reasoning | 86% (A) | 6/7 | 5ms |
-| Conflict Resolution | 100% (A+) | 7/7 | 7ms |
+| Factual Recall | 100% (A+) | 8/8 | 9ms |
+| Semantic Search | 100% (A+) | 8/8 | 8ms |
+| Temporal Reasoning | 100% (A+) | 7/7 | 5ms |
+| Conflict Resolution | 100% (A+) | 7/7 | 4ms |
 | Selective Forgetting | 83% (A) | 5/6 | 8ms |
-| Cross-Session Continuity | 71% (B) | 5/7 | 8ms |
+| Cross-Session Continuity | 71% (B) | 5/7 | 9ms |
 | Multi-Agent Collaboration | 83% (A) | 5/6 | 8ms |
 | Cost Efficiency | 100% (A+) | 16/16 | 6ms |
 
@@ -24,18 +24,18 @@
 | Metric | Value |
 |---|---|
 | Total API Calls | 70 |
-| Total Latency | 0.6s |
-| Est. Token Usage | 2,624 |
+| Total Latency | 0.7s |
+| Est. Token Usage | 2,563 |
 
 ## Layer 2: Multi-Step Retrieval
 
 | Scenario | Score | Latency |
 |---|---|---|
-| ✅ Conflict Resolution (Multi-Step) | PASS | 69ms |
-| ❌ Context Continuity | FAIL | 32ms |
-| ✅ Cross-Agent Handoff | PASS | 27ms |
-| ❌ Preference Application | FAIL | 27ms |
-| ✅ Redundancy Check | PASS | 42ms |
+| ✅ Conflict Resolution (Multi-Step) | PASS | 68ms |
+| ❌ Context Continuity | FAIL | 40ms |
+| ✅ Cross-Agent Handoff | PASS | 32ms |
+| ❌ Preference Application | FAIL | 69ms |
+| ✅ Redundancy Check | PASS | 43ms |
 
 **Layer 2 Score:** 3/5 scenarios passed (60%)
 
@@ -56,20 +56,16 @@ Tests the same Layer 1 queries against a noisy store with distractor memories.
 |---|---|---|---|---|---|---|---|---|---|
 | 1,000 | 48.5% | 88% | 38% | 29% | 71% | 0% | 43% | 0% | 100% |
 
-**Score Degradation** (vs Layer 1 baseline of 91%):
+**Score Degradation** (vs Layer 1 baseline of 93%):
 
-- 1,000 distractors: -42.6%
+- 1,000 distractors: -44.7%
 
 **Distractor Ingestion:**
 
-- 1,000: 4.1s
+- 1,000: 4.5s
 
 
-## Failed Tests (5)
-
-### tr-01-q1: "what database do we currently use"
-- **Reason:** Results contain unexpected keywords: [MySQL]
-- **Top result:** "Database is MySQL 5.7..."
+## Failed Tests (4)
 
 ### sf-04-q1: "list project details"
 - **Reason:** Found: [delta], Missing: [epsilon]
@@ -85,7 +81,7 @@ Tests the same Layer 1 queries against a noisy store with distractor memories.
 
 ### ma-02-q1: "what decisions were made"
 - **Reason:** Found: [Hono], Missing: [Tailwind]
-- **Top result:** "Backend decision: use Hono framework for API instead of Express..."
+- **Top result:** "Frontend decision: implement dark mode with CSS custom properties..."
 
 
 ---

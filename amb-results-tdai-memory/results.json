@@ -1,8 +1,8 @@
 {
   "provider": "tdai-memory-mcp",
-  "timestamp": "2026-08-14T00:41:05.227Z",
+  "timestamp": "2026-08-14T01:15:24.185Z",
   "version": "3.0.0",
-  "overallScore": 91,
+  "overallScore": 93,
   "categories": [
     {
       "category": "factual-recall",
@@ -17,14 +17,14 @@
           "query": "what database does the project use",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 7,
           "tokensEstimated": 28,
           "topResults": [
             {
-              "id": "01KZYVB516V4MS4AMXYBXK4B0E",
+              "id": "01KZYX9YY2E22VYQ0BG1RNGBD0",
               "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
-              "score": 0.049266782710606034,
-              "createdAt": "2026-08-14T00:39:23.430Z"
+              "score": 0.05121185080516923,
+              "createdAt": "2026-08-14T01:13:41.570Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -35,14 +35,14 @@
           "query": "how is the API authenticated",
           "passed": true,
           "score": 1,
-          "latencyMs": 6,
+          "latencyMs": 11,
           "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "01KZYVB6P08PXJAK48HSWDKYMD",
+              "id": "01KZYXA0K0FYGCVXKD8P8047HE",
               "content": "API authentication uses Bearer tokens with JWT signed by RS256",
-              "score": 0.04926817056455965,
-              "createdAt": "2026-08-14T00:39:25.120Z"
+              "score": 0.05121853664673165,
+              "createdAt": "2026-08-14T01:13:43.264Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -53,14 +53,14 @@
           "query": "what are the deployment specs",
           "passed": true,
           "score": 1,
-          "latencyMs": 10,
+          "latencyMs": 9,
           "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "01KZYVB85FT4WMWDJVMP5TP215",
+              "id": "01KZYXA22TXM2S9FSBD21FQYYC",
               "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
-              "score": 0.049268138009954165,
-              "createdAt": "2026-08-14T00:39:26.639Z"
+              "score": 0.05121878046070852,
+              "createdAt": "2026-08-14T01:13:44.794Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -71,14 +71,14 @@
           "query": "what is the rate limit",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 9,
           "tokensEstimated": 21,
           "topResults": [
             {
-              "id": "01KZYVB9N4948TZ9C2WS9ZJYR8",
+              "id": "01KZYXA3JG9FG1M181D7W0H1N9",
               "content": "Rate limiting is set to 100 requests per minute per API key",
-              "score": 0.049268211263909685,
-              "createdAt": "2026-08-14T00:39:28.164Z"
+              "score": 0.051218821101109285,
+              "createdAt": "2026-08-14T01:13:46.320Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -89,14 +89,14 @@
           "query": "what CI/CD system do we use",
           "passed": true,
           "score": 1,
-          "latencyMs": 6,
+          "latencyMs": 10,
           "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "01KZYVBB4EG40K7Z5QM05VK18W",
+              "id": "01KZYXA523KFCSMS9SYK9GNXVR",
               "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
-              "score": 0.049268194983357154,
-              "createdAt": "2026-08-14T00:39:29.678Z"
+              "score": 0.05121873982166155,
+              "createdAt": "2026-08-14T01:13:47.843Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -111,10 +111,10 @@
           "tokensEstimated": 22,
           "topResults": [
             {
-              "id": "01KZYVBCKSV8NZHCFTD8KQ581N",
+              "id": "01KZYXA6HRS3KK4AFXAHHGS98T",
               "content": "Error codes follow RFC 7807 Problem Details format",
-              "score": 0.04926815428671535,
-              "createdAt": "2026-08-14T00:39:31.193Z"
+              "score": 0.05121869918396834,
+              "createdAt": "2026-08-14T01:13:49.368Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -125,14 +125,14 @@
           "query": "what is the staging URL",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 5,
           "tokensEstimated": 22,
           "topResults": [
             {
-              "id": "01KZYVBE3BV9FETJ79D2VBMBC4",
+              "id": "01KZYXA81DRXV5B619VV26AK7E",
               "content": "The staging environment URL is staging.example.com on port 8443",
-              "score": 0.049268211263909685,
-              "createdAt": "2026-08-14T00:39:32.715Z"
+              "score": 0.05121910562182725,
+              "createdAt": "2026-08-14T01:13:50.893Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -147,16 +147,16 @@
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "01KZYVBFJM1WQ9PF8H3DARW984",
+              "id": "01KZYXA9GRCCA0S06K6AGNG2BD",
               "content": "Database migrations use Drizzle ORM with sequential version numbers",
-              "score": 0.04926814614819938,
-              "createdAt": "2026-08-14T00:39:34.228Z"
+              "score": 0.0512186179126429,
+              "createdAt": "2026-08-14T01:13:52.408Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 7,
+      "avgLatencyMs": 9,
       "totalTokens": 191
     },
     {
@@ -172,14 +172,14 @@
           "query": "why did we pick this frontend framework",
           "passed": true,
           "score": 1,
-          "latencyMs": 12,
+          "latencyMs": 9,
           "tokensEstimated": 29,
           "topResults": [
             {
-              "id": "01KZYVBH2AV057DD7N0V61TC6S",
+              "id": "01KZYXAB0FRY356AW8JV8XT709",
               "content": "We chose React because the team has 5 years of collective React experience",
-              "score": 0.04926812173427597,
-              "createdAt": "2026-08-14T00:39:35.754Z"
+              "score": 0.051218821101109285,
+              "createdAt": "2026-08-14T01:13:53.935Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -190,14 +190,14 @@
           "query": "how do we handle money",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 7,
           "tokensEstimated": 23,
           "topResults": [
             {
-              "id": "01KZYVBJJ2NAXJB0A6V104B3ZR",
+              "id": "01KZYXACG2EC5AJFN800Q9MSS9",
               "content": "Payment processing uses Stripe with webhooks for async confirmation",
-              "score": 0.04926821940459226,
-              "createdAt": "2026-08-14T00:39:37.282Z"
+              "score": 0.05121890238597255,
+              "createdAt": "2026-08-14T01:13:55.458Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -208,14 +208,14 @@
           "query": "when do we show progress to leadership",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 8,
           "tokensEstimated": 24,
           "topResults": [
             {
-              "id": "01KZYVBM1BD7T926SWPNR5J70G",
+              "id": "01KZYXADZHDHGBES4RE306GCKG",
               "content": "The CEO wants weekly demos every Friday at 3pm Pacific",
-              "score": 0.049268194983357154,
-              "createdAt": "2026-08-14T00:39:38.795Z"
+              "score": 0.05121886174286394,
+              "createdAt": "2026-08-14T01:13:56.977Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -230,10 +230,10 @@
           "tokensEstimated": 28,
           "topResults": [
             {
-              "id": "01KZYVBNGPBREDR1Y63H0875Y1",
+              "id": "01KZYXAFF23X5W0JDZEDVMJ5M6",
               "content": "User data is encrypted at rest with AES-256 and in transit with TLS 1.3",
-              "score": 0.049268186843487154,
-              "createdAt": "2026-08-14T00:39:40.310Z"
+              "score": 0.051219064971947864,
+              "createdAt": "2026-08-14T01:13:58.498Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -248,10 +248,10 @@
           "tokensEstimated": 31,
           "topResults": [
             {
-              "id": "01KZYVBQ02TQ99FZPJJEN4FNCW",
+              "id": "01KZYXAGYC4T3PP8PCPN6NSYAB",
               "content": "The onboarding flow has 4 steps: signup, verify email, choose plan, connect first agent",
-              "score": 0.04926820312349799,
-              "createdAt": "2026-08-14T00:39:41.826Z"
+              "score": 0.07212043325511827,
+              "createdAt": "2026-08-14T01:14:00.012Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -266,10 +266,10 @@
           "tokensEstimated": 32,
           "topResults": [
             {
-              "id": "01KZYVBRFD251BVSDNZJX8JY47",
+              "id": "01KZYXAJETXE395KM4GT4BRJ33",
               "content": "We sunset the Python SDK in favor of TypeScript-only to reduce maintenance burden",
-              "score": 0.04926816242550211,
-              "createdAt": "2026-08-14T00:39:43.341Z"
+              "score": 0.05121873982166155,
+              "createdAt": "2026-08-14T01:14:01.563Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -284,10 +284,10 @@
           "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "01KZYVBSYZNB514GV6E3TPX08K",
+              "id": "01KZYXAKYGG755EAQJADSHHG2W",
               "content": "Performance SLA: p99 latency under 200ms for recall operations",
-              "score": 0.04926814614819938,
-              "createdAt": "2026-08-14T00:39:44.864Z"
+              "score": 0.051218821101109285,
+              "createdAt": "2026-08-14T01:14:03.088Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -298,58 +298,46 @@
           "query": "what can users do without paying",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 10,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "01KZYVBVEMW0VV550VT1MZ0WKP",
+              "id": "01KZYXANE2V3SPSA9B518KEPCS",
               "content": "The free tier includes 500 operations per month with no credit card required",
-              "score": 0.04926815428671535,
-              "createdAt": "2026-08-14T00:39:46.388Z"
+              "score": 0.05121865854762881,
+              "createdAt": "2026-08-14T01:14:04.610Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 7,
+      "avgLatencyMs": 8,
       "totalTokens": 219
     },
     {
       "category": "temporal-reasoning",
       "name": "Temporal Reasoning",
-      "score": 85.71428571428571,
-      "passed": 6,
+      "score": 100,
+      "passed": 7,
       "total": 7,
       "details": [
         {
           "testId": "tr-01",
           "queryId": "tr-01-q1",
           "query": "what database do we currently use",
-          "passed": false,
-          "score": 0,
+          "passed": true,
+          "score": 1,
           "latencyMs": 6,
-          "tokensEstimated": 31,
+          "tokensEstimated": 16,
           "topResults": [
             {
-              "id": "01KZYVBWY6YD17WR9W7J238YGE",
-              "content": "Database is MySQL 5.7",
-              "score": 0.0492632156538318,
-              "createdAt": "2026-08-14T00:39:47.910Z"
-            },
-            {
-              "id": "01KZYVBX4S14XBG5Q46N1533DM",
-              "content": "Migrated database to PostgreSQL 14",
-              "score": 0.04809193037111278,
-              "createdAt": "2026-08-14T00:39:48.121Z"
-            },
-            {
-              "id": "01KZYVBXHFG4R8F76S4H7SCWWC",
+              "id": "01KZYXAQH4732ARFTWPG8G90YM",
               "content": "Upgraded to PostgreSQL 16",
-              "score": 0.04697664326937147,
-              "createdAt": "2026-08-14T00:39:48.527Z"
+              "score": 0.0694916809977006,
+              "createdAt": "2026-08-14T01:14:06.756Z"
             }
           ],
-          "reason": "Results contain unexpected keywords: [MySQL]"
+          "reason": "All expected keywords found in results"
         },
         {
           "testId": "tr-02",
@@ -361,16 +349,16 @@
           "tokensEstimated": 30,
           "topResults": [
             {
-              "id": "01KZYVBZ7A65W298FE5WRJ4834",
+              "id": "01KZYXAS6YBQ9MKRFN79XMP0YE",
               "content": "Migrated database from MySQL to PostgreSQL 14",
-              "score": 0.049268211263909685,
-              "createdAt": "2026-08-14T00:39:50.250Z"
+              "score": 0.05121910562182725,
+              "createdAt": "2026-08-14T01:14:08.479Z"
             },
             {
-              "id": "01KZYVBZ0YS7X0WXN38SAKEK2C",
+              "id": "01KZYXAS0H9G9YMP8GSB69PX52",
               "content": "Database is MySQL 5.7",
-              "score": 0.04809354296641283,
-              "createdAt": "2026-08-14T00:39:50.046Z"
+              "score": 0.004999145643026435,
+              "createdAt": "2026-08-14T01:14:08.273Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -382,19 +370,13 @@
           "passed": true,
           "score": 1,
           "latencyMs": 5,
-          "tokensEstimated": 27,
+          "tokensEstimated": 18,
           "topResults": [
             {
-              "id": "01KZYVC0QQR4TTMJP4TM3SDSJ9",
-              "content": "Sprint velocity is 21 story points",
-              "score": 0.04926651578499829,
-              "createdAt": "2026-08-14T00:39:51.799Z"
-            },
-            {
-              "id": "01KZYVC0Y7XT6FR86ZRDWXTVE9",
+              "id": "01KZYXATWTNZFE8BDBNQTQCFM0",
               "content": "Sprint velocity increased to 34 story points",
-              "score": 0.04809515066817661,
-              "createdAt": "2026-08-14T00:39:52.007Z"
+              "score": 0.07119283337868881,
+              "createdAt": "2026-08-14T01:14:10.202Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -406,25 +388,13 @@
           "passed": true,
           "score": 1,
           "latencyMs": 4,
-          "tokensEstimated": 27,
+          "tokensEstimated": 13,
           "topResults": [
             {
-              "id": "01KZYVC2DJNPBAB05BFVZ4N3HV",
-              "content": "Deploy target: Heroku",
-              "score": 0.04926327148648528,
-              "createdAt": "2026-08-14T00:39:53.522Z"
-            },
-            {
-              "id": "01KZYVC30RQ4W146HV2M84ZGRZ",
+              "id": "01KZYXAWZBZMEBANJ1NJN7Y3RJ",
               "content": "Migrated from AWS to Fly.io",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:39:54.136Z"
-            },
-            {
-              "id": "01KZYVC2M3AE8ZZZ13G9FB90VS",
-              "content": "Migrated from Heroku to AWS ECS",
-              "score": 0.046973551675669606,
-              "createdAt": "2026-08-14T00:39:53.731Z"
+              "score": 0.07121619691199196,
+              "createdAt": "2026-08-14T01:14:12.331Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -435,26 +405,26 @@
           "query": "what cloud providers have we used",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 6,
           "tokensEstimated": 30,
           "topResults": [
             {
-              "id": "01KZYVC4PEHXXTVF95JG1B0P6W",
-              "content": "Migrated from Heroku to AWS ECS",
-              "score": 0.04926493640825891,
-              "createdAt": "2026-08-14T00:39:55.854Z"
-            },
-            {
-              "id": "01KZYVC534E3H2E7EY02RMRR85",
+              "id": "01KZYXAZ1RX0HT9PZ3760WEHQA",
               "content": "Migrated from AWS to Fly.io",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:39:56.260Z"
+              "score": 0.04999956342499672,
+              "createdAt": "2026-08-14T01:14:14.456Z"
             },
             {
-              "id": "01KZYVC4FZ3PTA5MRF4RQ90R5Q",
+              "id": "01KZYXAYN2DFJZYCYZAG00DDXR",
+              "content": "Migrated from Heroku to AWS ECS",
+              "score": 0.005120271236922699,
+              "createdAt": "2026-08-14T01:14:14.051Z"
+            },
+            {
+              "id": "01KZYXAYEM3BG2GT1C1QXX69PF",
               "content": "Deploy target: Heroku",
-              "score": 0.046971964139739725,
-              "createdAt": "2026-08-14T00:39:55.647Z"
+              "score": 0.00488133020358175,
+              "createdAt": "2026-08-14T01:14:13.844Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -469,22 +439,22 @@
           "tokensEstimated": 31,
           "topResults": [
             {
-              "id": "01KZYVC6JD14HCSB3PQSD5R062",
-              "content": "Team size: 3 engineers",
-              "score": 0.049263279463629475,
-              "createdAt": "2026-08-14T00:39:57.773Z"
-            },
-            {
-              "id": "01KZYVC75J3A8KWQ806RMX4199",
+              "id": "01KZYXB149N2CQJZ89G6TBNJCE",
               "content": "Alice left, team is 4 engineers",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:39:58.386Z"
+              "score": 0.04999964279036905,
+              "createdAt": "2026-08-14T01:14:16.585Z"
             },
             {
-              "id": "01KZYVC6RX6PFZS4KRSS9W3Z1D",
+              "id": "01KZYXB0H331CAG6DNH9JYRC6W",
+              "content": "Team size: 3 engineers",
+              "score": 0.005119443872049153,
+              "createdAt": "2026-08-14T01:14:15.971Z"
+            },
+            {
+              "id": "01KZYXB0QJKZE9YMNHTWWZT29P",
               "content": "Hired 2 more, team is now 5 engineers",
-              "score": 0.046973551675669606,
-              "createdAt": "2026-08-14T00:39:57.981Z"
+              "score": 0.004882119086368155,
+              "createdAt": "2026-08-14T01:14:16.178Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -496,32 +466,20 @@
           "passed": true,
           "score": 1,
           "latencyMs": 5,
-          "tokensEstimated": 28,
+          "tokensEstimated": 13,
           "topResults": [
             {
-              "id": "01KZYVC8MVNFDSGK0AJPW5MDFR",
-              "content": "API version v1 launched",
-              "score": 0.049263279463629475,
-              "createdAt": "2026-08-14T00:39:59.899Z"
-            },
-            {
-              "id": "01KZYVC980JFRGRJAZEWYWBMR1",
+              "id": "01KZYXB36SR406Z9518V52A40B",
               "content": "v2.1 patch released",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:40:00.512Z"
-            },
-            {
-              "id": "01KZYVC8VBYG15XNPS8XHK2227",
-              "content": "v2 released with breaking changes",
-              "score": 0.046973551675669606,
-              "createdAt": "2026-08-14T00:40:00.107Z"
+              "score": 0.07119283337868881,
+              "createdAt": "2026-08-14T01:14:18.714Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
       "avgLatencyMs": 5,
-      "totalTokens": 204
+      "totalTokens": 151
     },
     {
       "category": "conflict-resolution",
@@ -540,16 +498,16 @@
           "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "01KZYVCAQ9TP3ES6JN5VEMTMDK",
-              "content": "Default timeout is 30 seconds",
-              "score": 0.04926654003889266,
-              "createdAt": "2026-08-14T00:40:02.025Z"
+              "id": "01KZYXB4XK7QHK37VDRFHED0K6",
+              "content": "Changed default timeout to 60 seconds",
+              "score": 0.04999960310702183,
+              "createdAt": "2026-08-14T01:14:20.467Z"
             },
             {
-              "id": "01KZYVCAXRJW124GYZMX48GV6Q",
-              "content": "Changed default timeout to 60 seconds",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:40:02.232Z"
+              "id": "01KZYXB4Q5RHX6X4ZSG36YBSY5",
+              "content": "Default timeout is 30 seconds",
+              "score": 0.005121076024563665,
+              "createdAt": "2026-08-14T01:14:20.261Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -560,20 +518,20 @@
           "query": "what logging library do we use",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 4,
           "tokensEstimated": 26,
           "topResults": [
             {
-              "id": "01KZYVCCD04EHHV9XR1RWKANW1",
-              "content": "Logging uses Winston",
-              "score": 0.04926652386936166,
-              "createdAt": "2026-08-14T00:40:03.744Z"
+              "id": "01KZYXB6KCQAQGCXZ2DA948G6G",
+              "content": "Replaced Winston with Pino for better performance",
+              "score": 0.04999964279036905,
+              "createdAt": "2026-08-14T01:14:22.188Z"
             },
             {
-              "id": "01KZYVCCKGAVNSANKD17T0JEST",
-              "content": "Replaced Winston with Pino for better performance",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:40:03.953Z"
+              "id": "01KZYXB6CWPF6BYNFGRX427X05",
+              "content": "Logging uses Winston",
+              "score": 0.0051210719873318045,
+              "createdAt": "2026-08-14T01:14:21.980Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -584,20 +542,20 @@
           "query": "what is the max file upload size",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 4,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "01KZYVCE2VDENNV31PA07V7R2X",
-              "content": "Max file upload size is 5MB",
-              "score": 0.04926652386936166,
-              "createdAt": "2026-08-14T00:40:05.467Z"
+              "id": "01KZYXB896WPKQPN7QZ2CWEW08",
+              "content": "Increased max upload to 50MB for enterprise tier",
+              "score": 0.04999960310702183,
+              "createdAt": "2026-08-14T01:14:23.910Z"
             },
             {
-              "id": "01KZYVCE9CEVFWZPWSB5N2NVY3",
-              "content": "Increased max upload to 50MB for enterprise tier",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:40:05.676Z"
+              "id": "01KZYXB82PDAW6FPWAHB84RQJP",
+              "content": "Max file upload size is 5MB",
+              "score": 0.005121067950233986,
+              "createdAt": "2026-08-14T01:14:23.702Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -608,20 +566,20 @@
           "query": "what is the main git branch",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 5,
           "tokensEstimated": 21,
           "topResults": [
             {
-              "id": "01KZYVCFRPV4FEJYA8HQ8YBB33",
-              "content": "Primary branch is master",
-              "score": 0.04926653195399312,
-              "createdAt": "2026-08-14T00:40:07.190Z"
+              "id": "01KZYXB9YY0H58Q8NCAQGYWVEZ",
+              "content": "Renamed primary branch to main",
+              "score": 0.04999960310702183,
+              "createdAt": "2026-08-14T01:14:25.630Z"
             },
             {
-              "id": "01KZYVCFZ6P59MTVPTKW8XGHFA",
-              "content": "Renamed primary branch to main",
-              "score": 0.04809516656162577,
-              "createdAt": "2026-08-14T00:40:07.398Z"
+              "id": "01KZYXB9RFG9ZTWPEN9Y71YBKX",
+              "content": "Primary branch is master",
+              "score": 0.0051210719873318045,
+              "createdAt": "2026-08-14T01:14:25.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -636,16 +594,16 @@
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "01KZYVCHEEGCCE9GXFS9W0XQW7",
-              "content": "Use Prettier with semicolons enabled",
-              "score": 0.04926651578499829,
-              "createdAt": "2026-08-14T00:40:08.910Z"
+              "id": "01KZYXBBMS8QPN35QD6SD2Z3V9",
+              "content": "Team voted to disable semicolons in Prettier config",
+              "score": 0.04999956342499672,
+              "createdAt": "2026-08-14T01:14:27.353Z"
             },
             {
-              "id": "01KZYVCHMZE71HXJQ28G7PQ3TC",
-              "content": "Team voted to disable semicolons in Prettier config",
-              "score": 0.04809515861476897,
-              "createdAt": "2026-08-14T00:40:09.119Z"
+              "id": "01KZYXBBE96J0YA5DA7CM04QSF",
+              "content": "Use Prettier with semicolons enabled",
+              "score": 0.005121063913270206,
+              "createdAt": "2026-08-14T01:14:27.145Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -656,20 +614,20 @@
           "query": "what Node version do we need",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 5,
           "tokensEstimated": 25,
           "topResults": [
             {
-              "id": "01KZYVCK494DW10HV9TH7692MY",
-              "content": "Node.js 18 is required minimum version",
-              "score": 0.04926620877770112,
-              "createdAt": "2026-08-14T00:40:10.633Z"
+              "id": "01KZYXBDATPTWAT48JWRD350HA",
+              "content": "Upgraded minimum to Node.js 20",
+              "score": 0.04999960310702183,
+              "createdAt": "2026-08-14T01:14:29.082Z"
             },
             {
-              "id": "01KZYVCKASEC37SGTC55NR56PA",
-              "content": "Upgraded minimum to Node.js 20",
-              "score": 0.0480948488934729,
-              "createdAt": "2026-08-14T00:40:10.841Z"
+              "id": "01KZYXBD46NXECTX7MX1NVWXE6",
+              "content": "Node.js 18 is required minimum version",
+              "score": 0.005121051803183022,
+              "createdAt": "2026-08-14T01:14:28.870Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -680,26 +638,26 @@
           "query": "what format does the API return",
           "passed": true,
           "score": 1,
-          "latencyMs": 23,
+          "latencyMs": 5,
           "tokensEstimated": 26,
           "topResults": [
             {
-              "id": "01KZYVCMV9WZNGH2Q8WNMJFRNQ",
-              "content": "The API returns XML responses",
-              "score": 0.049266386471631424,
-              "createdAt": "2026-08-14T00:40:12.394Z"
+              "id": "01KZYXBF0QRS1YPSSRAAS3KN17",
+              "content": "Switched API to return JSON exclusively",
+              "score": 0.04999960310702183,
+              "createdAt": "2026-08-14T01:14:30.807Z"
             },
             {
-              "id": "01KZYVCN1SXHSZXT5NGWZW26Z7",
-              "content": "Switched API to return JSON exclusively",
-              "score": 0.048095015616550094,
-              "createdAt": "2026-08-14T00:40:12.601Z"
+              "id": "01KZYXBET7VM9QFG7Q4DTKAGRA",
+              "content": "The API returns XML responses",
+              "score": 0.005121067950233986,
+              "createdAt": "2026-08-14T01:14:30.599Z"
             }
           ],
           "reason": "All expected keywords found in results"
         }
       ],
-      "avgLatencyMs": 7,
+      "avgLatencyMs": 4,
       "totalTokens": 177
     },
     {
@@ -726,7 +684,7 @@
           "query": "what workarounds do we have",
           "passed": true,
           "score": 1,
-          "latencyMs": 9,
+          "latencyMs": 8,
           "tokensEstimated": 7,
           "topResults": [],
           "reason": "Correctly returned empty/low-score results"
@@ -737,14 +695,14 @@
           "query": "what linter do we use",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 7,
           "tokensEstimated": 20,
           "topResults": [
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.04926814614819938,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.05121873982166155,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -755,14 +713,14 @@
           "query": "list project details",
           "passed": false,
           "score": 0,
-          "latencyMs": 5,
+          "latencyMs": 6,
           "tokensEstimated": 12,
           "topResults": [
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
               "content": "Memory delta: MIT license",
-              "score": 0.049268097322789084,
-              "createdAt": "2026-08-14T00:40:18.742Z"
+              "score": 0.005121813039836917,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "Found: [delta], Missing: [epsilon]"
@@ -777,22 +735,22 @@
           "tokensEstimated": 37,
           "topResults": [
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
-              "content": "Memory delta: MIT license",
-              "score": 0.049256011202283415,
-              "createdAt": "2026-08-14T00:40:18.742Z"
-            },
-            {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.048083301924640165,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.04994017120363531,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             },
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.046953918060594096,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.04872239115072884,
+              "createdAt": "2026-08-14T01:14:35.372Z"
+            },
+            {
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
+              "content": "Memory delta: MIT license",
+              "score": 0.0051157760480299835,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "Correctly returned empty/low-score results"
@@ -803,7 +761,7 @@
           "query": "what bugs exist in auth",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 10,
           "tokensEstimated": 6,
           "topResults": [],
           "reason": "Correctly returned empty/low-score results"
@@ -825,20 +783,14 @@
           "query": "what are the user's editor preferences",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
-          "tokensEstimated": 37,
+          "latencyMs": 8,
+          "tokensEstimated": 29,
           "topResults": [
             {
-              "id": "01KZYVCZGGKJN3K8WB3WKZ7X4E",
+              "id": "01KZYXBSGGPXZWRG0G7FSMWH3F",
               "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
-              "score": 0.04926817056455965,
-              "createdAt": "2026-08-14T00:40:23.312Z"
-            },
-            {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
-              "content": "Memory epsilon: Hono framework",
-              "score": 0.04806142163009343,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.05121869918396834,
+              "createdAt": "2026-08-14T01:14:41.552Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -853,22 +805,22 @@
           "tokensEstimated": 61,
           "topResults": [
             {
-              "id": "01KZYVD0ZYF8EQZSAS3WRSHKWB",
+              "id": "01KZYXBV066YS98BREZNCYGMH0",
               "content": "Investigated OOM crash at 2am. Root cause was unbounded cache in UserService.getAll() method. Fixed by adding LRU eviction with max 1000 entries.",
-              "score": 0.049268138009954165,
-              "createdAt": "2026-08-14T00:40:24.830Z"
+              "score": 0.0512186179126429,
+              "createdAt": "2026-08-14T01:14:43.078Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.048051214750933165,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.004977826584682848,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             },
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
               "content": "Memory delta: MIT license",
-              "score": 0.04693369984706349,
-              "createdAt": "2026-08-14T00:40:18.742Z"
+              "score": 0.004862024912313665,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -879,20 +831,20 @@
           "query": "why did we pick this data pattern",
           "passed": true,
           "score": 1,
-          "latencyMs": 10,
+          "latencyMs": 12,
           "tokensEstimated": 52,
           "topResults": [
             {
-              "id": "01KZYVD2FJ3WATP8BHRRJ9QFJV",
+              "id": "01KZYXBWFX1RZNQ3NRQ84WWY0T",
               "content": "Architecture decision: chose event sourcing over CRUD for the audit trail requirements. CQRS pattern with separate read and write models.",
-              "score": 0.04926811359684297,
-              "createdAt": "2026-08-14T00:40:26.355Z"
+              "score": 0.05121857727901053,
+              "createdAt": "2026-08-14T01:14:44.605Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.04804142889837252,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.004972950049002116,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -903,26 +855,26 @@
           "query": "what is the status of the dashboard feature",
           "passed": true,
           "score": 1,
-          "latencyMs": 11,
+          "latencyMs": 14,
           "tokensEstimated": 92,
           "topResults": [
             {
-              "id": "01KZYVD3ZASPQNGD5H090GPR4A",
-              "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
-              "score": 0.049267967169327076,
-              "createdAt": "2026-08-14T00:40:27.882Z"
-            },
-            {
-              "id": "01KZYVD3ZX93M2H6JS947FECTT",
+              "id": "01KZYXBY0AX2NH1XVKZHJ3DATB",
               "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
-              "score": 0.04809507121679321,
-              "createdAt": "2026-08-14T00:40:27.901Z"
+              "score": 0.049999047678952316,
+              "createdAt": "2026-08-14T01:14:46.154Z"
             },
             {
-              "id": "01KZYVD3ZKX7VC35G97X3WGNDN",
+              "id": "01KZYXBXZNSFZ517VY02RCGZ9V",
+              "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
+              "score": 0.005121768368140866,
+              "createdAt": "2026-08-14T01:14:46.133Z"
+            },
+            {
+              "id": "01KZYXBXZYFEWH97PNB4MP2K3W",
               "content": "Dashboard design: use Recharts for graphs, card layout for metrics, infinite scroll for API log.",
-              "score": 0.04697650361063199,
-              "createdAt": "2026-08-14T00:40:27.891Z"
+              "score": 0.00488358143200511,
+              "createdAt": "2026-08-14T01:14:46.142Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -933,26 +885,26 @@
           "query": "summarize what happened this week",
           "passed": false,
           "score": 0,
-          "latencyMs": 6,
+          "latencyMs": 8,
           "tokensEstimated": 59,
           "topResults": [
             {
-              "id": "01KZYVD5GVK53GVYA45FZWKJ40",
+              "id": "01KZYXBZJ1CVJWGWTA0CM1TRWB",
               "content": "Friday: production deploy successful. Monitoring looks clean.",
-              "score": 0.04926817870388799,
-              "createdAt": "2026-08-14T00:40:29.468Z"
+              "score": 0.05121873982166155,
+              "createdAt": "2026-08-14T01:14:47.745Z"
             },
             {
-              "id": "01KZYVD5FQEW8615HTRRHK9RWP",
+              "id": "01KZYXBZGFC0JNJGATST6HP4N7",
               "content": "Monday: set up CI/CD pipeline with GitHub Actions. Tests passing.",
-              "score": 0.048094833021156386,
-              "createdAt": "2026-08-14T00:40:29.431Z"
+              "score": 0.00499972641274132,
+              "createdAt": "2026-08-14T01:14:47.695Z"
             },
             {
-              "id": "01KZYVD5GJG4TF0JE2ET7V9X7X",
+              "id": "01KZYXBZHKJEWCNTXQJSPGV70W",
               "content": "Thursday: deployed to staging. Found CORS issue, fixed by evening.",
-              "score": 0.046976565670858325,
-              "createdAt": "2026-08-14T00:40:29.459Z"
+              "score": 0.004883596923548658,
+              "createdAt": "2026-08-14T01:14:47.732Z"
             }
           ],
           "reason": "Found: [CI/CD], Missing: [authentication]"
@@ -967,22 +919,22 @@
           "tokensEstimated": 69,
           "topResults": [
             {
-              "id": "01KZYVD70E7YMK7QFNGCRSJ6QZ",
-              "content": "Task started: implement search functionality for the API",
-              "score": 0.04926761772482964,
-              "createdAt": "2026-08-14T00:40:30.990Z"
-            },
-            {
-              "id": "01KZYVD71ACR01FSVKM1Q9WE8A",
+              "id": "01KZYXC12PXSA8N42RV28SE7AN",
               "content": "Task completed: search functionality shipped with vector + BM25 + trigram hybrid approach",
-              "score": 0.048094801279689826,
-              "createdAt": "2026-08-14T00:40:31.018Z"
+              "score": 0.04999948406491256,
+              "createdAt": "2026-08-14T01:14:49.302Z"
             },
             {
-              "id": "01KZYVD70PN4ZJWM24GFJY3XW3",
+              "id": "01KZYXC11R7TF36RSS4DJEMDR5",
+              "content": "Task started: implement search functionality for the API",
+              "score": 0.005121776489050366,
+              "createdAt": "2026-08-14T01:14:49.272Z"
+            },
+            {
+              "id": "01KZYXC120Q6PP2N6FQ2QW8WJB",
               "content": "Blocker found: full-text search requires pg_trgm extension not available on managed Postgres",
-              "score": 0.04697616257436457,
-              "createdAt": "2026-08-14T00:40:30.998Z"
+              "score": 0.004883585304697529,
+              "createdAt": "2026-08-14T01:14:49.280Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -993,21 +945,21 @@
           "query": "trace the deploy process",
           "passed": false,
           "score": 0,
-          "latencyMs": 7,
+          "latencyMs": 5,
           "tokensEstimated": 26,
           "topResults": [
             {
-              "id": "01KZYVD8JKB5GVCQNCFRN9XFZ7",
+              "id": "01KZYXC2JS709E6SJZQG0HBM8N",
               "content": "Session 3: deployed to Fly.io. Health checks passing. Latency improved by 40%.",
-              "score": 0.04926816242550211,
-              "createdAt": "2026-08-14T00:40:32.595Z"
+              "score": 0.05121894303043518,
+              "createdAt": "2026-08-14T01:14:50.841Z"
             }
           ],
           "reason": "Found: [deployed], Missing: [environment]"
         }
       ],
-      "avgLatencyMs": 8,
-      "totalTokens": 396
+      "avgLatencyMs": 9,
+      "totalTokens": 388
     },
     {
       "category": "multi-agent",
@@ -1026,16 +978,16 @@
           "tokensEstimated": 34,
           "topResults": [
             {
-              "id": "01KZYVDA25MHHXCWEQNX2ADG7V",
+              "id": "01KZYXC42APZJZ5YB8GWPBH72X",
               "content": "Refactored auth module to use middleware pattern instead of inline checks",
-              "score": 0.04926816242550211,
-              "createdAt": "2026-08-14T00:40:34.117Z"
+              "score": 0.05121873982166155,
+              "createdAt": "2026-08-14T01:14:52.362Z"
             },
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
               "content": "Memory delta: MIT license",
-              "score": 0.04799782671715717,
-              "createdAt": "2026-08-14T00:40:18.742Z"
+              "score": 0.004951219433479056,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1046,26 +998,26 @@
           "query": "what decisions were made",
           "passed": false,
           "score": 0,
-          "latencyMs": 10,
+          "latencyMs": 9,
           "tokensEstimated": 53,
           "topResults": [
             {
-              "id": "01KZYVDBJ8QJX2K6VZQFPYFN6C",
-              "content": "Backend decision: use Hono framework for API instead of Express",
-              "score": 0.049268015968758384,
-              "createdAt": "2026-08-14T00:40:35.656Z"
-            },
-            {
-              "id": "01KZYVDBHZZAPA9ND178AMB95H",
+              "id": "01KZYXC5J7K8SPS14RB368GT9D",
               "content": "Frontend decision: implement dark mode with CSS custom properties",
-              "score": 0.048094896516756636,
-              "createdAt": "2026-08-14T00:40:35.647Z"
+              "score": 0.04999805648707436,
+              "createdAt": "2026-08-14T01:14:53.895Z"
             },
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXC5JHNWJJH14944R0QDYV",
+              "content": "Backend decision: use Hono framework for API instead of Express",
+              "score": 0.00512179273249197,
+              "createdAt": "2026-08-14T01:14:53.905Z"
+            },
+            {
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.0468669352668588,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.004828727369290773,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             }
           ],
           "reason": "Found: [Hono], Missing: [Tailwind]"
@@ -1076,14 +1028,14 @@
           "query": "what is the bug",
           "passed": true,
           "score": 1,
-          "latencyMs": 7,
+          "latencyMs": 8,
           "tokensEstimated": 36,
           "topResults": [
             {
-              "id": "01KZYVDD2FXYWGV2GPDAWT6M0H",
+              "id": "01KZYXC72VCKG02ZN99V5NFN1T",
               "content": "Root cause identified: race condition in queue consumer. Two workers processing same message due to missing distributed lock.",
-              "score": 0.04926815428671535,
-              "createdAt": "2026-08-14T00:40:37.200Z"
+              "score": 0.05121800855024182,
+              "createdAt": "2026-08-14T01:14:55.451Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1094,26 +1046,26 @@
           "query": "what experimental approaches are being tried",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 16,
           "tokensEstimated": 55,
           "topResults": [
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
-              "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.049139157571008556,
-              "createdAt": "2026-08-14T00:40:17.198Z"
-            },
-            {
-              "id": "01KZYVDEJ1ZMNMCHC5X1HT3FEH",
+              "id": "01KZYXC8KBBFYY4M4CPNM62E6W",
               "content": "Private note: trying experimental approach with WebAssembly for hot path optimization",
-              "score": 0.04809511888445108,
-              "createdAt": "2026-08-14T00:40:38.721Z"
+              "score": 0.049998373578697464,
+              "createdAt": "2026-08-14T01:14:57.003Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
+              "content": "Switched linter from ESLint to Biome for faster checks",
+              "score": 0.005057201398484431,
+              "createdAt": "2026-08-14T01:14:35.372Z"
+            },
+            {
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.04686027134827451,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.004825331179572799,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             }
           ],
           "reason": "Correctly returned empty/low-score results"
@@ -1124,26 +1076,26 @@
           "query": "what are the logging standards",
           "passed": true,
           "score": 1,
-          "latencyMs": 7,
+          "latencyMs": 4,
           "tokensEstimated": 52,
           "topResults": [
             {
-              "id": "01KZYVDG1HS4PTV210AHXP0F05",
+              "id": "01KZYXCA3QBDCWDH09TKD1SVTA",
               "content": "Org-wide standard: all services must use structured JSON logging with correlation IDs",
-              "score": 0.04926815428671535,
-              "createdAt": "2026-08-14T00:40:40.241Z"
+              "score": 0.05121910562182725,
+              "createdAt": "2026-08-14T01:14:58.551Z"
             },
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.047962737263422345,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.004933600168659827,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.04685373749242189,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.004822091642184679,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1154,26 +1106,26 @@
           "query": "how does user registration work end to end",
           "passed": true,
           "score": 1,
-          "latencyMs": 6,
+          "latencyMs": 4,
           "tokensEstimated": 80,
           "topResults": [
             {
-              "id": "01KZYVDHHSYTRWVDZB2XPJ6728",
+              "id": "01KZYXCBKCPJAGZTCPADE08HQP",
               "content": "Frontend form: user registration collects email, name, and optional phone",
-              "score": 0.04926817870388799,
-              "createdAt": "2026-08-14T00:40:41.785Z"
+              "score": 0.05121914627306099,
+              "createdAt": "2026-08-14T01:15:00.076Z"
             },
             {
-              "id": "01KZYVDHHDJ141A4RZJ63RXW69",
+              "id": "01KZYXCBK6DJNHR287BBHEY4WF",
               "content": "API endpoint: POST /users creates a new user, requires email and name",
-              "score": 0.048095031501012735,
-              "createdAt": "2026-08-14T00:40:41.773Z"
+              "score": 0.004999940471011606,
+              "createdAt": "2026-08-14T01:15:00.070Z"
             },
             {
-              "id": "01KZYVDHH2V761A1V88RN13CJT",
+              "id": "01KZYXCBK0WMYTBV36S81SXCCF",
               "content": "Database schema: users table has id, email, name, created_at columns",
-              "score": 0.04697646483137601,
-              "createdAt": "2026-08-14T00:40:41.763Z"
+              "score": 0.004883639535936701,
+              "createdAt": "2026-08-14T01:15:00.064Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1199,22 +1151,22 @@
           "tokensEstimated": 53,
           "topResults": [
             {
-              "id": "01KZYVDK195FHV0QZ31BZS1YZZ",
+              "id": "01KZYXCD2PE04HP14V7ZMNGFPX",
               "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
-              "score": 0.0492675121771062,
-              "createdAt": "2026-08-14T00:40:43.305Z"
+              "score": 0.00512157768233282,
+              "createdAt": "2026-08-14T01:15:01.590Z"
             },
             {
-              "id": "01KZYVDK1WTET9DG9TA3KEHAYM",
+              "id": "01KZYXCD37PXNQBMZGX9SJQ9ZV",
               "content": "Cost test memory 3: The frontend is built with Next.js 14 using app router",
-              "score": 0.048094626777056046,
-              "createdAt": "2026-08-14T00:40:43.324Z"
+              "score": 0.00499970661199072,
+              "createdAt": "2026-08-14T01:15:01.608Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.04684098618132808,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.004815791345126587,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1225,20 +1177,20 @@
           "query": "what port does the server use",
           "passed": true,
           "score": 1,
-          "latencyMs": 9,
+          "latencyMs": 8,
           "tokensEstimated": 34,
           "topResults": [
             {
-              "id": "01KZYVDMKEPBP9BVZZ3S1GV8V6",
+              "id": "01KZYXCEMN98C1WZG3CWH7YKNA",
               "content": "The main API server runs on port 3000 with hot reload enabled in development",
-              "score": 0.04926814614819938,
-              "createdAt": "2026-08-14T00:40:44.910Z"
+              "score": 0.05121886174286394,
+              "createdAt": "2026-08-14T01:15:03.189Z"
             },
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
               "content": "Memory delta: MIT license",
-              "score": 0.04795022077061091,
-              "createdAt": "2026-08-14T00:40:18.742Z"
+              "score": 0.004927451693732798,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1249,26 +1201,26 @@
           "query": "I need to understand the complete authentication and authorization system including how tokens are generated signed verified and refreshed and what happens when a user session expires or becomes inactive for a period of time",
           "passed": true,
           "score": 1,
-          "latencyMs": 14,
+          "latencyMs": 16,
           "tokensEstimated": 124,
           "topResults": [
             {
-              "id": "01KZYVDP30G9PMEDKZAM1TG3DE",
+              "id": "01KZYXCG462RBA62206MTSF1CJ",
               "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
-              "score": 0.049268089186168165,
-              "createdAt": "2026-08-14T00:40:46.433Z"
+              "score": 0.05121796793690452,
+              "createdAt": "2026-08-14T01:15:04.710Z"
             },
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.04794444488409342,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.0049245626231959536,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             },
             {
-              "id": "01KZYVCV1PR33EH513HDP18GF6",
+              "id": "01KZYXBN01EXXMXJPQTBTAVHE4",
               "content": "Memory delta: MIT license",
-              "score": 0.046829432314822166,
-              "createdAt": "2026-08-14T00:40:18.742Z"
+              "score": 0.004810016181425644,
+              "createdAt": "2026-08-14T01:14:36.929Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1283,22 +1235,22 @@
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQJTCF91S4KX2DBTDDWS",
+              "id": "01KZYXCHMC05W84ECSR6GZ5N3T",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "score": 0.049267171488134184,
-              "createdAt": "2026-08-14T00:40:47.962Z"
+              "score": 0.00512120124527359,
+              "createdAt": "2026-08-14T01:15:06.253Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04809477747636015,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004999603701180026,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.046976651030642864,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.0048836627856392424,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1313,22 +1265,22 @@
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "01KZYVDQK73B2M28DXQCZ1SMHH",
+              "id": "01KZYXCHMP6A28QY7M7K8KSCDH",
               "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-              "score": 0.04926724445291185,
-              "createdAt": "2026-08-14T00:40:47.975Z"
+              "score": 0.0051212214542402735,
+              "createdAt": "2026-08-14T01:15:06.262Z"
             },
             {
-              "id": "01KZYVDQJTCF91S4KX2DBTDDWS",
+              "id": "01KZYXCHMC05W84ECSR6GZ5N3T",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "score": 0.04809411194571528,
-              "createdAt": "2026-08-14T00:40:47.962Z"
+              "score": 0.004999252102409378,
+              "createdAt": "2026-08-14T01:15:06.253Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04697626328315744,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004883318391144156,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1343,22 +1295,22 @@
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "01KZYVDQMC2DQVSHQ5KS1VSDQ7",
+              "id": "01KZYXCHN43D8QJ8TEH9ACHMGK",
               "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-              "score": 0.0492675121771062,
-              "createdAt": "2026-08-14T00:40:48.012Z"
+              "score": 0.005121265925785787,
+              "createdAt": "2026-08-14T01:15:06.276Z"
             },
             {
-              "id": "01KZYVDQJTCF91S4KX2DBTDDWS",
+              "id": "01KZYXCHMC05W84ECSR6GZ5N3T",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "score": 0.04809408030007395,
-              "createdAt": "2026-08-14T00:40:47.962Z"
+              "score": 0.004999240268874139,
+              "createdAt": "2026-08-14T01:15:06.253Z"
             },
             {
-              "id": "01KZYVDQMWRNB3SFS89YT5KW96",
+              "id": "01KZYXCHPEJ00EEX3JJZVZJHSC",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "score": 0.04697612385179961,
-              "createdAt": "2026-08-14T00:40:48.028Z"
+              "score": 0.004883229556050258,
+              "createdAt": "2026-08-14T01:15:06.318Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1369,26 +1321,26 @@
           "query": "what is configuration setting D",
           "passed": true,
           "score": 1,
-          "latencyMs": 5,
+          "latencyMs": 3,
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQMHDG4CAWHMQ07WXNR2",
+              "id": "01KZYXCHNP8X10V4P4J54PRBS2",
               "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
-              "score": 0.0492675121771062,
-              "createdAt": "2026-08-14T00:40:48.017Z"
+              "score": 0.005121322549449661,
+              "createdAt": "2026-08-14T01:15:06.294Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.048095039443640346,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004999896835322846,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             },
             {
-              "id": "01KZYVDQMWRNB3SFS89YT5KW96",
+              "id": "01KZYXCHPEJ00EEX3JJZVZJHSC",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "score": 0.04697608513566892,
-              "createdAt": "2026-08-14T00:40:48.028Z"
+              "score": 0.004883214113403643,
+              "createdAt": "2026-08-14T01:15:06.318Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1399,26 +1351,26 @@
           "query": "what is configuration setting E",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 3,
           "tokensEstimated": 74,
           "topResults": [
             {
-              "id": "01KZYVDQMQS4NPY6X5VVS02V51",
+              "id": "01KZYXCHP3FVQH6WVV2RJ83592",
               "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-              "score": 0.04926752841224994,
-              "createdAt": "2026-08-14T00:40:48.023Z"
+              "score": 0.0051213589642917666,
+              "createdAt": "2026-08-14T01:15:06.307Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04809464263565896,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004999544370038442,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQJTCF91S4KX2DBTDDWS",
+              "id": "01KZYXCHMC05W84ECSR6GZ5N3T",
               "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-              "score": 0.04697554378454037,
-              "createdAt": "2026-08-14T00:40:47.962Z"
+              "score": 0.004882948050671244,
+              "createdAt": "2026-08-14T01:15:06.253Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1429,26 +1381,26 @@
           "query": "what is configuration setting F",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 5,
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQMWRNB3SFS89YT5KW96",
+              "id": "01KZYXCHPEJ00EEX3JJZVZJHSC",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "score": 0.04926752841224994,
-              "createdAt": "2026-08-14T00:40:48.028Z"
+              "score": 0.005121387294479559,
+              "createdAt": "2026-08-14T01:15:06.318Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04809460299112817,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004999528553399344,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.04697648034230451,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004883589177518921,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1463,22 +1415,22 @@
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQN1B5HAYXXVCJWW4VDS",
+              "id": "01KZYXCHPQV3QQMP589Q5PXPGC",
               "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
-              "score": 0.049267536530226405,
-              "createdAt": "2026-08-14T00:40:48.033Z"
+              "score": 0.0051214034861186055,
+              "createdAt": "2026-08-14T01:15:06.327Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04809457128024659,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004999508785559022,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.046976449321479284,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004883569814701646,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1489,26 +1441,26 @@
           "query": "what is configuration setting H",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 5,
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQN5WDMGG7BCAX5Q1BB1",
+              "id": "01KZYXCHPX6145D5HGPVVV8GY9",
               "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
-              "score": 0.049267536530226405,
-              "createdAt": "2026-08-14T00:40:48.037Z"
+              "score": 0.005121411582745659,
+              "createdAt": "2026-08-14T01:15:06.333Z"
             },
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.04809453957358016,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.004999492973653094,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.04697641830478065,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004883554326768954,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1523,22 +1475,22 @@
           "tokensEstimated": 75,
           "topResults": [
             {
-              "id": "01KZYVDQNAMS0ZDCSKVW4T0Y6D",
+              "id": "01KZYXCHQ2NAS8JGCMCCCZ03VF",
               "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-              "score": 0.049267544648472626,
-              "createdAt": "2026-08-14T00:40:48.042Z"
+              "score": 0.005121411582745659,
+              "createdAt": "2026-08-14T01:15:06.338Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.04809487270392701,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004999809611890818,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             },
             {
-              "id": "01KZYVDQMWRNB3SFS89YT5KW96",
+              "id": "01KZYXCHPEJ00EEX3JJZVZJHSC",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "score": 0.046975922598146175,
-              "createdAt": "2026-08-14T00:40:48.028Z"
+              "score": 0.004883129215546789,
+              "createdAt": "2026-08-14T01:15:06.318Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1553,22 +1505,22 @@
           "tokensEstimated": 76,
           "topResults": [
             {
-              "id": "01KZYVDQNE74MJKHWEH3GPKM59",
+              "id": "01KZYXCHRA4Q601CWT0GGT9JYB",
               "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
-              "score": 0.04926755276698862,
-              "createdAt": "2026-08-14T00:40:48.046Z"
+              "score": 0.0051215574141555,
+              "createdAt": "2026-08-14T01:15:06.378Z"
             },
             {
-              "id": "01KZYVDQMWRNB3SFS89YT5KW96",
+              "id": "01KZYXCHPEJ00EEX3JJZVZJHSC",
               "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-              "score": 0.048094373182702745,
-              "createdAt": "2026-08-14T00:40:48.028Z"
+              "score": 0.004999378400200277,
+              "createdAt": "2026-08-14T01:15:06.318Z"
             },
             {
-              "id": "01KZYVDQPR4MDNPH472KSC2JEV",
+              "id": "01KZYXCHSQMRESG3QYSSCHMNVV",
               "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-              "score": 0.04697636403548516,
-              "createdAt": "2026-08-14T00:40:48.088Z"
+              "score": 0.004883519486461802,
+              "createdAt": "2026-08-14T01:15:06.423Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1579,20 +1531,20 @@
           "query": "temporary test data",
           "passed": true,
           "score": 1,
-          "latencyMs": 4,
+          "latencyMs": 3,
           "tokensEstimated": 27,
           "topResults": [
             {
-              "id": "01KZYVCV1W4WY6771YJ5B6GY13",
+              "id": "01KZYXBN0DF57HT7S1HZN4GZ4N",
               "content": "Memory epsilon: Hono framework",
-              "score": 0.049101586227482605,
-              "createdAt": "2026-08-14T00:40:18.749Z"
+              "score": 0.00503849176657288,
+              "createdAt": "2026-08-14T01:14:36.941Z"
             },
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.04792722337601547,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.004915875611440919,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             }
           ],
           "reason": "Correctly returned empty/low-score results"
@@ -1603,20 +1555,20 @@
           "query": "cold start test",
           "passed": true,
           "score": 1,
-          "latencyMs": 8,
+          "latencyMs": 9,
           "tokensEstimated": 36,
           "topResults": [
             {
-              "id": "01KZYVDTTN2BDVTXDEHT95X7EW",
+              "id": "01KZYXCMXYMQQ4X9WEA0B6GBW4",
               "content": "Cold start test: this memory exists to measure initial search latency",
-              "score": 0.07390225584683949,
-              "createdAt": "2026-08-14T00:40:51.285Z"
+              "score": 0.07682823165166394,
+              "createdAt": "2026-08-14T01:15:09.630Z"
             },
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.04792223249668714,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.004913392097885842,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             }
           ],
           "reason": "All expected keywords found in results"
@@ -1627,14 +1579,14 @@
           "query": "lifecycle test",
           "passed": true,
           "score": 1,
-          "latencyMs": 12,
+          "latencyMs": 8,
           "tokensEstimated": 18,
           "topResults": [
             {
-              "id": "01KZYVCSHECY32GQC9YKPQ5MJB",
+              "id": "01KZYXBKFC0C6VZK8BS07155H0",
               "content": "Switched linter from ESLint to Biome for faster checks",
-              "score": 0.04908604240677468,
-              "createdAt": "2026-08-14T00:40:17.198Z"
+              "score": 0.005030748312049617,
+              "createdAt": "2026-08-14T01:14:35.372Z"
             }
           ],
           "reason": "Correctly returned empty/low-score results"
@@ -1654,15 +1606,11 @@
         "name": "Conflict Resolution (Multi-Step)",
         "passed": true,
         "score": 1,
-        "latencyMs": 69,
+        "latencyMs": 68,
         "reason": "All 2 expected keywords found",
         "retrievedContent": [
-          "API version is v1 with REST endpoints",
           "Deprecated REST in v2.1, GraphQL is now the only supported API",
-          "Upgraded API to v2, added GraphQL alongside REST",
-          "Team size is 3 backend engineers",
-          "Backend lead left, team is 4 engineers: 2 backend, 2 frontend",
-          "Hired 2 frontend engineers, team is now 5 total"
+          "Backend lead left, team is 4 engineers: 2 backend, 2 frontend"
         ]
       },
       {
@@ -1670,18 +1618,13 @@
         "name": "Context Continuity",
         "passed": false,
         "score": 0,
-        "latencyMs": 32,
+        "latencyMs": 40,
         "reason": "Missing keywords: [Lucia, Turso, rate limiting]. Found: [Hono]",
         "retrievedContent": [
-          "Memory epsilon: Hono framework",
-          "Memory delta: MIT license",
-          "Session 1: Set up the project with Hono framework on Cloudflare Workers",
-          "Switched linter from ESLint to Biome for faster checks",
           "Session 5: Added WebSocket support for real-time notifications",
           "Session 1: Set up the project with Hono framework on Cloudflare Workers",
           "Switched linter from ESLint to Biome for faster checks",
-          "Memory epsilon: Hono framework",
-          "Memory delta: MIT license"
+          "Memory epsilon: Hono framework"
         ]
       },
       {
@@ -1689,11 +1632,11 @@
         "name": "Cross-Agent Handoff",
         "passed": true,
         "score": 1,
-        "latencyMs": 27,
+        "latencyMs": 32,
         "reason": "All 3 expected keywords found",
         "retrievedContent": [
-          "Bug report: users experiencing 502 errors on the /api/billing endpoint during peak hours",
           "Private debug notes: tried increasing to 25 first but still saw intermittent failures",
+          "Bug report: users experiencing 502 errors on the /api/billing endpoint during peak hours",
           "Fix applied: increased connection pool to 100, added connection timeout of 5 seconds",
           "Root cause: connection pool exhaustion. Max connections set to 10, need at least 50 for peak load",
           "Memory delta: MIT license",
@@ -1706,16 +1649,16 @@
         "name": "Preference Application",
         "passed": false,
         "score": 0,
-        "latencyMs": 27,
+        "latencyMs": 69,
         "reason": "Missing keywords: [vitest]. Found: [TypeScript, Fly.io, PostgreSQL]",
         "retrievedContent": [
-          "User prefers TypeScript with strict mode enabled for all projects",
           "Default deploy target is Fly.io with auto-scaling enabled",
+          "Database preference: PostgreSQL 16 with pgvector extension",
+          "User prefers TypeScript with strict mode enabled for all projects",
           "Database preference: PostgreSQL 16 with pgvector extension",
           "User prefers TypeScript with strict mode enabled for all projects",
           "Memory delta: MIT license",
           "Memory epsilon: Hono framework",
-          "Database preference: PostgreSQL 16 with pgvector extension",
           "Switched linter from ESLint to Biome for faster checks"
         ]
       },
@@ -1724,14 +1667,14 @@
         "name": "Redundancy Check",
         "passed": true,
         "score": 1,
-        "latencyMs": 42,
+        "latencyMs": 43,
         "reason": "All 5 expected keywords found",
         "retrievedContent": [
           "The application uses Redis for caching with a 15-minute TTL",
           "File uploads are stored in S3-compatible MinIO with 50MB size limit",
           "Switched linter from ESLint to Biome for faster checks",
-          "Background jobs are processed by BullMQ with 3 worker threads",
           "The application uses Redis for caching with a 15-minute TTL",
+          "Background jobs are processed by BullMQ with 3 worker threads",
           "Email notifications are sent via Resend with rate limit of 100 per hour",
           "The application uses Redis for caching with a 15-minute TTL",
           "File uploads are stored in S3-compatible MinIO with 50MB size limit",
@@ -1740,7 +1683,7 @@
         ]
       }
     ],
-    "avgLatencyMs": 39
+    "avgLatencyMs": 50
   },
   "layer3": {
     "scales": [
@@ -1764,22 +1707,22 @@
                 "tokensEstimated": 87,
                 "topResults": [
                   {
-                    "id": "01KZYVE0923CWR0DYTZS8TDRGX",
-                    "content": "The team uses Linear for project management with 2-week sprint cycles. The preference applies to both personal and team repositories.",
-                    "score": 0.04925397663826245,
-                    "createdAt": "2026-08-14T00:40:56.866Z"
-                  },
-                  {
-                    "id": "01KZYVE21DEHEXX32K5R8SJKFT",
+                    "id": "01KZYXCWKVV5R2QJQJ59R1T1TC",
                     "content": "The project uses PostgreSQL 15 with pgvector extension for vector storage",
-                    "score": 0.048095174508747,
-                    "createdAt": "2026-08-14T00:40:58.669Z"
+                    "score": 0.04999968247503846,
+                    "createdAt": "2026-08-14T01:15:17.499Z"
                   },
                   {
-                    "id": "01KZYVE0X7BQNE7RXPS2W610ZB",
+                    "id": "01KZYXCTN7N64Z2K3VYPQBKBE7",
+                    "content": "The team uses Linear for project management with 2-week sprint cycles. The preference applies to both personal and team repositories.",
+                    "score": 0.005114034972038514,
+                    "createdAt": "2026-08-14T01:15:15.495Z"
+                  },
+                  {
+                    "id": "01KZYXCVC20CPH55KTTH231W5E",
                     "content": "Team uses conventional commits with scope prefixes for all repositories. This has been the workflow since the project started in January.",
-                    "score": 0.04696786308611335,
-                    "createdAt": "2026-08-14T00:40:57.511Z"
+                    "score": 0.0048788579319706555,
+                    "createdAt": "2026-08-14T01:15:16.226Z"
                   }
                 ]
               },
@@ -1789,26 +1732,26 @@
                 "query": "how is the API authenticated",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 5,
+                "latencyMs": 4,
                 "tokensEstimated": 68,
                 "topResults": [
                   {
-                    "id": "01KZYVE21Q6BCA551KFXCJHB9V",
+                    "id": "01KZYXCWM53WB1R2W3H3M2PHCJ",
                     "content": "API authentication uses Bearer tokens with JWT signed by RS256",
-                    "score": 0.0492679427732629,
-                    "createdAt": "2026-08-14T00:40:58.679Z"
+                    "score": 0.0512179273249197,
+                    "createdAt": "2026-08-14T01:15:17.509Z"
                   },
                   {
-                    "id": "01KZYVE0SJVW7GM6MYYE2C9QMG",
+                    "id": "01KZYXCV86HADMGJZDKB8E63VF",
                     "content": "Refactored the user authentication flow to support passkeys via WebAuthn. Average API response time is now 45ms at the 95th percentile.",
-                    "score": 0.0480849095631403,
-                    "createdAt": "2026-08-14T00:40:57.394Z"
+                    "score": 0.004994395007278646,
+                    "createdAt": "2026-08-14T01:15:16.102Z"
                   },
                   {
-                    "id": "01KZYVDY5KTSSNK77PZGCJPD3P",
+                    "id": "01KZYXCRA4GA7EHFCWDHRB5K1Z",
                     "content": "Refactored the user authentication flow to support passkeys via WebAuthn",
-                    "score": 0.04694752183737483,
-                    "createdAt": "2026-08-14T00:40:54.707Z"
+                    "score": 0.0048676378202491,
+                    "createdAt": "2026-08-14T01:15:13.092Z"
                   }
                 ]
               },
@@ -1818,26 +1761,26 @@
                 "query": "what are the deployment specs",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 3,
                 "tokensEstimated": 88,
                 "topResults": [
                   {
-                    "id": "01KZYVDZT82S4S0KFQ3RV3Z07E",
-                    "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. The team agreed on this convention during the engineering standards review.",
-                    "score": 0.0492499591198781,
-                    "createdAt": "2026-08-14T00:40:56.392Z"
-                  },
-                  {
-                    "id": "01KZYVE234NTETADGM08GQ4GXW",
+                    "id": "01KZYXCWND7CB0JK2RNHPB2NRA",
                     "content": "The deployment runs on 3 Kubernetes pods with 2GB RAM each",
-                    "score": 0.048095182456132674,
-                    "createdAt": "2026-08-14T00:40:58.724Z"
+                    "score": 0.04999968247503846,
+                    "createdAt": "2026-08-14T01:15:17.549Z"
                   },
                   {
-                    "id": "01KZYVE1DCCM9V659JW351RJ93",
+                    "id": "01KZYXCT59ZXMNM77TSS8499Z0",
+                    "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. The team agreed on this convention during the engineering standards review.",
+                    "score": 0.005111922179769578,
+                    "createdAt": "2026-08-14T01:15:14.985Z"
+                  },
+                  {
+                    "id": "01KZYXCVY2MRV40T3KXR5PWW13",
                     "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. This has been the workflow since the project started in January.",
-                    "score": 0.046971348855105906,
-                    "createdAt": "2026-08-14T00:40:58.028Z"
+                    "score": 0.004880829953919712,
+                    "createdAt": "2026-08-14T01:15:16.802Z"
                   }
                 ]
               },
@@ -1851,22 +1794,22 @@
                 "tokensEstimated": 88,
                 "topResults": [
                   {
-                    "id": "01KZYVE23C11QXF4143YGYK7ZQ",
+                    "id": "01KZYXCWNP5W30MCGT6HAKK40Q",
                     "content": "Rate limiting is set to 100 requests per minute per API key",
-                    "score": 0.04926823568677006,
-                    "createdAt": "2026-08-14T00:40:58.732Z"
+                    "score": 0.05121914627306099,
+                    "createdAt": "2026-08-14T01:15:17.558Z"
                   },
                   {
-                    "id": "01KZYVE14HMAJ2CGKHW05EYA6C",
+                    "id": "01KZYXCVKBYHP9N4GV7BBV71CK",
                     "content": "Added rate limiting to the /api/search endpoint using a sliding window algorithm. Peak traffic is 1,200 requests/second during flash sales.",
-                    "score": 0.04808746498679219,
-                    "createdAt": "2026-08-14T00:40:57.745Z"
+                    "score": 0.004995681416887573,
+                    "createdAt": "2026-08-14T01:15:16.459Z"
                   },
                   {
-                    "id": "01KZYVE1439YHTG9EP9CZY4YXB",
+                    "id": "01KZYXCVJSTQ2ZK61S2ZZ3AVXB",
                     "content": "Added rate limiting to the /api/search endpoint using a sliding window algorithm. The service now handles 10x the previous throughput without scaling.",
-                    "score": 0.04696904667715708,
-                    "createdAt": "2026-08-14T00:40:57.731Z"
+                    "score": 0.0048794355152688524,
+                    "createdAt": "2026-08-14T01:15:16.441Z"
                   }
                 ]
               },
@@ -1880,22 +1823,22 @@
                 "tokensEstimated": 90,
                 "topResults": [
                   {
-                    "id": "01KZYVE23NYNK65XQQ9PARK8KT",
+                    "id": "01KZYXCWP08TGAJBYZRVWZ853A",
                     "content": "The team uses GitHub Actions for CI/CD with a 15-minute build timeout",
-                    "score": 0.04926822754554571,
-                    "createdAt": "2026-08-14T00:40:58.741Z"
+                    "score": 0.05121914627306099,
+                    "createdAt": "2026-08-14T01:15:17.568Z"
                   },
                   {
-                    "id": "01KZYVDZG7Z1XDW5N2Z1WZ3TE3",
+                    "id": "01KZYXCSSAB997X3JY5GRTKFS5",
                     "content": "Default branch protection requires 1 approval and passing CI before merge. The standard was adopted after evaluating three alternative approaches.",
-                    "score": 0.048074857802149276,
-                    "createdAt": "2026-08-14T00:40:56.071Z"
+                    "score": 0.004988748181433043,
+                    "createdAt": "2026-08-14T01:15:14.602Z"
                   },
                   {
-                    "id": "01KZYVDZXC3SCGF0HAGA1B12XR",
+                    "id": "01KZYXCT7GPBWTN93QYVJYV4SN",
                     "content": "Set up automated dependency scanning using Snyk in the CI pipeline. The penetration test found zero critical and two medium severity issues.",
-                    "score": 0.046959854004950306,
-                    "createdAt": "2026-08-14T00:40:56.492Z"
+                    "score": 0.004874340329805027,
+                    "createdAt": "2026-08-14T01:15:15.056Z"
                   }
                 ]
               },
@@ -1905,26 +1848,26 @@
                 "query": "what format do error responses use",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 3,
+                "latencyMs": 4,
                 "tokensEstimated": 91,
                 "topResults": [
                   {
-                    "id": "01KZYVE23YQHE5RDDQJBY2YAJV",
+                    "id": "01KZYXCWPAJ4V6BC119Z58JKPP",
                     "content": "Error codes follow RFC 7807 Problem Details format",
-                    "score": 0.04926823568677006,
-                    "createdAt": "2026-08-14T00:40:58.750Z"
+                    "score": 0.05121922757959182,
+                    "createdAt": "2026-08-14T01:15:17.578Z"
                   },
                   {
-                    "id": "01KZYVE1YPHHA59HR00MHDSH4A",
+                    "id": "01KZYXCWGYAW6ZY54R08Q230QP",
                     "content": "Code style: 2-space indentation, single quotes, no semicolons, trailing commas. The standard was adopted after evaluating three alternative approaches.",
-                    "score": 0.04809385099479189,
-                    "createdAt": "2026-08-14T00:40:58.582Z"
+                    "score": 0.004999291556045112,
+                    "createdAt": "2026-08-14T01:15:17.406Z"
                   },
                   {
-                    "id": "01KZYVDZM1JXTQZE7B1M79V982",
+                    "id": "01KZYXCSYF9BYN01RH55D2XZ2J",
                     "content": "Implemented session replay using PostHog for debugging user-reported issues. The experiment showed a 12% lift in conversion with 95% statistical significance.",
-                    "score": 0.04695765057772988,
-                    "createdAt": "2026-08-14T00:40:56.193Z"
+                    "score": 0.004873284756972464,
+                    "createdAt": "2026-08-14T01:15:14.767Z"
                   }
                 ]
               },
@@ -1934,26 +1877,26 @@
                 "query": "what is the staging URL",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 5,
+                "latencyMs": 4,
                 "tokensEstimated": 72,
                 "topResults": [
                   {
-                    "id": "01KZYVE246RBGAZVD3G8C01BZX",
+                    "id": "01KZYXCWPJFCYP2WBJ09PSK4VJ",
                     "content": "The staging environment URL is staging.example.com on port 8443",
-                    "score": 0.04926821940459226,
-                    "createdAt": "2026-08-14T00:40:58.758Z"
+                    "score": 0.051219186925649154,
+                    "createdAt": "2026-08-14T01:15:17.586Z"
                   },
                   {
-                    "id": "01KZYVE1RVBM1EZMCNTQGT23ZK",
+                    "id": "01KZYXCWAVA0PSWTJF5GWYWMEE",
                     "content": "Configured Terraform modules for provisioning staging environments on demand. The previous setup required manual intervention for every deployment.",
-                    "score": 0.04809229912206137,
-                    "createdAt": "2026-08-14T00:40:58.395Z"
+                    "score": 0.004998489286896951,
+                    "createdAt": "2026-08-14T01:15:17.211Z"
                   },
                   {
-                    "id": "01KZYVE1NJKKCSEF3FV6E03S1T",
+                    "id": "01KZYXCW6VZZAPSY5Z48R1G3C0",
                     "content": "Configured Terraform modules for provisioning staging environments on demand",
-                    "score": 0.04697306968447359,
-                    "createdAt": "2026-08-14T00:40:58.290Z"
+                    "score": 0.004881756368816118,
+                    "createdAt": "2026-08-14T01:15:17.083Z"
                   }
                 ]
               },
@@ -1963,32 +1906,32 @@
                 "query": "what tool handles database migrations",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 4,
+                "latencyMs": 3,
                 "tokensEstimated": 104,
                 "topResults": [
                   {
-                    "id": "01KZYVDZR7H1NPPRHEEXCH7JXW",
+                    "id": "01KZYXCT22YZTM0TYR2DF0DG2V",
                     "content": "Set up automated vacuum tuning for tables with high write throughput. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.04924912315515081,
-                    "createdAt": "2026-08-14T00:40:56.327Z"
+                    "score": 0.005111366378516414,
+                    "createdAt": "2026-08-14T01:15:14.882Z"
                   },
                   {
-                    "id": "01KZYVE0YVR4SQ4571XARGF95N",
+                    "id": "01KZYXCVDPFP59FZRB8PH9FXCH",
                     "content": "Created a data warehouse ETL pipeline using dbt for analytics queries. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.048085778644145566,
-                    "createdAt": "2026-08-14T00:40:57.563Z"
+                    "score": 0.0049948538976809604,
+                    "createdAt": "2026-08-14T01:15:16.278Z"
                   },
                   {
-                    "id": "01KZYVE0Y0D0VHBVE460CBZ5JD",
+                    "id": "01KZYXCVCR15EKS1JHMF2E0SAB",
                     "content": "Implemented soft deletes with a deleted_at timestamp across all tables. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.046967303388938376,
-                    "createdAt": "2026-08-14T00:40:57.536Z"
+                    "score": 0.004878583211382464,
+                    "createdAt": "2026-08-14T01:15:16.248Z"
                   }
                 ],
                 "reason": "Missing keyword: \"Drizzle\""
               }
             ],
-            "avgLatencyMs": 4.125,
+            "avgLatencyMs": 3.75,
             "totalTokens": 688
           },
           {
@@ -2004,26 +1947,26 @@
                 "query": "why did we pick this frontend framework",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 93,
                 "topResults": [
                   {
-                    "id": "01KZYVDYBCWGFPM9EJWWTNBNXP",
-                    "content": "Added CORS configuration limiting origins to known frontend domains. Two-factor authentication adoption increased from 23% to 87% of users.",
-                    "score": 0.04923851229269398,
-                    "createdAt": "2026-08-14T00:40:54.892Z"
-                  },
-                  {
-                    "id": "01KZYVDZSNNGSQYYFJT1R77X1Y",
-                    "content": "User prefers functional programming patterns and avoids class-based architectures. This preference was mentioned during the initial project setup discussion.",
-                    "score": 0.04807679668309616,
-                    "createdAt": "2026-08-14T00:40:56.373Z"
-                  },
-                  {
-                    "id": "01KZYVE24T264XZPZESG0KG8S1",
+                    "id": "01KZYXCWQ6MCNTVYTASZGQEFZD",
                     "content": "We chose React because the team has 5 years of collective React experience",
-                    "score": 0.04697668207831102,
-                    "createdAt": "2026-08-14T00:40:58.778Z"
+                    "score": 0.048836821639416675,
+                    "createdAt": "2026-08-14T01:15:17.606Z"
+                  },
+                  {
+                    "id": "01KZYXCRGCBXCA0D0BAMHYJTQ4",
+                    "content": "Added CORS configuration limiting origins to known frontend domains. Two-factor authentication adoption increased from 23% to 87% of users.",
+                    "score": 0.005105549660354806,
+                    "createdAt": "2026-08-14T01:15:13.292Z"
+                  },
+                  {
+                    "id": "01KZYXCT3KJJQ9R84C9VJH29DE",
+                    "content": "User prefers functional programming patterns and avoids class-based architectures. This preference was mentioned during the initial project setup discussion.",
+                    "score": 0.00498979803302737,
+                    "createdAt": "2026-08-14T01:15:14.931Z"
                   }
                 ]
               },
@@ -2037,22 +1980,22 @@
                 "tokensEstimated": 60,
                 "topResults": [
                   {
-                    "id": "01KZYVE00JZ9AQTRTJNTVV635Z",
+                    "id": "01KZYXCTC8PTG67JGKWZ2WSPEN",
                     "content": "Sprint planning: agreed to prioritize the billing redesign over the admin panel",
-                    "score": 0.04925101015885395,
-                    "createdAt": "2026-08-14T00:40:56.594Z"
+                    "score": 0.0051124919048284615,
+                    "createdAt": "2026-08-14T01:15:15.208Z"
                   },
                   {
-                    "id": "01KZYVDZGJ91M0TTN2B097ACHD",
+                    "id": "01KZYXCSSQYFDGHXWCP5E6ZBQD",
                     "content": "Set up cost monitoring alerts for AWS spending exceeding monthly budget",
-                    "score": 0.048074610224055965,
-                    "createdAt": "2026-08-14T00:40:56.082Z"
+                    "score": 0.004988611330493362,
+                    "createdAt": "2026-08-14T01:15:14.615Z"
                   },
                   {
-                    "id": "01KZYVDYEN4W375NTR2359HM4M",
+                    "id": "01KZYXCRMRJQG8HPNWJ1Q2XW7M",
                     "content": "Architecture review: decided to decompose the monolith starting with the payment service",
-                    "score": 0.046949014233181874,
-                    "createdAt": "2026-08-14T00:40:54.997Z"
+                    "score": 0.00486851492597425,
+                    "createdAt": "2026-08-14T01:15:13.432Z"
                   }
                 ],
                 "reason": "Missing keyword: \"Stripe\""
@@ -2067,22 +2010,22 @@
                 "tokensEstimated": 89,
                 "topResults": [
                   {
-                    "id": "01KZYVDZX3QQ9K7XE3SBNFVK6P",
+                    "id": "01KZYXCT767E17E3FHZB1FXYYZ",
                     "content": "1-on-1 with team lead: discussed career growth path toward staff engineer",
-                    "score": 0.04925011006023031,
-                    "createdAt": "2026-08-14T00:40:56.483Z"
+                    "score": 0.0051118436852302905,
+                    "createdAt": "2026-08-14T01:15:15.046Z"
                   },
                   {
-                    "id": "01KZYVDYNDECFG3EVXBNA8AX0B",
+                    "id": "01KZYXCRVT2QX2MNWGYC2P8802",
                     "content": "1-on-1 with team lead: discussed career growth path toward staff engineer. The budget increase was approved by the VP of Engineering.",
-                    "score": 0.048068315494678895,
-                    "createdAt": "2026-08-14T00:40:55.213Z"
+                    "score": 0.004985180026860106,
+                    "createdAt": "2026-08-14T01:15:13.658Z"
                   },
                   {
-                    "id": "01KZYVE0XPD2XSRJWWWQQ66PX5",
+                    "id": "01KZYXCVCDPXGV642DYY8214PC",
                     "content": "1-on-1 with team lead: discussed career growth path toward staff engineer. The customer segment most affected is enterprise accounts with 50+ seats.",
-                    "score": 0.0469670426650224,
-                    "createdAt": "2026-08-14T00:40:57.526Z"
+                    "score": 0.00487840907041237,
+                    "createdAt": "2026-08-14T01:15:16.237Z"
                   }
                 ],
                 "reason": "Missing keyword: \"Friday\""
@@ -2093,26 +2036,26 @@
                 "query": "how do we protect sensitive information",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 4,
+                "latencyMs": 3,
                 "tokensEstimated": 73,
                 "topResults": [
                   {
-                    "id": "01KZYVE1504QX23VB24MSRY7YT",
+                    "id": "01KZYXCVKWEZM5BJ9GTBBXASVT",
                     "content": "Implemented row-level security policies for multi-tenant data isolation. Storage costs reduced by 40% after archiving records older than 2 years.",
-                    "score": 0.049259865489976074,
-                    "createdAt": "2026-08-14T00:40:57.760Z"
+                    "score": 0.005117276666322279,
+                    "createdAt": "2026-08-14T01:15:16.476Z"
                   },
                   {
-                    "id": "01KZYVDZ9P4D53V8TSFSYFEM12",
+                    "id": "01KZYXCSJ55R2FDBTQ17075QV7",
                     "content": "Implemented multi-tenant data isolation using row-level security policies",
-                    "score": 0.04807287742978866,
-                    "createdAt": "2026-08-14T00:40:55.862Z"
+                    "score": 0.00498767225126936,
+                    "createdAt": "2026-08-14T01:15:14.373Z"
                   },
                   {
-                    "id": "01KZYVE11PG0PQ5RHMWSDXTNG3",
+                    "id": "01KZYXCVHCHN0EQG5YMCFRRX20",
                     "content": "Implemented row-level security policies for multi-tenant data isolation",
-                    "score": 0.04696791539443916,
-                    "createdAt": "2026-08-14T00:40:57.654Z"
+                    "score": 0.0048789657737210055,
+                    "createdAt": "2026-08-14T01:15:16.396Z"
                   }
                 ],
                 "reason": "Missing keyword: \"encrypted\""
@@ -2123,28 +2066,9 @@
                 "query": "what happens when a new user joins",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 6,
-                "tokensEstimated": 91,
-                "topResults": [
-                  {
-                    "id": "01KZYVDY7NS6N7M28W4JRZQJF6",
-                    "content": "Created migration 045 to add composite indexes on orders(user_id, created_at)",
-                    "score": 0.04923738025704573,
-                    "createdAt": "2026-08-14T00:40:54.773Z"
-                  },
-                  {
-                    "id": "01KZYVE06F19Y4AZ36R5J7889X",
-                    "content": "Added security event logging for failed auth attempts and permission escalations. All affected sessions were invalidated within 30 minutes of detection.",
-                    "score": 0.04807953889397435,
-                    "createdAt": "2026-08-14T00:40:56.783Z"
-                  },
-                  {
-                    "id": "01KZYVDYXRQDBPDCMTPBJC2CWJ",
-                    "content": "Default branch protection requires 1 approval and passing CI before merge. This was documented in the team's engineering handbook.",
-                    "score": 0.04695214122764491,
-                    "createdAt": "2026-08-14T00:40:55.480Z"
-                  }
-                ],
+                "latencyMs": 4,
+                "tokensEstimated": 0,
+                "topResults": [],
                 "reason": "Missing keyword: \"onboarding\""
               },
               {
@@ -2153,26 +2077,26 @@
                 "query": "which programming languages do we support",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 81,
                 "topResults": [
                   {
-                    "id": "01KZYVE26ANXMZZQWBWM9AE9ZF",
+                    "id": "01KZYXCWRT8HM9ZHPA53K82P06",
                     "content": "We sunset the Python SDK in favor of TypeScript-only to reduce maintenance burden",
-                    "score": 0.04926822754554571,
-                    "createdAt": "2026-08-14T00:40:58.826Z"
+                    "score": 0.05121910562182725,
+                    "createdAt": "2026-08-14T01:15:17.658Z"
                   },
                   {
-                    "id": "01KZYVDZE7AYA62X9VG799ATSJ",
+                    "id": "01KZYXCSP3GJSBYQB0HA021M62",
                     "content": "User prefers functional programming patterns and avoids class-based architectures",
-                    "score": 0.04807377481005356,
-                    "createdAt": "2026-08-14T00:40:56.007Z"
+                    "score": 0.004988051246149446,
+                    "createdAt": "2026-08-14T01:15:14.499Z"
                   },
                   {
-                    "id": "01KZYVDZSNNGSQYYFJT1R77X1Y",
+                    "id": "01KZYXCT3KJJQ9R84C9VJH29DE",
                     "content": "User prefers functional programming patterns and avoids class-based architectures. This preference was mentioned during the initial project setup discussion.",
-                    "score": 0.04695838742805919,
-                    "createdAt": "2026-08-14T00:40:56.373Z"
+                    "score": 0.0048735716496522506,
+                    "createdAt": "2026-08-14T01:15:14.931Z"
                   }
                 ]
               },
@@ -2186,22 +2110,22 @@
                 "tokensEstimated": 95,
                 "topResults": [
                   {
-                    "id": "01KZYVDYTPPBNM1VCJ1GBKRPF2",
+                    "id": "01KZYXCS0W5VQT1G5ESJQMRWQY",
                     "content": "Migrated from Express to Fastify for 30% better throughput on the API gateway. Average API response time is now 45ms at the 95th percentile.",
-                    "score": 0.049241643482543555,
-                    "createdAt": "2026-08-14T00:40:55.382Z"
+                    "score": 0.005107210512253564,
+                    "createdAt": "2026-08-14T01:15:13.820Z"
                   },
                   {
-                    "id": "01KZYVE1VD58EB5CY57B3SY5SE",
+                    "id": "01KZYXCWCBX2G7KHQJVAGYQSD0",
                     "content": "Added a circuit breaker pattern to the inventory service client. Average API response time is now 45ms at the 95th percentile.",
-                    "score": 0.04809234623791391,
-                    "createdAt": "2026-08-14T00:40:58.477Z"
+                    "score": 0.004998348272186697,
+                    "createdAt": "2026-08-14T01:15:17.259Z"
                   },
                   {
-                    "id": "01KZYVDZ9FFEJPNWBWW9Y6H9S6",
+                    "id": "01KZYXCSHZ757D5S9HEVV54EM6",
                     "content": "Added a circuit breaker pattern to the inventory service client. Response time p99 improved from 850ms to 120ms.",
-                    "score": 0.04695464266384297,
-                    "createdAt": "2026-08-14T00:40:55.855Z"
+                    "score": 0.004871554433348959,
+                    "createdAt": "2026-08-14T01:15:14.367Z"
                   }
                 ],
                 "reason": "Missing keyword: \"200ms\""
@@ -2212,32 +2136,32 @@
                 "query": "what can users do without paying",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 3,
+                "latencyMs": 4,
                 "tokensEstimated": 96,
                 "topResults": [
                   {
-                    "id": "01KZYVE26W082SDAWG47N84KN0",
+                    "id": "01KZYXCWSFK0672P53ZCB2BPZS",
                     "content": "The free tier includes 500 operations per month with no credit card required",
-                    "score": 0.04926823568677006,
-                    "createdAt": "2026-08-14T00:40:58.844Z"
+                    "score": 0.051219186925649154,
+                    "createdAt": "2026-08-14T01:15:17.679Z"
                   },
                   {
-                    "id": "01KZYVDYB3SSEM2E3YDQNE4NG5",
+                    "id": "01KZYXCRG2VABKM6406DP8JEYG",
                     "content": "Added revenue attribution tracking linking marketing channels to paid conversions. The cohort analysis showed that users who complete onboarding retain 3x better.",
-                    "score": 0.04806564851325554,
-                    "createdAt": "2026-08-14T00:40:54.883Z"
+                    "score": 0.004983712976847747,
+                    "createdAt": "2026-08-14T01:15:13.283Z"
                   },
                   {
-                    "id": "01KZYVDYEFWFQ0E5HJGS2KKDRK",
+                    "id": "01KZYXCRMJ3F87T83BC215HPTX",
                     "content": "Implemented field-level encryption for SSN and payment card data at rest. Two-factor authentication adoption increased from 23% to 87% of users.",
-                    "score": 0.04694858875535773,
-                    "createdAt": "2026-08-14T00:40:54.992Z"
+                    "score": 0.004868294984393976,
+                    "createdAt": "2026-08-14T01:15:13.426Z"
                   }
                 ]
               }
             ],
             "avgLatencyMs": 4.125,
-            "totalTokens": 678
+            "totalTokens": 587
           },
           {
             "category": "temporal-reasoning",
@@ -2252,28 +2176,9 @@
                 "query": "what database do we currently use",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 5,
-                "tokensEstimated": 75,
-                "topResults": [
-                  {
-                    "id": "01KZYVE274NY904RQJBV7Z2S8A",
-                    "content": "Database is MySQL 5.7",
-                    "score": 0.04926331935329198,
-                    "createdAt": "2026-08-14T00:40:58.852Z"
-                  },
-                  {
-                    "id": "01KZYVE0J8VD2YSG81AP5HB78M",
-                    "content": "Created a data warehouse ETL pipeline using dbt for analytics queries. The table has 450 million rows and grows by 2 million per day.",
-                    "score": 0.048077562100806985,
-                    "createdAt": "2026-08-14T00:40:57.160Z"
-                  },
-                  {
-                    "id": "01KZYVDZAWYJDVQJWAVA9VNE5M",
-                    "content": "Set up automated vacuum tuning for tables with high write throughput. Storage costs reduced by 40% after archiving records older than 2 years.",
-                    "score": 0.04695058601856731,
-                    "createdAt": "2026-08-14T00:40:55.900Z"
-                  }
-                ],
+                "latencyMs": 6,
+                "tokensEstimated": 0,
+                "topResults": [],
                 "reason": "Missing keyword: \"PostgreSQL 16\""
               },
               {
@@ -2282,26 +2187,26 @@
                 "query": "what database did we use before the migration",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 6,
+                "latencyMs": 5,
                 "tokensEstimated": 104,
                 "topResults": [
                   {
-                    "id": "01KZYVE0YVR4SQ4571XARGF95N",
+                    "id": "01KZYXCVDPFP59FZRB8PH9FXCH",
                     "content": "Created a data warehouse ETL pipeline using dbt for analytics queries. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.04925160200717208,
-                    "createdAt": "2026-08-14T00:40:57.563Z"
+                    "score": 0.005113143726301393,
+                    "createdAt": "2026-08-14T01:15:16.278Z"
                   },
                   {
-                    "id": "01KZYVE17T7Q0AKW1A0PEX4CK0",
+                    "id": "01KZYXCVRACNGN20X0E1W6T1JS",
                     "content": "Implemented read replicas for the reporting queries to reduce primary load. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.04808108319176156,
-                    "createdAt": "2026-08-14T00:40:57.850Z"
+                    "score": 0.004992663103691655,
+                    "createdAt": "2026-08-14T01:15:16.618Z"
                   },
                   {
-                    "id": "01KZYVE1NQV1VX3QG6GK6FG9JE",
+                    "id": "01KZYXCW833D42DB9MNN26ZK4R",
                     "content": "Added database-level audit logging for all PII-containing tables. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.04696619550767476,
-                    "createdAt": "2026-08-14T00:40:58.295Z"
+                    "score": 0.00487840907041237,
+                    "createdAt": "2026-08-14T01:15:17.123Z"
                   }
                 ],
                 "reason": "Missing keyword: \"MySQL\""
@@ -2312,26 +2217,14 @@
                 "query": "what is our current velocity",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
-                "tokensEstimated": 54,
+                "latencyMs": 5,
+                "tokensEstimated": 11,
                 "topResults": [
                   {
-                    "id": "01KZYVE3188Q8Y4B4CSCYPXJXA",
-                    "content": "Sprint velocity is 21 story points",
-                    "score": 0.04926657238117198,
-                    "createdAt": "2026-08-14T00:40:59.688Z"
-                  },
-                  {
-                    "id": "01KZYVE31CCZ97GSM6JN07D3JG",
+                    "id": "01KZYXCXM38VMR6RJ4AGW3R8KH",
                     "content": "Sprint velocity increased to 34 story points",
-                    "score": 0.04809359032946219,
-                    "createdAt": "2026-08-14T00:40:59.692Z"
-                  },
-                  {
-                    "id": "01KZYVE1P6WDW22BMKVSN04S0V",
-                    "content": "Migrated from Express to Fastify for 30% better throughput on the API gateway. Peak traffic is 1,200 requests/second during flash sales.",
-                    "score": 0.04696471683123032,
-                    "createdAt": "2026-08-14T00:40:58.310Z"
+                    "score": 0.06732891457726474,
+                    "createdAt": "2026-08-14T01:15:18.531Z"
                   }
                 ]
               },
@@ -2342,27 +2235,8 @@
                 "passed": false,
                 "score": 0,
                 "latencyMs": 4,
-                "tokensEstimated": 92,
-                "topResults": [
-                  {
-                    "id": "01KZYVE1DCCM9V659JW351RJ93",
-                    "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. This has been the workflow since the project started in January.",
-                    "score": 0.04924880761725995,
-                    "createdAt": "2026-08-14T00:40:58.028Z"
-                  },
-                  {
-                    "id": "01KZYVDZT82S4S0KFQ3RV3Z07E",
-                    "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. The team agreed on this convention during the engineering standards review.",
-                    "score": 0.048064532056965883,
-                    "createdAt": "2026-08-14T00:40:56.392Z"
-                  },
-                  {
-                    "id": "01KZYVDZRH8A0G32WDCQ4MB60E",
-                    "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays",
-                    "score": 0.046946378638399476,
-                    "createdAt": "2026-08-14T00:40:56.337Z"
-                  }
-                ],
+                "tokensEstimated": 0,
+                "topResults": [],
                 "reason": "Missing keyword: \"Fly.io\""
               },
               {
@@ -2371,26 +2245,26 @@
                 "query": "what cloud providers have we used",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 5,
+                "latencyMs": 6,
                 "tokensEstimated": 177,
                 "topResults": [
                   {
-                    "id": "01KZYVDZWSDTZ6Y2DGV27MAGEZ",
+                    "id": "01KZYXCT6W66GSJ973XSGA1R5J",
                     "content": "Vendor evaluation: comparing Cloudflare Workers vs AWS Lambda for edge compute. The team voted 7-2 in favor of the proposed approach.",
-                    "score": 0.04923278820518574,
-                    "createdAt": "2026-08-14T00:40:56.473Z"
+                    "score": 0.005103262394673201,
+                    "createdAt": "2026-08-14T01:15:15.036Z"
                   },
                   {
-                    "id": "01KZYVDZ0VPPFY4CRY84GMBAB2",
+                    "id": "01KZYXCS7TCVB2RREBCZEF2YGQ",
                     "content": "Vendor evaluation: comparing Cloudflare Workers vs AWS Lambda for edge compute. We agreed to time-box the investigation to 3 days before deciding.",
-                    "score": 0.048054548988496405,
-                    "createdAt": "2026-08-14T00:40:55.579Z"
+                    "score": 0.004978442177730976,
+                    "createdAt": "2026-08-14T01:15:14.042Z"
                   },
                   {
-                    "id": "01KZYVE1G9PS3DB5FBXVYJP300",
+                    "id": "01KZYXCW1YRS41CKFDK1EPW1NV",
                     "content": "Implemented blue-green deployments using AWS ALB target group switching. Zero-downtime deployments are now the standard for all services.",
-                    "score": 0.04695418511485113,
-                    "createdAt": "2026-08-14T00:40:58.121Z"
+                    "score": 0.004872337273919321,
+                    "createdAt": "2026-08-14T01:15:16.926Z"
                   }
                 ],
                 "reason": "Missing keyword: \"Heroku\""
@@ -2405,22 +2279,22 @@
                 "tokensEstimated": 23,
                 "topResults": [
                   {
-                    "id": "01KZYVE4FRGAQAM07XM1J9810T",
-                    "content": "Team size: 3 engineers",
-                    "score": 0.049263311374833904,
-                    "createdAt": "2026-08-14T00:41:01.176Z"
-                  },
-                  {
-                    "id": "01KZYVE4P96CAESMQKDBGH3YJ8",
+                    "id": "01KZYXCZ93YAA239DBZ9N8618B",
                     "content": "Alice left, team is 4 engineers",
-                    "score": 0.04809200878078477,
-                    "createdAt": "2026-08-14T00:41:01.385Z"
+                    "score": 0.04998387426085957,
+                    "createdAt": "2026-08-14T01:15:20.227Z"
                   },
                   {
-                    "id": "01KZYVE4FWWMVZVRWCPX5SG7VH",
+                    "id": "01KZYXCZ2G4GW3YD0W0CPJMCM1",
+                    "content": "Team size: 3 engineers",
+                    "score": 0.005119455822505855,
+                    "createdAt": "2026-08-14T01:15:20.016Z"
+                  },
+                  {
+                    "id": "01KZYXCZ2PQMEV4BEP848QG9DZ",
                     "content": "Hired 2 more, team is now 5 engineers",
-                    "score": 0.04697202499767372,
-                    "createdAt": "2026-08-14T00:41:01.180Z"
+                    "score": 0.004881364390828922,
+                    "createdAt": "2026-08-14T01:15:20.022Z"
                   }
                 ]
               },
@@ -2430,33 +2304,14 @@
                 "query": "what is the latest API version",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 5,
-                "tokensEstimated": 79,
-                "topResults": [
-                  {
-                    "id": "01KZYVE534PFXGNPZWJE5RA683",
-                    "content": "API version v1 launched",
-                    "score": 0.049263327332012885,
-                    "createdAt": "2026-08-14T00:41:01.796Z"
-                  },
-                  {
-                    "id": "01KZYVDYNXR9HJSWBG83DFHAC0",
-                    "content": "Cross-team sync: the mobile team needs the API v3 endpoints ready by March 15. The budget increase was approved by the VP of Engineering.",
-                    "score": 0.04804423298573021,
-                    "createdAt": "2026-08-14T00:40:55.229Z"
-                  },
-                  {
-                    "id": "01KZYVDYHG5E7AJ7WJQ4EBZNGG",
-                    "content": "Cross-team sync: the mobile team needs the API v3 endpoints ready by March 15. The customer segment most affected is enterprise accounts with 50+ seats.",
-                    "score": 0.046926053507517995,
-                    "createdAt": "2026-08-14T00:40:55.088Z"
-                  }
-                ],
+                "latencyMs": 6,
+                "tokensEstimated": 0,
+                "topResults": [],
                 "reason": "Missing keyword: \"v2.1\""
               }
             ],
-            "avgLatencyMs": 4.714285714285714,
-            "totalTokens": 604
+            "avgLatencyMs": 5.142857142857143,
+            "totalTokens": 315
           },
           {
             "category": "conflict-resolution",
@@ -2471,26 +2326,26 @@
                 "query": "what is the default timeout",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 49,
                 "topResults": [
                   {
-                    "id": "01KZYVE5PF2GJWQK2AQ0W1P1XY",
-                    "content": "Default timeout is 30 seconds",
-                    "score": 0.049266580467412155,
-                    "createdAt": "2026-08-14T00:41:02.415Z"
-                  },
-                  {
-                    "id": "01KZYVE5PJPJRBRY04TQ8SJHJC",
+                    "id": "01KZYXD09JKMD0PY1KF7WRCXJJ",
                     "content": "Changed default timeout to 60 seconds",
-                    "score": 0.04809359032946219,
-                    "createdAt": "2026-08-14T00:41:02.418Z"
+                    "score": 0.04999173234441902,
+                    "createdAt": "2026-08-14T01:15:21.266Z"
                   },
                   {
-                    "id": "01KZYVDZTP9Q0XQV6MHAP94TZT",
+                    "id": "01KZYXD09CXC9MVNH1BRSGJTM6",
+                    "content": "Default timeout is 30 seconds",
+                    "score": 0.005121080061929577,
+                    "createdAt": "2026-08-14T01:15:21.260Z"
+                  },
+                  {
+                    "id": "01KZYXCT5RMRSXYK8414XKJ98Q",
                     "content": "Set up graceful shutdown handling to drain in-flight requests before stopping. Response time p99 improved from 850ms to 120ms.",
-                    "score": 0.046932978061683374,
-                    "createdAt": "2026-08-14T00:40:56.406Z"
+                    "score": 0.004861060178384776,
+                    "createdAt": "2026-08-14T01:15:15.000Z"
                   }
                 ]
               },
@@ -2500,26 +2355,26 @@
                 "query": "what logging library do we use",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 80,
                 "topResults": [
                   {
-                    "id": "01KZYVE5X46EX7J7MQA7TFEWS0",
+                    "id": "01KZYXD0G4CH8NF2D2R40V81ED",
                     "content": "Logging uses Winston",
-                    "score": 0.04926658855392051,
-                    "createdAt": "2026-08-14T00:41:02.628Z"
+                    "score": 0.00512108813706358,
+                    "createdAt": "2026-08-14T01:15:21.477Z"
                   },
                   {
-                    "id": "01KZYVE073NYJ2JFZD00A442FW",
+                    "id": "01KZYXCTK4TCBF6848MFREWJGT",
                     "content": "Added log aggregation using Loki with structured JSON logging across all services. Infrastructure costs reduced by 35% through right-sizing instances.",
-                    "score": 0.04805164105619313,
-                    "createdAt": "2026-08-14T00:40:56.803Z"
+                    "score": 0.0049774907988612924,
+                    "createdAt": "2026-08-14T01:15:15.428Z"
                   },
                   {
-                    "id": "01KZYVE1Y3TXXY20R2YT18E4GK",
+                    "id": "01KZYXCWGFSTSC5EC4EZYA6W7N",
                     "content": "Added log aggregation using Loki with structured JSON logging across all services. Zero-downtime deployments are now the standard for all services.",
-                    "score": 0.04694575512863269,
-                    "createdAt": "2026-08-14T00:40:58.563Z"
+                    "score": 0.004868166609059857,
+                    "createdAt": "2026-08-14T01:15:17.391Z"
                   }
                 ],
                 "reason": "Missing keyword: \"Pino\""
@@ -2534,22 +2389,22 @@
                 "tokensEstimated": 50,
                 "topResults": [
                   {
-                    "id": "01KZYVE63RTH2E92RXRJCF4D9J",
-                    "content": "Max file upload size is 5MB",
-                    "score": 0.04926655620949607,
-                    "createdAt": "2026-08-14T00:41:02.840Z"
-                  },
-                  {
-                    "id": "01KZYVE63XC3QHK3H2J598Z8TF",
+                    "id": "01KZYXD0PZ570KG2ZFJ5J77RDJ",
                     "content": "Increased max upload to 50MB for enterprise tier",
-                    "score": 0.048093582434966156,
-                    "createdAt": "2026-08-14T00:41:02.845Z"
+                    "score": 0.04999173234441902,
+                    "createdAt": "2026-08-14T01:15:21.695Z"
                   },
                   {
-                    "id": "01KZYVDZ49CK62XPG1T94C7EGK",
+                    "id": "01KZYXD0PVR2HWKF49X0FRSDWJ",
+                    "content": "Max file upload size is 5MB",
+                    "score": 0.00512108813706358,
+                    "createdAt": "2026-08-14T01:15:21.691Z"
+                  },
+                  {
+                    "id": "01KZYXCSCA9FJW2TD696FAE4HE",
                     "content": "Implemented drag-and-drop file upload using react-dropzone v14. The animation frame budget is now consistently under 16ms.",
-                    "score": 0.04692580070793503,
-                    "createdAt": "2026-08-14T00:40:55.689Z"
+                    "score": 0.0048572056375417805,
+                    "createdAt": "2026-08-14T01:15:14.186Z"
                   }
                 ]
               },
@@ -2559,26 +2414,26 @@
                 "query": "what is the main git branch",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 52,
                 "topResults": [
                   {
-                    "id": "01KZYVE6AH08S0JVQXDS5FZXCJ",
-                    "content": "Primary branch is master",
-                    "score": 0.049266564295199954,
-                    "createdAt": "2026-08-14T00:41:03.057Z"
-                  },
-                  {
-                    "id": "01KZYVE6ANTNS5MMHC2BJE947D",
+                    "id": "01KZYXD0XPGJF82XZ9SFYTZGQ6",
                     "content": "Renamed primary branch to main",
-                    "score": 0.048093582434966156,
-                    "createdAt": "2026-08-14T00:41:03.061Z"
+                    "score": 0.04999161408764262,
+                    "createdAt": "2026-08-14T01:15:21.910Z"
                   },
                   {
-                    "id": "01KZYVE0W4DBZAT3Q22F94Z035",
+                    "id": "01KZYXD0XJ2K4EQVBVK4KHFRXJ",
+                    "content": "Primary branch is master",
+                    "score": 0.005121076024563665,
+                    "createdAt": "2026-08-14T01:15:21.906Z"
+                  },
+                  {
+                    "id": "01KZYXCVASMBEMB6TN0QCFJ5QC",
                     "content": "The team follows a trunk-based development workflow with short-lived feature branches. The preference applies to both personal and team repositories.",
-                    "score": 0.046935712048342765,
-                    "createdAt": "2026-08-14T00:40:57.476Z"
+                    "score": 0.004862773560214246,
+                    "createdAt": "2026-08-14T01:15:16.185Z"
                   }
                 ]
               },
@@ -2588,26 +2443,26 @@
                 "query": "do we use semicolons",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 5,
+                "latencyMs": 6,
                 "tokensEstimated": 60,
                 "topResults": [
                   {
-                    "id": "01KZYVE6H8WG57Y5WRJREWPZPF",
-                    "content": "Use Prettier with semicolons enabled",
-                    "score": 0.0492665481240603,
-                    "createdAt": "2026-08-14T00:41:03.272Z"
-                  },
-                  {
-                    "id": "01KZYVE6HEXVPWC0J73TMEKRAC",
+                    "id": "01KZYXD14GDQFPHB2QE0GREC1A",
                     "content": "Team voted to disable semicolons in Prettier config",
-                    "score": 0.048093582434966156,
-                    "createdAt": "2026-08-14T00:41:03.278Z"
+                    "score": 0.04999173234441902,
+                    "createdAt": "2026-08-14T01:15:22.128Z"
                   },
                   {
-                    "id": "01KZYVE1YPHHA59HR00MHDSH4A",
+                    "id": "01KZYXD14CT9PWDBGX86PEGKR7",
+                    "content": "Use Prettier with semicolons enabled",
+                    "score": 0.00512108813706358,
+                    "createdAt": "2026-08-14T01:15:22.124Z"
+                  },
+                  {
+                    "id": "01KZYXCWGYAW6ZY54R08Q230QP",
                     "content": "Code style: 2-space indentation, single quotes, no semicolons, trailing commas. The standard was adopted after evaluating three alternative approaches.",
-                    "score": 0.04694153285080024,
-                    "createdAt": "2026-08-14T00:40:58.582Z"
+                    "score": 0.0048660535476254,
+                    "createdAt": "2026-08-14T01:15:17.406Z"
                   }
                 ]
               },
@@ -2621,22 +2476,22 @@
                 "tokensEstimated": 54,
                 "topResults": [
                   {
-                    "id": "01KZYVE6R1E3KYZVVH93413MYT",
-                    "content": "Node.js 18 is required minimum version",
-                    "score": 0.049266564295199954,
-                    "createdAt": "2026-08-14T00:41:03.489Z"
-                  },
-                  {
-                    "id": "01KZYVE6R5DY7BYM47AZBHVCYD",
+                    "id": "01KZYXD1B7Q0QPZA1B2S1WJ6XX",
                     "content": "Upgraded minimum to Node.js 20",
-                    "score": 0.048093582434966156,
-                    "createdAt": "2026-08-14T00:41:03.493Z"
+                    "score": 0.04999173234441902,
+                    "createdAt": "2026-08-14T01:15:22.343Z"
                   },
                   {
-                    "id": "01KZYVDY6PS8BRP5723KKHZRGP",
+                    "id": "01KZYXD1B3SVE0YX737BQ0AE98",
+                    "content": "Node.js 18 is required minimum version",
+                    "score": 0.00512108813706358,
+                    "createdAt": "2026-08-14T01:15:22.339Z"
+                  },
+                  {
+                    "id": "01KZYXCRCH7RA7SHK543N7ED4F",
                     "content": "Team uses conventional commits with scope prefixes for all repositories. The standard was adopted after evaluating three alternative approaches.",
-                    "score": 0.046916199030084864,
-                    "createdAt": "2026-08-14T00:40:54.742Z"
+                    "score": 0.00485225878855119,
+                    "createdAt": "2026-08-14T01:15:13.169Z"
                   }
                 ]
               },
@@ -2650,28 +2505,28 @@
                 "tokensEstimated": 69,
                 "topResults": [
                   {
-                    "id": "01KZYVE6YR0Z4ZMNG87QNWB01W",
+                    "id": "01KZYXD1JW9143DVP8TD59Z5HJ",
                     "content": "The API returns XML responses",
-                    "score": 0.04926657238117198,
-                    "createdAt": "2026-08-14T00:41:03.704Z"
+                    "score": 0.00512108813706358,
+                    "createdAt": "2026-08-14T01:15:22.588Z"
                   },
                   {
-                    "id": "01KZYVDYMNDGFQVJQHV3YWWA9E",
+                    "id": "01KZYXCRV2HHN5EYWQWXTBTAW9",
                     "content": "Added rate limiting to the /api/search endpoint using a sliding window algorithm. Response time p99 improved from 850ms to 120ms.",
-                    "score": 0.0480346590117348,
-                    "createdAt": "2026-08-14T00:40:55.189Z"
+                    "score": 0.004968432034310461,
+                    "createdAt": "2026-08-14T01:15:13.634Z"
                   },
                   {
-                    "id": "01KZYVE20NHMKHFZGASB3J2686",
+                    "id": "01KZYXCWK3SC5N7MXCNANQGGAS",
                     "content": "Implemented cursor-based pagination for the /api/orders endpoint. Response time p99 improved from 850ms to 120ms.",
-                    "score": 0.046939117269542946,
-                    "createdAt": "2026-08-14T00:40:58.645Z"
+                    "score": 0.004864753638855592,
+                    "createdAt": "2026-08-14T01:15:17.475Z"
                   }
                 ],
                 "reason": "Missing keyword: \"JSON\""
               }
             ],
-            "avgLatencyMs": 4.571428571428571,
+            "avgLatencyMs": 5.142857142857143,
             "totalTokens": 414
           },
           {
@@ -2697,26 +2552,26 @@
                 "query": "what are the user's editor preferences",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 88,
                 "topResults": [
                   {
-                    "id": "01KZYVDYY4KNZQGKB03AYJ3ZRF",
-                    "content": "User prefers Monaco editor over CodeMirror for TypeScript development. The preference applies to both personal and team repositories.",
-                    "score": 0.04920805698125639,
-                    "createdAt": "2026-08-14T00:40:55.493Z"
-                  },
-                  {
-                    "id": "01KZYVE0GAPT9GRFYB7C0XC7AA",
-                    "content": "User prefers Monaco editor over CodeMirror for TypeScript development. The standard was adopted after evaluating three alternative approaches.",
-                    "score": 0.048046483858568294,
-                    "createdAt": "2026-08-14T00:40:57.098Z"
-                  },
-                  {
-                    "id": "01KZYVE75F989K41R1NDS3H5DG",
+                    "id": "01KZYXD1SKNTNMB14FF0GQRNKV",
                     "content": "User prefers dark mode, vim keybindings, 2-space indent, and Fira Code font",
-                    "score": 0.04697667431600657,
-                    "createdAt": "2026-08-14T00:41:03.919Z"
+                    "score": 0.048836821639416675,
+                    "createdAt": "2026-08-14T01:15:22.803Z"
+                  },
+                  {
+                    "id": "01KZYXCS5RN6NWB394KT7751HN",
+                    "content": "User prefers Monaco editor over CodeMirror for TypeScript development. The preference applies to both personal and team repositories.",
+                    "score": 0.005090628036256656,
+                    "createdAt": "2026-08-14T01:15:13.976Z"
+                  },
+                  {
+                    "id": "01KZYXCTXP0RR8FAPGSZ0P4PKK",
+                    "content": "User prefers Monaco editor over CodeMirror for TypeScript development. The standard was adopted after evaluating three alternative approaches.",
+                    "score": 0.0049749655356889225,
+                    "createdAt": "2026-08-14T01:15:15.766Z"
                   }
                 ]
               },
@@ -2730,22 +2585,22 @@
                 "tokensEstimated": 98,
                 "topResults": [
                   {
-                    "id": "01KZYVE75STFJES4DPP4RQWPF2",
+                    "id": "01KZYXD1SZ998QGG2J3FSNXW1F",
                     "content": "Investigated OOM crash at 2am. Root cause was unbounded cache in UserService.getAll() method. Fixed by adding LRU eviction with max 1000 entries.",
-                    "score": 0.04926821940459226,
-                    "createdAt": "2026-08-14T00:41:03.929Z"
+                    "score": 0.05121914627306099,
+                    "createdAt": "2026-08-14T01:15:22.815Z"
                   },
                   {
-                    "id": "01KZYVDYB8KEM7BV5P5YVSB3QG",
+                    "id": "01KZYXCRG7818DVTFW6R4GDGKH",
                     "content": "Post-mortem: the data corruption was caused by a race condition in the batch processor",
-                    "score": 0.04803271020862348,
-                    "createdAt": "2026-08-14T00:40:54.888Z"
+                    "score": 0.004967335523798385,
+                    "createdAt": "2026-08-14T01:15:13.288Z"
                   },
                   {
-                    "id": "01KZYVDYE4PQ4E0BS25R9WJDAK",
+                    "id": "01KZYXCRM4N68XBC9YKHTYGR8V",
                     "content": "Incident retrospective: the outage was caused by a misconfigured autoscaling policy. The customer segment most affected is enterprise accounts with 50+ seats.",
-                    "score": 0.046916216673589604,
-                    "createdAt": "2026-08-14T00:40:54.981Z"
+                    "score": 0.004852177626537485,
+                    "createdAt": "2026-08-14T01:15:13.413Z"
                   }
                 ]
               },
@@ -2755,26 +2610,26 @@
                 "query": "why did we pick this data pattern",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 4,
+                "latencyMs": 3,
                 "tokensEstimated": 110,
                 "topResults": [
                   {
-                    "id": "01KZYVDYEYA3ZSED156K78ZEAJ",
+                    "id": "01KZYXCRN15W6X849FD1JCEGHZ",
                     "content": "Post-mortem: the data corruption was caused by a race condition in the batch processor. The team voted 7-2 in favor of the proposed approach.",
-                    "score": 0.04920491749616858,
-                    "createdAt": "2026-08-14T00:40:55.006Z"
+                    "score": 0.00508892393092415,
+                    "createdAt": "2026-08-14T01:15:13.441Z"
                   },
                   {
-                    "id": "01KZYVDYZKB3GGPNX8J0WCAQQ6",
+                    "id": "01KZYXCS6FS1PD9B6PKC99DT29",
                     "content": "Post-mortem: the data corruption was caused by a race condition in the batch processor. Follow-up meeting scheduled for next Thursday at 2 PM.",
-                    "score": 0.048036607824083075,
-                    "createdAt": "2026-08-14T00:40:55.539Z"
+                    "score": 0.004969428639234959,
+                    "createdAt": "2026-08-14T01:15:13.999Z"
                   },
                   {
-                    "id": "01KZYVDYMYED68G7NH8YRY4PX8",
+                    "id": "01KZYXCRVB6Y19KXV60QQ23RA9",
                     "content": "Post-mortem: the data corruption was caused by a race condition in the batch processor. We agreed to time-box the investigation to 3 days before deciding.",
-                    "score": 0.04691744962014199,
-                    "createdAt": "2026-08-14T00:40:55.198Z"
+                    "score": 0.00485281709688987,
+                    "createdAt": "2026-08-14T01:15:13.643Z"
                   }
                 ],
                 "reason": "Missing keyword: \"event sourcing\""
@@ -2789,22 +2644,22 @@
                 "tokensEstimated": 120,
                 "topResults": [
                   {
-                    "id": "01KZYVE76B7VG9JAJBMYBRYG63",
-                    "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
-                    "score": 0.0492678858585774,
-                    "createdAt": "2026-08-14T00:41:03.948Z"
-                  },
-                  {
-                    "id": "01KZYVE76NV0FHQX31QXCHDJ9X",
+                    "id": "01KZYXD1TXAR07PW15QESNAKPT",
                     "content": "Dashboard implementation: 70% complete. Metrics cards done, charts in progress, API log not started.",
-                    "score": 0.0480949123932963,
-                    "createdAt": "2026-08-14T00:41:03.957Z"
+                    "score": 0.04999964279036905,
+                    "createdAt": "2026-08-14T01:15:22.845Z"
                   },
                   {
-                    "id": "01KZYVDZG245WE4YSPW6F45NTE",
+                    "id": "01KZYXD1TKT8P3FHBB7J7X88EX",
+                    "content": "Feature: user dashboard. Requirements: show usage metrics, billing status, and recent API calls.",
+                    "score": 0.0051218739821661564,
+                    "createdAt": "2026-08-14T01:15:22.835Z"
+                  },
+                  {
+                    "id": "01KZYXCSS58ZHHFZC3DTS898M1",
                     "content": "Stakeholder demo: showed the new analytics dashboard to the product team",
-                    "score": 0.046922335901499225,
-                    "createdAt": "2026-08-14T00:40:56.066Z"
+                    "score": 0.0048555778185634165,
+                    "createdAt": "2026-08-14T01:15:14.597Z"
                   }
                 ]
               },
@@ -2818,22 +2673,22 @@
                 "tokensEstimated": 142,
                 "topResults": [
                   {
-                    "id": "01KZYVE78HRN44WJF47TS1JV5J",
+                    "id": "01KZYXD1VVY8D55MSPKS312KPK",
                     "content": "Friday: production deploy successful. Monitoring looks clean.",
-                    "score": 0.04926823568677006,
-                    "createdAt": "2026-08-14T00:41:04.017Z"
+                    "score": 0.051219186925649154,
+                    "createdAt": "2026-08-14T01:15:22.875Z"
                   },
                   {
-                    "id": "01KZYVE0CXPQ2GX4EX5EK4S2EG",
+                    "id": "01KZYXCTRVJKGZSAQBWEBYXD89",
                     "content": "Added log aggregation using Loki with structured JSON logging across all services. Mean time to recovery dropped from 2 hours to 15 minutes.",
-                    "score": 0.048045173814259545,
-                    "createdAt": "2026-08-14T00:40:56.989Z"
+                    "score": 0.004974252596762816,
+                    "createdAt": "2026-08-14T01:15:15.611Z"
                   },
                   {
-                    "id": "01KZYVDZ77HCR9HQDGQWXNCY2J",
+                    "id": "01KZYXCSE5W2SJ27XT6MY9T24S",
                     "content": "Post-mortem: the data corruption was caused by a race condition in the batch processor. Action items assigned to 3 team members with a 2-week deadline.",
-                    "score": 0.04692047186322921,
-                    "createdAt": "2026-08-14T00:40:55.783Z"
+                    "score": 0.004854442587540834,
+                    "createdAt": "2026-08-14T01:15:14.245Z"
                   }
                 ],
                 "reason": "Missing keyword: \"CI/CD\""
@@ -2844,26 +2699,26 @@
                 "query": "what happened with the search task",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 3,
+                "latencyMs": 4,
                 "tokensEstimated": 165,
                 "topResults": [
                   {
-                    "id": "01KZYVE78VX169DQTSS3SA4Q20",
+                    "id": "01KZYXD1W66WZC6ZGFF15NN0B8",
                     "content": "Task started: implement search functionality for the API",
-                    "score": 0.049268138009954165,
-                    "createdAt": "2026-08-14T00:41:04.028Z"
+                    "score": 0.005121861791264291,
+                    "createdAt": "2026-08-14T01:15:22.886Z"
                   },
                   {
-                    "id": "01KZYVE0YA0GEZEVDH7ATRC75R",
+                    "id": "01KZYXCVD5Y3J3NEX6YJZYNG09",
                     "content": "Implemented custom event tracking for the search feature to measure relevance. Average session duration increased from 4.2 to 6.8 minutes.",
-                    "score": 0.04804860316894971,
-                    "createdAt": "2026-08-14T00:40:57.546Z"
+                    "score": 0.004976244863713737,
+                    "createdAt": "2026-08-14T01:15:16.261Z"
                   },
                   {
-                    "id": "01KZYVDZNA47TDB7SQY2Y8H17T",
+                    "id": "01KZYXCSYNSM49ACRASJYY6J07",
                     "content": "Migrated the search feature from LIKE queries to Elasticsearch with synonym support. The migration ran in 3 minutes with zero downtime using online DDL.",
-                    "score": 0.04692305828882045,
-                    "createdAt": "2026-08-14T00:40:56.234Z"
+                    "score": 0.004855944013333253,
+                    "createdAt": "2026-08-14T01:15:14.773Z"
                   }
                 ],
                 "reason": "Missing keyword: \"completed\""
@@ -2874,26 +2729,26 @@
                 "query": "trace the deploy process",
                 "passed": false,
                 "score": 0,
-                "latencyMs": 4,
+                "latencyMs": 3,
                 "tokensEstimated": 182,
                 "topResults": [
                   {
-                    "id": "01KZYVE1FWV1AC96ZKFVWKEM54",
+                    "id": "01KZYXCW0R5XWDVNWQD659T881",
                     "content": "Implemented canary deployments with automatic rollback on error rate increase. Deploy frequency increased from weekly to multiple times per day.",
-                    "score": 0.0492241372569095,
-                    "createdAt": "2026-08-14T00:40:58.108Z"
+                    "score": 0.005099635733435797,
+                    "createdAt": "2026-08-14T01:15:16.888Z"
                   },
                   {
-                    "id": "01KZYVE1DCCM9V659JW351RJ93",
+                    "id": "01KZYXCVY2MRV40T3KXR5PWW13",
                     "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. This has been the workflow since the project started in January.",
-                    "score": 0.04805160823374517,
-                    "createdAt": "2026-08-14T00:40:58.028Z"
+                    "score": 0.004977934387723014,
+                    "createdAt": "2026-08-14T01:15:16.802Z"
                   },
                   {
-                    "id": "01KZYVDZT82S4S0KFQ3RV3Z07E",
+                    "id": "01KZYXCT59ZXMNM77TSS8499Z0",
                     "content": "Deployment cadence: ship to staging daily, production releases on Tuesdays. The team agreed on this convention during the engineering standards review.",
-                    "score": 0.046923893084295995,
-                    "createdAt": "2026-08-14T00:40:56.392Z"
+                    "score": 0.004856522982165306,
+                    "createdAt": "2026-08-14T01:15:14.985Z"
                   }
                 ],
                 "reason": "Missing keyword: \"environment\""
@@ -2925,26 +2780,26 @@
                 "query": "what is the project architecture",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 69,
                 "topResults": [
                   {
-                    "id": "01KZYVE7A6ZB34ES0A9KYQV7WF",
+                    "id": "01KZYXD1XJW20R623EX5EZ9M68",
                     "content": "Cost test memory 1: The project architecture follows a monorepo pattern",
-                    "score": 0.04926793464178238,
-                    "createdAt": "2026-08-14T00:41:04.071Z"
+                    "score": 0.005121593899302514,
+                    "createdAt": "2026-08-14T01:15:22.930Z"
                   },
                   {
-                    "id": "01KZYVE1EB08H3X9PPMZK8RVNJ",
+                    "id": "01KZYXCVZ53GVTPC1A0372J36D",
                     "content": "The team uses Linear for project management with 2-week sprint cycles. Exceptions are allowed for prototypes and hackathon projects.",
-                    "score": 0.048051503235237825,
-                    "createdAt": "2026-08-14T00:40:58.059Z"
+                    "score": 0.004977754775692903,
+                    "createdAt": "2026-08-14T01:15:16.837Z"
                   },
                   {
-                    "id": "01KZYVDYVGHK261KCEKXD0VGGJ",
+                    "id": "01KZYXCS1NJBQ6MT7KTQBQQ5BD",
                     "content": "The team uses Linear for project management with 2-week sprint cycles",
-                    "score": 0.04691769236826164,
-                    "createdAt": "2026-08-14T00:40:55.408Z"
+                    "score": 0.004852869597130182,
+                    "createdAt": "2026-08-14T01:15:13.845Z"
                   }
                 ]
               },
@@ -2958,22 +2813,22 @@
                 "tokensEstimated": 92,
                 "topResults": [
                   {
-                    "id": "01KZYVE7BTHJJ3AFGK9P7XJADE",
+                    "id": "01KZYXD20F4Y0W2NC0ZTCZ1HMN",
                     "content": "The main API server runs on port 3000 with hot reload enabled in development",
-                    "score": 0.04926823568677006,
-                    "createdAt": "2026-08-14T00:41:04.122Z"
+                    "score": 0.05121922757959182,
+                    "createdAt": "2026-08-14T01:15:23.023Z"
                   },
                   {
-                    "id": "01KZYVE1PJBG6BRRXM3X1V30MD",
+                    "id": "01KZYXCW8Z2QQQBZRC0V73A9RA",
                     "content": "Added connection pooling using PgBouncer with 50 max connections per service. Connection count dropped from 800 to 200 after pooling was configured.",
-                    "score": 0.04805314304885406,
-                    "createdAt": "2026-08-14T00:40:58.322Z"
+                    "score": 0.004978744705262623,
+                    "createdAt": "2026-08-14T01:15:17.151Z"
                   },
                   {
-                    "id": "01KZYVE00WRN96SA061FVBMBKR",
+                    "id": "01KZYXCTCJVQC2SWZBYRE3P70Q",
                     "content": "Added CORS configuration limiting origins to known frontend domains. The penetration test found zero critical and two medium severity issues.",
-                    "score": 0.04692481710364757,
-                    "createdAt": "2026-08-14T00:40:56.604Z"
+                    "score": 0.004856919888572224,
+                    "createdAt": "2026-08-14T01:15:15.218Z"
                   }
                 ]
               },
@@ -2987,22 +2842,22 @@
                 "tokensEstimated": 125,
                 "topResults": [
                   {
-                    "id": "01KZYVE7C2XCREDKACBZDRZ2QQ",
+                    "id": "01KZYXD20Q64G1AS7BEESSW21J",
                     "content": "The authentication system was designed with security in mind, implementing JWT tokens with RS256 signing, refresh token rotation every 24 hours, and automatic session invalidation after 30 minutes of inactivity",
-                    "score": 0.04926820312349799,
-                    "createdAt": "2026-08-14T00:41:04.130Z"
+                    "score": 0.051219064971947864,
+                    "createdAt": "2026-08-14T01:15:23.031Z"
                   },
                   {
-                    "id": "01KZYVDYM7NQ7W08PVVJ3QF281",
+                    "id": "01KZYXCRTHC6WPQRHWQZ4RXVS2",
                     "content": "Implemented token refresh rotation to limit the window of stolen tokens. Two-factor authentication adoption increased from 23% to 87% of users.",
-                    "score": 0.048033215265472266,
-                    "createdAt": "2026-08-14T00:40:55.175Z"
+                    "score": 0.004967664143167279,
+                    "createdAt": "2026-08-14T01:15:13.617Z"
                   },
                   {
-                    "id": "01KZYVDYE0WN5F96K7V6457MJY",
+                    "id": "01KZYXCRKYCC8VV8F6WWD093AW",
                     "content": "Implemented token refresh rotation to limit the window of stolen tokens. All affected sessions were invalidated within 30 minutes of detection.",
-                    "score": 0.0469149970086482,
-                    "createdAt": "2026-08-14T00:40:54.976Z"
+                    "score": 0.004851527800307535,
+                    "createdAt": "2026-08-14T01:15:13.406Z"
                   }
                 ]
               },
@@ -3016,22 +2871,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7CEHF09FDKNNHF8TS51",
+                    "id": "01KZYXD213KGJYG05VJGVW9S7Z",
                     "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-                    "score": 0.04926723634463744,
-                    "createdAt": "2026-08-14T00:41:04.142Z"
+                    "score": 0.005121407534364832,
+                    "createdAt": "2026-08-14T01:15:23.043Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.04809477747636015,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.004999627441927357,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.04697664326937147,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.004883666661041494,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   }
                 ]
               },
@@ -3041,26 +2896,26 @@
                 "query": "what is configuration setting B",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7CKYEX41D1HDK9NWF68",
+                    "id": "01KZYXD217X19HCPE0VKK0BCGB",
                     "content": "Batch memory 2: Configuration setting B is set to value_2 for the production environment",
-                    "score": 0.04926723634463744,
-                    "createdAt": "2026-08-14T00:41:04.147Z"
+                    "score": 0.0051214034861186055,
+                    "createdAt": "2026-08-14T01:15:23.047Z"
                   },
                   {
-                    "id": "01KZYVE7CEHF09FDKNNHF8TS51",
+                    "id": "01KZYXD213KGJYG05VJGVW9S7Z",
                     "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-                    "score": 0.04809416733570147,
-                    "createdAt": "2026-08-14T00:41:04.142Z"
+                    "score": 0.004999449501753855,
+                    "createdAt": "2026-08-14T01:15:23.043Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.046976255534781956,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.004883337712115603,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   }
                 ]
               },
@@ -3074,22 +2929,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7DJS781YZZFNNVKW52Y",
+                    "id": "01KZYXD21CCFWEV8ZE1KNEAVMM",
                     "content": "Batch memory 3: Configuration setting C is set to value_3 for the production environment",
-                    "score": 0.04926746347814758,
-                    "createdAt": "2026-08-14T00:41:04.178Z"
+                    "score": 0.005121407534364832,
+                    "createdAt": "2026-08-14T01:15:23.052Z"
                   },
                   {
-                    "id": "01KZYVE7CEHF09FDKNNHF8TS51",
+                    "id": "01KZYXD213KGJYG05VJGVW9S7Z",
                     "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-                    "score": 0.04809414359555955,
-                    "createdAt": "2026-08-14T00:41:04.142Z"
+                    "score": 0.0049994336977318195,
+                    "createdAt": "2026-08-14T01:15:23.043Z"
                   },
                   {
-                    "id": "01KZYVE7E8JXTVGP6S7HYCPXF7",
+                    "id": "01KZYXD21WQVVSST0XCWEAH3SA",
                     "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-                    "score": 0.04697612385179961,
-                    "createdAt": "2026-08-14T00:41:04.200Z"
+                    "score": 0.004883264309516237,
+                    "createdAt": "2026-08-14T01:15:23.068Z"
                   }
                 ]
               },
@@ -3103,22 +2958,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7DYFBH3J6T5PKWMWPAP",
+                    "id": "01KZYXD21HX8VWCXT3AEW2BCWJ",
                     "content": "Batch memory 4: Configuration setting D is set to value_4 for the production environment",
-                    "score": 0.04926752841224994,
-                    "createdAt": "2026-08-14T00:41:04.190Z"
+                    "score": 0.005121415631261092,
+                    "createdAt": "2026-08-14T01:15:23.057Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.048095039443640346,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.004999896835322846,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   },
                   {
-                    "id": "01KZYVE7E8JXTVGP6S7HYCPXF7",
+                    "id": "01KZYXD21WQVVSST0XCWEAH3SA",
                     "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-                    "score": 0.04697609287838039,
-                    "createdAt": "2026-08-14T00:41:04.200Z"
+                    "score": 0.004883252723871832,
+                    "createdAt": "2026-08-14T01:15:23.068Z"
                   }
                 ]
               },
@@ -3132,22 +2987,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7E25QKM5M5068YGW9VR",
+                    "id": "01KZYXD21PVEYEPZZNTKTNW4YW",
                     "content": "Batch memory 5: Configuration setting E is set to value_5 for the production environment",
-                    "score": 0.04926752841224994,
-                    "createdAt": "2026-08-14T00:41:04.194Z"
+                    "score": 0.005121423728695805,
+                    "createdAt": "2026-08-14T01:15:23.063Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.048094650565355765,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.004999564143796553,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7CEHF09FDKNNHF8TS51",
+                    "id": "01KZYXD213KGJYG05VJGVW9S7Z",
                     "content": "Batch memory 1: Configuration setting A is set to value_1 for the production environment",
-                    "score": 0.046975613316351306,
-                    "createdAt": "2026-08-14T00:41:04.142Z"
+                    "score": 0.004883140788871546,
+                    "createdAt": "2026-08-14T01:15:23.043Z"
                   }
                 ]
               },
@@ -3157,26 +3012,26 @@
                 "query": "what is configuration setting F",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 3,
+                "latencyMs": 4,
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7E8JXTVGP6S7HYCPXF7",
+                    "id": "01KZYXD21WQVVSST0XCWEAH3SA",
                     "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-                    "score": 0.04926755276698862,
-                    "createdAt": "2026-08-14T00:41:04.200Z"
+                    "score": 0.005121427777615097,
+                    "createdAt": "2026-08-14T01:15:23.068Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.048094626777056046,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.0049995483245269985,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.046976495854264846,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.004883589177518921,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   }
                 ]
               },
@@ -3190,22 +3045,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7ECM663T9683C4GV03K",
+                    "id": "01KZYXD2214X1NER3KGZ5M5C3E",
                     "content": "Batch memory 7: Configuration setting G is set to value_7 for the production environment",
-                    "score": 0.04926755276698862,
-                    "createdAt": "2026-08-14T00:41:04.204Z"
+                    "score": 0.005121435875857588,
+                    "createdAt": "2026-08-14T01:15:23.073Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.048094595063012564,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.00499953646145588,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.04697646483137601,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.0048835775594416615,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   }
                 ]
               },
@@ -3219,22 +3074,22 @@
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7EHA4B04R2TJF3C0G5Y",
+                    "id": "01KZYXD226E6HMMN24WACXCY1Q",
                     "content": "Batch memory 8: Configuration setting H is set to value_8 for the production environment",
-                    "score": 0.04926756900482994,
-                    "createdAt": "2026-08-14T00:41:04.209Z"
+                    "score": 0.005121439925180801,
+                    "createdAt": "2026-08-14T01:15:23.078Z"
                   },
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.04809457128024659,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.004999520645868781,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.0469764415669178,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.004883562070477427,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   }
                 ]
               },
@@ -3244,26 +3099,26 @@
                 "query": "what is configuration setting I",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 3,
+                "latencyMs": 4,
                 "tokensEstimated": 67,
                 "topResults": [
                   {
-                    "id": "01KZYVE7EPYCEQT58RYBDY70WN",
+                    "id": "01KZYXD22BNJSYTN4NJCQ69EGG",
                     "content": "Batch memory 9: Configuration setting I is set to value_9 for the production environment",
-                    "score": 0.04926757712415529,
-                    "createdAt": "2026-08-14T00:41:04.214Z"
+                    "score": 0.005121443974638667,
+                    "createdAt": "2026-08-14T01:15:23.083Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.048094896516756636,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.00499982150223275,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   },
                   {
-                    "id": "01KZYVE7E8JXTVGP6S7HYCPXF7",
+                    "id": "01KZYXD21WQVVSST0XCWEAH3SA",
                     "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-                    "score": 0.04697595354893141,
-                    "createdAt": "2026-08-14T00:41:04.200Z"
+                    "score": 0.004883179374957102,
+                    "createdAt": "2026-08-14T01:15:23.068Z"
                   }
                 ]
               },
@@ -3273,26 +3128,26 @@
                 "query": "what is configuration setting J",
                 "passed": true,
                 "score": 1,
-                "latencyMs": 4,
+                "latencyMs": 5,
                 "tokensEstimated": 68,
                 "topResults": [
                   {
-                    "id": "01KZYVE7EVR3VSMQDW0TWG6RGQ",
+                    "id": "01KZYXD22FG48X4MS2GTAB98VM",
                     "content": "Batch memory 10: Configuration setting J is set to value_10 for the production environment",
-                    "score": 0.04926758524375047,
-                    "createdAt": "2026-08-14T00:41:04.219Z"
+                    "score": 0.005121443974638667,
+                    "createdAt": "2026-08-14T01:15:23.087Z"
                   },
                   {
-                    "id": "01KZYVE7E8JXTVGP6S7HYCPXF7",
+                    "id": "01KZYXD21WQVVSST0XCWEAH3SA",
                     "content": "Batch memory 6: Configuration setting F is set to value_6 for the production environment",
-                    "score": 0.04809439694572108,
-                    "createdAt": "2026-08-14T00:41:04.200Z"
+                    "score": 0.004999429747054667,
+                    "createdAt": "2026-08-14T01:15:23.068Z"
                   },
                   {
-                    "id": "01KZYVE7G36X4A9EQ0RQH7YGA9",
+                    "id": "01KZYXD24V27GZEMT2R84W2F0B",
                     "content": "Batch memory 19: Configuration setting S is set to value_19 for the production environment",
-                    "score": 0.04697637953970911,
-                    "createdAt": "2026-08-14T00:41:04.259Z"
+                    "score": 0.004883531098737496,
+                    "createdAt": "2026-08-14T01:15:23.163Z"
                   }
                 ]
               },
@@ -3306,45 +3161,45 @@
                 "tokensEstimated": 56,
                 "topResults": [
                   {
-                    "id": "01KZYVE7HXCB3JFCDYFPVA9SVD",
+                    "id": "01KZYXD26P0D2D7G8M5CN7P548",
                     "content": "Cold start test: this memory exists to measure initial search latency",
-                    "score": 0.07390234131831858,
-                    "createdAt": "2026-08-14T00:41:04.317Z"
+                    "score": 0.07682871940959149,
+                    "createdAt": "2026-08-14T01:15:23.222Z"
                   },
                   {
-                    "id": "01KZYVDZVBTS7JVYBTAG6GANG1",
+                    "id": "01KZYXCT6G018N2SG46G2FC4PF",
                     "content": "Added A/B test framework using LaunchDarkly for the new pricing experiment",
-                    "score": 0.04803974542192838,
-                    "createdAt": "2026-08-14T00:40:56.427Z"
+                    "score": 0.004971340305265724,
+                    "createdAt": "2026-08-14T01:15:15.024Z"
                   },
                   {
-                    "id": "01KZYVDZSTE9CCM7217FM68PRB",
+                    "id": "01KZYXCT4VPPCCT5PCCR2BESRK",
                     "content": "Testing philosophy: 80% unit tests, 15% integration tests, 5% end-to-end tests",
-                    "score": 0.04692224502348219,
-                    "createdAt": "2026-08-14T00:40:56.378Z"
+                    "score": 0.004855568830257035,
+                    "createdAt": "2026-08-14T01:15:14.971Z"
                   }
                 ]
               }
             ],
-            "avgLatencyMs": 3.7857142857142856,
+            "avgLatencyMs": 4.142857142857143,
             "totalTokens": 1013
           }
         ],
         "overallScore": 48.48,
         "avgLatencyMs": 3,
-        "distractorStoreTimeMs": 4062
+        "distractorStoreTimeMs": 4530
       }
     ],
     "degradation": [
       {
         "scale": 1000,
-        "scoreDropPercent": -42.59
+        "scoreDropPercent": -44.73
       }
     ]
   },
   "meta": {
-    "totalLatencyMs": 629,
-    "totalTokens": 2624,
+    "totalLatencyMs": 692,
+    "totalTokens": 2563,
     "totalApiCalls": 70
   }
 }

@@ -62,6 +62,24 @@ export class TdaiMemoryAdapter implements MemoryAdapter {
     const id = parsed.id || `tdai-${Date.now()}`;
     this.storedIds.push(id);
 
+    // Auto-resolve conflicts: when a new capture conflicts with existing ones,
+    // mark the older ones as stale (superseded by the new capture).
+    // This is critical for temporal reasoning tests where the latest fact should win.
+    if (parsed.conflict_ids && Array.isArray(parsed.conflict_ids) && parsed.conflict_ids.length > 0) {
+      console.error(`[tdai-adapter] Conflicts detected for ${id}: ${JSON.stringify(parsed.conflict_ids)}`);
+      for (const oldId of parsed.conflict_ids) {
+        try {
+          await this.client.callTool({
+            name: "resolve",
+            arguments: { winner: id, loser: oldId, reason: "auto-resolved by benchmark adapter" },
+          });
+          console.error(`[tdai-adapter] Resolved: ${oldId} → stale (superseded by ${id})`);
+        } catch (e) {
+          console.error(`[tdai-adapter] Resolve failed for ${oldId}: ${e}`);
+        }
+      }
+    }
+
     return {
       id,
       content: parsed.content || content,
@@ -75,7 +93,7 @@ export class TdaiMemoryAdapter implements MemoryAdapter {
       arguments: {
         query,
         agent_id: options?.agentId,
-        limit: options?.limit || 30,
+        limit: options?.limit || 50,
         format: "json",
       },
     });
@@ -89,7 +107,10 @@ export class TdaiMemoryAdapter implements MemoryAdapter {
     }
 
     const memories = Array.isArray(parsed) ? parsed : parsed.memories || parsed.results || [];
-    return memories.map((m: any) => ({
+    // Filter out rejected memories, but keep stale ones (needed for "before/previous" queries).
+    // Stale memories get a lower score from the server's trust boost, so they rank below active ones.
+    const activeMemories = memories.filter((m: any) => m.trust_state !== "rejected");
+    return activeMemories.map((m: any) => ({
       id: m.id || "unknown",
       content: m.content || m.memory || m.text || "",
       score: m.score ?? m.similarity,
