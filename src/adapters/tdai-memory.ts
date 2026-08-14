@@ -75,7 +75,7 @@ export class TdaiMemoryAdapter implements MemoryAdapter {
       arguments: {
         query,
         agent_id: options?.agentId,
-        limit: options?.limit || 10,
+        limit: options?.limit || 30,
         format: "json",
       },
     });

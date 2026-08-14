@@ -1,41 +1,41 @@
 # Agent Memory Benchmark Results
 
 **Provider:** tdai-memory-mcp
-**Date:** 2026-08-13T18:18:48.189Z
+**Date:** 2026-08-14T00:41:05.227Z
 **AMB Version:** 3.0.0
-**Layer 1 Score:** 84/100 (A)
+**Layer 1 Score:** 91/100 (A+)
 **Layer 2 Score:** 60/100 (C)
 
 ## Category Scores
 
 | Category | Score | Passed | Avg Latency |
 |---|---|---|---|
-| Factual Recall | 88% (A) | 7/8 | 7ms |
-| Semantic Search | 88% (A) | 7/8 | 8ms |
-| Temporal Reasoning | 86% (A) | 6/7 | 4ms |
-| Conflict Resolution | 86% (A) | 6/7 | 5ms |
-| Selective Forgetting | 83% (A) | 5/6 | 7ms |
-| Cross-Session Continuity | 71% (B) | 5/7 | 9ms |
-| Multi-Agent Collaboration | 67% (C) | 4/6 | 6ms |
-| Cost Efficiency | 100% (A+) | 16/16 | 5ms |
+| Factual Recall | 100% (A+) | 8/8 | 7ms |
+| Semantic Search | 100% (A+) | 8/8 | 7ms |
+| Temporal Reasoning | 86% (A) | 6/7 | 5ms |
+| Conflict Resolution | 100% (A+) | 7/7 | 7ms |
+| Selective Forgetting | 83% (A) | 5/6 | 8ms |
+| Cross-Session Continuity | 71% (B) | 5/7 | 8ms |
+| Multi-Agent Collaboration | 83% (A) | 5/6 | 8ms |
+| Cost Efficiency | 100% (A+) | 16/16 | 6ms |
 
 ## Efficiency Metrics
 
 | Metric | Value |
 |---|---|
 | Total API Calls | 70 |
-| Total Latency | 0.7s |
-| Est. Token Usage | 2,278 |
+| Total Latency | 0.6s |
+| Est. Token Usage | 2,624 |
 
 ## Layer 2: Multi-Step Retrieval
 
 | Scenario | Score | Latency |
 |---|---|---|
-| ✅ Conflict Resolution (Multi-Step) | PASS | 80ms |
-| ❌ Context Continuity | FAIL | 36ms |
-| ✅ Cross-Agent Handoff | PASS | 29ms |
-| ❌ Preference Application | FAIL | 34ms |
-| ✅ Redundancy Check | PASS | 68ms |
+| ✅ Conflict Resolution (Multi-Step) | PASS | 69ms |
+| ❌ Context Continuity | FAIL | 32ms |
+| ✅ Cross-Agent Handoff | PASS | 27ms |
+| ❌ Preference Application | FAIL | 27ms |
+| ✅ Redundancy Check | PASS | 42ms |
 
 **Layer 2 Score:** 3/5 scenarios passed (60%)
 
@@ -54,39 +54,29 @@ Tests the same Layer 1 queries against a noisy store with distractor memories.
 
 | Scale | Overall | Factual Recall | Semantic Search | Temporal Reasoning | Conflict Resolution | Selective Forgetting | Cross Session | Multi Agent | Cost Efficiency |
 |---|---|---|---|---|---|---|---|---|---|
-| 1,000 | 46.6% | 75% | 38% | 29% | 71% | 0% | 43% | 0% | 100% |
+| 1,000 | 48.5% | 88% | 38% | 29% | 71% | 0% | 43% | 0% | 100% |
 
-**Score Degradation** (vs Layer 1 baseline of 84%):
+**Score Degradation** (vs Layer 1 baseline of 91%):
 
-- 1,000 distractors: -37.8%
+- 1,000 distractors: -42.6%
 
 **Distractor Ingestion:**
 
-- 1,000: 4.0s
+- 1,000: 4.1s
 
 
-## Failed Tests (9)
-
-### fr-02-q1: "how is the API authenticated"
-- **Reason:** Found: [JWT, RS256], Missing: [Bearer]
-- **Top result:** "API authentication uses [REDACTED] with JWT signed by RS256..."
-
-### ss-02-q1: "how do we handle money"
-- **Reason:** Found: [], Missing: [Stripe, payment]
+## Failed Tests (5)
 
 ### tr-01-q1: "what database do we currently use"
 - **Reason:** Results contain unexpected keywords: [MySQL]
 - **Top result:** "Database is MySQL 5.7..."
 
-### cr-02-q1: "what logging library do we use"
-- **Reason:** Found: [], Missing: [Pino]
-- **Top result:** "Logging uses Winston..."
-
 ### sf-04-q1: "list project details"
-- **Reason:** Found: [], Missing: [delta, epsilon]
+- **Reason:** Found: [delta], Missing: [epsilon]
+- **Top result:** "Memory delta: MIT license..."
 
 ### cs-05-q1: "summarize what happened this week"
-- **Reason:** Found: [], Missing: [CI/CD, authentication]
+- **Reason:** Found: [CI/CD], Missing: [authentication]
 - **Top result:** "Friday: production deploy successful. Monitoring looks clean...."
 
 ### cs-07-q1: "trace the deploy process"
@@ -96,9 +86,6 @@ Tests the same Layer 1 queries against a noisy store with distractor memories.
 ### ma-02-q1: "what decisions were made"
 - **Reason:** Found: [Hono], Missing: [Tailwind]
 - **Top result:** "Backend decision: use Hono framework for API instead of Express..."
-
-### ma-03-q1: "what is the bug"
-- **Reason:** Found: [], Missing: [race condition, queue]
 
 
 ---
